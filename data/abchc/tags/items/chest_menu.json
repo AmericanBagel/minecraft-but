@@ -1,0 +1,25 @@
+{
+  "values":
+  [
+  "minecraft:gray_stained_glass_pane",
+  "minecraft:black_stained_glass_pane",
+  "minecraft:green_stained_glass_pane",
+  "minecraft:lime_wool",
+  "minecraft:red_wool",
+  "minecraft:conduit",
+  "minecraft:paper",
+  "minecraft:player_head",
+  "minecraft:written_book",
+  "minecraft:barrier",
+  "minecraft:lime_wool",
+  "minecraft:netherite_scrap",
+  "minecraft:turtle_egg",
+  "minecraft:target",
+  "minecraft:zombie_head",
+  "minecraft:wither_skeleton_skull",
+  "minecraft:filled_map",
+  "minecraft:magma_block",
+  "minecraft:map",
+  "minecraft:yellow_wool"
+  ]
+}

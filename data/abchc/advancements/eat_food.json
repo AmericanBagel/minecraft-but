@@ -1,0 +1,16 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:consume_item",
+        "conditions": {
+          "item": {
+            "tag": "abchc:food"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "abchc:modifiers/food_poisoning/trigger"
+    }
+  }
+  

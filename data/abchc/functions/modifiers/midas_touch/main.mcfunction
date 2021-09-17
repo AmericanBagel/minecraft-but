@@ -1,0 +1,1 @@
+execute as @a[tag=!abch_blacklist] at @s unless block ~ ~-1 ~ air run setblock ~ ~-1 ~ gold_block

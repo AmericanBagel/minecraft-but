@@ -1,0 +1,1 @@
+effect give @a[tag=!abch_blacklist] glowing 1 0 true

@@ -1,0 +1,1 @@
+execute unless score abch_vsLCG abch_vsMath matches ..0 unless score abch_vsLCG abch_vsMath matches 1.. run function abchc:modifiers/vengeful_slimes/rng/zprivate/uuid_reset

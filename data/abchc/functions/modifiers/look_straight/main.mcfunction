@@ -1,0 +1,1 @@
+execute as @a[tag=!abch_blacklist] at @s run teleport @s ~ ~ ~ 0 0
