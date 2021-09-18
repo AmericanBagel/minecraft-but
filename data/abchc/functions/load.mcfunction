@@ -64,4 +64,12 @@ scoreboard objectives add abch_frTimer dummy
 scoreboard objectives add abch_uiTakeDMG dummy
 scoreboard objectives add abch_uiRand dummy
 
+scoreboard objectives add abch_ebDmg minecraft.custom:damage_taken
+
+scoreboard objectives add abch_pfEfLvl dummy
+scoreboard objectives add abch_pfEffect dummy
+
+scoreboard objectives add abch_siDmg minecraft.custom:damage_taken
+scoreboard objectives add abch_siEffect dummy
+
 function abchc:modifiers/vengeful_slimes/rng/zprivate/init

@@ -12,6 +12,7 @@ execute if score deadly_falls abch_toggle matches 1 run function abchc:modifiers
 execute if score delicate_explosives abch_toggle matches 1 run function abchc:modifiers/delicate_explosives/main
 execute if score diamonds_to_coal abch_toggle matches 1 run function abchc:modifiers/diamonds_to_coal/main
 execute if score effect_arrows abch_toggle matches 1 run function abchc:modifiers/effect_arrows/main
+execute if score ender_blood abch_toggle matches 1 run function abchc:modifiers/ender_blood/main
 execute if score explosive_arrows abch_toggle matches 1 run function abchc:modifiers/explosive_arrows/main
 execute if score explosive_bush abch_toggle matches 1 run function abchc:modifiers/explosive_bush/main
 execute if score explosive_coal abch_toggle matches 1 run function abchc:modifiers/explosive_coal/main

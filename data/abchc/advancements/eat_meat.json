@@ -1,0 +1,16 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:consume_item",
+        "conditions": {
+          "item": {
+            "tag": "abchc:meat"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "abchc:modifiers/herbivore/trigger"
+    }
+  }
+  

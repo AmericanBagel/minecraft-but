@@ -4,13 +4,13 @@
         "trigger": "minecraft:consume_item",
         "conditions": {
           "item": {
-            "tag": "abchc:food"
+            "tag": "abchc:vegetables"
           }
         }
       }
     },
     "rewards": {
-      "function": "abchc:modifiers/potion_food/trigger"
+      "function": "abchc:modifiers/carnivore/trigger"
     }
   }
   
