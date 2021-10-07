@@ -1,6 +1,6 @@
-execute if entity @a[advancements={abchc:fall_dmg=true},scores={abch_fall=1..}] run gamerule showDeathMessages false
-execute as @a[advancements={abchc:fall_dmg=true},scores={abch_fall=1..}] at @s run tellraw @a [{"selector":"@s"},{"text":" fell from a high place."}]
-execute as @a[advancements={abchc:fall_dmg=true},scores={abch_fall=1..}] at @s run kill @s
-execute as @a[advancements={abchc:fall_dmg=true},scores={abch_fall=1..}] at @s run advancement revoke @s only abchc:fall_dmg
-execute if entity @a[advancements={abchc:fall_dmg=true},scores={abch_fall=1..}] run gamerule showDeathMessages false
-scoreboard players reset @a abch_fall
+execute if entity @a[advancements={abchc:fall_dmg=true},scores={abch.fall=1..}] run gamerule showDeathMessages false
+execute as @a[advancements={abchc:fall_dmg=true},scores={abch.fall=1..}] at @s run tellraw @a [{"selector":"@s"},{"text":" fell from a high place."}]
+execute as @a[advancements={abchc:fall_dmg=true},scores={abch.fall=1..}] at @s run kill @s
+execute as @a[advancements={abchc:fall_dmg=true},scores={abch.fall=1..}] at @s run advancement revoke @s only abchc:fall_dmg
+execute if entity @a[advancements={abchc:fall_dmg=true},scores={abch.fall=1..}] run gamerule showDeathMessages false
+scoreboard players reset @a abch.fall

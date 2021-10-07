@@ -15,8 +15,8 @@ execute if score selection chest_menu matches 7 run function abchc:menu/page0/bl
 execute if score selection chest_menu matches 8 run function abchc:menu/page0/blank
 execute if score selection chest_menu matches 9 run function abchc:menu/page0/blank
 execute if score selection chest_menu matches 10 run function abchc:menu/page0/blank
-execute unless score global abch_debug matches 1 if score selection chest_menu matches 11 run scoreboard players set @s abch_debug 1
-execute if score global abch_debug matches 1 if score selection chest_menu matches 11 run scoreboard players set @s abch_debug 0
+execute unless score global abch.debug matches 1 if score selection chest_menu matches 11 run scoreboard players set @s abch.debug 1
+execute if score global abch.debug matches 1 if score selection chest_menu matches 11 run scoreboard players set @s abch.debug 0
 execute if score selection chest_menu matches 12 run function abchc:menu/page0/blank
 execute if score selection chest_menu matches 13 run function abchc:menu/page0/blank
 execute if score selection chest_menu matches 14 run function abchc:menu/page0/blank
@@ -34,4 +34,4 @@ execute if score selection chest_menu matches 26 run function abchc:menu/page0/b
 execute if score selection chest_menu matches 27 run function abchc:menu/page0/blank
 execute if score selection chest_menu matches 26 run function abchc:menu/page0/blank
 
-execute if score @s abch_debug matches 0..1 run function abchc:menu/page11/toggle
+execute if score @s abch.debug matches 0..1 run function abchc:menu/page11/toggle

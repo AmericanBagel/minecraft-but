@@ -1,1 +1,1 @@
-effect give @a[tag=!abch_blacklist] blindness 1 0 true
+effect give @a[tag=!abch.blacklist] blindness 1 0 true

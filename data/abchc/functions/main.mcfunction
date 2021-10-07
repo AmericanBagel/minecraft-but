@@ -1,14 +1,14 @@
 execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s run function abchc:menu/update
-execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s positioned ~ ~1 ~ run tp @e[type=chest_minecart,tag=abch_menu,limit=1,sort=nearest] ^ ^ ^1.5
-execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] unless entity @s[scores={abch_isSpawned=1}] at @s run function abchc:menu/spawn
-execute as @a[scores={abch_isSpawned=1},nbt=!{SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s run function abchc:menu/despawn
+execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s positioned ~ ~1 ~ run tp @e[type=chest_minecart,tag=abch.menu,limit=1,sort=nearest] ^ ^ ^1.5
+execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] unless entity @s[scores={abch.isSpawned=1}] at @s run function abchc:menu/spawn
+execute as @a[scores={abch.isSpawned=1},nbt=!{SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s run function abchc:menu/despawn
 scoreboard players set @a open_chest 0
 
 execute as @a run function abchc:menu/check
 
 execute as @a[nbt={Inventory:[{id:"minecraft:nether_star",tag:{display:{Name:'{"text":"Chaos Menu"}'}}}]}] run function abchc:menu/give_menu
 
-scoreboard players add global abch_timer 1
+scoreboard players add global abch.timer 1
 
 function abchc:modifiers/directory
 
@@ -17,7 +17,7 @@ function abchc:modifiers/directory
 
 
 
-execute if score global abch_timer matches 1200.. run scoreboard players reset global abch_timer
+execute if score global abch.timer matches 1200.. run scoreboard players reset global abch.timer
 
 
 #    __  __     ____                                                                   ___                                                  __    

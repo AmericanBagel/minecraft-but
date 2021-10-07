@@ -1,1 +1,1 @@
-execute as @a[tag=!abch_blacklist] at @s if predicate abchc:00083pct run function abchc:modifiers/chunk_error/spawn
+execute as @a[tag=!abch.blacklist] at @s if predicate abchc:00083pct run function abchc:modifiers/chunk_error/spawn

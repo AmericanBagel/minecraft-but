@@ -1,85 +1,85 @@
 scoreboard objectives add open_chest minecraft.custom:minecraft.open_chest
 scoreboard objectives add chest_menu dummy
-scoreboard objectives add abch_isSpawned dummy
-scoreboard objectives add abch_toggle dummy
-scoreboard objectives add abch_debug dummy
-scoreboard objectives add abch_modifier dummy
-scoreboard objectives add abch_timer dummy
-scoreboard objectives add abch_minute dummy
+scoreboard objectives add abch.isSpawned dummy
+scoreboard objectives add abch.toggle dummy
+scoreboard objectives add abch.debug dummy
+scoreboard objectives add abch.modifier dummy
+scoreboard objectives add abch.timer dummy
+scoreboard objectives add abch.minute dummy
 
-scoreboard objectives add abch_walk minecraft.custom:minecraft.walk_one_cm
-scoreboard objectives add abch_sneak minecraft.custom:minecraft.sneak_time
-scoreboard objectives add abch_jump minecraft.custom:minecraft.jump
-scoreboard objectives add abch_mobkill minecraft.custom:minecraft.mob_kills
-scoreboard objectives add abch_pkill minecraft.custom:minecraft.player_kills
-scoreboard objectives add abch_blDmg minecraft.custom:minecraft.damage_taken
-scoreboard objectives add abch_naDmg minecraft.custom:minecraft.damage_taken
-scoreboard objectives add abch_dyingTotem minecraft.used:minecraft.totem_of_undying
-scoreboard objectives add abch_death deathCount
-scoreboard objectives add abch_fall minecraft.custom:minecraft.fall_one_cm
-scoreboard objectives add abch_eatCF minecraft.used:minecraft.chorus_fruit
+scoreboard objectives add abch.walk minecraft.custom:minecraft.walk_one_cm
+scoreboard objectives add abch.sneak minecraft.custom:minecraft.sneak_time
+scoreboard objectives add abch.jump minecraft.custom:minecraft.jump
+scoreboard objectives add abch.mobkill minecraft.custom:minecraft.mob_kills
+scoreboard objectives add abch.pkill minecraft.custom:minecraft.player_kills
+scoreboard objectives add abch.blDmg minecraft.custom:minecraft.damage_taken
+scoreboard objectives add abch.naDmg minecraft.custom:minecraft.damage_taken
+scoreboard objectives add abch.dyingTotem minecraft.used:minecraft.totem_of_undying
+scoreboard objectives add abch.death deathCount
+scoreboard objectives add abch.fall minecraft.custom:minecraft.fall_one_cm
+scoreboard objectives add abch.eatCF minecraft.used:minecraft.chorus_fruit
 
-scoreboard objectives add abch_webKill dummy
-scoreboard objectives add abch_yeet dummy
-scoreboard objectives add abch_webCdwn dummy
-scoreboard objectives add abch_tntRand dummy
-scoreboard objectives add abch_lightning dummy
-scoreboard objectives add abch_snTime dummy
-scoreboard objectives add abch_anvilRain dummy
-scoreboard objectives add abch_effect dummy
-scoreboard objectives add abch_efLvl dummy
-scoreboard objectives add abch_CEreLimit dummy
-scoreboard objectives add abch_CEChunkX dummy
-scoreboard objectives add abch_CEChunkZ dummy
-scoreboard objectives add abch_CEChunkT dummy
+scoreboard objectives add abch.webKill dummy
+scoreboard objectives add abch.yeet dummy
+scoreboard objectives add abch.webCdwn dummy
+scoreboard objectives add abch.tntRand dummy
+scoreboard objectives add abch.lightning dummy
+scoreboard objectives add abch.snTime dummy
+scoreboard objectives add abch.anvilRain dummy
+scoreboard objectives add abch.effect dummy
+scoreboard objectives add abch.efLvl dummy
+scoreboard objectives add abch.CEreLimit dummy
+scoreboard objectives add abch.CEChunkX dummy
+scoreboard objectives add abch.CEChunkZ dummy
+scoreboard objectives add abch.CEChunkT dummy
 
-scoreboard objectives add abch_vsMath dummy
-scoreboard players set abch_vsLCG abch_vsConst 1103515245
-scoreboard objectives add abch_vsConst dummy
-scoreboard objectives add abch_vsID dummy
+scoreboard objectives add abch.vsMath dummy
+scoreboard players set abch.vsLCG abch.vsConst 1103515245
+scoreboard objectives add abch.vsConst dummy
+scoreboard objectives add abch.vsID dummy
 
-scoreboard objectives add abch_tpaUUID1 dummy
-scoreboard objectives add abch_tpaUUID2 dummy
-scoreboard objectives add abch_tpaUUID3 dummy
-scoreboard objectives add abch_tpaUUID4 dummy
+scoreboard objectives add abch.tpaUUID1 dummy
+scoreboard objectives add abch.tpaUUID2 dummy
+scoreboard objectives add abch.tpaUUID3 dummy
+scoreboard objectives add abch.tpaUUID4 dummy
 
-scoreboard objectives add abch_esUUID1 dummy
-scoreboard objectives add abch_esUUID2 dummy
-scoreboard objectives add abch_esUUID3 dummy
-scoreboard objectives add abch_esUUID4 dummy
+scoreboard objectives add abch.esUUID1 dummy
+scoreboard objectives add abch.esUUID2 dummy
+scoreboard objectives add abch.esUUID3 dummy
+scoreboard objectives add abch.esUUID4 dummy
 
-scoreboard objectives add abch_eeUUID1 dummy
-scoreboard objectives add abch_eeUUID2 dummy
-scoreboard objectives add abch_eeUUID3 dummy
-scoreboard objectives add abch_eeUUID4 dummy
+scoreboard objectives add abch.eeUUID1 dummy
+scoreboard objectives add abch.eeUUID2 dummy
+scoreboard objectives add abch.eeUUID3 dummy
+scoreboard objectives add abch.eeUUID4 dummy
 
-scoreboard objectives add abch_esSneak minecraft.custom:minecraft.sneak_time
+scoreboard objectives add abch.esSneak minecraft.custom:minecraft.sneak_time
 
-scoreboard objectives add abch_vsSize dummy
+scoreboard objectives add abch.vsSize dummy
 
-scoreboard objectives add abch_esLimit dummy
-scoreboard objectives add abch_esTimer dummy
-scoreboard objectives add abch_frTimer dummy
+scoreboard objectives add abch.esLimit dummy
+scoreboard objectives add abch.esTimer dummy
+scoreboard objectives add abch.frTimer dummy
 
-scoreboard objectives add abch_uiTakeDMG dummy
-scoreboard objectives add abch_uiRand dummy
+scoreboard objectives add abch.uiTakeDMG dummy
+scoreboard objectives add abch.uiRand dummy
 
-scoreboard objectives add abch_ebDmg minecraft.custom:damage_taken
+scoreboard objectives add abch.ebDmg minecraft.custom:damage_taken
 
-scoreboard objectives add abch_pfEfLvl dummy
-scoreboard objectives add abch_pfEffect dummy
+scoreboard objectives add abch.pfEfLvl dummy
+scoreboard objectives add abch.pfEffect dummy
 
-scoreboard objectives add abch_siDmg minecraft.custom:damage_taken
-scoreboard objectives add abch_siEffect dummy
+scoreboard objectives add abch.siDmg minecraft.custom:damage_taken
+scoreboard objectives add abch.siEffect dummy
 
-scoreboard objectives add abch_ytpLimit dummy
-scoreboard objectives add abch_ytpTimer dummy
+scoreboard objectives add abch.ytpLimit dummy
+scoreboard objectives add abch.ytpTimer dummy
 
-scoreboard objectives add abch_lagTimer dummy
-scoreboard objectives add abch_lagUUID1 dummy
-scoreboard objectives add abch_lagUUID2 dummy
-scoreboard objectives add abch_lagUUID3 dummy
-scoreboard objectives add abch_lagUUID4 dummy
-scoreboard objectives add abch_lagCount dummy
+scoreboard objectives add abch.lagTimer dummy
+scoreboard objectives add abch.lagUUID1 dummy
+scoreboard objectives add abch.lagUUID2 dummy
+scoreboard objectives add abch.lagUUID3 dummy
+scoreboard objectives add abch.lagUUID4 dummy
+scoreboard objectives add abch.lagCount dummy
 
 function abchc:modifiers/vengeful_slimes/rng/zprivate/init

@@ -33,4 +33,4 @@ execute if score selection chest_menu matches 26 run function abchc:menu/page0/b
 execute if score selection chest_menu matches 27 run function abchc:menu/page0/blank
 execute if score selection chest_menu matches 26 run function abchc:menu/page0/blank
 
-execute if score @s abch_debug matches 0..1 run function abchc:menu/page12/toggle
+execute if score @s abch.debug matches 0..1 run function abchc:menu/page12/toggle

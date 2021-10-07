@@ -5,7 +5,7 @@
       "conditions": {
         "entity": {
           "type": "minecraft:creeper",
-          "nbt": "{Tags:[\"abch_crRf\"]}"
+          "nbt": "{Tags:[\"abch.crRf\"]}"
         }
       }
     }

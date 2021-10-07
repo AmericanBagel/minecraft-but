@@ -1,2 +1,2 @@
-execute as @a if score @s abch_lagUUID1 = @e[type=marker,tag=abch_lagMarker,limit=1,sort=nearest] abch_lagUUID1 run particle end_rod ~ ~ ~ 0.01 0.01 0.01 .15 10 normal
-execute as @a if score @s abch_lagUUID1 = @e[type=marker,tag=abch_lagMarker,limit=1,sort=nearest] abch_lagUUID1 as @e[type=marker,tag=abch_lagMarker,limit=1,sort=nearest] run kill @s
+execute as @a if score @s abch.lagUUID1 = @e[type=marker,tag=abch.lagMarker,limit=1,sort=nearest] abch.lagUUID1 run particle end_rod ~ ~ ~ 0.01 0.01 0.01 .15 10 normal
+execute as @a if score @s abch.lagUUID1 = @e[type=marker,tag=abch.lagMarker,limit=1,sort=nearest] abch.lagUUID1 as @e[type=marker,tag=abch.lagMarker,limit=1,sort=nearest] run kill @s

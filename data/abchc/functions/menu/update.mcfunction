@@ -1,6 +1,6 @@
-data remove entity @e[type=chest_minecart,tag=abch_menu,limit=1,sort=nearest] Items
+data remove entity @e[type=chest_minecart,tag=abch.menu,limit=1,sort=nearest] Items
 ### REMEMBER TO UNCOMMENT!!!
-#execute positioned ~ ~1 ~ run tp @e[type=chest_minecart,tag=abch_menu,limit=1,sort=nearest] ^ ^ ^2
+#execute positioned ~ ~1 ~ run tp @e[type=chest_minecart,tag=abch.menu,limit=1,sort=nearest] ^ ^ ^2
 
 ### expand for new pages
 execute if score @s chest_menu matches 0 run function abchc:menu/page0/items

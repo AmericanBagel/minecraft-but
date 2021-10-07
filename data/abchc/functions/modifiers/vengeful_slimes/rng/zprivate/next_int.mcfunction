@@ -15,12 +15,12 @@
 
 function abchc:modifiers/vengeful_slimes/rng/lcg
 
-scoreboard players operation abch_vsTemp abch_vsMath = abch_vsOut abch_vsMath
-scoreboard players operation abch_vsOut abch_vsMath %= abch_vsRange abch_vsMath
-scoreboard players operation abch_vsTemp abch_vsMath -= abch_vsOut abch_vsMath
-scoreboard players operation abch_vsTemp abch_vsMath += abch_vsM1 abch_vsMath
-execute if score abch_vsTemp abch_vsMath matches ..-1 run function abchc:modifiers/vengeful_slimes/rng/zprivate/next_int
+scoreboard players operation abch.vsTemp abch.vsMath = abch.vsOut abch.vsMath
+scoreboard players operation abch.vsOut abch.vsMath %= abch.vsRange abch.vsMath
+scoreboard players operation abch.vsTemp abch.vsMath -= abch.vsOut abch.vsMath
+scoreboard players operation abch.vsTemp abch.vsMath += abch.vsM1 abch.vsMath
+execute if score abch.vsTemp abch.vsMath matches ..-1 run function abchc:modifiers/vengeful_slimes/rng/zprivate/next_int
 
 
-tag @s add abch_hasID
-scoreboard players operation @s abch_vsID = abch_vsLCG abch_vsMath
+tag @s add abch.hasID
+scoreboard players operation @s abch.vsID = abch.vsLCG abch.vsMath

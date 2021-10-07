@@ -16,4 +16,4 @@ summon falling_block ~ ~ ~ {Motion:[-0.5,0.25,-0.5],NoGravity:0b,Time:1,BlockSta
 summon armor_stand ~ ~ ~ {CustomName:'{"text":"web_rider8"}',Tags:["web_rider"]}
 
 playsound minecraft:entity.spider.ambient hostile @a ~ ~ ~ 1 0.35
-scoreboard players set @s abch_webCdwn 0
+scoreboard players set @s abch.webCdwn 0
