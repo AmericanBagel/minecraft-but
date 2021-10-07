@@ -14,4 +14,4 @@
 scoreboard players remove @s abch_esLimit 1
 execute unless block ^ ^ ^1 minecraft:air run summon creeper ~ ~ ~ {Fuse:0,ignited:1b,ExplosionRadius:3b}
 execute if score @s abch_esLimit matches 0 run summon creeper ~ ~ ~ {Fuse:0,ignited:1b,ExplosionRadius:3b}
-execute unless score @s abch_esLimit matches ..0 positioned ^ ^ ^1 if block ~ ~ ~ minecraft:air run function abchc:modifiers/explosive_sight/raytrace
+execute unless score @s abch_esLimit matches ..0 positioned ^ ^ ^1 if block ~ ~ ~ minecraft:air run function abchc:modifiers/explosive_sight/raycast

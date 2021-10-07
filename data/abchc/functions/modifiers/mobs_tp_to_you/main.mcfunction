@@ -1,0 +1,1 @@
+execute if score global abch_timer matches 1200.. run tp @e[type=#abchc:mobs] @r[tag=!abch_blacklist]

@@ -72,4 +72,14 @@ scoreboard objectives add abch_pfEffect dummy
 scoreboard objectives add abch_siDmg minecraft.custom:damage_taken
 scoreboard objectives add abch_siEffect dummy
 
+scoreboard objectives add abch_ytpLimit dummy
+scoreboard objectives add abch_ytpTimer dummy
+
+scoreboard objectives add abch_lagTimer dummy
+scoreboard objectives add abch_lagUUID1 dummy
+scoreboard objectives add abch_lagUUID2 dummy
+scoreboard objectives add abch_lagUUID3 dummy
+scoreboard objectives add abch_lagUUID4 dummy
+scoreboard objectives add abch_lagCount dummy
+
 function abchc:modifiers/vengeful_slimes/rng/zprivate/init

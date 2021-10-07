@@ -4,5 +4,5 @@
 #scoreboard players set @a abch_esLimit 0
 
 scoreboard players add global abch_esTimer 1
-execute if score global abch_esTimer matches 2.. as @a at @s run function abchc:modifiers/explosive_sight/start_raytrace
+execute if score global abch_esTimer matches 2.. as @a at @s run function abchc:modifiers/explosive_sight/start_raycast
 execute if score global abch_esTimer matches 2.. run scoreboard players set global abch_esTimer 0

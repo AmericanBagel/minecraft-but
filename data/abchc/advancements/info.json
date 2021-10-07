@@ -1,0 +1,17 @@
+{
+    "display": {
+        "title": "Minecraft, but it's chaos",
+        "description": "The one data pack to end all other \"Minecraft but\" data packs!",
+        "icon": {
+            "item": "minecraft:netherrack"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "parent": "global:americanbagel",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

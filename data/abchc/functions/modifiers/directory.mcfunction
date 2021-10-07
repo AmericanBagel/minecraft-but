@@ -27,6 +27,7 @@ execute if score fire_walker abch_toggle matches 1 run function abchc:modifiers/
 execute if score flying_skeletons abch_toggle matches 1 run function abchc:modifiers/flying_skeletons/main
 execute if score food_poisoning abch_toggle matches 1 run function abchc:modifiers/food_poisoning/main
 execute if score insta_creeper abch_toggle matches 1 run function abchc:modifiers/insta_creeper/main
+execute if score lag abch_toggle matches 1 run function abchc:modifiers/lag/main
 execute if score lazy_inventory abch_toggle matches 1 run function abchc:modifiers/lazy_inventory/main
 execute if score lightning_storm abch_toggle matches 1 run function abchc:modifiers/lightning_storm/main
 execute if score look_straight abch_toggle matches 1 run function abchc:modifiers/look_straight/main
@@ -65,3 +66,4 @@ execute if score unstable_inv abch_toggle matches 1 run function abchc:modifiers
 execute if score vengeful_slimes abch_toggle matches 1 run function abchc:modifiers/vengeful_slimes/main
 execute if score volatile_creepers abch_toggle matches 1 run function abchc:modifiers/volatile_creepers/main
 execute if score yeet abch_toggle matches 1 run function abchc:modifiers/yeet/main
+execute if score ytpwyl abch_toggle matches 1 run function abchc:modifiers/you_tp_where_you_look/main
