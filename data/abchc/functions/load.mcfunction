@@ -1,5 +1,4 @@
-scoreboard objectives add open_chest minecraft.custom:minecraft.open_chest
-scoreboard objectives add chest_menu dummy
+scoreboard objectives add abch.menu dummy
 scoreboard objectives add abch.isSpawned dummy
 scoreboard objectives add abch.toggle dummy
 scoreboard objectives add abch.debug dummy
