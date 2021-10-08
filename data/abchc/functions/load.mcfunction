@@ -81,4 +81,6 @@ scoreboard objectives add abch.lagUUID3 dummy
 scoreboard objectives add abch.lagUUID4 dummy
 scoreboard objectives add abch.lagCount dummy
 
+function abchc:modifiers/lag/load
+
 function abchc:modifiers/vengeful_slimes/rng/zprivate/init
