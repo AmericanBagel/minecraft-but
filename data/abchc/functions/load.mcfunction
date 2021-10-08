@@ -81,6 +81,14 @@ scoreboard objectives add abch.lagUUID3 dummy
 scoreboard objectives add abch.lagUUID4 dummy
 scoreboard objectives add abch.lagCount dummy
 
+scoreboard objectives add abch.walkLevel dummy
+scoreboard objectives add abch.walkLevel2 dummy
+scoreboard objectives add abch.wlFactor dummy
+scoreboard objectives add abch.wlAddend dummy
+scoreboard objectives add abch.walkXP minecraft.custom:minecraft:walk_one_cm
+
 function abchc:modifiers/lag/load
 
 function abchc:modifiers/vengeful_slimes/rng/zprivate/init
+
+say load
