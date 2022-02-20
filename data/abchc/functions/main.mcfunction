@@ -1,21 +1,28 @@
+# Update chest minecart GUI
 execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s run function abchc:menu/update
+# Teleport it in front of the player
 execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s positioned ~ ~1 ~ run tp @e[type=chest_minecart,tag=abch.menu,limit=1,sort=nearest] ^ ^ ^1.5
+# If the minecart is gone for some reason (killed, out of range, or despawned), spawn it again
 execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] unless entity @s[scores={abch.isSpawned=1}] at @s run function abchc:menu/spawn
+# If the player stopped holding the nether star, despawn the GUI
 execute as @a[scores={abch.isSpawned=1},nbt=!{SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s run function abchc:menu/despawn
 
+# Make minecarts visible
+execute as @e[type=#abchc:minecarts,tag=!invisible_minecart] run function abchc:menu/invisible_minecart
+
+# Update minecart chest GUI
 execute as @a run function abchc:menu/check
 
+# If the player renamed a nether star to "Chaos Menu", give the menu item
 execute as @a[nbt={Inventory:[{id:"minecraft:nether_star",tag:{display:{Name:'{"text":"Chaos Menu"}'}}}]}] run function abchc:menu/give_menu
 
-scoreboard players add global abch.timer 1
+# Increase global timer for modifiers
+scoreboard players add global abch.timer 1 
 
+# Modifiers
 function abchc:modifiers/directory
 
-
-
-
-
-
+# Global timer for a few modifiers
 execute if score global abch.timer matches 1200.. run scoreboard players reset global abch.timer
 
 

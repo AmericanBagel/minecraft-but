@@ -65,6 +65,6 @@ execute if score troglodyte abch.toggle matches 1 run function abchc:modifiers/t
 execute if score unstable_inv abch.toggle matches 1 run function abchc:modifiers/unstable_inv/main
 execute if score vengeful_slimes abch.toggle matches 1 run function abchc:modifiers/vengeful_slimes/main
 execute if score volatile_creepers abch.toggle matches 1 run function abchc:modifiers/volatile_creepers/main
-execute if score walk_leveling abch.toggle matches 1 run function abchc:modifiers/
+execute if score walk_leveling abch.toggle matches 1 run function abchc:modifiers/walk_leveling/main
 execute if score yeet abch.toggle matches 1 run function abchc:modifiers/yeet/main
 execute if score ytpwyl abch.toggle matches 1 run function abchc:modifiers/you_tp_where_you_look/main

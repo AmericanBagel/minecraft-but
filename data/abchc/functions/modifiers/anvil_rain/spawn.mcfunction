@@ -1,4 +1,4 @@
-summon armor_stand ~ ~ ~ {CustomName:'{"text":"abch.anvilRain"}',Invisible:1b}
+summon armor_stand ~ ~ ~ {CustomName:'{"text":"abch.anvilRain"}',Invisible:1b,Tags:["global.ignore"]}
 spreadplayers ~ ~ 1 50 false @e[type=armor_stand,name="abch.anvilRain"]
 
 execute store result score @e[type=armor_stand,name="abch.anvilRain"] abch.anvilRand run loot spawn ~ ~-1000 ~ loot abchc:1r60
