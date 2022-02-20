@@ -1,89 +1,106 @@
-### Removes scoreboards
 scoreboard objectives remove abch.menu
-scoreboard objectives remove abch_isSpawned
-scoreboard objectives remove abch_toggle
-scoreboard objectives remove abch_debug
-scoreboard objectives remove abch_modifier
-scoreboard objectives remove abch_timer
-scoreboard objectives remove abch_minute
+scoreboard objectives remove abch.isSpawned
+scoreboard objectives remove abch.toggle
+scoreboard objectives remove abch.debug
+scoreboard objectives remove abch.modifier
+scoreboard objectives remove abch.timer
+scoreboard objectives remove abch.minute
 
-scoreboard objectives remove abch_walk
-scoreboard objectives remove abch_sneak
-scoreboard objectives remove abch_jump
-scoreboard objectives remove abch_mobkill
-scoreboard objectives remove abch_pkill
-scoreboard objectives remove abch_blDmg
-scoreboard objectives remove abch_naDmg
-scoreboard objectives remove abch_dyingTotem
-scoreboard objectives remove abch_death
-scoreboard objectives remove abch_fall
-scoreboard objectives remove abch_eatCF
+##### Menu scores ####
+## mitems
+# GUI items for /clear
+scoreboard objectives remove abch.mitems
 
-scoreboard objectives remove abch_webKill
-scoreboard objectives remove abch_yeet
-scoreboard objectives remove abch_webCdwn
-scoreboard objectives remove abch_tntRand
-scoreboard objectives remove abch_lightning
-scoreboard objectives remove abch_snTime
-scoreboard objectives remove abch_anvilRain
-scoreboard objectives remove abch_effect
-scoreboard objectives remove abch_efLvl
-scoreboard objectives remove abch_CEreLimit
-scoreboard objectives remove abch_CEChunkX
-scoreboard objectives remove abch_CEChunkZ
-scoreboard objectives remove abch_CEChunkT
+## mbool
+# Score for testing for GUI click events
+scoreboard objectives remove abch.mbool
 
-scoreboard objectives remove abch_vsMath
-scoreboard objectives remove abch_vsConst
-scoreboard objectives remove abch_vsID
+## mpage
+# Current page on GUI
+scoreboard objectives remove abch.mpage
 
-scoreboard objectives remove abch_tpaUUID1
-scoreboard objectives remove abch_tpaUUID2
-scoreboard objectives remove abch_tpaUUID3
-scoreboard objectives remove abch_tpaUUID4
+scoreboard objectives remove abch.walk
+scoreboard objectives remove abch.sneak
+scoreboard objectives remove abch.jump
+scoreboard objectives remove abch.mobkill
+scoreboard objectives remove abch.pkill
+scoreboard objectives remove abch.blDmg
+scoreboard objectives remove abch.naDmg
+scoreboard objectives remove abch.dyingTotem
+scoreboard objectives remove abch.death
+scoreboard objectives remove abch.fall
+scoreboard objectives remove abch.eatCF
 
-scoreboard objectives remove abch_esUUID1
-scoreboard objectives remove abch_esUUID2
-scoreboard objectives remove abch_esUUID3
-scoreboard objectives remove abch_esUUID4
+scoreboard objectives remove abch.webKill
+scoreboard objectives remove abch.yeet
+scoreboard objectives remove abch.webCdwn
+scoreboard objectives remove abch.tntRand
+scoreboard objectives remove abch.lightning
+scoreboard objectives remove abch.snTime
+scoreboard objectives remove abch.anvilRain
+scoreboard objectives remove abch.effect
+scoreboard objectives remove abch.efLvl
+scoreboard objectives remove abch.CEreLimit
+scoreboard objectives remove abch.CEChunkX
+scoreboard objectives remove abch.CEChunkZ
+scoreboard objectives remove abch.CEChunkT
 
-scoreboard objectives remove abch_eeUUID1
-scoreboard objectives remove abch_eeUUID2
-scoreboard objectives remove abch_eeUUID3
-scoreboard objectives remove abch_eeUUID4
+scoreboard objectives remove abch.vsMath
+scoreboard objectives remove abch.vsConst
+scoreboard objectives remove abch.vsID
 
-scoreboard objectives remove abch_esSneak
+scoreboard objectives remove abch.tpaUUID1
+scoreboard objectives remove abch.tpaUUID2
+scoreboard objectives remove abch.tpaUUID3
+scoreboard objectives remove abch.tpaUUID4
 
-scoreboard objectives remove abch_vsSize
+scoreboard objectives remove abch.esUUID1
+scoreboard objectives remove abch.esUUID2
+scoreboard objectives remove abch.esUUID3
+scoreboard objectives remove abch.esUUID4
 
-scoreboard objectives remove abch_esLimit
-scoreboard objectives remove abch_esTimer
-scoreboard objectives remove abch_frTimer
+scoreboard objectives remove abch.eeUUID1
+scoreboard objectives remove abch.eeUUID2
+scoreboard objectives remove abch.eeUUID3
+scoreboard objectives remove abch.eeUUID4
 
-scoreboard objectives remove abch_uiTakeDMG
-scoreboard objectives remove abch_uiRand
+scoreboard objectives remove abch.esSneak
 
-scoreboard objectives remove abch_ebDmg
+scoreboard objectives remove abch.vsSize
 
-scoreboard objectives remove abch_pfEfLvl
-scoreboard objectives remove abch_pfEffect
+scoreboard objectives remove abch.esLimit
+scoreboard objectives remove abch.esTimer
+scoreboard objectives remove abch.frTimer
 
-scoreboard objectives remove abch_siDmg
-scoreboard objectives remove abch_siEffect
+scoreboard objectives remove abch.uiTakeDMG
+scoreboard objectives remove abch.uiRand
 
-scoreboard objectives remove abch_ytpLimit
-scoreboard objectives remove abch_ytpTimer
-scoreboard objectives remove abch_lagTimer
-scoreboard objectives remove abch_lagUUID1
-scoreboard objectives remove abch_lagUUID2
-scoreboard objectives remove abch_lagUUID3
-scoreboard objectives remove abch_lagUUID4
-scoreboard objectives remove abch_lagCount
+scoreboard objectives remove abch.ebDmg
 
-### Kills entities
-kill @e[tag=abch]
+scoreboard objectives remove abch.pfEfLvl
+scoreboard objectives remove abch.pfEffect
 
-### Disables data pack
-## Only works if directory/archive isn't renamed
-datapack disable "file/minecraft but it's absolute chaos V2"
-datapack disable "file/minecraft but it's absolute chaos V2.zip"
+scoreboard objectives remove abch.siDmg
+scoreboard objectives remove abch.siEffect
+
+scoreboard objectives remove abch.ytpLimit
+scoreboard objectives remove abch.ytpTimer
+
+scoreboard objectives remove abch.lagTimer
+scoreboard objectives remove abch.lagUUID1
+scoreboard objectives remove abch.lagUUID2
+scoreboard objectives remove abch.lagUUID3
+scoreboard objectives remove abch.lagUUID4
+scoreboard objectives remove abch.lagCount
+
+scoreboard objectives remove abch.walkLevel
+scoreboard objectives remove abch.walkLevel2
+scoreboard objectives remove abch.wlFactor
+scoreboard objectives remove abch.wlremoveend
+scoreboard objectives remove abch.walkXP
+
+function abchc:modifiers/lag/load
+
+function abchc:modifiers/vengeful_slimes/rng/zprivate/init
+
+say load
