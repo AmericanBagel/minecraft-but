@@ -6,6 +6,19 @@ scoreboard objectives add abch.modifier dummy
 scoreboard objectives add abch.timer dummy
 scoreboard objectives add abch.minute dummy
 
+##### Menu scores ####
+## mitems
+# GUI items for /clear
+scoreboard objectives add abch.mitems dummy
+
+## mbool
+# Score for testing for GUI click events
+scoreboard objectives add abch.mbool dummy
+
+## mpage
+# Current page on GUI
+scoreboard objectives add abch.mpage dummy
+
 scoreboard objectives add abch.walk minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add abch.sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add abch.jump minecraft.custom:minecraft.jump
