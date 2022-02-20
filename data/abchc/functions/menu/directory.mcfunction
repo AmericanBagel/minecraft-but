@@ -20,4 +20,4 @@ execute if score bool abch.menu matches 0 if score @s abch.menu matches 12 run f
 
 function abchc:menu/update
 
-clear @s #abchc:abch.menu{abch:{isMenu:1b}}
+clear @s #abchc:chest_menu{abch:{isMenu:1b}}
