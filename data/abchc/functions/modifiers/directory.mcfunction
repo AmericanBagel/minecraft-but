@@ -6,10 +6,10 @@ execute if score blindness abch.toggle matches 1 run function abchc:modifiers/bl
 execute if score chunk_error abch.toggle matches 1 run function abchc:modifiers/chunk_error/main
 execute if score confetti_funeral abch.toggle matches 1 run function abchc:modifiers/confetti_funeral/main
 execute if score creeper_nukes abch.toggle matches 1 run function abchc:modifiers/creeper_nukes/main
-execute if score creeper_reinforcements abch.toggle matches 1 run function abchc:modifiers/creeper_reinforcements/main
+execute if score creeper_reinf abch.toggle matches 1 run function abchc:modifiers/creeper_reinforcements/main
 execute if score damage_nausea abch.toggle matches 1 run function abchc:modifiers/damage_nausea/main
 execute if score deadly_falls abch.toggle matches 1 run function abchc:modifiers/deadly_falls/main
-execute if score delicate_explosives abch.toggle matches 1 run function abchc:modifiers/delicate_explosives/main
+execute if score delicate_expl abch.toggle matches 1 run function abchc:modifiers/delicate_explosives/main
 execute if score diamonds_to_coal abch.toggle matches 1 run function abchc:modifiers/diamonds_to_coal/main
 execute if score effect_arrows abch.toggle matches 1 run function abchc:modifiers/effect_arrows/main
 execute if score ender_blood abch.toggle matches 1 run function abchc:modifiers/ender_blood/main
@@ -18,7 +18,7 @@ execute if score explosive_bush abch.toggle matches 1 run function abchc:modifie
 execute if score explosive_coal abch.toggle matches 1 run function abchc:modifiers/explosive_coal/main
 execute if score explosive_eggs abch.toggle matches 1 run function abchc:modifiers/explosive_eggs/main
 execute if score explosive_sight abch.toggle matches 1 run function abchc:modifiers/explosive_sight/main
-execute if score explosive_snowballs abch.toggle matches 1 run function abchc:modifiers/explosive_snowballs/main
+execute if score explosive_snow abch.toggle matches 1 run function abchc:modifiers/explosive_snowballs/main
 execute if score explosive_xp abch.toggle matches 1 run function abchc:modifiers/explosive_xp/main
 execute if score fast_arrows abch.toggle matches 1 run function abchc:modifiers/fast_arrows/main
 execute if score fast_creepers abch.toggle matches 1 run function abchc:modifiers/fast_creepers/main
@@ -49,12 +49,12 @@ execute if score piglinator abch.toggle matches 1 run function abchc:modifiers/p
 execute if score players_glow abch.toggle matches 1 run function abchc:modifiers/players_glow/main
 execute if score random_effect abch.toggle matches 1 run function abchc:modifiers/random_effect/main
 execute if score random_teleport abch.toggle matches 1 run function abchc:modifiers/random_teleport/main
-execute if score realistic_spiders abch.toggle matches 1 run function abchc:modifiers/realistic_spiders/main
+execute if score realistic_spider abch.toggle matches 1 run function abchc:modifiers/realistic_spiders/main
 execute if score schlatt_mode abch.toggle matches 1 run function abchc:modifiers/schlatt_mode/main
 execute if score stacked_pigs abch.toggle matches 1 run function abchc:modifiers/stacked_pigs/main
 execute if score super_sponge abch.toggle matches 1 run function abchc:modifiers/super_sponge/main
 execute if score superhot abch.toggle matches 1 run function abchc:modifiers/superhot/main
-execute if score suspicious_injury abch.toggle matches 1 run function abchc:modifiers/suspicious_injury/main
+execute if score sus_injury abch.toggle matches 1 run function abchc:modifiers/suspicious_injury/main
 execute if score teleport_chorus abch.toggle matches 1 run function abchc:modifiers/teleport_chorus/main
 execute if score tp_arrows abch.toggle matches 1 run function abchc:modifiers/tp_arrows/main
 execute if score tnt_rain abch.toggle matches 1 run function abchc:modifiers/tnt_rain/main
@@ -64,7 +64,7 @@ execute if score toxic_water abch.toggle matches 1 run function abchc:modifiers/
 execute if score troglodyte abch.toggle matches 1 run function abchc:modifiers/troglodyte/main
 execute if score unstable_inv abch.toggle matches 1 run function abchc:modifiers/unstable_inv/main
 execute if score vengeful_slimes abch.toggle matches 1 run function abchc:modifiers/vengeful_slimes/main
-execute if score volatile_creepers abch.toggle matches 1 run function abchc:modifiers/volatile_creepers/main
+execute if score volatile_creeper abch.toggle matches 1 run function abchc:modifiers/volatile_creepers/main
 execute if score walk_leveling abch.toggle matches 1 run function abchc:modifiers/walk_leveling/main
 execute if score yeet abch.toggle matches 1 run function abchc:modifiers/yeet/main
 execute if score ytpwyl abch.toggle matches 1 run function abchc:modifiers/you_tp_where_you_look/main
