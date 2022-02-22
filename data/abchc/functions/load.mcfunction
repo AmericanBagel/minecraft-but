@@ -19,6 +19,10 @@ scoreboard objectives add abch.mbool dummy
 # Current page on GUI
 scoreboard objectives add abch.mpage dummy
 
+## msel
+# Score to keep track of what item was selectedd
+scoreboard objectives add abch.msel dummy
+
 scoreboard objectives add abch.walk minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add abch.sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add abch.jump minecraft.custom:minecraft.jump
