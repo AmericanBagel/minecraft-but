@@ -2,8 +2,8 @@
 scoreboard players reset @s abch.lagTimer
 
 ### Kills older lag markers belonging to player, preventing the existence of multiple lag markers for one player, by kiling all lag markers with a UUID score matching the player's UUID
-execute at @e[type=minecraft:marker,tag=abch.lagMarker] if score @e[type=minecraft:marker,tag=abch.lagMarker,sort=nearest,limit=1] abch.lagUUID1 = @s abch_lagUUID1 run kill @e[type=minecraft:marker,tag=abch.lagMarker,limit=1,sort=nearest]
-execute at @e[type=minecraft:marker,tag=abch.lagMarker] if score @e[type=minecraft:marker,tag=abch.lagMarker,sort=nearest,limit=1] abch.lagUUID1 = @s abch_lagUUID1 run say Found matching UUID! Killing previous lag marker.
+execute at @e[type=minecraft:marker,tag=abch.lagMarker] if score @e[type=minecraft:marker,tag=abch.lagMarker,sort=nearest,limit=1] abch.lagUUID1 = @s abch.lagUUID1 run kill @e[type=minecraft:marker,tag=abch.lagMarker,limit=1,sort=nearest]
+execute at @e[type=minecraft:marker,tag=abch.lagMarker] if score @e[type=minecraft:marker,tag=abch.lagMarker,sort=nearest,limit=1] abch.lagUUID1 = @s abch.lagUUID1 run say Found matching UUID! Killing previous lag marker.
 
 ### Summon new lag marker
 summon minecraft:marker ~ ~ ~ {CustomName:'{"text":"abch.lagMarker"}',Tags:["abch.lagMarker","abch.marker","global.ignore","abch.newLag"]}
