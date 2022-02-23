@@ -4,24 +4,25 @@ scoreboard objectives add abch.toggle dummy
 scoreboard objectives add abch.debug dummy
 scoreboard objectives add abch.modifier dummy
 scoreboard objectives add abch.timer dummy
+scoreboard objectives add abch.config dummy
 scoreboard objectives add abch.minute dummy
 
 ##### Menu scores ####
 ## mitems
 # GUI items for /clear
-scoreboard objectives add abch.mitems dummy
+scoreboard objectives add abch.menu.item dummy
 
 ## mbool
 # Score for testing for GUI click events
-scoreboard objectives add abch.mbool dummy
+scoreboard objectives add abch.menu.bool dummy
 
 ## mpage
 # Current page on GUI
-scoreboard objectives add abch.mpage dummy
+scoreboard objectives add abch.menu.page dummy
 
 ## msel
 # Score to keep track of what item was selectedd
-scoreboard objectives add abch.msel dummy
+scoreboard objectives add abch.menu.selection dummy
 
 scoreboard objectives add abch.walk minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add abch.sneak minecraft.custom:minecraft.sneak_time
@@ -41,7 +42,35 @@ scoreboard objectives add abch.webCdwn dummy
 scoreboard objectives add abch.tntRand dummy
 scoreboard objectives add abch.lightning dummy
 scoreboard objectives add abch.snTime dummy
-scoreboard objectives add abch.anvilRain dummy
+
+## Anvil Rain
+# anvil_rain.sky - Summon anvils from the sky (Y255)? - BOOLEAN - DEF 1
+execute unless score anvil_rain.sky abch.config matches 0..1 run scoreboard players set anvil_rain.sky abch.config 1
+
+# anvil_rain.relative - Summon anvils above players? (+~15)? - BOOLEAN - DEF 1
+execute unless score anvil_rain.relative abch.config matches 0..1 run scoreboard players set anvil_rain.relative abch.config 1
+
+# anvil_rain.keep - Keep anvils? - BOOLEAN - DEF 0/
+execute unless score anvil_rain.keep abch.config matches 0..1 run scoreboard players set anvil_rain.keep abch.config 1
+
+scoreboard objectives add abch.anvil_rain.random dummy
+scoreboard objectives add abch.anvil_rain.Y dummy
+scoreboard objectives add abch.anvil_rain.Yoffset dummy
+
+## Degradation
+execute unless score degradation.speed abch.config matches 0..1 run scoreboard players set degradation.speed abch.config 1
+
+## Superhot
+scoreboard objectives add abch.superhot.x dummy
+scoreboard objectives add abch.superhot.y dummy
+scoreboard objectives add abch.superhot.z dummy
+
+scoreboard objectives add abch.superhot.nx dummy
+scoreboard objectives add abch.superhot.ny dummy
+scoreboard objectives add abch.superhot.nz dummy
+
+
+
 scoreboard objectives add abch.effect dummy
 scoreboard objectives add abch.efLvl dummy
 scoreboard objectives add abch.CEreLimit dummy
