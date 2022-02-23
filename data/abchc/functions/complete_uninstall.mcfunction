@@ -9,15 +9,15 @@ scoreboard objectives remove abch.minute
 ##### Menu scores ####
 ## mitems
 # GUI items for /clear
-scoreboard objectives remove abch.mitems
+scoreboard objectives remove abch.menu.item
 
 ## mbool
 # Score for testing for GUI click events
-scoreboard objectives remove abch.mbool
+scoreboard objectives remove abch.menu.bool
 
 ## mpage
 # Current page on GUI
-scoreboard objectives remove abch.mpage
+scoreboard objectives remove abch.menu.page
 
 scoreboard objectives remove abch.walk
 scoreboard objectives remove abch.sneak
