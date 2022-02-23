@@ -50,8 +50,10 @@ execute unless score anvil_rain.sky abch.config matches 0..1 run scoreboard play
 # anvil_rain.relative - Summon anvils above players? (+~15)? - BOOLEAN - DEF 1
 execute unless score anvil_rain.relative abch.config matches 0..1 run scoreboard players set anvil_rain.relative abch.config 1
 
-# anvil_rain.keep - Keep anvils? - BOOLEAN - DEF 0/
-execute unless score anvil_rain.keep abch.config matches 0..1 run scoreboard players set anvil_rain.keep abch.config 1
+# anvil_rain.keep - Keep anvils? - BOOLEAN - DEF 0
+
+# anvil_rain.chance - Anvil spawn rate - INTEGER - DEF 1
+execute unless score anvil_rain.chance abch.config matches 0.. run scoreboard players set anvil_rain.chance abch.config 1
 
 scoreboard objectives add abch.anvil_rain.random dummy
 scoreboard objectives add abch.anvil_rain.Y dummy
