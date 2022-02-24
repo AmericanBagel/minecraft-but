@@ -9,6 +9,7 @@ execute if score creeper_nukes abch.toggle matches 1 run function abchc:modifier
 execute if score creeper_reinf abch.toggle matches 1 run function abchc:modifiers/creeper_reinforcements/main
 execute if score damage_nausea abch.toggle matches 1 run function abchc:modifiers/damage_nausea/main
 execute if score deadly_falls abch.toggle matches 1 run function abchc:modifiers/deadly_falls/main
+execute if score deadly_colors abch.toggle matches 1 run function abchc:modifiers/deadly_colors/main
 execute if score delicate_expl abch.toggle matches 1 run function abchc:modifiers/delicate_explosives/main
 execute if score degradation abch.toggle matches 1 run function abchc:modifiers/degradation/main
 execute if score diamonds_to_coal abch.toggle matches 1 run function abchc:modifiers/diamonds_to_coal/main

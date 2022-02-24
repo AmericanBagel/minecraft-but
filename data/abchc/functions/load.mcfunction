@@ -1,3 +1,7 @@
+scoreboard objectives add abch.global dummy
+scoreboard players set #neginf abch.global -2147483648
+scoreboard players set #inf abch.global 2147483647
+
 scoreboard objectives add abch.menu dummy
 scoreboard objectives add abch.isSpawned dummy
 scoreboard objectives add abch.toggle dummy
@@ -23,6 +27,9 @@ scoreboard objectives add abch.menu.page dummy
 ## msel
 # Score to keep track of what item was selectedd
 scoreboard objectives add abch.menu.selection dummy
+
+execute store result score showDeathMessages abch.config run gamerule showDeathMessages
+
 
 scoreboard objectives add abch.walk minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add abch.sneak minecraft.custom:minecraft.sneak_time
@@ -60,6 +67,7 @@ scoreboard objectives add abch.anvil_rain.Y dummy
 scoreboard objectives add abch.anvil_rain.Yoffset dummy
 
 ## Degradation
+# degradation.speed - Degradation speed - INTEGER - DEF 1
 execute unless score degradation.speed abch.config matches 0..1 run scoreboard players set degradation.speed abch.config 1
 
 ## Superhot
@@ -71,6 +79,24 @@ scoreboard objectives add abch.superhot.nx dummy
 scoreboard objectives add abch.superhot.ny dummy
 scoreboard objectives add abch.superhot.nz dummy
 
+## TNT Rain
+# tnt_rain.grief - Should TNT grief? - Integer - Def 1
+execute unless score tnt_rain.grief abch.config matches 0..1 store result score tnt_rain.grief abch.config run gamerule mobGriefing
+
+# tnt_rain.sky - Summon tnt from the sky (Y255)? - BOOLEAN - DEF 1
+execute unless score anvil_rain.sky abch.config matches 0..1 run scoreboard players set anvil_rain.sky abch.config 1
+
+# tnt_rain.relative - Summon tnts above players? (+~15)? - BOOLEAN - DEF 1
+execute unless score anvil_rain.relative abch.config matches 0..1 run scoreboard players set anvil_rain.relative abch.config 1
+
+# anvil_rain.keep - Keep anvils? - BOOLEAN - DEF 0
+
+# anvil_rain.chance - Anvil spawn rate - INTEGER - DEF 1
+execute unless score anvil_rain.chance abch.config matches 0.. run scoreboard players set anvil_rain.chance abch.config 1
+
+scoreboard objectives add abch.anvil_rain.random dummy
+scoreboard objectives add abch.anvil_rain.Y dummy
+scoreboard objectives add abch.anvil_rain.Yoffset dummy
 
 
 scoreboard objectives add abch.effect dummy
@@ -134,6 +160,15 @@ scoreboard objectives add abch.walkLevel2 dummy
 scoreboard objectives add abch.wlFactor dummy
 scoreboard objectives add abch.wlAddend dummy
 scoreboard objectives add abch.walkXP minecraft.custom:minecraft.walk_one_cm
+
+# Deadly Colors
+scoreboard objectives add abch.deadly_colors.random dummy
+scoreboard objectives add abch.deadly_colors.color dummy
+scoreboard objectives add abch.deadly_colors dummy
+
+execute unless 
+
+
 
 function abchc:modifiers/lag/load
 

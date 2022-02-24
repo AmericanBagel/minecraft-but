@@ -9,7 +9,6 @@ summon marker ~ ~ ~ {CustomName:'{"text":"abch.anvil_rain.spawner"}',Tags:["glob
 execute store result score @e[type=marker,name="abch.anvil_rain.spawner"] abch.anvil_rain.Y run data get entity @s Pos[1]
 
 ### TEMP
-execute as @e[type=marker,name="abch.anvil_rain.spawner"] store result entity @s abch.anvil_rain.Yoffset int 1 run loot spawn ~ ~-1000 ~ loot abchc:1r15
 scoreboard players set @e[type=marker,name="abch.anvil_rain.spawner"] abch.anvil_rain.Yoffset 15
 ###
 
