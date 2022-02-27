@@ -17,8 +17,8 @@ execute if score @s abch.menu.selection matches 7 run function abchc:menu/page0/
 execute if score @s abch.menu.selection matches 8 run function abchc:menu/page0/blank
 execute if score @s abch.menu.selection matches 9 run function abchc:menu/page0/blank
 execute if score @s abch.menu.selection matches 10 run function abchc:menu/page0/blank
-execute unless score global abch.debug matches 1 if score @s abch.menu.selection matches 11 run scoreboard players set @s abch.debug 1
-execute if score global abch.debug matches 1 if score @s abch.menu.selection matches 11 run scoreboard players set @s abch.debug 0
+execute unless score .global abch.debug matches 1 if score @s abch.menu.selection matches 11 run scoreboard players set @s abch.debug 1
+execute if score .global abch.debug matches 1 if score @s abch.menu.selection matches 11 run scoreboard players set @s abch.debug 0
 execute if score @s abch.menu.selection matches 12 run function abchc:menu/page0/blank
 execute if score @s abch.menu.selection matches 13 run function abchc:menu/page0/blank
 execute if score @s abch.menu.selection matches 14 run function abchc:menu/page0/blank
