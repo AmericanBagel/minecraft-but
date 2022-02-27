@@ -17,10 +17,10 @@ execute if score @s abch.menu.selection matches 9 run function abchc:menu/page0/
 execute if score @s abch.menu.selection matches 10 run function abchc:menu/page0/blank
 execute if score @s abch.menu.selection matches 11 run scoreboard players set @s abch.menu.page 1
 execute if score @s abch.menu.selection matches 12 run function abchc:menu/page0/blank
-execute if score global abch.toggle matches 1 if score @s abch.menu.selection matches 13 run scoreboard players set @s abch.toggle 0
-execute if score global abch.toggle matches 1 if score @s abch.menu.selection matches 13 run say toggle off
-execute if score global abch.toggle matches 0 if score @s abch.menu.selection matches 13 run scoreboard players set @s abch.toggle 1
-execute if score global abch.toggle matches 0 if score @s abch.menu.selection matches 13 run say toggle on
+execute if score.global abch.toggle matches 1 if score @s abch.menu.selection matches 13 run scoreboard players set @s abch.toggle 0
+execute if score.global abch.toggle matches 1 if score @s abch.menu.selection matches 13 run say toggle off
+execute if score.global abch.toggle matches 0 if score @s abch.menu.selection matches 13 run scoreboard players set @s abch.toggle 1
+execute if score.global abch.toggle matches 0 if score @s abch.menu.selection matches 13 run say toggle on
 execute if score @s abch.menu.selection matches 14 run function abchc:menu/page0/blank
 execute if score @s abch.menu.selection matches 15 run scoreboard players set @s abch.menu.page 5
 execute if score @s abch.menu.selection matches 16 run function abchc:menu/page0/blank

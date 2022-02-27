@@ -35,4 +35,4 @@ execute if entity @s[nbt={Inventory:[{Slot:33b,id:"minecraft:nether_star",tag:{d
 execute if entity @s[nbt={Inventory:[{Slot:34b,id:"minecraft:nether_star",tag:{display:{Name:'{"text":"Chaos Menu"}'}}}]}] run item replace entity @s inventory.25 with nether_star{display:{Name:'{"text":"Chaos Menu","color":"dark_red","bold":true,"italic":false}',Lore:['{"text":"Right-click to open the menu.","color":"gray","italic":true}']},abch:{menuStar:1b},ctc:{id:"chaos_menu",from:"abchc:give_menu",traits:{item:1b,menu:1b,config:1b}}} 1
 execute if entity @s[nbt={Inventory:[{Slot:35b,id:"minecraft:nether_star",tag:{display:{Name:'{"text":"Chaos Menu"}'}}}]}] run item replace entity @s inventory.26 with nether_star{display:{Name:'{"text":"Chaos Menu","color":"dark_red","bold":true,"italic":false}',Lore:['{"text":"Right-click to open the menu.","color":"gray","italic":true}']},abch:{menuStar:1b},ctc:{id:"chaos_menu",from:"abchc:give_menu",traits:{item:1b,menu:1b,config:1b}}} 1
 
-execute if score global abch.debug matches 1.. run say menus/give_menu success
+execute if score.global abch.debug matches 1.. run say menus/give_menu success
