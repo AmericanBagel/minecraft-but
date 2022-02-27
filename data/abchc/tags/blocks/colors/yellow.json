@@ -1,0 +1,37 @@
+{
+    "values":
+    [
+    "minecraft:yellow_wool",
+    "minecraft:yellow_terracotta",
+    "minecraft:yellow_carpet",
+    "minecraft:yellow_stained_glass",
+    "minecraft:yellow_stained_glass_pane",
+    "minecraft:yellow_shulker_box",
+    "minecraft:yellow_glazed_terracotta",
+    "minecraft:yellow_concrete",
+    "minecraft:yellow_concrete_powder",
+    "minecraft:yellow_bed",
+    "minecraft:yellow_banner",
+    "minecraft:yellow_candle",
+    "minecraft:gold_block",
+    "minecraft:raw_gold_block",
+    "minecraft:gold_ore",
+    "minecraft:deepslate_gold_ore",
+    "minecraft:horn_coral_block",
+    "minecraft:horn_coral_fan",
+    "minecraft:honeycomb_block",
+    "minecraft:bell",
+    "minecraft:lantern",
+    "minecraft:sponge",
+    "minecraft:wet_sponge",
+    "minecraft:dandelion",
+    "minecraft:sunflower",
+    "minecraft:light_weighted_pressure_plate",
+    "minecraft:powered_rail",
+    "minecraft:brewing_stand",
+    "minecraft:nether_gold_ore",
+    "minecraft:gilded_blackstone",
+    "potted_dandelion"
+    ]
+  }
+  

@@ -1,0 +1,1 @@
+data modify storage abchc:modifiers/deadly_colors green set value '{"text":"GREEN ","bold":true,"color":"#00FF00"}'

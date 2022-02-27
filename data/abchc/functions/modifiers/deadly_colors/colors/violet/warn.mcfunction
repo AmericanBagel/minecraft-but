@@ -1,0 +1,1 @@
+data modify storage abchc:modifiers/deadly_colors violet set value '{"text":"VIOLET ","bold":true,"color":"#CA00F7"}'

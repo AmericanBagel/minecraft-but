@@ -1,6 +1,7 @@
 scoreboard objectives add abch.global dummy
 scoreboard players set #neginf abch.global -2147483648
 scoreboard players set #inf abch.global 2147483647
+scoreboard players set #zero abch.global 0
 
 scoreboard objectives add abch.menu dummy
 scoreboard objectives add abch.isSpawned dummy
@@ -10,6 +11,32 @@ scoreboard objectives add abch.modifier dummy
 scoreboard objectives add abch.timer dummy
 scoreboard objectives add abch.config dummy
 scoreboard objectives add abch.minute dummy
+
+##### Team Colors ####
+team add abchc.color.dark_red
+team modify abchc.color.dark_red color dark_red
+
+team add abchc.color.gold
+team modify abchc.color.gold color gold
+
+team add abchc.color.yellow
+team modify abchc.color.yellow color yellow
+
+team add abchc.color.green
+team modify abchc.color.green color green
+
+team add abchc.color.blue
+team modify abchc.color.blue color blue
+
+team add abchc.color.dark_purple
+team modify abchc.color.dark_purple color dark_purple
+
+team add abchc.color.white
+team modify abchc.color.white color white
+
+team add abchc.color.black
+team modify abchc.color.white color black
+
 
 ##### Menu scores ####
 ## mitems
@@ -161,12 +188,23 @@ scoreboard objectives add abch.wlFactor dummy
 scoreboard objectives add abch.wlAddend dummy
 scoreboard objectives add abch.walkXP minecraft.custom:minecraft.walk_one_cm
 
-# Deadly Colors
-scoreboard objectives add abch.deadly_colors.random dummy
+## Deadly Colors
+scoreboard objectives add abch.deadly_colors.color dummy
 scoreboard objectives add abch.deadly_colors.color dummy
 scoreboard objectives add abch.deadly_colors dummy
 
-execute unless 
+# Interval for killing
+execute unless score deadly_colors.interval abch.config > #zero abch.global run scoreboard players set deadly_colors.interval abch.config 200
+
+# How many ticks before killing to warn player
+execute unless score deadly_colors.interval abch.config > #zero abch.global run scoreboard players set deadly_colors.offset abch.config 60
+
+# Keep this at one unless you know what you're doing.
+# How many ticks before killing to stop warning
+execute unless score deadly_colors.interval abch.config > #zero abch.global run scoreboard players set deadly_colors.stop_offset abch.config 1
+
+# Whether to kill with a specific color or a random color
+execute unless score deadly_colors.random abch.config matches 1 unless score deadly_colors.random abch.config matches 0 run scoreboard players set deadly_colors.random abch.config 1 
 
 
 

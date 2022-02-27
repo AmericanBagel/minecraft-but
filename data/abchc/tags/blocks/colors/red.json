@@ -60,7 +60,13 @@
     "minecraft:crimson_fence_gate",
     "minecraft:powered_rail",
     "minecraft:detector_rail",
-    "minecraft:activator_rail"
+    "minecraft:activator_rail",
+    "potted_poppy",
+    "potted_red_tulip",
+    "potted_red_mushroom",
+    "potted_crimson_fungus",
+    "potted_crimson_roots",
+    "minecraft:barrier"
     ]
   }
   

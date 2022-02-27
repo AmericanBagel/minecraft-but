@@ -1,0 +1,1 @@
+execute store result score @s abch.deadly_colors.color run loot spawn ~ ~-1000 ~ loot abchc:1r9

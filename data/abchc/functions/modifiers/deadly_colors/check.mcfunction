@@ -1,1 +1,0 @@
-execute if score @s abch.deadly_colors.color matches 1 run function abchc:modifiers/deadly_colors/red/check

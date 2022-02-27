@@ -1,0 +1,3 @@
+# title @s actionbar ["",{"text":"\u2620","color":"black"},{"text":" Deadly","color":"#BC0002"},{"text":" C","bold":true,"color":"#FE0103"},{"text":"o","bold":true,"color":"#F96E00"},{"text":"l","bold":true,"color":"#FCFF00"},{"text":"o","bold":true,"color":"#03FF00"},{"text":"r","bold":true,"color":"#1D6DFE"},{"text":": ","bold":true}]
+
+data modify storage abchc:modifiers/deadly_colors blue set value '{"text":"BLUE ","bold":true,"color":"#0152FE"}'
