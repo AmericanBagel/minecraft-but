@@ -1,6 +1,5 @@
 {
-    "values":
-    [
+  "values": [
     "minecraft:white_wool",
     "minecraft:white_terracotta",
     "minecraft:white_carpet",
@@ -116,5 +115,5 @@
     "heavy_weighted_pressure_plate",
     "iron_trapdoor",
     "iron_bars"
-    ]
-  }
+  ]
+}

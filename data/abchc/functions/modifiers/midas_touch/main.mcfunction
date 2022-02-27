@@ -1,1 +1,1 @@
-execute as @a[tag=!abch.blacklist] at @s unless block ~ ~-1 ~ air run setblock ~ ~-1 ~ gold_block
+execute as @a[ tag=!abch.blacklist ] at @s unless block ~ ~-1 ~ air run setblock ~ ~-1 ~ gold_block

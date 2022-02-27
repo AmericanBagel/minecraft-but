@@ -1,1 +1,1 @@
-effect give @e[tag=!abch.blacklist] glowing 1 0 true
+effect give @e[ tag=!abch.blacklist ] glowing 1 0 true

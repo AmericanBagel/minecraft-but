@@ -1,2 +1,2 @@
-execute as @e[type=phantom,tag=!global.ignore] at @s if entity @a[tag=!blacklist,tag=!global.ignore,distance=..2.5,gamemode=!creative,gamemode=!spectator] run summon creeper ~ ~ ~ {ExplosionRadius:3b,Fuse:0,Tags:["global.ignore","abch","abch.explosive_phantoms"]}
-execute as @e[type=creeper,tag=abch.explosive_phantoms] at @s store result entity @s ExplosionRadius byte 1 run scoreboard players get explosive_phantoms.radius abch.config
+execute as @e[ type=phantom, tag=!global.ignore ] at @s if entity @a[ tag=!blacklist, tag=!global.ignore, distance=..2.5, gamemode=!creative, gamemode=!spectator ] run summon creeper ~ ~ ~ {ExplosionRadius: 3b, Fuse: 0, Tags: [ "global.ignore", "abch", "abch.explosive_phantoms" ]}
+execute as @e[ type=creeper, tag=abch.explosive_phantoms ] at @s store result entity @s ExplosionRadius byte 1 run scoreboard players get explosive_phantoms.radius abch.config

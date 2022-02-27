@@ -1,6 +1,5 @@
 {
-    "values":
-    [
+  "values": [
     "minecraft:orange_wool",
     "minecraft:orange_tulip",
     "minecraft:orange_terracotta",
@@ -41,6 +40,5 @@
     "minecraft:honey_block",
     "minecraft:shroomlight",
     "potted_orange_tulip"
-    ]
-  }
-  
+  ]
+}

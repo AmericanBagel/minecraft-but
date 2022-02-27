@@ -1,2 +1,2 @@
-execute as @e[type=snowball,tag=!abch.esMarked] at @s run function abchc:modifiers/explosive_snowballs/mark
-execute as @e[type=area_effect_cloud,name="abch.esMarker"] at @s run function abchc:modifiers/explosive_snowballs/tick
+execute as @e[ type=snowball, tag=!abch.esMarked ] at @s run function abchc:modifiers/explosive_snowballs/mark
+execute as @e[ type=area_effect_cloud, name="abch.esMarker" ] at @s run function abchc:modifiers/explosive_snowballs/tick

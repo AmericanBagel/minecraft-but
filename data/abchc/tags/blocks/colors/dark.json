@@ -1,6 +1,5 @@
 {
-    "values":
-    [
+  "values": [
     "minecraft:black_wool",
     "minecraft:black_terracotta",
     "minecraft:black_carpet",
@@ -81,7 +80,5 @@
     "chipped_anvil",
     "damaged_anvil",
     "potted_wither_rose"
-
-    ]
-  }
-  
+  ]
+}

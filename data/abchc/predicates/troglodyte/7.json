@@ -1,12 +1,11 @@
 {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-      "location": {
-        "light": {
-          "light": 7
-        }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "location": {
+      "light": {
+        "light": 7
       }
     }
   }
-  
+}

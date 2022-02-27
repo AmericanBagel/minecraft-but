@@ -93,7 +93,7 @@
 			"id": "minecraft:wandering_trader",
 			"required": false
 		},
-    {
+		{
 			"id": "minecraft:bee",
 			"required": false
 		},
@@ -141,7 +141,7 @@
 			"id": "minecraft:pufferfish",
 			"required": false
 		},
-    {
+		{
 			"id": "minecraft:blaze",
 			"required": false
 		},

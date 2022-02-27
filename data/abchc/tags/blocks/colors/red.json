@@ -1,6 +1,5 @@
 {
-    "values":
-    [
+  "values": [
     "minecraft:redstone_ore",
     "minecraft:deepslate_redstone_ore",
     "minecraft:red_wool",
@@ -67,6 +66,5 @@
     "potted_crimson_fungus",
     "potted_crimson_roots",
     "minecraft:barrier"
-    ]
-  }
-  
+  ]
+}

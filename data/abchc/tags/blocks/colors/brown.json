@@ -1,6 +1,5 @@
 {
-    "values":
-    [
+  "values": [
     "minecraft:brown_wool",
     "minecraft:brown_terracotta",
     "minecraft:brown_carpet",
@@ -117,5 +116,5 @@
     "fletching_table",
     "flower_pot",
     "#flower_pots"
-    ]
-  }
+  ]
+}

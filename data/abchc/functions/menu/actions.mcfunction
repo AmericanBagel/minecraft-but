@@ -38,4 +38,4 @@ function abchc:menu/check
 execute anchored eyes positioned ~ ~1 ~ run tp @s ^ ^ ^1.5
 
 # If the player stopped holding the nether star, despawn the GUI
-execute if entity @p[nbt=!{SelectedItem:{tag:{abch:{menuStar:1b}}}}] run function abchc:menu/despawn
+execute if entity @p[ nbt=!{SelectedItem: {tag: {abch: {menuStar: 1b}}}} ] run function abchc:menu/despawn

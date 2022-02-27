@@ -1,6 +1,5 @@
 {
-    "values":
-    [
+  "values": [
     "minecraft:yellow_wool",
     "minecraft:yellow_terracotta",
     "minecraft:yellow_carpet",
@@ -32,6 +31,5 @@
     "minecraft:nether_gold_ore",
     "minecraft:gilded_blackstone",
     "potted_dandelion"
-    ]
-  }
-  
+  ]
+}

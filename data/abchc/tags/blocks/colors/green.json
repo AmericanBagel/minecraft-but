@@ -1,6 +1,5 @@
 {
-    "values":
-    [
+  "values": [
     "minecraft:green_wool",
     "minecraft:green_carpet",
     "minecraft:green_terracotta",
@@ -111,6 +110,5 @@
     "potted_red_tulip",
     "potted_spruce_sapling",
     "potted_white_tulip"
-    ]
-  }
-  
+  ]
+}

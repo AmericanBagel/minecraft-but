@@ -1,1 +1,1 @@
-execute as @e[type=creeper] run data merge entity @s {ExplosionRadius:50b}
+execute as @e[ type=creeper ] run data merge entity @s {ExplosionRadius: 50b}

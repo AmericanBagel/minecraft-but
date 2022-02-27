@@ -1,4 +1,4 @@
-execute as @a[advancements={abchc:player_kill_creeper=true,abchc:player_kill_reinforcement=false}] at @s run function abchc:modifiers/creeper_reinforcements/reinforcements
+execute as @a[ advancements={ abchc:player_kill_creeper=true, abchc:player_kill_reinforcement=false } ] at @s run function abchc:modifiers/creeper_reinforcements/reinforcements
 
 #Note: If someone is reading through my terrible code for some reason, have a nice day and enjoy a shroomjak:
 #                                  .~-~.                                  

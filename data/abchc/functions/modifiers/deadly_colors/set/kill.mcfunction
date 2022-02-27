@@ -31,12 +31,12 @@ execute if score #brown abch.deadly_colors.color matches 1 if block ~ ~1 ~ #abch
 execute if score #light abch.deadly_colors.color matches 1 if block ~ ~1 ~ #abchc:colors/light run tag @s add abch.deadly_colors.light.kill
 execute if score #dark abch.deadly_colors.color matches 1 if block ~ ~1 ~ #abchc:colors/dark run tag @s add abch.deadly_colors.dark.kill
 
-execute if entity @s[tag=abch.deadly_colors.red.kill] run function abchc:modifiers/deadly_colors/colors/red/kill
-execute if entity @s[tag=abch.deadly_colors.orange.kill] run function abchc:modifiers/deadly_colors/colors/orange/kill
-execute if entity @s[tag=abch.deadly_colors.yellow.kill] run function abchc:modifiers/deadly_colors/colors/yellow/kill
-execute if entity @s[tag=abch.deadly_colors.green.kill] run function abchc:modifiers/deadly_colors/colors/green/kill
-execute if entity @s[tag=abch.deadly_colors.blue.kill] run function abchc:modifiers/deadly_colors/colors/blue/kill
-execute if entity @s[tag=abch.deadly_colors.violet.kill] run function abchc:modifiers/deadly_colors/colors/violet/kill
-execute if entity @s[tag=abch.deadly_colors.brown.kill] run function abchc:modifiers/deadly_colors/colors/brown/kill
-execute if entity @s[tag=abch.deadly_colors.light.kill] run function abchc:modifiers/deadly_colors/colors/light/kill
-execute if entity @s[tag=abch.deadly_colors.dark.kill] run function abchc:modifiers/deadly_colors/colors/dark/kill
+execute if entity @s[ tag=abch.deadly_colors.red.kill ] run function abchc:modifiers/deadly_colors/colors/red/kill
+execute if entity @s[ tag=abch.deadly_colors.orange.kill ] run function abchc:modifiers/deadly_colors/colors/orange/kill
+execute if entity @s[ tag=abch.deadly_colors.yellow.kill ] run function abchc:modifiers/deadly_colors/colors/yellow/kill
+execute if entity @s[ tag=abch.deadly_colors.green.kill ] run function abchc:modifiers/deadly_colors/colors/green/kill
+execute if entity @s[ tag=abch.deadly_colors.blue.kill ] run function abchc:modifiers/deadly_colors/colors/blue/kill
+execute if entity @s[ tag=abch.deadly_colors.violet.kill ] run function abchc:modifiers/deadly_colors/colors/violet/kill
+execute if entity @s[ tag=abch.deadly_colors.brown.kill ] run function abchc:modifiers/deadly_colors/colors/brown/kill
+execute if entity @s[ tag=abch.deadly_colors.light.kill ] run function abchc:modifiers/deadly_colors/colors/light/kill
+execute if entity @s[ tag=abch.deadly_colors.dark.kill ] run function abchc:modifiers/deadly_colors/colors/dark/kill

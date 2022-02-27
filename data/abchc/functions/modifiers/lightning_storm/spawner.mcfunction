@@ -1,2 +1,2 @@
-summon armor_stand ~ ~10 ~ {CustomName:'{"text":"abch.lightning"}',Invisible:1b}
-execute as @e[type=armor_stand,name="abch.lightning"] at @s unless score @s abch.lightning matches 1..50 run spreadplayers ~ ~ 13 50 false @s
+summon armor_stand ~ ~10 ~ {CustomName: '{"text":"abch.lightning"}', Invisible: 1b}
+execute as @e[ type=armor_stand, name="abch.lightning" ] at @s unless score @s abch.lightning matches 1..50 run spreadplayers ~ ~ 13 50 false @s

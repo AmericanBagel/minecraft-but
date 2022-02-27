@@ -29,4 +29,4 @@ execute if score @s abch.menu.bool matches 0 if score @s abch.menu.page matches 
 
 function abchc:menu/update
 
-clear @s #abchc:chest_menu{abch:{isMenu:1b}}
+clear @s #abchc:chest_menu{abch: {isMenu: 1b}}

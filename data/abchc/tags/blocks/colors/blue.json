@@ -1,6 +1,5 @@
 {
-    "values":
-    [
+  "values": [
     "minecraft:light_blue_wool",
     "minecraft:light_blue_terracotta",
     "minecraft:light_blue_carpet",
@@ -103,6 +102,5 @@
     "potted_blue_orchid",
     "potted_warped_fungus",
     "potted_warped_roots"
-    ]
-  }
-  
+  ]
+}

@@ -203,7 +203,7 @@ execute unless score deadly_colors.interval abch.config matches 0.. run scoreboa
 execute unless score deadly_colors.interval abch.config matches 0.. run scoreboard players set deadly_colors.stop_offset abch.config 1
 
 # Whether to kill with a specific color or a random color
-execute unless score deadly_colors.random abch.config matches 1 unless score deadly_colors.random abch.config matches 0 run scoreboard players set deadly_colors.random abch.config 1 
+execute unless score deadly_colors.random abch.config matches 1 unless score deadly_colors.random abch.config matches 0 run scoreboard players set deadly_colors.random abch.config 1
 
 
 

@@ -1,6 +1,5 @@
 {
-    "values":
-    [
+  "values": [
     "minecraft:purple_wool",
     "minecraft:purple_terracotta",
     "minecraft:purple_carpet",
@@ -62,6 +61,5 @@
     "minecraft:brain_coral",
     "minecraft:brain_coral_fan",
     "potted_pink_tulip"
-    ]
-  }
-  
+  ]
+}

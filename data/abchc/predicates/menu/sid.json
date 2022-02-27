@@ -1,26 +1,26 @@
 {
-    "condition": "minecraft:value_check",
-    "value": {
+  "condition": "minecraft:value_check",
+  "value": {
+    "type": "minecraft:score",
+    "target": "this",
+    "score": "abch.menu.sid"
+  },
+  "range": {
+    "min": {
       "type": "minecraft:score",
-      "target": "this",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": ".search"
+      },
       "score": "abch.menu.sid"
     },
-    "range": {
-      "min": {
-        "type": "minecraft:score",
-        "target": {
-          "type": "minecraft:fixed",
-          "name": ".search"
-        },
-        "score": "abch.menu.sid"
+    "max": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": ".search"
       },
-      "max": {
-        "type": "minecraft:score",
-        "target": {
-          "type": "minecraft:fixed",
-          "name": ".search"
-        },
-        "score": "abch.menu.sid"
-      }
+      "score": "abch.menu.sid"
     }
+  }
 }
