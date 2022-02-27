@@ -22,6 +22,7 @@ execute if score explosive_eggs abch.toggle matches 1 run function abchc:modifie
 execute if score explosive_sight abch.toggle matches 1 run function abchc:modifiers/explosive_sight/main
 execute if score explosive_snowballs abch.toggle matches 1 run function abchc:modifiers/explosive_snowballs/main
 execute if score explosive_xp abch.toggle matches 1 run function abchc:modifiers/explosive_xp/main
+execute if score explosive_phantoms abch.toggle matches 1 run function abchc:modifiers/explosive_phantoms/main
 execute if score fast_arrows abch.toggle matches 1 run function abchc:modifiers/fast_arrows/main
 execute if score fast_creepers abch.toggle matches 1 run function abchc:modifiers/fast_creepers/main
 execute if score fire_rain abch.toggle matches 1 run function abchc:modifiers/fire_rain/main

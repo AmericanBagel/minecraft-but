@@ -1,1 +1,0 @@
-particle soul_fire_flame ~ ~ ~ 1 1 1 0.1 10 normal

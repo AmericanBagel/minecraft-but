@@ -157,8 +157,8 @@ scoreboard objectives add abch.esSneak minecraft.custom:minecraft.sneak_time
 
 scoreboard objectives add abch.vsSize dummy
 
-scoreboard objectives add abch.esLimit dummy
-scoreboard objectives add abch.esTimer dummy
+scoreboard objectives add abch.explosive_sight.raycast dummy
+
 scoreboard objectives add abch.frTimer dummy
 
 scoreboard objectives add abch.uiTakeDMG dummy
