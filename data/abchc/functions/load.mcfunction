@@ -1,4 +1,8 @@
 scoreboard objectives add abch.menu dummy
+scoreboard objectives add abch.menu.sid dummy
+scoreboard objectives add abch.menu.sid.pbool dummy
+scoreboard objectives add abch.menu.sid.bool dummy
+
 scoreboard objectives add abch.isSpawned dummy
 scoreboard objectives add abch.toggle dummy
 scoreboard objectives add abch.debug dummy
@@ -6,8 +10,6 @@ scoreboard objectives add abch.modifier dummy
 scoreboard objectives add abch.timer dummy
 scoreboard objectives add abch.config dummy
 scoreboard objectives add abch.minute dummy
-
-scoreboard objectives add abch.sid dummy
 
 ##### Team Colors ####
 team add abchc.color.dark_red
