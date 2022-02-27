@@ -11,8 +11,8 @@ execute as @e[type=armor_stand,name="abch.chunkError"] at @s positioned ~ 256 ~ 
 execute as @e[type=armor_stand,name="abch.chunkError"] store result score @s abch.CEChunkX run data get entity @s Pos[0] 0.0625
 execute as @e[type=armor_stand,name="abch.chunkError"] store result score @s abch.CEChunkZ run data get entity @s Pos[2] 0.0625
 
-execute as @a store result score @s abch.CEChunkX run data get entity @s Pos[0] 0.0625
-execute as @a store result score @s abch.CEChunkZ run data get entity @s Pos[2] 0.0625
+execute as @a[tag=!blacklist,tag=!global.ignore] store result score @s abch.CEChunkX run data get entity @s Pos[0] 0.0625
+execute as @a[tag=!blacklist,tag=!global.ignore] store result score @s abch.CEChunkZ run data get entity @s Pos[2] 0.0625
 
 execute as @e[type=armor_stand,name="abch.chunkError"] at @s run scoreboard players reset @s abch.CEChunkT
 execute as @e[type=armor_stand,name="abch.chunkError"] at @s run scoreboard players operation @s abch.CEChunkT = @s abch.CEChunkX 

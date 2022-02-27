@@ -10,7 +10,7 @@ execute as @a[scores={abch.isSpawned=1},nbt=!{SelectedItem:{tag:{abch:{menuStar:
 execute as @e[type=#abchc:minecarts,tag=!invisible_minecart] run function abchc:menu/invisible_minecart
 
 # Update minecart chest GUI
-execute as @a at @s run function abchc:menu/check
+execute as @a[tag=!blacklist,tag=!global.ignore] at @s run function abchc:menu/check
 
 # If the player renamed a nether star to "Chaos Menu", give the menu item
 execute as @a[nbt={Inventory:[{id:"minecraft:nether_star",tag:{display:{Name:'{"text":"Chaos Menu"}'}}}]}] run function abchc:menu/give_menu

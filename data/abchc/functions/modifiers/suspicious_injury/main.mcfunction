@@ -9,4 +9,4 @@ execute as @a[scores={abch.siDmg=8}] at @s run function abchc:modifiers/suspicio
 execute as @a[scores={abch.siDmg=9}] at @s run function abchc:modifiers/suspicious_injury/lvl/9
 execute as @a[scores={abch.siDmg=10..}] at @s run function abchc:modifiers/suspicious_injury/lvl/10
 
-scoreboard players reset @a abch.siDmg
+scoreboard players reset @a[tag=!blacklist,tag=!global.ignore] abch.siDmg
