@@ -1,0 +1,1 @@
+execute as @e[type=phantom,tag=!global.ignore] at @s if entity @a[tag=!blacklist,tag=!global.ignore]
