@@ -1,5 +1,11 @@
-### AS: server
-### AT: server
+#> abchc:menu/directory
+#
+# Directory function for the menu, the root of the GUI.
+# Spawns, updates, despawns, and otherwise manages the GUI.
+#
+# @context root
+#
+# @within abchc:main
 
 ## Update chest minecart GUI
 #execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s run function abchc:menu/update
@@ -26,32 +32,23 @@
 
 ###############################################################
 
-# execute as @a at @s as @e[tag=abch.menu] if score @s abch.menu.sid = @p abch.menu.sid anchor run tp @s 
-
-# Update chest minecart GUI
-
-
 # Does a minecart linked to player exist?
-scoreboard players set @p abch.menu.sid.bool 0
-execute as @a at @s as @e[ tag=abch.menu ] if score @s abch.menu.sid = @p abch.menu.sid run scoreboard players set @p abch.menu.sid.bool 1
+#execute as @a at @s store result score @s abch.menu.sid.bool if entity @e[type=chest_minecart,tag=abch.menu,predicate=abchc:menu/sid]
 
-# If the minecart is gone, spawn it again
-execute as @a[ nbt={SelectedItem: {tag: {abch: {menuStar: 1b}}}} ] at @s unless score @s abch.menu.sid.bool matches 1 run function abchc:menu/spawn
+#execute as @a at @s as @e[type=chest_minecart,tag=abch.menu,predicate=abchc:menu/sid] if score @s sid = @p sid run scoreboard players set @p abch.menu.bool
 
-# If the player stopped holding the nether star, despawn the GUI
-execute as @a[ nbt=!{SelectedItem: {tag: {abch: {menuStar: 1b}}}}, scores={ abch.menu.sid.bool=1 } ] at @s as @e[ tag=abch.menu ] run function abchc:menu/despawn
+#execute store result score @s abch.menu.sid.bool as @a at @s as @e[type=chest_minecart,tag=abch.menu,predicate=abchc:menu/sid]
 
-# Update minecart chest GUI
+# scoreboard players operation .search sid = @s sid
+# tag @s add this
+# execute as @e[type=pig] if score @s sid = .search sid run function ...
+# tag @s remove this 
 
-# If the player renamed a nether star to "Chaos Menu", give the menu item
-execute as @a[ nbt={Inventory: [ {id: "minecraft:nether_star", tag: {display: {Name: '{"text":"Chaos Menu"}'}}} ]} ] run function abchc:menu/give_menu
-
-kill @e[ type=item, nbt={Item: {tag: {abch: {isMenu: 1b}}}} ]
-
-# Teleport GUI minecart in front of player
-execute as @a at @s run function abchc:menu/sid_test
+# If player holds chaos menu, spawn GUI
+#execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s 
 
 
+execute as @a at @s run function abchc:menu/link
 
-
-# Make minecarts visible
+# If player has chaos menu and there is no linked GUI, spawn GUI.
+execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s unless score @s abch.menu.bool matches 1 run function abchc:menu/spawn

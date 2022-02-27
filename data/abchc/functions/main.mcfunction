@@ -3,7 +3,6 @@
 
 # Menu
 function abchc:menu/directory
-function abchc:menu/directory
 
 # Modifiers
 # function abchc:modifiers/directory

@@ -1,7 +1,21 @@
-### AS: server
-### AT: server
+#> abchc:menu/actions
+#
+# Actions to run between GUI and player to set up and manage GUI.
+#
+# Functions from here should use `@s` for the GUI and `@p` for the player.
+#
+# @context gui
+# 
+# @within abchc:menu/link
+#
+# @output
+#   score @s abch.menu.bool
+#       Boolean for testing if there is a minecart
+#
+#alias entity gui @s
+#alias entity player @p[tag=this]
 
-## Update chest minecart GUI
+# Update chest minecart GUI
 #execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s run function abchc:menu/update
 #
 ## If the minecart is gone for some reason (killed, out of range, or despawned), spawn it again
@@ -28,14 +42,18 @@
 
 # execute as @a at @s as @e[tag=abch.menu] if score @s abch.menu.sid = @p abch.menu.sid anchor run tp @s 
 
-# Update chest minecart GUI
+# Set bool to 1
+scoreboard players set @p[ tag=this ] abch.menu.bool 1
+
+# Update chest GUI items
 function abchc:menu/update
 
-# Update minecart chest GUI
+# If an item in the GUI was selected,
+# run interaction in abchc:menu/gui
 function abchc:menu/check
 
 # Teleport GUI minecart in front of player
 execute anchored eyes positioned ~ ~1 ~ run tp @s ^ ^ ^1.5
 
 # If the player stopped holding the nether star, despawn the GUI
-execute if entity @p[ nbt=!{SelectedItem: {tag: {abch: {menuStar: 1b}}}} ] run function abchc:menu/despawn
+execute if entity @p[ tag=this, nbt=!{SelectedItem: {tag: {abch: {menuStar: 1b}}}} ] run function abchc:menu/despawn
