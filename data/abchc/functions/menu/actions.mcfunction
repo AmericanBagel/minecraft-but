@@ -13,7 +13,7 @@
 #       Boolean for testing if there is a minecart
 #
 #alias entity gui @s
-#alias entity player @p[tag=this]
+#alias entity player @p[tag=abch.menu.this]
 
 # Update chest minecart GUI
 #execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s run function abchc:menu/update
@@ -42,8 +42,8 @@
 
 # execute as @a at @s as @e[tag=abch.menu] if score @s abch.menu.sid = @p abch.menu.sid anchor run tp @s 
 
-# Set bool to 1
-scoreboard players set @p[ tag=this ] abch.menu.bool 1
+# Set bool to 1 for commands in abchc:menu/directory
+scoreboard players set @p[ tag=abch.menu.this ] abch.menu.bool 1
 
 # Update chest GUI items
 function abchc:menu/update
@@ -56,4 +56,4 @@ function abchc:menu/check
 execute anchored eyes positioned ~ ~1 ~ run tp @s ^ ^ ^1.5
 
 # If the player stopped holding the nether star, despawn the GUI
-execute if entity @p[ tag=this, nbt=!{SelectedItem: {tag: {abch: {menuStar: 1b}}}} ] run function abchc:menu/despawn
+execute if entity @p[ tag=abch.menu.this, nbt=!{SelectedItem: {tag: {abch: { menuStar: 1b}}}}] run function abchc:menu/despawn

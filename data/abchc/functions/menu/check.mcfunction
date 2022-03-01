@@ -12,6 +12,6 @@
 #		Items cleared if any.
 
 # Detect if player selected an item by clearing it into item
-execute store result score @p abch.menu.item run clear @p #abchc:chest_menu{abch: {isMenu: 1b}} 0
+execute store result score @p[tag=abch.menu.this] abch.menu.item run clear @p #abchc:chest_menu{abch: {isMenu: 1b}} 0
 # If it is above one, run gui function
-execute if score @p abch.menu.item matches 1.. run function abchc:menu/gui
+execute if score @p[tag=abch.menu.this] abch.menu.item matches 1.. run function abchc:menu/gui

@@ -18,6 +18,4 @@ scoreboard players set @s abch.menu.bool 0
 function abchc:menu/pages
 
 #> Final
-function abchc:menu/update
-
-clear @s #abchc:chest_menu{abch: {isMenu: 1b}}
+clear @p[tag=abch.menu.this] #abchc:chest_menu{abch: {isMenu: 1b}}

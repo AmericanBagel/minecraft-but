@@ -17,5 +17,3 @@ scoreboard players operation @e[ tag=abch.menu, sort=nearest, limit=1, tag=init 
 scoreboard players operation @p[ tag=init ] abch.menu.sid = .global abch.menu.sid
 # Remove init tag
 tag @e[ tag=init ] remove init
-
-say spawn
