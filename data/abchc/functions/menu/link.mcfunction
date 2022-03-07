@@ -8,8 +8,6 @@
 # @context gui link
 #
 # @within abchc:menu/directory
-#
-#alias entity player @p[ tag=abch.menu.this ]
 
 # Set .search to player's sid
 scoreboard players operation .search abch.menu.sid = @s abch.menu.sid
