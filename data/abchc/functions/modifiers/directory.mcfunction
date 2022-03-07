@@ -1,5 +1,6 @@
 execute if score 2020_mode abch.toggle matches 1 run function abchc:modifiers/2020_mode/main
 execute if score anvil_rain abch.toggle matches 1 run function abchc:modifiers/anvil_rain/main
+execute if score bedrock_touch abch.toggle matches 1 run function abchc:modifiers/bedrock_touch/main
 execute if score blinding_damage abch.toggle matches 1 run function abchc:modifiers/blinding_damage/main
 execute if score blinding_light abch.toggle matches 1 run function abchc:modifiers/blinding_light/main
 execute if score blindness abch.toggle matches 1 run function abchc:modifiers/blindness/main
@@ -60,6 +61,7 @@ execute if score superhot abch.toggle matches 1 run function abchc:modifiers/sup
 execute if score sus_injury abch.toggle matches 1 run function abchc:modifiers/suspicious_injury/main
 execute if score teleport_chorus abch.toggle matches 1 run function abchc:modifiers/teleport_chorus/main
 execute if score tp_arrows abch.toggle matches 1 run function abchc:modifiers/tp_arrows/main
+execute if score tp_sneak abch.toggle matches 1 run function abchc:modifiers/tp_sneak/main
 execute if score tnt_rain abch.toggle matches 1 run function abchc:modifiers/tnt_rain/main
 execute if score totems_of_dying abch.toggle matches 1 run function abchc:modifiers/totems_of_dying/main
 execute if score toxic_grass abch.toggle matches 1 run function abchc:modifiers/toxic_grass/main

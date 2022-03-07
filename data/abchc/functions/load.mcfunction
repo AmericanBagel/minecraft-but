@@ -205,10 +205,16 @@ execute unless score deadly_colors.interval abch.config matches 0.. run scoreboa
 # Whether to kill with a specific color or a random color
 execute unless score deadly_colors.random abch.config matches 1 unless score deadly_colors.random abch.config matches 0 run scoreboard players set deadly_colors.random abch.config 1
 
+# TP Sneak
+scoreboard objectives add abch.tp_sneak.sneak minecraft.custom:minecraft.sneak_time
+scoreboard objectives add abch.tp_sneak.raycast dummy
+scoreboard objectives add abch.tp_sneak.timer dummy
 
+#> Bedrock touch
+scoreboard objectives add abch.bedrock_touch.timer dummy
+scoreboard objectives add abch.bedrock_touch.sid dummy
+scoreboard objectives add abch.bedrock_touch.raytrace dummy
 
 function abchc:modifiers/lag/load
 
 function abchc:modifiers/vengeful_slimes/rng/zprivate/init
-
-say load
