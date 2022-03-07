@@ -40,7 +40,7 @@ scoreboard objectives add abch.lag.b28 minecraft.broken:minecraft.azalea
 scoreboard objectives add abch.lag.b29 minecraft.broken:minecraft.azalea_leaves
 scoreboard objectives add abch.lag.b30 minecraft.broken:minecraft.azure_bluet
 scoreboard objectives add abch.lag.b31 minecraft.broken:minecraft.bamboo
-scoreboard objectives add abch.lag.b33 minecraft.broken:minecraft.banvil_rain.relative
+scoreboard objectives add abch.lag.b33 minecraft.broken:minecraft.anvil
 scoreboard objectives add abch.lag.b34 minecraft.broken:minecraft.barrier
 scoreboard objectives add abch.lag.b35 minecraft.broken:minecraft.basalt
 scoreboard objectives add abch.lag.b36 minecraft.broken:minecraft.beacon
