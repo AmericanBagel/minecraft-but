@@ -1,0 +1,1 @@
+kill @e[ name="abch.anvil_rain" ]

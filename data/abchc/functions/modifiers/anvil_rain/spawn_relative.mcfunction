@@ -1,5 +1,5 @@
 # Summon marker
-summon marker ~ ~ ~ {CustomName: '{"text":"abch.anvil_rain.spawner"}', Tags: [ "global.ignore", "marker", "abch.marker" ]}
+summon marker ~ ~ ~ {CustomName: '{"text":"abch.anvil_rain.spawner"}', Tags: [ "global.ignore", "marker", "abch.marker", "abch.anvil_rain" ]}
 
 # Copy Y position from player to marker
 #data modify entity @e[type=marker,name="abch.anvil_rain.spawner",tag=abch.marker,limit=1] Pos[1] set from entity @s Pos[1]
