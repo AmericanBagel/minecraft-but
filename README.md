@@ -7,11 +7,6 @@ Browsing through [PlanetMinecraft's data pack page](https://www.planetminecraft.
 **Minecraft, but it's absolute chaos** aims to solve this problem by making one centralized way to manage all your gameplay modifiers. Gone are the days of typing `/datapack`! Gone are the days of having to revisit that PlanetMinecraft page again and again to remind yourself how to configure it! Gone are the days of having to find that inconveniently placed `.txt` file hidden away in the archived data pack file! Gone are the days of a chat flooded by 50 different *Minecraft, but* data packs *every time* you reload.
 
 ## 🏷️ Features
-- 50+ customizable, toggleable gameplay modifiers
-- Centralized GUI to manage modifiers
-- Configuration GUIs for 15+ modifiers to fine-tune your gameplay
-- One single, easy kill switch
-
 - [x] 50+ customizable, toggleable gameplay modifiers
 - [x] Centralized GUI to manage modifiers
 - [x] An easy kill switch when you want the chaos to all *stop*
