@@ -213,7 +213,19 @@ scoreboard objectives add abch.tp_sneak.timer dummy
 #> Bedrock touch
 scoreboard objectives add abch.bedrock_touch.timer dummy
 scoreboard objectives add abch.bedrock_touch.sid dummy
-scoreboard objectives add abch.bedrock_touch.raytrace dummy
+scoreboard objectives add abch.bedrock_touch.raycast dummy
+
+#> 2020 Mode
+scoreboard objectives add abch.2020_mode.recurs dummy
+
+#> Death Orb
+scoreboard objectives add abch.death_orb.sid dummy
+scoreboard objectives add abch.death_orb.distance dummy
+scoreboard objectives add abch.death_orb dummy
+
+#> APIs
+# Distance library
+function abchc:apis/dist/load
 
 function abchc:modifiers/lag/load
 
