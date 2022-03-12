@@ -1,0 +1,26 @@
+{
+    "condition": "minecraft:value_check",
+    "value": {
+      "type": "minecraft:score",
+      "target": "this",
+      "score": "abch.death_orb.sid"
+    },
+    "range": {
+      "min": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": ".search"
+        },
+        "score": "abch.death_orb.sid"
+      },
+      "max": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": ".search"
+        },
+        "score": "abch.death_orb.sid"
+      }
+    }
+  }
