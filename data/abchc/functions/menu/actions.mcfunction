@@ -11,9 +11,6 @@
 # @output
 #   score @s abch.menu.bool
 #       Boolean for testing if there is a minecart
-#
-#alias entity gui @s
-#alias entity player @p[tag=abch.menu.this]
 
 # Update chest minecart GUI
 #execute as @a[nbt={SelectedItem:{tag:{abch:{menuStar:1b}}}}] at @s run function abchc:menu/update
