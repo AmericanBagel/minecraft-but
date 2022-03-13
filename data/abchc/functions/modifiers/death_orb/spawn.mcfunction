@@ -16,7 +16,7 @@ tag @p add abch.death_orb.init
 summon marker ~ ~ ~ {Tags:["global.ignore", "abch", "abch.death_orb", "abch.death_orb.marker", "abch.death_orb.init"],CustomName:'{"text":"abch.death_orb.marker"}'}
 
 # Move the death orb away from the player
-spreadplayers ~ ~ 30 60 false @e[ name="abch.death_orb.marker", tag=abch.death_orb.init ]
+spreadplayers ~ ~ 150 200 false @e[ name="abch.death_orb.marker", tag=abch.death_orb.init ]
 
 ## ID Linking
 # Add to global death orb count

@@ -15,8 +15,3 @@ scoreboard players operation @s abch.death_orb.distance = $out temp
 # Divide result by 1000 to get distance in blocks
 scoreboard players set $divisor abch.death_orb.distance 1000
 scoreboard players operation @s abch.death_orb.distance /= $divisor abch.death_orb.distance
-
-
-# temp
-scoreboard players operation $out abch.death_orb.distance = $out temp
-scoreboard players operation $out abch.death_orb.distance /= $divisor abch.death_orb.distance
