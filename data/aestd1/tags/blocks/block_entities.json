@@ -1,0 +1,81 @@
+{
+	"description": "All block entities",
+	"values": [
+		{
+			"id": "#minecraft:banners",
+			"required": false
+		},
+		{
+			"id": "#minecraft:beds",
+			"required": false
+		},
+		{
+			"id": "#minecraft:signs",
+			"required": false
+		},
+		{
+			"id": "#aestd1:command_blocks",
+			"required": false
+		},
+		{
+			"id": "#aestd1:heads",
+			"required": false
+		},
+		{
+			"id": "#aestd1:store_items",
+			"required": false
+		},
+		{
+			"id": "minecraft:beacon",
+			"required": false
+		},
+		{
+			"id": "minecraft:beehive",
+			"required": false
+		},
+		{
+			"id": "minecraft:bee_nest",
+			"required": false
+		},
+		{
+			"id": "minecraft:bell",
+			"required": false
+		},
+		{
+			"id": "minecraft:comparator",
+			"required": false
+		},
+		{
+			"id": "minecraft:conduit",
+			"required": false
+		},
+		{
+			"id": "minecraft:daylight_detector",
+			"required": false
+		},
+		{
+			"id": "minecraft:enchanting_table",
+			"required": false
+		},
+		{
+			"id": "minecraft:end_gateway",
+			"required": false
+		},
+		{
+			"id": "minecraft:end_portal",
+			"required": false
+		},
+		{
+			"id": "minecraft:ender_chest",
+			"required": false
+		},
+		{
+			"id": "minecraft:spawner",
+			"required": false
+		},
+		{
+			"id": "minecraft:structure_block",
+			"required": false
+		}
+	]
+}

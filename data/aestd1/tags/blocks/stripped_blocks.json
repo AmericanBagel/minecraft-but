@@ -1,0 +1,13 @@
+{
+	"description": "Stripped logs, wood, stems and hyphae",
+	"values": [
+		{
+			"id": "#aestd1:stripped_overworld_blocks",
+			"required": false
+		},
+		{
+			"id": "#aestd1:stripped_nether_blocks",
+			"required": false
+		}
+	]
+}

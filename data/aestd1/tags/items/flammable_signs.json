@@ -1,0 +1,29 @@
+{
+	"description": "Signs that can burn (i.e. signs built from overworld trees)",
+	"values": [
+		{
+			"id": "minecraft:acacia_sign",
+			"required": false
+		},
+		{
+			"id": "minecraft:birch_sign",
+			"required": false
+		},
+		{
+			"id": "minecraft:dark_oak_sign",
+			"required": false
+		},
+		{
+			"id": "minecraft:jungle_sign",
+			"required": false
+		},
+		{
+			"id": "minecraft:oak_sign",
+			"required": false
+		},
+		{
+			"id": "minecraft:spruce_sign",
+			"required": false
+		}
+	]
+}

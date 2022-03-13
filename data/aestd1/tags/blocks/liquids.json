@@ -1,0 +1,17 @@
+{
+	"description": "Lava and water",
+	"values": [
+		{
+			"id": "minecraft:water",
+			"required": false
+		},
+		{
+			"id": "minecraft:bubble_column",
+			"required": false
+		},
+		{
+			"id": "minecraft:lava",
+			"required": false
+		}
+	]
+}

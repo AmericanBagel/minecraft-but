@@ -1,0 +1,29 @@
+{
+	"description": "Consumable items that can inflict status effects upon consumption",
+	"values": [
+		{
+			"id": "#aestd1:can_inflict_hunger",
+			"required": false
+		},
+		{
+			"id": "minecraft:enchanted_golden_apple",
+			"required": false
+		},
+		{
+			"id": "minecraft:golden_apple",
+			"required": false
+		},
+		{
+			"id": "minecraft:potion",
+			"required": false
+		},
+		{
+			"id": "minecraft:pufferfish",
+			"required": false
+		},
+		{
+			"id": "minecraft:spider_eye",
+			"required": false
+		}
+	]
+}

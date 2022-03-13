@@ -1,0 +1,69 @@
+{
+	"description": "Blocks that generate in the end, including end city/end ship blocks",
+	"values": [
+		{
+			"id": "minecraft:end_stone",
+			"required": false
+		},
+		{
+			"id": "minecraft:obsidian",
+			"required": false
+		},
+		{
+			"id": "minecraft:bedrock",
+			"required": false
+		},
+		{
+			"id": "minecraft:iron_bars",
+			"required": false
+		},
+		{
+			"id": "minecraft:chorus_plant",
+			"required": false
+		},
+		{
+			"id": "minecraft:chorus_flower",
+			"required": false
+		},
+		{
+			"id": "#aestd1:end_stone_brick_blocks",
+			"required": false
+		},
+		{
+			"id": "#aestd1:purpur_blocks",
+			"required": false
+		},
+		{
+			"id": "minecraft:dragon_head",
+			"required": false
+		},
+		{
+			"id": "minecraft:dragon_wall_head",
+			"required": false
+		},
+		{
+			"id": "minecraft:magenta_stained_glass",
+			"required": false
+		},
+		{
+			"id": "minecraft:magenta_wall_banner",
+			"required": false
+		},
+		{
+			"id": "minecraft:ladder",
+			"required": false
+		},
+		{
+			"id": "minecraft:end_rod",
+			"required": false
+		},
+		{
+			"id": "minecraft:chest",
+			"required": false
+		},
+		{
+			"id": "minecraft:brewing_stand",
+			"required": false
+		}
+	]
+}

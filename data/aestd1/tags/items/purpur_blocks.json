@@ -1,0 +1,21 @@
+{
+	"description": "Blocks derived from purpur",
+	"values": [
+		{
+			"id": "minecraft:purpur_slab",
+			"required": false
+		},
+		{
+			"id": "minecraft:purpur_block",
+			"required": false
+		},
+		{
+			"id": "minecraft:purpur_pillar",
+			"required": false
+		},
+		{
+			"id": "minecraft:purpur_stairs",
+			"required": false
+		}
+	]
+}

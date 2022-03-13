@@ -1,0 +1,17 @@
+{
+	"description": "Piglin-type mobs",
+	"values": [
+		{
+			"id": "minecraft:piglin",
+			"required": false
+		},
+		{
+			"id": "minecraft:zombified_piglin",
+			"required": false
+		},
+		{
+			"id": "minecraft:piglin_brute",
+			"required": false
+		}
+	]
+}

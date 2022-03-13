@@ -1,0 +1,21 @@
+{
+	"description": "Leather armour, not including leather horse armour",
+	"values": [
+		{
+			"id": "minecraft:leather_boots",
+			"required": false
+		},
+		{
+			"id": "minecraft:leather_leggings",
+			"required": false
+		},
+		{
+			"id": "minecraft:leather_chestplate",
+			"required": false
+		},
+		{
+			"id": "minecraft:leather_helmet",
+			"required": false
+		}
+	]
+}

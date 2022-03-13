@@ -1,0 +1,53 @@
+{
+	"description": "Arbitrary. Placeable items, associated blocks are transparent blocks which entities can go through, therefore not including cactus and flower pots, but including coral fans, dead or not",
+	"values": [
+		{
+			"id": "#aestd1:nether_plants",
+			"required": false
+		},
+		{
+			"id": "#aestd1:all_corals",
+			"required": false
+		},
+		{
+			"id": "#minecraft:flowers",
+			"required": false
+		},
+		{
+			"id": "#minecraft:saplings",
+			"required": false
+		},
+		{
+			"id": "minecraft:grass",
+			"required": false
+		},
+		{
+			"id": "minecraft:fern",
+			"required": false
+		},
+		{
+			"id": "minecraft:dead_bush",
+			"required": false
+		},
+		{
+			"id": "minecraft:seagrass",
+			"required": false
+		},
+		{
+			"id": "minecraft:sea_pickle",
+			"required": false
+		},
+		{
+			"id": "minecraft:tall_grass",
+			"required": false
+		},
+		{
+			"id": "minecraft:large_fern",
+			"required": false
+		},
+		{
+			"id": "minecraft:kelp",
+			"required": false
+		}
+	]
+}

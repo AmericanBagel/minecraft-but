@@ -1,0 +1,113 @@
+{
+	"description": "Items that can be cooked into another in a furnace if no smelting recipes are added or removed",
+	"values": [
+		{
+			"id": "#aestd1:iron_armor",
+			"required": false
+		},
+		{
+			"id": "#aestd1:iron_tools",
+			"required": false
+		},
+		{
+			"id": "#aestd1:golden_armor",
+			"required": false
+		},
+		{
+			"id": "#aestd1:golden_tools",
+			"required": false
+		},
+		{
+			"id": "#aestd1:ores",
+			"required": false
+		},
+		{
+			"id": "#aestd1:raw_food",
+			"required": false
+		},
+		{
+			"id": "#aestd1:terracotta",
+			"required": false
+		},
+		{
+			"id": "#minecraft:logs_that_burn",
+			"required": false
+		},
+		{
+			"id": "minecraft:ancient_debris",
+			"required": false
+		},
+		{
+			"id": "minecraft:cactus",
+			"required": false
+		},
+		{
+			"id": "minecraft:clay",
+			"required": false
+		},
+		{
+			"id": "minecraft:clay_ball",
+			"required": false
+		},
+		{
+			"id": "minecraft:cobblestone",
+			"required": false
+		},
+		{
+			"id": "minecraft:chorus_fruit",
+			"required": false
+		},
+		{
+			"id": "minecraft:golden_horse_armor",
+			"required": false
+		},
+		{
+			"id": "minecraft:golden_sword",
+			"required": false
+		},
+		{
+			"id": "minecraft:iron_horse_armor",
+			"required": false
+		},
+		{
+			"id": "minecraft:iron_sword",
+			"required": false
+		},
+		{
+			"id": "minecraft:kelp",
+			"required": false
+		},
+		{
+			"id": "minecraft:netherrack",
+			"required": false
+		},
+		{
+			"id": "minecraft:nether_bricks",
+			"required": false
+		},
+		{
+			"id": "minecraft:red_sand",
+			"required": false
+		},
+		{
+			"id": "minecraft:sand",
+			"required": false
+		},
+		{
+			"id": "minecraft:sea_pickle",
+			"required": false
+		},
+		{
+			"id": "minecraft:stone",
+			"required": false
+		},
+		{
+			"id": "minecraft:stone_bricks",
+			"required": false
+		},
+		{
+			"id": "minecraft:wet_sponge",
+			"required": false
+		}
+	]
+}

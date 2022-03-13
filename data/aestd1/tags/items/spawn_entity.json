@@ -1,0 +1,73 @@
+{
+	"description": "All items that spawn an entity when used",
+	"values": [
+		{
+			"id": "#aestd1:spawn_eggs",
+			"required": false
+		},
+		{
+			"id": "#aestd1:minecarts",
+			"required": false
+		},
+		{
+			"id": "#minecraft:boats",
+			"required": false
+		},
+		{
+			"id": "minecraft:armor_stand",
+			"required": false
+		},
+		{
+			"id": "minecraft:egg",
+			"required": false
+		},
+		{
+			"id": "minecraft:end_crystal",
+			"required": false
+		},
+		{
+			"id": "minecraft:ender_eye",
+			"required": false
+		},
+		{
+			"id": "minecraft:ender_pearl",
+			"required": false
+		},
+		{
+			"id": "minecraft:experience_bottle",
+			"required": false
+		},
+		{
+			"id": "minecraft:firework_rocket",
+			"required": false
+		},
+		{
+			"id": "minecraft:item_frame",
+			"required": false
+		},
+		{
+			"id": "minecraft:lead",
+			"required": false
+		},
+		{
+			"id": "minecraft:lingering_potion",
+			"required": false
+		},
+		{
+			"id": "minecraft:painting",
+			"required": false
+		},
+		{
+			"id": "minecraft:snowball",
+			"required": false
+		},
+		{
+			"id": "minecraft:splash_potion",
+			"required": false
+		},
+		{
+			"id": "minecraft:trident",
+			"required": false
+		}
+	]
+}

@@ -1,0 +1,13 @@
+{
+	"description": "Crimson and warped nylium, same as the #minecraft:nylium block tag",
+	"values": [
+		{
+			"id": "minecraft:crimson_nylium",
+			"required": false
+		},
+		{
+			"id": "minecraft:warped_nylium",
+			"required": false
+		}
+	]
+}

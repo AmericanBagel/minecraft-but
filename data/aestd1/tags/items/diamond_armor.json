@@ -1,0 +1,21 @@
+{
+	"description": "Diamond armour, not including diamond horse armour",
+	"values": [
+		{
+			"id": "minecraft:diamond_boots",
+			"required": false
+		},
+		{
+			"id": "minecraft:diamond_leggings",
+			"required": false
+		},
+		{
+			"id": "minecraft:diamond_chestplate",
+			"required": false
+		},
+		{
+			"id": "minecraft:diamond_helmet",
+			"required": false
+		}
+	]
+}

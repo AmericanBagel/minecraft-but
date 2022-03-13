@@ -1,0 +1,41 @@
+{
+	"description": "Blocks derived from quartz",
+	"values": [
+		{
+			"id": "minecraft:quartz_slab",
+			"required": false
+		},
+		{
+			"id": "minecraft:smooth_quartz",
+			"required": false
+		},
+		{
+			"id": "minecraft:chiseled_quartz_block",
+			"required": false
+		},
+		{
+			"id": "minecraft:quartz_block",
+			"required": false
+		},
+		{
+			"id": "minecraft:quartz_bricks",
+			"required": false
+		},
+		{
+			"id": "minecraft:quartz_pillar",
+			"required": false
+		},
+		{
+			"id": "minecraft:quartz_stairs",
+			"required": false
+		},
+		{
+			"id": "minecraft:smooth_quartz_stairs",
+			"required": false
+		},
+		{
+			"id": "minecraft:smooth_quartz_slab",
+			"required": false
+		}
+	]
+}

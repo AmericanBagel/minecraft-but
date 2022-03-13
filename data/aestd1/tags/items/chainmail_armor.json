@@ -1,0 +1,21 @@
+{
+	"description": "Chainmail armour",
+	"values": [
+		{
+			"id": "minecraft:chainmail_boots",
+			"required": false
+		},
+		{
+			"id": "minecraft:chainmail_leggings",
+			"required": false
+		},
+		{
+			"id": "minecraft:chainmail_chestplate",
+			"required": false
+		},
+		{
+			"id": "minecraft:chainmail_helmet",
+			"required": false
+		}
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"description": "Shovels",
+	"values": [
+		{
+			"id": "minecraft:wooden_shovel",
+			"required": false
+		},
+		{
+			"id": "minecraft:stone_shovel",
+			"required": false
+		},
+		{
+			"id": "minecraft:iron_shovel",
+			"required": false
+		},
+		{
+			"id": "minecraft:golden_shovel",
+			"required": false
+		},
+		{
+			"id": "minecraft:diamond_shovel",
+			"required": false
+		},
+		{
+			"id": "minecraft:netherite_shovel",
+			"required": false
+		}
+	]
+}

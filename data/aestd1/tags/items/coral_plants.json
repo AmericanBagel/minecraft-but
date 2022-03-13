@@ -1,0 +1,25 @@
+{
+	"description": "Coral plants, not including dead variants. Same as the #minecraft:coral_plants block tag",
+	"values": [
+		{
+			"id": "minecraft:tube_coral",
+			"required": false
+		},
+		{
+			"id": "minecraft:brain_coral",
+			"required": false
+		},
+		{
+			"id": "minecraft:bubble_coral",
+			"required": false
+		},
+		{
+			"id": "minecraft:fire_coral",
+			"required": false
+		},
+		{
+			"id": "minecraft:horn_coral",
+			"required": false
+		}
+	]
+}

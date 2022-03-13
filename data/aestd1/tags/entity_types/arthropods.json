@@ -1,0 +1,25 @@
+{
+	"description": "Mobs that take more damage when attacked with a weapon enchanted with Bane of Arthropods",
+	"values": [
+		{
+			"id": "minecraft:spider",
+			"required": false
+		},
+		{
+			"id": "minecraft:cave_spider",
+			"required": false
+		},
+		{
+			"id": "minecraft:bee",
+			"required": false
+		},
+		{
+			"id": "minecraft:silverfish",
+			"required": false
+		},
+		{
+			"id": "minecraft:endermite",
+			"required": false
+		}
+	]
+}

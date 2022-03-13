@@ -1,0 +1,49 @@
+{
+	"description": "Blocks that can catch fire and go up in flames",
+	"values": [
+		{
+			"id": "#aestd1:flammable_wood",
+			"required": false
+		},
+		{
+			"id": "#aestd1:plants",
+			"required": false
+		},
+		{
+			"id": "#minecraft:carpets",
+			"required": false
+		},
+		{
+			"id": "#minecraft:leaves",
+			"required": false
+		},
+		{
+			"id": "#minecraft:wool",
+			"required": false
+		},
+		{
+			"id": "minecraft:coal_block",
+			"required": false
+		},
+		{
+			"id": "minecraft:bookshelf",
+			"required": false
+		},
+		{
+			"id": "minecraft:target",
+			"required": false
+		},
+		{
+			"id": "minecraft:tnt",
+			"required": false
+		},
+		{
+			"id": "minecraft:vine",
+			"required": false
+		},
+		{
+			"id": "minecraft:hay_block",
+			"required": false
+		}
+	]
+}

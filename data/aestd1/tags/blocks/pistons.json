@@ -1,0 +1,17 @@
+{
+	"description": "Blocks that comprise pistons, sticky or not",
+	"values": [
+		{
+			"id": "minecraft:piston",
+			"required": false
+		},
+		{
+			"id": "minecraft:sticky_piston",
+			"required": false
+		},
+		{
+			"id": "minecraft:piston_head",
+			"required": false
+		}
+	]
+}

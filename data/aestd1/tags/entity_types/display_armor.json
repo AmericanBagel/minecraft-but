@@ -1,0 +1,29 @@
+{
+	"description": "Mobs who can display the armour they wear, excluding horse armour",
+	"values": [
+		{
+			"id": "minecraft:armor_stand",
+			"required": false
+		},
+		{
+			"id": "minecraft:piglin",
+			"required": false
+		},
+		{
+			"id": "minecraft:zombified_piglin",
+			"required": false
+		},
+		{
+			"id": "minecraft:piglin_brute",
+			"required": false
+		},
+		{
+			"id": "#minecraft:skeletons",
+			"required": false
+		},
+		{
+			"id": "#aestd1:zombies",
+			"required": false
+		}
+	]
+}

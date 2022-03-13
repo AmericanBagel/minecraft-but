@@ -1,0 +1,29 @@
+{
+	"description": "Stairs that can burn (i.e. wooden stairs built from overworld trees)",
+	"values": [
+		{
+			"id": "minecraft:acacia_stairs",
+			"required": false
+		},
+		{
+			"id": "minecraft:birch_stairs",
+			"required": false
+		},
+		{
+			"id": "minecraft:dark_oak_stairs",
+			"required": false
+		},
+		{
+			"id": "minecraft:jungle_stairs",
+			"required": false
+		},
+		{
+			"id": "minecraft:oak_stairs",
+			"required": false
+		},
+		{
+			"id": "minecraft:spruce_stairs",
+			"required": false
+		}
+	]
+}

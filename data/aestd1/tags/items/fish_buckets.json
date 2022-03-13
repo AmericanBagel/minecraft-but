@@ -1,0 +1,21 @@
+{
+	"description": "Buckets of fish",
+	"values": [
+		{
+			"id": "minecraft:cod_bucket",
+			"required": false
+		},
+		{
+			"id": "minecraft:salmon_bucket",
+			"required": false
+		},
+		{
+			"id": "minecraft:pufferfish_bucket",
+			"required": false
+		},
+		{
+			"id": "minecraft:tropical_fish_bucket",
+			"required": false
+		}
+	]
+}

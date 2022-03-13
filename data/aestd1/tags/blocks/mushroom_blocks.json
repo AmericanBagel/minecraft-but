@@ -1,0 +1,17 @@
+{
+	"description": "Blocks that generate as part of huge mushrooms",
+	"values": [
+		{
+			"id": "minecraft:red_mushroom_block",
+			"required": false
+		},
+		{
+			"id": "minecraft:brown_mushroom_block",
+			"required": false
+		},
+		{
+			"id": "minecraft:mushroom_stem",
+			"required": false
+		}
+	]
+}

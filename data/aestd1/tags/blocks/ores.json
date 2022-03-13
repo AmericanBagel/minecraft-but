@@ -1,0 +1,45 @@
+{
+	"description": "Ores, including gilded blackstone",
+	"values": [
+		{
+			"id": "minecraft:coal_ore",
+			"required": false
+		},
+		{
+			"id": "minecraft:iron_ore",
+			"required": false
+		},
+		{
+			"id": "minecraft:lapis_ore",
+			"required": false
+		},
+		{
+			"id": "minecraft:gilded_blackstone",
+			"required": false
+		},
+		{
+			"id": "minecraft:gold_ore",
+			"required": false
+		},
+		{
+			"id": "minecraft:redstone_ore",
+			"required": false
+		},
+		{
+			"id": "minecraft:emerald_ore",
+			"required": false
+		},
+		{
+			"id": "minecraft:diamond_ore",
+			"required": false
+		},
+		{
+			"id": "minecraft:nether_gold_ore",
+			"required": false
+		},
+		{
+			"id": "minecraft:nether_quartz_ore",
+			"required": false
+		}
+	]
+}
