@@ -13,7 +13,7 @@ execute if score damage_nausea abch.toggle matches 1 run function abchc:modifier
 execute if score deadly_falls abch.toggle matches 1 run function abchc:modifiers/deadly_falls/main
 execute if score deadly_colors abch.toggle matches 1 run function abchc:modifiers/deadly_colors/main
 execute if score death_orb abch.toggle matches 1 run function abchc:modifiers/death_orb/main
-execute if score delicate_expl abch.toggle matches 1 run function abchc:modifiers/delicate_explosives/main
+execute if score delicate_explosives abch.toggle matches 1 run function abchc:modifiers/delicate_explosives/main
 execute if score degradation abch.toggle matches 1 run function abchc:modifiers/degradation/main
 execute if score diamonds_to_coal abch.toggle matches 1 run function abchc:modifiers/diamonds_to_coal/main
 execute if score effect_arrows abch.toggle matches 1 run function abchc:modifiers/effect_arrows/main
@@ -72,7 +72,10 @@ execute if score toxic_water abch.toggle matches 1 run function abchc:modifiers/
 execute if score troglodyte abch.toggle matches 1 run function abchc:modifiers/troglodyte/main
 execute if score unstable_inv abch.toggle matches 1 run function abchc:modifiers/unstable_inv/main
 execute if score vengeful_slimes abch.toggle matches 1 run function abchc:modifiers/vengeful_slimes/main
-execute if score volatile_creeper abch.toggle matches 1 run function abchc:modifiers/volatile_creepers/main
+execute if score volatile_creepers abch.toggle matches 1 run function abchc:modifiers/volatile_creepers/main
 execute if score walk_leveling abch.toggle matches 1 run function abchc:modifiers/walk_leveling/main
+execute if score waning_wellness abch.toggle matches 1 run function abchc:modifiers/waning_wellness/main
 execute if score yeet abch.toggle matches 1 run function abchc:modifiers/yeet/main
 execute if score ytpwyl abch.toggle matches 1 run function abchc:modifiers/you_tp_where_you_look/main
+
+scoreboard players reset @a abch.deaths

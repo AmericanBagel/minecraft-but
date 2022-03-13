@@ -10,6 +10,7 @@ scoreboard objectives add abch.modifier dummy
 scoreboard objectives add abch.timer dummy
 scoreboard objectives add abch.config dummy
 scoreboard objectives add abch.minute dummy
+scoreboard objectives add abch.deaths deathCount
 
 ##### Team Colors ####
 team add abchc.color.dark_red
@@ -229,6 +230,13 @@ scoreboard objectives add abch.keep_moving.x dummy
 scoreboard objectives add abch.keep_moving.y dummy
 scoreboard objectives add abch.keep_moving.z dummy
 scoreboard objectives add abch.keep_moving.still_time dummy
+
+#> Botanophobia
+scoreboard objectives add abch.botanophobia.deaths deathCount
+
+#> Waning Wellness
+scoreboard objectives add abch.waning_wellness.death_time minecraft.custom:minecraft.time_since_death
+scoreboard objectives add abch.waning_wellness.max_health dummy
 
 #> APIs
 # Distance library
