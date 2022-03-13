@@ -1,0 +1,27 @@
+{
+    "criteria": {
+        "enterbastion": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "dimension": "the_nether",
+                "feature": "bastion_remnant",
+                "smokey": false
+            }
+        },
+        "lootbastion": {
+            "trigger": "minecraft:player_generates_container_loot",
+            "conditions": {
+                "loot_table": "minecraft:chests/bastion_treasure"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "enterbastion",
+            "lootbastion"
+        ]
+    ],
+    "rewards": {
+        "function": "abchc:modifiers/waning_wellness/check_milestone"
+    }
+}

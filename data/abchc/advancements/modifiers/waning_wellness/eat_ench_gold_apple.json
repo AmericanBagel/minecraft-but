@@ -1,0 +1,15 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:consume_item",
+        "conditions": {
+          "item": {
+            "id": "minecraft:enchanted_golden_apple"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "abchc:modifiers/waning_wellness/eat_golden_apple"
+    }
+  }
