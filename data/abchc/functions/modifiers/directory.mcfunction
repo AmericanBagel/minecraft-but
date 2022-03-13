@@ -33,6 +33,7 @@ execute if score fire_walker abch.toggle matches 1 run function abchc:modifiers/
 execute if score flying_skeletons abch.toggle matches 1 run function abchc:modifiers/flying_skeletons/main
 execute if score food_poisoning abch.toggle matches 1 run function abchc:modifiers/food_poisoning/main
 execute if score insta_creeper abch.toggle matches 1 run function abchc:modifiers/insta_creeper/main
+execute if score keep_moving abch.toggle matches 1 run function abchc:modifiers/keep_moving/main
 execute if score lag abch.toggle matches 1 run function abchc:modifiers/lag/main
 execute if score lazy_inventory abch.toggle matches 1 run function abchc:modifiers/lazy_inventory/main
 execute if score lightning_storm abch.toggle matches 1 run function abchc:modifiers/lightning_storm/main

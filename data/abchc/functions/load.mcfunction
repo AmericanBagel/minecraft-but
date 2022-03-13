@@ -221,7 +221,14 @@ scoreboard objectives add abch.2020_mode.recurs dummy
 #> Death Orb
 scoreboard objectives add abch.death_orb.sid dummy
 scoreboard objectives add abch.death_orb.distance dummy
+scoreboard objectives add abch.death_orb.factor dummy
 scoreboard objectives add abch.death_orb dummy
+
+#> Keep Moving
+scoreboard objectives add abch.keep_moving.x dummy
+scoreboard objectives add abch.keep_moving.y dummy
+scoreboard objectives add abch.keep_moving.z dummy
+scoreboard objectives add abch.keep_moving.still_time dummy
 
 #> APIs
 # Distance library
