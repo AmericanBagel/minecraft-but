@@ -12,6 +12,11 @@ scoreboard objectives add abch.config dummy
 scoreboard objectives add abch.minute dummy
 scoreboard objectives add abch.deaths deathCount
 
+scoreboard objectives add abch.math dummy
+scoreboard players set #100 abch.math 100
+scoreboard players set #neginf abch.math -2147483647
+scoreboard players set #inf abch.math 2147483647
+
 ##### Team Colors ####
 team add abchc.color.dark_red
 team modify abchc.color.dark_red color dark_red
@@ -89,9 +94,7 @@ execute unless score anvil_rain.relative abch.config matches 0..1 run scoreboard
 # anvil_rain.chance - Anvil spawn rate - INTEGER - DEF 1
 execute unless score anvil_rain.chance abch.config matches 0.. run scoreboard players set anvil_rain.chance abch.config 1
 
-scoreboard objectives add abch.anvil_rain.random dummy
-scoreboard objectives add abch.anvil_rain.Y dummy
-scoreboard objectives add abch.anvil_rain.Yoffset dummy
+scoreboard objectives add abch.anvil_rain dummy
 
 ## Degradation
 # degradation.speed - Degradation speed - INTEGER - DEF 1
@@ -238,9 +241,14 @@ scoreboard objectives add abch.botanophobia.deaths deathCount
 scoreboard objectives add abch.waning_wellness.death_time minecraft.custom:minecraft.time_since_death
 scoreboard objectives add abch.waning_wellness.max_health dummy
 
+#> Unstable Inventory
+scoreboard objectives add abch.unstable_inv.damage minecraft.custom:minecraft.damage_taken
+scoreboard objectives add abch.unstable_inv dummy
+
 #> APIs
 # Distance library
 function abchc:apis/dist/load
+function abchc:apis/rng/init
 
 function abchc:modifiers/lag/load
 
