@@ -1,3 +1,8 @@
+#> abchc:modifiers/anvil_rain/mark_destroy
+# Mark anvils for destruction and destroy after one tick
+# @context anvil marker
+# @within abchc:modifiers/anvil_rain/main
+
 # 1 tick after being tagged by the commands below, destroy anvil and kill marker
 execute as @s[ tag=abch.anvil_rain.destroy ] run function abchc:modifiers/anvil_rain/destroy_anvil
 # Play particles 1 tick before destroying anvils. Playing particles before it is deleted makes it look smooth and less laggy. ¯\_(ツ)_/¯
