@@ -1,10 +1,40 @@
-scoreboard objectives add abch.menu dummy
-scoreboard objectives add abch.menu.sid dummy
-scoreboard objectives add abch.menu.sid.pbool dummy
-scoreboard objectives add abch.menu.sid.bool dummy
+scoreboard objectives add abch.menu.page dummy
+
+#> Config
+## Difficulty scoreboard
+scoreboard objectives add abch.difficulty dummy
+# If no value is assigned to global difficulty, set it to normal (2)
+# 1 = Easy
+# 2 = Normal
+# 3 = Hard
+execute unless score .global abch.difficulty matches ..1 unless score .global abch.difficulty matches 3.. run scoreboard players set .global abch.difficulty 2
+
+## Toggle
+scoreboard objectives add abch.toggle dummy
+# If no value is assigned to toggle, set it to 1
+execute unless score .global abch.toggle matches 0..1 run scoreboard players set .global abch.toggle 1
+
+## Expansion Pack Support
+scoreboard objectives add abch.expansion dummy
+# Reset expansion pack loaded status so
+# it's always updated after loading
+scoreboard players reset * abch.expansion
+
+## Add scores together for total
+scoreboard players operation $total abch.expansion = $1 abch.expansion
+scoreboard players operation $total abch.expansion += $2 abch.expansion
+scoreboard players operation $total abch.expansion += $3 abch.expansion
+scoreboard players operation $total abch.expansion += $4 abch.expansion
+scoreboard players operation $total abch.expansion += $5 abch.expansion
+
+## Run expansion pack loading functions
+function abch.ex1:update_status
+function abch.ex2:update_status
+function abch.ex3:update_status
+function abch.ex4:update_status
 
 scoreboard objectives add abch.isSpawned dummy
-scoreboard objectives add abch.toggle dummy
+
 scoreboard objectives add abch.debug dummy
 scoreboard objectives add abch.modifier dummy
 scoreboard objectives add abch.timer dummy
@@ -16,6 +46,7 @@ scoreboard objectives add abch.math dummy
 scoreboard players set #100 abch.math 100
 scoreboard players set #neginf abch.math -2147483647
 scoreboard players set #inf abch.math 2147483647
+scoreboard players set #8 abch.math 8
 
 ##### Team Colors ####
 team add abchc.color.dark_red
@@ -73,7 +104,6 @@ scoreboard objectives add abch.naDmg minecraft.custom:minecraft.damage_taken
 scoreboard objectives add abch.dyingTotem minecraft.used:minecraft.totem_of_undying
 scoreboard objectives add abch.death deathCount
 scoreboard objectives add abch.fall minecraft.custom:minecraft.fall_one_cm
-scoreboard objectives add abch.eatCF minecraft.used:minecraft.chorus_fruit
 
 scoreboard objectives add abch.webKill dummy
 scoreboard objectives add abch.yeet dummy
@@ -244,6 +274,12 @@ scoreboard objectives add abch.waning_wellness.max_health dummy
 #> Unstable Inventory
 scoreboard objectives add abch.unstable_inv.damage minecraft.custom:minecraft.damage_taken
 scoreboard objectives add abch.unstable_inv dummy
+
+#> Teleport Chorus
+scoreboard objectives add abch.teleport_chorus dummy
+scoreboard objectives add abch.teleport_chorus.eat minecraft.used:minecraft.chorus_fruit
+
+
 
 #> APIs
 # Distance library

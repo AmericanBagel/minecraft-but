@@ -7,6 +7,7 @@ execute if score blindness abch.toggle matches 1 run function abchc:modifiers/bl
 execute if score chunk_error abch.toggle matches 1 run function abchc:modifiers/chunk_error/main
 execute if score confetti_funeral abch.toggle matches 1 run function abchc:modifiers/confetti_funeral/main
 execute if score crawling abch.toggle matches 1 run function abchc:modifiers/crawling/main
+execute if score creeper_mobs abch.toggle matches 1 run function abchc:modifiers/creeper_mobs/main
 execute if score creeper_nukes abch.toggle matches 1 run function abchc:modifiers/creeper_nukes/main
 execute if score creeper_reinf abch.toggle matches 1 run function abchc:modifiers/creeper_reinforcements/main
 execute if score damage_nausea abch.toggle matches 1 run function abchc:modifiers/damage_nausea/main
@@ -62,10 +63,10 @@ execute if score stacked_pigs abch.toggle matches 1 run function abchc:modifiers
 execute if score super_sponge abch.toggle matches 1 run function abchc:modifiers/super_sponge/main
 execute if score superhot abch.toggle matches 1 run function abchc:modifiers/superhot/main
 execute if score sus_injury abch.toggle matches 1 run function abchc:modifiers/suspicious_injury/main
-execute if score teleport_chorus abch.toggle matches 1 run function abchc:modifiers/teleport_chorus/main
 execute if score tp_arrows abch.toggle matches 1 run function abchc:modifiers/tp_arrows/main
 execute if score tp_sneak abch.toggle matches 1 run function abchc:modifiers/tp_sneak/main
 execute if score tnt_rain abch.toggle matches 1 run function abchc:modifiers/tnt_rain/main
+execute if score tnt_bats abch.toggle matches 1 run function abchc:modifiers/tnt_bats/main
 execute if score totems_of_dying abch.toggle matches 1 run function abchc:modifiers/totems_of_dying/main
 execute if score toxic_grass abch.toggle matches 1 run function abchc:modifiers/toxic_grass/main
 execute if score toxic_water abch.toggle matches 1 run function abchc:modifiers/toxic_water/main
