@@ -5,3 +5,4 @@
 # @context root
 
 function abchc:modifiers/creeper_mobs/load
+function abchc:modifiers/creeper_nukes/load

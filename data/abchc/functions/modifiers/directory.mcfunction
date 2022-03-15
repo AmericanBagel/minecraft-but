@@ -29,6 +29,7 @@ execute if score explosive_xp abch.toggle matches 1 run function abchc:modifiers
 execute if score explosive_phantoms abch.toggle matches 1 run function abchc:modifiers/explosive_phantoms/main
 execute if score fast_arrows abch.toggle matches 1 run function abchc:modifiers/fast_arrows/main
 execute if score fast_creepers abch.toggle matches 1 run function abchc:modifiers/fast_creepers/main
+execute if score feature_fanatic abch.toggle matches 1 run function abchc:modifiers/feature_fanatic/main
 execute if score fire_rain abch.toggle matches 1 run function abchc:modifiers/fire_rain/main
 execute if score fire_walker abch.toggle matches 1 run function abchc:modifiers/fire_walker/main
 execute if score flying_skeletons abch.toggle matches 1 run function abchc:modifiers/flying_skeletons/main

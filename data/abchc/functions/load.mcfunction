@@ -7,7 +7,7 @@ scoreboard objectives add abch.difficulty dummy
 # 1 = Easy
 # 2 = Normal
 # 3 = Hard
-execute unless score .global abch.difficulty matches ..1 unless score .global abch.difficulty matches 3.. run scoreboard players set .global abch.difficulty 2
+execute unless score difficulty.global abch.config matches ..1 unless score difficulty.global abch.config matches 3.. run scoreboard players set difficulty.global abch.config 2
 
 ## Toggle
 scoreboard objectives add abch.toggle dummy
@@ -33,12 +33,17 @@ function abch.ex2:update_status
 function abch.ex3:update_status
 function abch.ex4:update_status
 
+## Gamerules
+execute unless score gamerule.mobGriefing abch.config matches 0..1 store result score gamerule.mobGriefing abch.config run gamerule mobGriefing
+execute unless score gamerule.showDeathMessages abch.config matches 0..1 store result score gamerule.showDeathMessages abch.config run gamerule mobGriefing
+
 scoreboard objectives add abch.isSpawned dummy
 
 scoreboard objectives add abch.debug dummy
 scoreboard objectives add abch.modifier dummy
 scoreboard objectives add abch.timer dummy
 scoreboard objectives add abch.config dummy
+scoreboard objectives add abch.default dummy
 scoreboard objectives add abch.minute dummy
 scoreboard objectives add abch.deaths deathCount
 
@@ -279,7 +284,10 @@ scoreboard objectives add abch.unstable_inv dummy
 scoreboard objectives add abch.teleport_chorus dummy
 scoreboard objectives add abch.teleport_chorus.eat minecraft.used:minecraft.chorus_fruit
 
+#> Modifiers
+function abchc:modifiers/load
 
+scoreboard objectives add abch.modifier.temp dummy
 
 #> APIs
 # Distance library
