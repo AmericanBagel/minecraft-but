@@ -1,0 +1,245 @@
+[
+    "",
+    {
+        "text": "---------------------------------------------",
+        "color": "#0F21C6"
+    },
+    "\n",
+    {
+        "text": "Minecraft, ",
+        "color": "#6BD716"
+    },
+    {
+        "text": "but ",
+        "bold": true,
+        "color": "#6BD716"
+    },
+    {
+        "text": "— a data pack by ",
+        "color": "#ECEFF5"
+    },
+    {
+        "text": "AmericanBagel",
+        "color": "#EB0DD7"
+    },
+    "\n",
+    {
+        "text": "---------------------------------------------",
+        "color": "#0F21C6"
+    },
+    "\n",
+    {
+        "text": "[✔]",
+        "bold": true,
+        "color": "#3ED011"
+    },
+    {
+        "text": " ENABLED",
+        "color": "#3ED011",
+        "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+                {
+                    "text": "Click here to turn the data pack ",
+                    "color": "#ECEFF5"
+                },
+                {
+                    "text": "OFF",
+                    "bold": true,
+                    "color": "#FF0000"
+                },
+                {
+                    "text": ".",
+                    "color": "#ECEFF5"
+                }
+            ]
+        }
+    },
+    "\n",
+    "\n",
+    {
+        "text": "|→ ",
+        "color": "#ECEFF5",
+        "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+                {
+                    "text": "Click here to go to the ",
+                    "color": "#ECEFF5"
+                },
+                {
+                    "text": "Information",
+                    "color": "#E4EB18"
+                },
+                {
+                    "text": " page which has information about this data pack and how to use it.",
+                    "color": "#ECEFF5"
+                }
+            ]
+        }
+    },
+    {
+        "text": "Information",
+        "color": "#E4EB18",
+        "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+                {
+                    "text": "Click here to go to the ",
+                    "color": "#ECEFF5"
+                },
+                {
+                    "text": "Information",
+                    "color": "#E4EB18"
+                },
+                {
+                    "text": " page.",
+                    "color": "#ECEFF5"
+                }
+            ]
+        }
+    },
+    "\n",
+    {
+        "text": "|→ ",
+        "color": "#ECEFF5"
+    },
+    {
+        "text": "Modifiers",
+        "color": "#CF2020",
+        "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+                {
+                    "text": "Click here to go to the ",
+                    "color": "#ECEFF5"
+                },
+                {
+                    "text": "Modifiers",
+                    "color": "#CF2020"
+                },
+                {
+                    "text": " page which allows you to toggle and configure \"Minecraft, but\" gameplay modifiers.",
+                    "color": "#ECEFF5"
+                }
+            ]
+        }
+    },
+    "\n",
+    {
+        "text": "|→ ",
+        "color": "#ECEFF5"
+    },
+    {
+        "text": "Config",
+        "color": "#20CBA8",
+        "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+                {
+                    "text": "Click here to go to the ",
+                    "color": "#ECEFF5"
+                },
+                {
+                    "text": "Config",
+                    "color": "#20CBA8"
+                },
+                {
+                    "text": " page which allows you to configure the data pack.",
+                    "color": "#ECEFF5"
+                }
+            ]
+        }
+    },
+    "\n",
+    {
+        "text": "|→ ",
+        "color": "#ECEFF5"
+    },
+    {
+        "text": "Credits",
+        "color": "#A8A8A8",
+        "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+                {
+                    "text": "Click here to go to the ",
+                    "color": "#ECEFF5"
+                },
+                {
+                    "text": "Credits",
+                    "color": "#A8A8A8"
+                },
+                {
+                    "text": " page which has a list of everyone who made this data pack possible!",
+                    "color": "#ECEFF5"
+                }
+            ]
+        }
+    },
+    "\n",
+    {
+        "text": "|→ ",
+        "color": "#ECEFF5"
+    },
+    {
+        "text": "Admin Panel",
+        "color": "#801212",
+        "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+                {
+                    "text": "Click here to go to the ",
+                    "color": "#ECEFF5"
+                },
+                {
+                    "text": "Admin Panel",
+                    "color": "#801212"
+                },
+                {
+                    "text": " page for including, and excluding players from being affected by modifiers and for selecting who can configure the data pack.",
+                    "color": "#ECEFF5"
+                }
+            ]
+        }
+    },
+    "\n",
+    "\n",
+    {
+        "score": {
+            "name": "$total",
+            "objective": "abch.toggle"
+        },
+        "color": "#17B7CD"
+    },
+    {
+        "text": " modifiers active",
+        "color": "#17B7CD"
+    },
+    "\n",
+    {
+        "text": "Difficulty: ",
+        "color": "#20CBA8"
+    },
+    {
+        "text": "← ",
+        "color": "#ECEFF5"
+    },
+    {
+        "text": "Easy ☮",
+        "color": "#3ED011"
+    },
+    {
+        "text": "Normal ☯",
+        "color": "#E4EB18"
+    },
+    {
+        "text": "Hard ☠",
+        "color": "#FF0000"
+    },
+    {
+        "text": " →",
+        "color": "#ECEFF5"
+    },
+    "\n"
+]
