@@ -1,6 +1,12 @@
-execute store result score .global abch.effect run loot spawn ~ -1000 ~ loot abchc:1r29
-execute store result score .global abch.efLvl run loot spawn ~ -1000 ~ loot abchc:1r10
+scoreboard players set in abch.rng.math 1
+scoreboard players set in1 abch.rng.math 29
+function abchc:apis/rng/range
+scoreboard players operation .global abch.effect = out abch.rng.math
 
+scoreboard players set in abch.rng.math 1
+scoreboard players set in1 abch.rng.math 10
+function abchc:apis/rng/range
+scoreboard players operation .global abch.efLvl = out abch.rng.math
 
 execute if score .global abch.efLvl matches 1 if score .global abch.effect matches 1 run effect give @a[ tag=!blacklist, tag=!global.ignore ] speed 60 0 false
 execute if score .global abch.efLvl matches 1 if score .global abch.effect matches 2 run effect give @a[ tag=!blacklist, tag=!global.ignore ] slowness 60 0 false

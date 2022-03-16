@@ -1,4 +1,7 @@
-execute store result score @s abch.siEffect run loot spawn ~ -1000 ~ loot abchc:1r29
+scoreboard players set in abch.rng.math 1
+scoreboard players set in1 abch.rng.math 29
+function abchc:apis/rng/range
+scoreboard players operation @s abch.siEffect = out abch.rng.math
 
 execute if score @s abch.siEffect matches 1 run effect give @s speed 60 0 false
 execute if score @s abch.siEffect matches 2 run effect give @s slowness 60 0 false
