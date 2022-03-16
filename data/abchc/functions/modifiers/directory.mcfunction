@@ -39,6 +39,7 @@ execute if score keep_moving abch.toggle matches 1 run function abchc:modifiers/
 execute if score lag abch.toggle matches 1 run function abchc:modifiers/lag/main
 execute if score lazy_inventory abch.toggle matches 1 run function abchc:modifiers/lazy_inventory/main
 execute if score lightning_storm abch.toggle matches 1 run function abchc:modifiers/lightning_storm/main
+execute if score limited_inventory abch.toggle matches 1 run function abchc:modifiers/limited_inventory/main
 execute if score look_straight abch.toggle matches 1 run function abchc:modifiers/look_straight/main
 execute if score loose_hotbar abch.toggle matches 1 run function abchc:modifiers/loose_hotbar/main
 execute if score mermaid abch.toggle matches 1 run function abchc:modifiers/mermaid/main

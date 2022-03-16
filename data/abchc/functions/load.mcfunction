@@ -1,8 +1,7 @@
 scoreboard objectives add abch.menu.page dummy
 
 #> Config
-## Difficulty scoreboard
-scoreboard objectives add abch.difficulty dummy
+## Difficulty config
 # If no value is assigned to global difficulty, set it to normal (2)
 # 1 = Easy
 # 2 = Normal
@@ -52,6 +51,8 @@ scoreboard players set #100 abch.math 100
 scoreboard players set #neginf abch.math -2147483647
 scoreboard players set #inf abch.math 2147483647
 scoreboard players set #8 abch.math 8
+scoreboard players set #2 abch.math 2
+scoreboard players set #1 abch.math 1
 
 ##### Team Colors ####
 team add abchc.color.dark_red

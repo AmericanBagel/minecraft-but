@@ -29,15 +29,15 @@ execute if score difficulty.sync abch.config matches 1 if score difficulty.globa
 execute if score difficulty.sync abch.config matches 1 if score difficulty.global abch.config matches 3 run tellraw @s [{"text":"Difficulty: ","color":"#20CBA8"},{"text":"←  ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/actions/previous_difficulty"}},{"text":"Hard ☠","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Hard","color":"#FF0000"},{"text":" is the most brutal difficulty for people who like absolute destruction and chaos. Destruction? Certainly. Death? More than you can count. Fun? ¯\\_(ツ)_/¯","color":"#ECEFF5"}]}},{"text":"  →","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/actions/next_difficulty"}}]
 
 #> Expansion Packs
-execute if score $1 abch.difficulty matches 1 run tellraw @p {"nbt":"title","storage":"abch.ex1","interpret":true}
-execute if score $1 abch.difficulty matches 2 run tellraw @p {"nbt":"title","storage":"abch.ex2","interpret":true}
-execute if score $1 abch.difficulty matches 3 run tellraw @p {"nbt":"title","storage":"abch.ex3","interpret":true}
-execute if score $1 abch.difficulty matches 4 run tellraw @p {"nbt":"title","storage":"abch.ex4","interpret":true}
-execute if score $1 abch.difficulty matches 5 run tellraw @p {"nbt":"title","storage":"abch.ex5","interpret":true}
-execute if score $1 abch.difficulty matches 6 run tellraw @p {"nbt":"title","storage":"abch.ex6","interpret":true}
-execute if score $1 abch.difficulty matches 7 run tellraw @p {"nbt":"title","storage":"abch.ex7","interpret":true}
-execute if score $1 abch.difficulty matches 8 run tellraw @p {"nbt":"title","storage":"abch.ex8","interpret":true}
-execute if score $1 abch.difficulty matches 9 run tellraw @p {"nbt":"title","storage":"abch.ex9","interpret":true}
+execute if score $1 abch.expansion matches 1 run tellraw @p {"nbt":"title","storage":"abch.ex1","interpret":true}
+execute if score $1 abch.expansion matches 2 run tellraw @p {"nbt":"title","storage":"abch.ex2","interpret":true}
+execute if score $1 abch.expansion matches 3 run tellraw @p {"nbt":"title","storage":"abch.ex3","interpret":true}
+execute if score $1 abch.expansion matches 4 run tellraw @p {"nbt":"title","storage":"abch.ex4","interpret":true}
+execute if score $1 abch.expansion matches 5 run tellraw @p {"nbt":"title","storage":"abch.ex5","interpret":true}
+execute if score $1 abch.expansion matches 6 run tellraw @p {"nbt":"title","storage":"abch.ex6","interpret":true}
+execute if score $1 abch.expansion matches 7 run tellraw @p {"nbt":"title","storage":"abch.ex7","interpret":true}
+execute if score $1 abch.expansion matches 8 run tellraw @p {"nbt":"title","storage":"abch.ex8","interpret":true}
+execute if score $1 abch.expansion matches 9 run tellraw @p {"nbt":"title","storage":"abch.ex9","interpret":true}
 
 #,"clickEvent":{"action":"run_command","value":"/function abchc:menu/"}
 
