@@ -8,27 +8,27 @@ execute as @e[ type=armor_stand, name="abch.chunkError" ] store result entity @s
 #Uses recursion to check for void.
 execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s positioned ~ 256 ~ run function abchc:modifiers/chunk_error/recursion
 
-execute as @e[ type=armor_stand, name="abch.chunkError" ] store result score @s abch.CEChunkX run data get entity @s Pos[0] 0.0625
-execute as @e[ type=armor_stand, name="abch.chunkError" ] store result score @s abch.CEChunkZ run data get entity @s Pos[2] 0.0625
+execute as @e[ type=armor_stand, name="abch.chunkError" ] store result score @s abch.chunk_error.x run data get entity @s Pos[0] 0.0625
+execute as @e[ type=armor_stand, name="abch.chunkError" ] store result score @s abch.chunk_error.z run data get entity @s Pos[2] 0.0625
 
-execute as @a[ tag=!blacklist, tag=!global.ignore ] store result score @s abch.CEChunkX run data get entity @s Pos[0] 0.0625
-execute as @a[ tag=!blacklist, tag=!global.ignore ] store result score @s abch.CEChunkZ run data get entity @s Pos[2] 0.0625
+execute as @a[ tag=!blacklist, tag=!global.ignore ] store result score @s abch.chunk_error.x run data get entity @s Pos[0] 0.0625
+execute as @a[ tag=!blacklist, tag=!global.ignore ] store result score @s abch.chunk_error.z run data get entity @s Pos[2] 0.0625
 
-execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players reset @s abch.CEChunkT
-execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players operation @s abch.CEChunkT = @s abch.CEChunkX
-execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players operation @s abch.CEChunkT *= @s abch.CEChunkZ
+execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players reset @s abch.chunk_error.total
+execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players operation @s abch.chunk_error.total = @s abch.chunk_error.x
+execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players operation @s abch.chunk_error.total *= @s abch.chunk_error.z
 
-execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players reset @p abch.CEChunkT
-execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players operation @p abch.CEChunkT = @p abch.CEChunkX
-execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players operation @p abch.CEChunkT *= @p abch.CEChunkZ
+execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players reset @p abch.chunk_error.total
+execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players operation @p abch.chunk_error.total = @p abch.chunk_error.x
+execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players operation @p abch.chunk_error.total *= @p abch.chunk_error.z
 
 
 #If the total of the player's
-#execute as @e[type=armor_stand,name="abch.chunkError",tag=abch.CEvoid] at @s unless score @s abch.CEChunkT = @p abch.CEChunkT run setblock ~ 35 ~ light_blue_wool
+#execute as @e[type=armor_stand,name="abch.chunkError",tag=abch.CEvoid] at @s unless score @s abch.chunk_error.total = @p abch.chunk_error.total run setblock ~ 35 ~ light_blue_wool
 execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run function abchc:modifiers/chunk_error/error_sound
 execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run fill ~16 255 ~16 ~ 150 ~ air
 execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run fill ~16 149 ~16 ~ 50 ~ air
 execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run fill ~16 49 ~16 ~ 0 ~ air
-execute as @e[ type=armor_stand, name="abch.chunkError", tag=abch.CEvoid ] at @s unless score @s abch.CEChunkT = @p abch.CEChunkT run kill @e[ type=armor_stand, name="abch.chunkError" ]
+execute as @e[ type=armor_stand, name="abch.chunkError", tag=abch.CEvoid ] at @s unless score @s abch.chunk_error.total = @p abch.chunk_error.total run kill @e[ type=armor_stand, name="abch.chunkError" ]
 
-execute as @e[ type=armor_stand, name="abch.chunkError", tag=abch.CEvoid ] at @s if score @s abch.CEChunkT = @p abch.CEChunkT run function abchc:modifiers/chunk_error/relocate
+execute as @e[ type=armor_stand, name="abch.chunkError", tag=abch.CEvoid ] at @s if score @s abch.chunk_error.total = @p abch.chunk_error.total run function abchc:modifiers/chunk_error/relocate

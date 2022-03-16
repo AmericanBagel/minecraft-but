@@ -11,7 +11,7 @@
 #scoreboard players add @s abch.esLimit 1
 
 #execute if score @s abch.esLimit matches ..6 run setblock ~ ~ ~ diamond_block
-scoreboard players remove @s abch.ytpLimit 1
+scoreboard players remove @s abch.ytpwyl.limit 1
 execute unless block ^ ^ ^1 minecraft:air run function abchc:modifiers/you_tp_where_you_look/trigger
-#execute if score @s abch.ytpLimit matches 0 run function abchc:modifiers/you_tp_where_you_look/trigger
-execute unless score @s abch.ytpLimit matches ..0 positioned ^ ^ ^1 if block ~ ~ ~ minecraft:air run function abchc:modifiers/you_tp_where_you_look/raycast
+#execute if score @s abch.ytpwyl.limit matches 0 run function abchc:modifiers/you_tp_where_you_look/trigger
+execute unless score @s abch.ytpwyl.limit matches ..0 positioned ^ ^ ^1 if block ~ ~ ~ minecraft:air run function abchc:modifiers/you_tp_where_you_look/raycast
