@@ -6,7 +6,7 @@ scoreboard objectives add abch.menu.page dummy
 # 1 = Easy
 # 2 = Normal
 # 3 = Hard
-execute unless score difficulty.global abch.config matches ..1 unless score difficulty.global abch.config matches 3.. run scoreboard players set difficulty.global abch.config 2
+execute if score difficulty.sync abch.config matches 1.. store result score difficulty.global abch.config run difficulty 
 
 ## Toggle
 scoreboard objectives add abch.toggle dummy

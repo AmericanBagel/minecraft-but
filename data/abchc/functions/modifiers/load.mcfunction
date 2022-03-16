@@ -7,3 +7,4 @@
 function abchc:modifiers/creeper_mobs/load
 function abchc:modifiers/creeper_nukes/load
 function abchc:modifiers/limited_inventory/load
+function abchc:modifiers/troglodyte/load
