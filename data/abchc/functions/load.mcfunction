@@ -117,32 +117,9 @@ scoreboard objectives add abch.webCdwn dummy
 scoreboard objectives add abch.tntRand dummy
 scoreboard objectives add abch.lightning dummy
 
-## Anvil Rain
-# anvil_rain.sky - Summon anvils from the sky (Y255)? - BOOLEAN - DEF 1
-execute unless score anvil_rain.sky abch.config matches 0..1 run scoreboard players set anvil_rain.sky abch.config 1
-
-# anvil_rain.relative - Summon anvils above players? (+~15)? - BOOLEAN - DEF 1
-execute unless score anvil_rain.relative abch.config matches 0..1 run scoreboard players set anvil_rain.relative abch.config 1
-
-# anvil_rain.keep - Keep anvils? - BOOLEAN - DEF 0
-
-# anvil_rain.chance - Anvil spawn rate - INTEGER - DEF 1
-execute unless score anvil_rain.chance abch.config matches 0.. run scoreboard players set anvil_rain.chance abch.config 1
-
-scoreboard objectives add abch.anvil_rain dummy
-
 ## Degradation
 # degradation.speed - Degradation speed - INTEGER - DEF 1
 execute unless score degradation.speed abch.config matches 0..1 run scoreboard players set degradation.speed abch.config 1
-
-## Superhot
-scoreboard objectives add abch.superhot.x dummy
-scoreboard objectives add abch.superhot.y dummy
-scoreboard objectives add abch.superhot.z dummy
-
-scoreboard objectives add abch.superhot.nx dummy
-scoreboard objectives add abch.superhot.ny dummy
-scoreboard objectives add abch.superhot.nz dummy
 
 ## TNT Rain
 # tnt_rain.grief - Should TNT grief? - Integer - Def 1
@@ -221,63 +198,10 @@ scoreboard objectives add abch.walk_leveling.lvl dummy
 scoreboard objectives add abch.walk_leveling.lvl2 dummy
 scoreboard objectives add abch.walk_leveling.xp minecraft.custom:minecraft.walk_one_cm
 
-## Deadly Colors
-scoreboard objectives add abch.deadly_colors.color dummy
-scoreboard objectives add abch.deadly_colors.color dummy
-scoreboard objectives add abch.deadly_colors dummy
-
-# Interval for killing
-execute unless score deadly_colors.interval abch.config matches 0.. run scoreboard players set deadly_colors.interval abch.config 200
-
-# How many ticks before killing to warn player
-execute unless score deadly_colors.interval abch.config matches 0.. run scoreboard players set deadly_colors.offset abch.config 60
-
-# Keep this at one unless you know what you're doing.
-# How many ticks before killing to stop warning
-execute unless score deadly_colors.interval abch.config matches 0.. run scoreboard players set deadly_colors.stop_offset abch.config 1
-
-# Whether to kill with a specific color or a random color
-execute unless score deadly_colors.random abch.config matches 1 unless score deadly_colors.random abch.config matches 0 run scoreboard players set deadly_colors.random abch.config 1
-
 # TP Sneak
 scoreboard objectives add abch.tp_sneak.sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add abch.tp_sneak.raycast dummy
 scoreboard objectives add abch.tp_sneak.timer dummy
-
-#> Bedrock touch
-scoreboard objectives add abch.bedrock_touch.timer dummy
-scoreboard objectives add abch.bedrock_touch.sid dummy
-scoreboard objectives add abch.bedrock_touch.raycast dummy
-
-#> 2020 Mode
-scoreboard objectives add abch.2020_mode.recurs dummy
-
-#> Death Orb
-scoreboard objectives add abch.death_orb.sid dummy
-scoreboard objectives add abch.death_orb.distance dummy
-scoreboard objectives add abch.death_orb.factor dummy
-scoreboard objectives add abch.death_orb dummy
-
-#> Keep Moving
-scoreboard objectives add abch.keep_moving.x dummy
-scoreboard objectives add abch.keep_moving.y dummy
-scoreboard objectives add abch.keep_moving.z dummy
-scoreboard objectives add abch.keep_moving.still_time dummy
-
-#> Botanophobia
-scoreboard objectives add abch.botanophobia.deaths deathCount
-
-#> Waning Wellness
-scoreboard objectives add abch.waning_wellness.death_time minecraft.custom:minecraft.time_since_death
-scoreboard objectives add abch.waning_wellness.max_health dummy
-
-#> Unstable Inventory
-scoreboard objectives add abch.unstable_inv.damage minecraft.custom:minecraft.damage_taken
-scoreboard objectives add abch.unstable_inv dummy
-
-#> Teleport Chorus
-scoreboard objectives add abch.teleport_chorus dummy
-scoreboard objectives add abch.teleport_chorus.eat minecraft.used:minecraft.chorus_fruit
 
 #> Modifiers
 function abchc:modifiers/load
