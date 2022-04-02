@@ -1,6 +1,6 @@
 {
     "recommendations": [
-        "arcensoth.language-mcfunction",
-        "SPGoding.datapack-language-server"
+        "spgoding.datapack-language-server",
+        "arcensoth.language-mcfunction"
     ]
 }

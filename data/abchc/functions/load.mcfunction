@@ -172,8 +172,6 @@ scoreboard objectives add abch.esSneak minecraft.custom:minecraft.sneak_time
 
 scoreboard objectives add abch.vsSize dummy
 
-scoreboard objectives add abch.explosive_sight.raycast dummy
-
 scoreboard objectives add abch.fire_rain.timer dummy
 
 scoreboard objectives add abch.ender_blood.damage minecraft.custom:damage_taken
@@ -216,3 +214,6 @@ function abchc:apis/rng/init
 function abchc:modifiers/lag/load
 
 function abchc:modifiers/vengeful_slimes/rng/zprivate/init
+
+#> Functions
+function abchc:minute
