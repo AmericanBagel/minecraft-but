@@ -147,8 +147,8 @@ scoreboard objectives add abch.anvil_rain.Y dummy
 scoreboard objectives add abch.anvil_rain.Yoffset dummy
 
 
-scoreboard objectives add abch.effect dummy
-scoreboard objectives add abch.efLvl dummy
+scoreboard objectives add abch.random_effect.effect dummy
+scoreboard objectives add abch.random_effect.lvl dummy
 scoreboard objectives add abch.chunk_error.limit dummy
 scoreboard objectives add abch.chunk_error.x dummy
 scoreboard objectives add abch.chunk_error.z dummy

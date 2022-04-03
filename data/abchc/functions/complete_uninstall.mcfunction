@@ -36,8 +36,8 @@ scoreboard objectives remove abch.webCdwn
 scoreboard objectives remove abch.tntRand
 scoreboard objectives remove abch.lightning
 scoreboard objectives remove abch.anvilRain
-scoreboard objectives remove abch.effect
-scoreboard objectives remove abch.efLvl
+scoreboard objectives remove abch.random_effect.effect
+scoreboard objectives remove abch.random_effect.lvl
 scoreboard objectives remove abch.chunk_error.limit
 scoreboard objectives remove abch.chunk_error.x
 scoreboard objectives remove abch.chunk_error.z
