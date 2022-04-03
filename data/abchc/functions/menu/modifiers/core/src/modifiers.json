@@ -1,76 +1,251 @@
 {
-    "modifier": {
-        "name": "Modifier",
-        "description": "A generic modifier example!",
-        "id": "modifier",
-        "category": "challenges",
-        "number": {
-            "name": "Number",
-            "description": "Add or remove a number!",
-            "id": "number",
-            "type": "number"
+    "degradation": {
+        "info": {
+            "name": "The world disintegrates",
+            "description": "Blocks around you randomly disappear. The world gradually degradates, desintegrates. The world will not last long.",
+            "id": "degradation",
+            "category": "chaos"
         },
-        "range": {
-            "name": "Range",
-            "description": "Add or remove a number within a range!",
-            "id": "range",
-            "type": "range",
-            "min": 1,
-            "max": 5
-        },
-        "string": {
-            "name": "String",
-            "description": "Switch between different strings! Useful for different modes and stuff!",
-            "id": "string",
-            "type": "string",
-            "strings": [
-                "Name1",
-                "Name2",
-                "Name3"
-            ]
-        },
-        "toggle": {
-            "name": "Toggle",
-            "description": "Toggle a value! 1 or 0!",
-            "id": "toggle",
-            "type": "type"
+        "config": {
+            "speed": {
+                "name": "Speed",
+                "description": "How fast the world degrades around you",
+                "id": "speed",
+                "type": "number"
+            }
         }
     },
-    "modifier2": {
-        "name": "Modifier 2",
-        "description": "A second generic modifier example!",
-        "id": "modifier2",
-        "category": "chaos",
-        "number": {
-            "name": "Number",
-            "description": "Add or remove a number!",
-            "id": "number",
-            "type": "number"
+    "tnt_rain": {
+        "info": {
+            "name": "TNT rains from the sky",
+            "description": "TNT rains from the sky! The end is nigh!",
+            "id": "tnt_rain",
+            "category": "explosions"
         },
-        "range": {
-            "name": "Range",
-            "description": "Add or remove a number within a range!",
-            "id": "range",
-            "type": "range",
-            "min": 1,
-            "max": 5
+        "config": {
+            "grief": {
+                "name": "Griefing",
+                "description": "Should TNT grief?",
+                "id": "grief",
+                "type": "toggle"
+            },
+            "sky": {
+                "name": "Rain from sky",
+                "description": "Should TNT rain from the sky?",
+                "id": "sky",
+                "type": "toggle"
+            },
+            "relative": {
+                "name": "Rain above players",
+                "description": "Should TNT rain above players?",
+                "id": "relative",
+                "type": "toggle"
+            },
+            "chance": {
+                "name": "Chance",
+                "description": "How often to spawn TNT",
+                "id": "chance",
+                "type": "number"
+            }
+        }
+    },
+    "anvil_rain": {
+        "info": {
+            "name": "Anvils rain from the sky",
+            "description": "Anvils rain from the sky threatening to crush your dreams.\\n\\nThe Aerial Anvil Attack Force commented on why they do it. 'We just follow gravity,' General Iron Krush said. 'Who are we to deny what the universe demands of us? We fall and we crush things. That is our purpose.'",
+            "id": "anvil_rain",
+            "category": "chaos"
         },
-        "string": {
-            "name": "String",
-            "description": "Switch between different strings! Useful for different modes and stuff!",
-            "id": "string",
-            "type": "string",
-            "strings": [
-                "Name1",
-                "Name2",
-                "Name3"
-            ]
+        "config": {
+            "grief": {
+                "name": "Keep anvils",
+                "description": "Should anvils stay after they hit the ground?",
+                "id": "keep",
+                "type": "toggle"
+            },
+            "sky": {
+                "name": "Rain from sky",
+                "description": "Should anvils rain from the sky?",
+                "id": "sky",
+                "type": "toggle"
+            },
+            "relative": {
+                "name": "Rain above players",
+                "description": "Should anvils rain above players?",
+                "id": "relative",
+                "type": "toggle"
+            },
+            "chance": {
+                "name": "Chance",
+                "description": "How often to spawn anvils",
+                "id": "chance",
+                "type": "number"
+            }
+        }
+    },
+    "crawling": {
+        "info": {
+            "name": "You always crawl",
+            "description": "If you've got four limbs, you'd better use them!",
+            "id": "crawling",
+            "category": "challenges"
         },
-        "toggle": {
-            "name": "Toggle",
-            "description": "Toggle a value! 1 or 0!",
-            "id": "toggle",
-            "type": "type"
+        "config": {
+            "creative": {
+                "name": "Crawl creative players",
+                "description": "Should creative players crawl?",
+                "id": "creative",
+                "type": "toggle"
+            }
+        }
+    },
+    "creeper_mobs": {
+        "info": {
+            "name": "All mobs explode like creepers",
+            "description": "If you get too close, mobs will explode like creepers!",
+            "id": "creeper_mobs",
+            "category": "explosions"
+        },
+        "config": {
+            "radius": {
+                "name": "Explosion radius",
+                "description": "How explosive should mob explosions be? Negative values hurt players but do not destroy blocks.",
+                "id": "radius",
+                "type": "number"
+            }
+        }
+    },
+    "creeper_nukes": {
+        "info": {
+            "name": "Creepers are nuclear",
+            "description": "Say goodbye to your precious world and your precious builds. These guys went from gunpowder to nuclear fuel. There's no stopping these guys. ",
+            "id": "creeper_nukes",
+            "category": "explosions"
+        },
+        "config": {
+            "radius": {
+                "name": "Explosion radius",
+                "description": "How explosive should creeper explosions be? Negative values hurt players but do not destroy blocks.",
+                "id": "radius",
+                "type": "number"
+            }
+        }
+    },
+    "deadly_colors": {
+        "info": {
+            "name": "Colors kill you",
+            "description": "According to Prof. H. D. Magnomore, recent solar flares have increased the radioactivity of highly energetic colors. Magnomore advises people to limit their exposures to lethal colors.",
+            "id": "deadly_colors",
+            "category": "miscellaneous"
+        },
+        "config": {
+            "interval": {
+                "name": "Killing interval",
+                "description": "How often to change the color and kill players (in seconds)",
+                "id": "interval",
+                "type": "number"
+            }
+        }
+    },
+    "explosive_phantoms": {
+        "info": {
+            "name": "Phantoms explode",
+            "description": "You'd better sleep. These guys aren't just angry. They're explosive.",
+            "id": "explosive_phantoms",
+            "category": "mobs"
+        },
+        "config": {
+            "radius": {
+                "name": "Explosion radius",
+                "description": "How explosive should phantom explosions be? Negative values hurt players but do not destroy blocks.",
+                "id": "radius",
+                "type": "number"
+            }
+        }
+    },
+    "explosive_sight": {
+        "info": {
+            "name": "Everywhere you look explodes",
+            "description": "Everywhere players look explodes!",
+            "id": "explosive_sight",
+            "category": "explosions"
+        },
+        "config": {
+            "radius": {
+                "name": "Explosion radius",
+                "description": "How explosive should explosions be? Negative values hurt players but do not destroy blocks.",
+                "id": "radius",
+                "type": "number"
+            }
+        }
+    },
+    "feature_fanatic": {
+        "info": {
+            "name": "Features randomly spawn",
+            "description": "World generation features randomly spawn around players",
+            "id": "feature_fanatic",
+            "category": "chaos"
+        },
+        "config": {
+            "chance": {
+                "name": "Chance",
+                "description": "How likely feature spawning is",
+                "id": "chance",
+                "type": "number"
+            }
+        }
+    },
+    "limited_inventory": {
+        "info": {
+            "name": "You have no inventory",
+            "description": "Players' inventories become locked, with each slot optionally unlockable for every 2 XP levels.",
+            "id": "limited_inventory",
+            "category": "challenges"
+        },
+        "config": {
+            "xp_unlock": {
+                "name": "Unlock slots with XP",
+                "description": "Should players unlock inventory slots for every 2 XP levels?",
+                "id": "xp_unlock",
+                "type": "toggle"
+            }
+        }
+    },
+    "tnt_bats": {
+        "info": {
+            "name": "Bats carry TNT",
+            "description": "All bats carry TNT which detonates near players.",
+            "id": "tnt_bats",
+            "category": "explosions"
+        },
+        "config": {
+            "radius": {
+                "name": "Explosion radius",
+                "description": "How explosive should TNT bat explosions be? Negative values hurt players but do not destroy blocks.",
+                "id": "radius",
+                "type": "number"
+            }
+        }
+    },
+    "troglodyte": {
+        "info": {
+            "name": "Light kills you",
+            "description": "Players die when they enter light. Higher light levels damage players more, eventually killing them.",
+            "id": "troglodyte",
+            "category": "challenges"
+        },
+        "config": {
+            "difficulty": {
+                "name": "Difficulty",
+                "description": "How unforgiving the modifier should be. Ranges from Easy, Normal, to Hard.",
+                "id": "difficulty",
+                "type": "string",
+                "strings": [
+                    "Easy",
+                    "Normal",
+                    "Hard"
+                ]
+            }
         }
     }
 }
