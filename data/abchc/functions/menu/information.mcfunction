@@ -14,8 +14,8 @@ scoreboard players set @s abch.menu.page 2
 tellraw @s ["\n\n\n\n\n\n\n\n\n\n\n\n",{"text":"---------------------------------------------","color":"#0F21C6"},"\n",{"text":"←|","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/actions/back_to_main"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back to the main menu.","color":"#ECEFF5"}]}},{"text":" Information","color":"#E4EB18","clickEvent":{"action":"run_command","value":"/function abchc:menu/actions/back_to_main"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back to the main menu.","color":"#ECEFF5"}]}},"\n",{"text":"---------------------------------------------","color":"#0F21C6"}]
 
 #> Info
-# Add PMC/PlanetMinecraft link!
-#tellraw @s [{"text":"Minecraft, but it's absolute chaos "}]
+# TODO: Add PMC/PlanetMinecraft link!
+tellraw @s [{"text":"The Minecraft, but"}]
 
 
 #,"clickEvent":{"action":"run_command","value":"/function abchc:menu/"}
