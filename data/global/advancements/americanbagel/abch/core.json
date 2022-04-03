@@ -1,0 +1,17 @@
+{
+    "display": {
+        "title": "Core",
+        "description": "The core of Minecraft, but it's absolute chaos, packed with over 70 gameplay modifiers!",
+        "icon": {
+            "item": "minecraft:conduit"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "parent": "global:americanbagel/abch",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

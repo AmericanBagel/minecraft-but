@@ -55,7 +55,7 @@ scoreboard players set #8 abch.math 8
 scoreboard players set #2 abch.math 2
 scoreboard players set #1 abch.math 1
 
-##### Team Colors ####
+##### Teams ####
 team add abchc.color.dark_red
 team modify abchc.color.dark_red color dark_red
 
@@ -80,6 +80,11 @@ team modify abchc.color.white color white
 team add abchc.color.black
 team modify abchc.color.white color black
 
+team add abchc.no_collision
+team modify abchc.no_collision collisionRule never
+
+scoreboard objectives add abch.menu.sid dummy
+scoreboard objectives add abch.menu.right_click minecraft.custom:minecraft.talked_to_villager
 
 ##### Menu scores ####
 ## mitems

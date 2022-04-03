@@ -152,7 +152,7 @@
             "name": "Phantoms explode",
             "description": "You'd better sleep. These guys aren't just angry. They're explosive.",
             "id": "explosive_phantoms",
-            "category": "mobs"
+            "category": "mob"
         },
         "config": {
             "radius": {

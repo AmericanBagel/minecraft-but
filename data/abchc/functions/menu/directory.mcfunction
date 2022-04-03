@@ -3,6 +3,15 @@
 # @within abchc:menu/**
 # @context menu player
 
+#> Check if player renamed nether star "Chaos Menu"
+execute as @a[nbt={SelectedItem:{id:"minecraft:nether_star",tag:{display:{Name:'{"text":"Chaos Menu"}'}}}}] at @s run function abchc:menu/give_item
+
+#> Players with chaos menu
+# If there's no linked villager to player with chaos menu, spawn villager
+execute as @a at @s run function abchc:menu/manage_villager
+
+
+
 ###### Expand as new pages are made #######
 execute if score @s abch.menu.page matches 1 run function abchc:menu/main
 execute if score @s abch.menu.page matches 2 run function abchc:menu/information
