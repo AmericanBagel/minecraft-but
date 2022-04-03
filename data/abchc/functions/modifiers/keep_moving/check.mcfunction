@@ -10,7 +10,7 @@ effect clear @s regeneration
 effect clear @s wither
 
 # Get player's current position
-execute as @a[ tag=!blacklist, tag=!global.ignore, tag=!abch.keep_moving.blacklist ] run function abchc:modifiers/keep_moving/current_pos
+execute as @a[ tag=!abch.blacklist, tag=!global.ignore, tag=!abch.keep_moving.blacklist ] run function abchc:modifiers/keep_moving/current_pos
 
 # Compare pos scores with a bias towards moving
 execute unless score @s abch.keep_moving.x = $p abch.keep_moving.x run function abchc:modifiers/keep_moving/move
@@ -35,4 +35,4 @@ execute if score @s abch.keep_moving.still_time matches 40.. run effect give @s 
 execute if score @s abch.keep_moving.still_time matches 60.. run effect give @s wither 1 3
 
 # Store player's current position for next tick
-execute as @a[ tag=!blacklist, tag=!global.ignore, tag=!abch.keep_moving.blacklist ] at @s run function abchc:modifiers/keep_moving/later_pos
+execute as @a[ tag=!abch.blacklist, tag=!global.ignore, tag=!abch.keep_moving.blacklist ] at @s run function abchc:modifiers/keep_moving/later_pos

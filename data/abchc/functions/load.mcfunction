@@ -54,6 +54,7 @@ scoreboard players set #inf abch.math 2147483647
 scoreboard players set #8 abch.math 8
 scoreboard players set #2 abch.math 2
 scoreboard players set #1 abch.math 1
+scoreboard players set #200 abch.math 200
 
 ##### Teams ####
 team add abchc.color.dark_red

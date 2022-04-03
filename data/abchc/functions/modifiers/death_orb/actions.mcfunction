@@ -47,7 +47,9 @@ execute at @s run effect give @e[type=#abchc:living_base,distance=6..7] wither 1
 execute at @s run effect give @e[type=#abchc:living_base,distance=6..7] slowness 1 0
 
 #> Corruption
-execute at @s run function abchc:modifiers/death_orb/corruption/directory
+execute unless score death_orb.corrupt abch.config matches ..0 at @s run function abchc:modifiers/death_orb/corruption/directory
+
+execute if score death_orb.corrupt abch.config matches ..0 at @s run function abchc:modifiers/death_orb/corruption/air
 
 #> Death Message (after detonation)
 execute as @a[ tag=abch.death_orb.death ] run function abchc:modifiers/death_orb/death_message

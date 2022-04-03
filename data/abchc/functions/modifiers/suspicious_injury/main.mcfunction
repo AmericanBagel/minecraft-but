@@ -9,4 +9,4 @@ execute as @a[ scores={ abch.suspicious_injury.damage=8 } ] at @s run function a
 execute as @a[ scores={ abch.suspicious_injury.damage=9 } ] at @s run function abchc:modifiers/suspicious_injury/lvl/9
 execute as @a[ scores={ abch.suspicious_injury.damage=10.. } ] at @s run function abchc:modifiers/suspicious_injury/lvl/10
 
-scoreboard players reset @a[ tag=!blacklist, tag=!global.ignore ] abch.suspicious_injury.damage
+scoreboard players reset @a[ tag=!abch.blacklist, tag=!global.ignore ] abch.suspicious_injury.damage

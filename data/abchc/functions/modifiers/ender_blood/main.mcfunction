@@ -1,2 +1,2 @@
-execute as @a[ scores={ abch.ender_blood.damage=1.. }, tag=!blacklist, tag=!global.ignore ] at @s run function abchc:modifiers/ender_blood/tp
-scoreboard players reset @a[ tag=!blacklist, tag=!global.ignore ] abch.ender_blood.damage
+execute as @a[ scores={ abch.ender_blood.damage=1.. }, tag=!abch.blacklist, tag=!global.ignore ] at @s run function abchc:modifiers/ender_blood/tp
+scoreboard players reset @a[ tag=!abch.blacklist, tag=!global.ignore ] abch.ender_blood.damage

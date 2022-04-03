@@ -15,5 +15,5 @@ summon armor_stand ~ ~ ~ {CustomName: '{"text":"web_rider7"}', Tags: [ "web_ride
 summon falling_block ~ ~ ~ {Motion: [ -0.5d, 0.25d, -0.5d ], NoGravity: 0b, Time: 1, BlockState: {Name: "minecraft:cobweb"}, CustomName: '{"text":"web8"}'}
 summon armor_stand ~ ~ ~ {CustomName: '{"text":"web_rider8"}', Tags: [ "web_rider" ]}
 
-playsound minecraft:entity.spider.ambient hostile @a[ tag=!blacklist, tag=!global.ignore ] ~ ~ ~ 1 0.35
+playsound minecraft:entity.spider.ambient hostile @a[ tag=!abch.blacklist, tag=!global.ignore ] ~ ~ ~ 1 0.35
 scoreboard players set @s abch.webCdwn 0

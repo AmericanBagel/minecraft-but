@@ -247,5 +247,45 @@
                 ]
             }
         }
+    },
+    "death_swap": {
+        "info": {
+            "name": "Players swap places periodically (Death Swap)",
+            "description": "",
+            "id": "death_swap",
+            "category": "teleporting"
+        },
+        "config": {
+            "warning": {
+                "name": "Swap warnings",
+                "description": "Should players receive warnings before they swap?",
+                "id": "warning",
+                "type": "toggle"
+            },
+            "log": {
+                "name": "Log to chat",
+                "description": "Should players be told who they swapped with in chat?",
+                "id": "log",
+                "type": "toggle"
+            },
+            "interval": {
+                "name": "Swap interval",
+                "description": "How often to swap players. This number represents 10 seconds (e.g. 30 = 300 seconds).",
+                "id": "interval",
+                "type": "number"
+            },
+            "interval_min": {
+                "name": "Interval offset minimum",
+                "description": "Minimum offset for random swap interval. This number represents 10 seconds (e.g. 30 = 300 seconds). Negative numbers are recommeneded to subtract time to interval.",
+                "id": "interval_min",
+                "type": "number"
+            },
+            "interval_max": {
+                "name": "Interval offset max",
+                "description": "Maximum offset for random swap interval. This number represents 10 seconds (e.g. 30 = 300 seconds)",
+                "id": "interval_max",
+                "type": "number"
+            }
+        }
     }
 }

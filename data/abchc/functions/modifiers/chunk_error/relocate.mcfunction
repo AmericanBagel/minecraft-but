@@ -13,8 +13,8 @@ execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s positioned ~ 256
 execute as @e[ type=armor_stand, name="abch.chunkError" ] store result score @s abch.chunk_error.x run data get entity @s Pos[0] 0.0625
 execute as @e[ type=armor_stand, name="abch.chunkError" ] store result score @s abch.chunk_error.z run data get entity @s Pos[2] 0.0625
 
-execute as @a[ tag=!blacklist, tag=!global.ignore ] store result score @s abch.chunk_error.x run data get entity @s Pos[0] 0.0625
-execute as @a[ tag=!blacklist, tag=!global.ignore ] store result score @s abch.chunk_error.z run data get entity @s Pos[2] 0.0625
+execute as @a[ tag=!abch.blacklist, tag=!global.ignore ] store result score @s abch.chunk_error.x run data get entity @s Pos[0] 0.0625
+execute as @a[ tag=!abch.blacklist, tag=!global.ignore ] store result score @s abch.chunk_error.z run data get entity @s Pos[2] 0.0625
 
 execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players reset @s abch.chunk_error.total
 execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard players operation @s abch.chunk_error.total = @s abch.chunk_error.x

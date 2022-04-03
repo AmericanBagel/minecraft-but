@@ -14,6 +14,7 @@ execute if score damage_nausea abch.toggle matches 1 run function abchc:modifier
 execute if score deadly_falls abch.toggle matches 1 run function abchc:modifiers/deadly_falls/main
 execute if score deadly_colors abch.toggle matches 1 run function abchc:modifiers/deadly_colors/main
 execute if score death_orb abch.toggle matches 1 run function abchc:modifiers/death_orb/main
+execute if score death_swap abch.toggle matches 1 run function abchc:modifiers/death_swap/main
 execute if score delicate_explosives abch.toggle matches 1 run function abchc:modifiers/delicate_explosives/main
 execute if score degradation abch.toggle matches 1 run function abchc:modifiers/degradation/main
 execute if score diamonds_to_coal abch.toggle matches 1 run function abchc:modifiers/diamonds_to_coal/main

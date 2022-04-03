@@ -13,7 +13,7 @@
 #
 #execute as @a[scores={abch.tp_sneak.timer=1..20}] run scoreboard players remove @s abch.tp_sneak.timer 1
 #
-#execute as @a[tag=!blacklist] at @s if score @s abch.tp_sneak.sneak matches 1.. if score @s abch.tp_sneak.timer matches 0 run function abchc:modifiers/tp_sneak/raycast/start_ray
+#execute as @a[tag=!abch.blacklist] at @s if score @s abch.tp_sneak.sneak matches 1.. if score @s abch.tp_sneak.timer matches 0 run function abchc:modifiers/tp_sneak/raycast/start_ray
 #scoreboard players reset @a abch.tp_sneak.sneak
 
 
