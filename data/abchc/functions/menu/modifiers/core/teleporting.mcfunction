@@ -7,7 +7,13 @@
 function abchc:menu/actions/click
 
 #> Update page score
-scoreboard players set @s abch.menu.page 12
+scoreboard players set @s abch.menu.page 19
+
+#> Disable sendCommandFeedback
+gamerule sendCommandFeedback false
+
+#> Set sendCommandFeedback back next tick
+schedule function abchc:menu/actions/enable_feedback 1t append
 
 #> Header
 

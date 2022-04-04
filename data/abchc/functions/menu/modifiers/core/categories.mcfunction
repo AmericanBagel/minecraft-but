@@ -9,6 +9,12 @@ function abchc:menu/actions/click
 #> Update page score
 scoreboard players set @s abch.menu.page 11
 
+#> Disable sendCommandFeedback
+gamerule sendCommandFeedback false
+
+#> Set sendCommandFeedback back next tick
+schedule function abchc:menu/actions/enable_feedback 1t append
+
 #> Header
 
 # If there are no expansion loaded, clicking top bar sends player back to main menu.
@@ -126,7 +132,7 @@ tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text
 # Anvils rain from the sky (anvil_rain)
 # Fire rains from the sky (fire_rain)
 # You leave a trail of fire (fire_walker)
-# Lightning is everywhere (storm)
+# Lightning is everywhere (lightning_storm)
 # The world disintegrates (degradation) 
 # Chunks randomly delete (chunk_error)
 # It lags (lag)
@@ -185,7 +191,7 @@ tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text
 # You can't stop moving (keep_moving)
 # It lags (lag)
 # Items randomly fall out of your inventory (lazy_inventory)
-# Lightning is everywhere (storm)
+# Lightning is everywhere (lightning_storm)
 # You have no inventory (limited_inventory)
 # You can only go one direction (look_straight)
 # You have to live underwater (mermaid)

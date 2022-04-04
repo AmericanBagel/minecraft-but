@@ -6,6 +6,12 @@
 #> Update page score
 scoreboard players set @s abch.menu.page 1
 
+#> Disable sendCommandFeedback
+gamerule sendCommandFeedback false
+
+#> Set sendCommandFeedback back next tick
+schedule function abchc:menu/actions/enable_feedback 1t append
+
 #> Top Bar
 tellraw @s ["\n\n\n\n\n\n\n\n\n\n\n\n",{"text":"---------------------------------------------","color":"#0F21C6"},"\n",{"text":"Minecraft, ","color":"#6BD716"},{"text":"but ","bold":true,"color":"#6BD716"},{"text":"— a data pack by ","color":"#ECEFF5"},{"text":"AmericanBagel","color":"#EB0DD7","hoverEvent": {"action": "show_text","contents":{"text":"The best of the best!","color":"#eceff5"}}},"\n",{"text":"---------------------------------------------","color":"#0F21C6"}]
 

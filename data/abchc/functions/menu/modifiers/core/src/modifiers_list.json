@@ -40,7 +40,7 @@
     "keep_moving",
     "lag",
     "lazy_inventory",
-    "storm",
+    "lightning_storm",
     "limited_inventory",
     "look_straight",
     "mermaid",
@@ -70,5 +70,6 @@
     "suspicious_injury",
     "teleport_chorus",
     "tnt_bats",
-    "tnt_rain"
+    "tnt_rain",
+    "stick_together"
 ]

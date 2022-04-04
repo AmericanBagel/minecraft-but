@@ -9,6 +9,12 @@ function abchc:menu/actions/click
 #> Update page score
 scoreboard players set @s abch.menu.page 12
 
+#> Disable sendCommandFeedback
+gamerule sendCommandFeedback false
+
+#> Set sendCommandFeedback back next tick
+schedule function abchc:menu/actions/enable_feedback 1t append
+
 #> Header
 
 # If there are no expansion loaded, clicking top bar sends player back to main menu.

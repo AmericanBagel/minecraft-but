@@ -56,8 +56,11 @@ Locked / Restricted / Admin Panel
 
 ## Difficulties
 ### Easy
-Easy ☮
-##3ED011
+Peaceful ☮
+#44F044 
+
+Easy ☺
+#3ED011
 
 ### Normal
 Normal ☯

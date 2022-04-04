@@ -39,12 +39,149 @@ entries.forEach(element => {
 #
 # @within abchc:menu/**
 # @context player
+
+#> Disable sendCommandFeedback
+gamerule sendCommandFeedback false
+
+#> Set sendCommandFeedback back next tick
+schedule function abchc:menu/actions/enable_feedback 1t append
   
 #> Header
-tellraw @s ["\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n",{"text":"---------------------------------------------","color":"#0F21C6"},"\\n",{"text":"←|","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${info.category}"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back.","color":"#ECEFF5"}]}}," ",{"text":"${info.name} Config","color":"#17B7CD","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${info.category}"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back.","color":"#ECEFF5"}]}},"\\n",{"text":"---------------------------------------------","color":"#0F21C6"}]
+tellraw @s ["\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n",{"text":"---------------------------------------------","color":"#0F21C6"},"\\n",{"text":"←|","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${info.category}"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back.","color":"#ECEFF5"}]}}," ",{"text":"${info.name}","color":"#20CBA8","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${info.category}"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back.","color":"#ECEFF5"}]}},{"text":" Config","color":"#17B7CD","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${info.category}"},"\\n",{"text":"---------------------------------------------","color":"#0F21C6"}]
 
 #> Blacklist
 tellraw @p [{"text":"[","color":"#0F21C6","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}},{"text":"✎","color":"#0F21C6","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}},{"text":"] ","color":"#0F21C6","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}},{"text":"Blacklist player","color":"#ECEFF5","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}},"\\n"]`;
+
+    // If difficulty is enabled,
+    if (info.difficulty !== false) {
+        // Define difficulty directory const for prettier code
+        const difficultyDir = `${modifierDir}/difficulty`;
+
+        // check if the "difficulty" directory exists.
+        if (fs.existsSync(difficultyDir) === false) {
+            // If it doesn't create it.
+            fs.mkdirSync(difficultyDir)
+          }
+        /*
+            Now that we know the difficulty directory exists, let's create the difficulty files.
+            We're basically going to use a modified version of the "string" files.
+          
+            I know I could just use string for this, but that would require manually setting
+            difficulty configs for each modifier, and considering that all difficulty files should
+            be nearly identical and most modifiers should use difficulty settings, I think it's
+            better to just code in direct support for difficulty
+        */
+
+        // Add difficulty tellraw to main config file
+                configFile = configFile +  
+`\n\n##> Difficulty selector
+#> Global difficulty
+# Peaceful
+execute unless score difficulty.${modifier} abch.config matches 0..3 if score difficulty.global abch.config matches 0 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"Difficulty: ","color":"#20CBA8"},{"text":"[←]  ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/previous_difficulty"}},{"text":"Peaceful ☮","color":"#44F044","hoverEvent":{"action":"show_text","contents":[{"text":"Peaceful","color":"#44F044"},{"text":" is just as its name implies: peaceful! Is it perfectly easy and relaxing? Yes! Is it fun? Well...","color":"#ECEFF5"}]}},{"text":"  [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/next_difficulty"}}]
+# Easy
+execute unless score difficulty.${modifier} abch.config matches 0..3 if score difficulty.global abch.config matches 1 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"Difficulty: ","color":"#20CBA8"},{"text":"[←]  ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/previous_difficulty"}},{"text":"Easy ☺","color":"#3ED011","hoverEvent":{"action":"show_text","contents":[{"text":"Easy","color":"#3ED011"},{"text":" is the difficulty for people looking for a relaxed, casual experience. Don't listen to your friends! Oh, you don't have friends? Uh... Anyway, You're not a chicken! You're just...","color":"#ECEFF5"}]}},{"text":"  [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/next_difficulty"}}]
+# Normal
+execute unless score difficulty.${modifier} abch.config matches 0..3 if score difficulty.global abch.config matches 2 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"Difficulty: ","color":"#20CBA8"},{"text":"[←] ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/previous_difficulty"}},{"text":"Normal ☯","color":"#E4EB18","hoverEvent":{"action":"show_text","contents":[{"text":"Normal","color":"#E4EB18"},{"text":" is the default difficulty with modifiers just the way they were intended — not too easy but not too hard.","color":"#ECEFF5"}]}},{"text":" [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/next_difficulty"}}]
+# Hard
+execute unless score difficulty.${modifier} abch.config matches 0..3 if score difficulty.global abch.config matches 3 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"Difficulty: ","color":"#20CBA8"},{"text":"[←]  ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/previous_difficulty"}},{"text":"Hard ☠","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Hard","color":"#FF0000"},{"text":" is the most brutal difficulty for people who like absolute destruction and chaos. Destruction? Certainly. Death? More than you can count. Fun? ¯\\_(ツ)_/¯","color":"#ECEFF5"}]}},{"text":"  [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/next_difficulty"}}]
+
+#> Modifier-specific difficulty (local difficulty)
+execute if score difficulty.${modifier} abch.config matches 0 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"Difficulty: ","color":"#20CBA8"},{"text":"[←]  ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/previous_difficulty"}},{"text":"Peaceful ☮","color":"#44F044","hoverEvent":{"action":"show_text","contents":[{"text":"Peaceful","color":"#44F044"},{"text":" is just as its name implies: peaceful! Is it perfectly easy and relaxing? Yes! Is it fun? Well...","color":"#ECEFF5"}]}},{"text":"  [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/next_difficulty"}}]
+execute if score difficulty.${modifier} abch.config matches 1 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"Difficulty: ","color":"#20CBA8"},{"text":"[←]  ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/previous_difficulty"}},{"text":"Easy ☺","color":"#3ED011","hoverEvent":{"action":"show_text","contents":[{"text":"Easy","color":"#3ED011"},{"text":" is the difficulty for people looking for a relaxed, casual experience. Don't listen to your friends! Oh, you don't have friends? Uh... Anyway, You're not a chicken! You're just...","color":"#ECEFF5"}]}},{"text":"  [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/next_difficulty"}}]
+execute if score difficulty.${modifier} abch.config matches 2 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"Difficulty: ","color":"#20CBA8"},{"text":"[←] ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/previous_difficulty"}},{"text":"Normal ☯","color":"#E4EB18","hoverEvent":{"action":"show_text","contents":[{"text":"Normal","color":"#E4EB18"},{"text":" is the default difficulty with modifiers just the way they were intended — not too easy but not too hard.","color":"#ECEFF5"}]}},{"text":" [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/next_difficulty"}}]
+execute if score difficulty.${modifier} abch.config matches 3 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"Difficulty: ","color":"#20CBA8"},{"text":"[←]  ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/previous_difficulty"}},{"text":"Hard ☠","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Hard","color":"#FF0000"},{"text":" is the most brutal difficulty for people who like absolute destruction and chaos. Destruction? Certainly. Death? More than you can count. Fun? ¯\\_(ツ)_/¯","color":"#ECEFF5"}]}},{"text":"  [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/next_difficulty"}}]
+`;
+
+                /* Previous difficulty function
+
+                e.g. abchc:menu/modifiers/core/anvil_rain/difficulty/previous_difficulty.mcfunction */
+                fs.writeFileSync(
+            `../${modifier}/difficulty/previous_difficulty.mcfunction`,
+`#> abchc:menu/${modifier}/difficulty/previous_difficulty
+# Go to the previous difficulty for ${modifier}
+# Generated with the script at '../src/index.js'
+#
+# @within abchc:menu/modifiers/core/${modifier}/**
+# @context player
+
+#> Click sound
+function abchc:menu/actions/click
+
+#> If difficulty isn't set, get from global
+execute unless score difficulty.${modifier} abch.config matches 0..3 run scoreboard players operation difficulty.${modifier} abch.config = difficulty.global abch.config
+
+#> Set difficulty to temp score
+scoreboard players operation #temp abch.config = difficulty.${modifier} abch.config
+
+#> Decrease temp score
+scoreboard players remove #temp abch.config 1
+
+#> If it goes below 0, set to 3 (Peaceful to Hard)
+execute if score #temp abch.config matches ..-1 run scoreboard players set #temp abch.config 3
+
+#> Set new difficulty temp score to difficulty
+scoreboard players operation difficulty.${modifier} abch.config = #temp abch.config
+
+#> Update menu
+function abchc:menu/modifiers/core/${modifier}/config`);
+
+                /* Next difficulty function
+
+                e.g. abchc:menu/modifiers/core/anvil_rain/difficulty/next_difficulty.mcfunction */
+                fs.writeFileSync(
+                    `../${modifier}/difficulty/next_difficulty.mcfunction`,
+`#> abchc:menu/${modifier}/difficulty/next_difficulty
+# Go to the next difficulty for ${modifier}
+# Generated with the script at '../src/index.js'
+#
+# @within abchc:menu/modifiers/core/${modifier}/**
+# @context player
+
+#> Click sound
+function abchc:menu/actions/click
+
+#> If difficulty isn't set, get from global
+execute unless score difficulty.${modifier} abch.config matches 0..3 run scoreboard players operation difficulty.${modifier} abch.config = difficulty.global abch.config
+
+#> Set difficulty to temp score
+scoreboard players operation #temp abch.config = difficulty.${modifier} abch.config
+
+#> Add temp score
+scoreboard players add #temp abch.config 1
+
+#> If it goes above 3, set to 0 (Hard to Peaceful)
+execute if score #temp abch.config matches 4.. run scoreboard players set #temp abch.config 0
+
+#> Set new difficulty temp score to difficulty
+scoreboard players operation difficulty.${modifier} abch.config = #temp abch.config
+
+#> Update menu
+function abchc:menu/modifiers/core/${modifier}/config`);
+
+            /* Write reset function
+            for resetting score
+
+            e.g. abchc:menu/modifiers/core/anvil_rain/rate/reset.mcfunction */
+            fs.writeFileSync(
+                `../${modifier}/difficulty/reset.mcfunction`,
+`#> abchc:menu/modifiers/core/${modifier}/difficulty/reset
+# Reset ${modifier} difficulty to global difficulty
+# Generated with the script at '../src/index.js'
+#
+# @within abchc:menu/modifiers/core/${modifier}/**
+# @context player
+
+#> Click sound
+function abchc:menu/actions/click
+
+#> Reset to global difficulty
+scoreboard players operation difficulty.${modifier} abch.config = difficulty.global abch.config
+
+#> Update menu
+function abchc:menu/modifiers/core/${modifier}/config`
+            );
+
+    } 
 
     // For each config
     configs.forEach(element => {
@@ -585,6 +722,7 @@ modifiersList.forEach(element => {
         fs.writeFileSync(`../${element}/off.mcfunction`, `#> abchc:menu/modifiers/core/${element}/off\n#Automatically generated toggle off function for ${element}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${element} abch.toggle 0\n\n# Run unload function\nfunction abchc:modifiers/${element}/unload\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/directory`)
 
         //file written successfully
+
       } catch (err) {
         console.error(err)
       }
