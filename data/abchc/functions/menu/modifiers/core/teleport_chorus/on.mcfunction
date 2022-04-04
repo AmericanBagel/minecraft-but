@@ -13,4 +13,4 @@ function abchc:modifiers/teleport_chorus/load
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/modifiers/directory
+function abchc:menu/directory

@@ -13,4 +13,4 @@ function abchc:modifiers/stacked_pigs/load
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/modifiers/directory
+function abchc:menu/directory

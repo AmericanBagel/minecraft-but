@@ -13,4 +13,4 @@ function abchc:modifiers/ender_blood/unload
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/modifiers/directory
+function abchc:menu/directory

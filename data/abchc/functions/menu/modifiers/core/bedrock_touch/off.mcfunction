@@ -13,4 +13,4 @@ function abchc:modifiers/bedrock_touch/unload
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/modifiers/directory
+function abchc:menu/directory

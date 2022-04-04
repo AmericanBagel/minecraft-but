@@ -13,4 +13,4 @@ function abchc:modifiers/anvil_rain/unload
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/modifiers/directory
+function abchc:menu/directory

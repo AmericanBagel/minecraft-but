@@ -13,4 +13,4 @@ function abchc:modifiers/blinding_damage/load
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/modifiers/directory
+function abchc:menu/directory

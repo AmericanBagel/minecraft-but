@@ -13,4 +13,4 @@ function abchc:modifiers/realistic_spiders/load
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/modifiers/directory
+function abchc:menu/directory
