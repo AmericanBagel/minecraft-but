@@ -10,7 +10,7 @@ Browsing through [PlanetMinecraft's data pack page](https://www.planetminecraft.
 - [x] 50+ customizable, toggleable gameplay modifiers
 - [x] Centralized GUI to manage modifiers
 - [x] An easy kill switch when you want the chaos to all *stop*
-- [ ] Configuration GUIs for 15+ modifiers to fine-tune your gameplay
+- [x] Configuration GUIs for 15+ modifiers to fine-tune your gameplay
 - [ ] Admin panel to exempt certain players from being affected by modifiers
 - [ ] Admin panel to select which players have access to data pack GUI
 - [ ] Random mode which randomly enables or disables modifiers at a customizable interval
