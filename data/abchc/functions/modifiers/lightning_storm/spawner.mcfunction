@@ -1,2 +1,4 @@
-summon armor_stand ~ ~10 ~ {CustomName: '{"text":"abch.lightning"}', Invisible: 1b}
-execute as @e[ type=armor_stand, name="abch.lightning" ] at @s unless score @s abch.lightning matches 1..50 run spreadplayers ~ ~ 13 50 false @s
+summon marker ~ ~10 ~ {CustomName: '{"text":"abch.lightning"}',Tags:["abch","abch.lightning","global.ignore","abch.lightning.init"]}
+execute as @e[ tag=abch.lightning.init ] at @s run spreadplayers ~ ~ 5 35 false @s
+tag @e[ type=marker, tag=abch.lightning.init ] remove abch.lightning.init
+scoreboard players reset @s abch.lightning
