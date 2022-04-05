@@ -192,6 +192,12 @@
                 "description": "How likely feature spawning is",
                 "id": "chance",
                 "type": "number"
+            },
+            "sfx": {
+                "name": "Sound effects",
+                "description": "Whether to play sound effects when a feature is spawned or not. By default, sound effects are disabled if the chance is above 4 to preserve your precious eardrums.",
+                "id": "sfx",
+                "type": "toggle"
             }
         }
     },

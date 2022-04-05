@@ -14,7 +14,7 @@ execute if score feature_fanatic.chance abch.config matches -2147483648..2147483
 # Else use default
 execute unless score feature_fanatic.chance abch.config matches -2147483648..2147483647 run scoreboard players operation #counter abch.modifier.temp = feature_fanatic.chance abch.default
 
-scoreboard players set #counter abch.modifier.temp 10
+#scoreboard players set #counter abch.modifier.temp 10
 
 #> Start loop
 function abchc:modifiers/feature_fanatic/loop

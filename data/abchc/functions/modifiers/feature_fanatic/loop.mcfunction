@@ -4,10 +4,12 @@
 # @context player
 
 #> Chance to place feature
-function abchc:modifiers/feature_fanatic/placefeature_init
+execute if predicate abchc:25pct run function abchc:modifiers/feature_fanatic/placefeature_init
 
 #> Remove counter
 scoreboard players remove #counter abch.modifier.temp 1
+
+#tellraw @a [{"score":{"name": "#counter","objective": "abch.modifier.temp"}}]
 
 #> Continue loop
 execute if score #counter abch.modifier.temp matches 1.. run function abchc:modifiers/feature_fanatic/loop
