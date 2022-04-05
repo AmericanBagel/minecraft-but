@@ -57,7 +57,7 @@
             "category": "chaos"
         },
         "config": {
-            "grief": {
+            "keep": {
                 "name": "Keep anvils",
                 "description": "Should anvils stay after they hit the ground?",
                 "id": "keep",
@@ -71,7 +71,7 @@
             },
             "relative": {
                 "name": "Rain above players",
-                "description": "Should anvils rain above players?",
+                "description": "Should anvils rain above players, relative to their position? This will spawn anvils about 15 blocks above players instead of from the sky. This is useful for players who hide underground.",
                 "id": "relative",
                 "type": "toggle"
             },
