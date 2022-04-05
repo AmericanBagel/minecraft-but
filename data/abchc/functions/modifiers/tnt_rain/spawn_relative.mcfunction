@@ -1,38 +1,67 @@
-# Summon marker
-summon marker ~ ~ ~ {CustomName: '{"text":"abch.anvil_rain.spawner"}', Tags: [ "global.ignore", "marker", "abch.marker" ]}
-
-# Copy Y position from player to marker
-#data modify entity @e[type=marker,name="abch.anvil_rain.spawner",tag=abch.marker,limit=1] Pos[1] set from entity @s Pos[1]
+#> abchc:modifiers/tnt_rain/spawn_relative
+# 
+# Spawn tnts above player
+#
+# @context tnt marker
+# @within abchc:modifiers/tnt_rain/relative
+# @output
+#   score #y abch.tnt_rain
+#       Y pos of tnt spawner to preserve
+#       Y pos after spreadplayers
+#   score out abch.rng.math
+#       Output of LCG, random number 
 
 ## Y pos storing
 # Copy Y position from player to marker's score
-execute store result score @e[ type=marker, name="abch.anvil_rain.spawner" ] abch.anvil_rain.Y run data get entity @s Pos[1]
+#execute store result score #y abch.tnt_rain run data get entity @s Pos[1]
+#tellraw @a {"score":{"name": "#y","objective": "abch.tnt_rain"}}
 
-### TEMP
-scoreboard players set @e[ type=marker, name="abch.anvil_rain.spawner" ] abch.anvil_rain.Yoffset 15
-###
+#> Get Y offset
+#function abchc:modifiers/tnt_rain/get_offset
 
 # Add marker's Y offset score to marker's Y score so it spawns above player
-scoreboard players operation @e[ type=marker, name="abch.anvil_rain.spawner" ] abch.anvil_rain.Y += @e[ type=marker, name="abch.anvil_rain.spawner" ] abch.anvil_rain.Yoffset
+#scoreboard players operation #y abch.tnt_rain += out abch.rng.math
+#spreadplayers ~ ~ 0 25 false @s
+#spreadplayers ~ ~ 0 25 false @s
+#
+## Apply Y position to keep marker's Y position
+## because spreadplayers grounds it
+#execute store result entity @s Pos[1] double 1 run scoreboard players get #y abch.tnt_rain
+#
+## Run tnt spawning function
+#execute positioned ~ ~10 ~ run function abchc:modifiers/tnt_rain/rain
+#
+## tnt particles
+#particle minecraft:smoke ~ ~ ~ 0.1 0.1 0.1 0.2 15 normal
+#particle minecraft:block minecraft:tnt ~ ~ ~ 0.1 0.1 0.1 0.2 15 normal
+#
+## Kill marker
+#kill @s
+
+## Y pos storing
+# Copy Y position from player to marker's score
+execute store result score #y abch.tnt_rain run data get entity @s Pos[1]
+#tellraw @a {"score":{"name": "#y","objective": "abch.tnt_rain"}}
+
+#> Get Y offset
+function abchc:modifiers/tnt_rain/get_offset
+
+# Add marker's Y offset score to marker's Y score so it spawns above player
+scoreboard players operation #y abch.tnt_rain += out abch.rng.math
 
 # Randomly teleport the marker around
-spreadplayers ~ ~ 0 25 false @e[ type=marker, name="abch.anvil_rain.spawner" ]
+spreadplayers ~ ~ 0 25 false @s
 
 # Apply Y position to keep marker's Y position
-execute as @e[ type=marker, name="abch.anvil_rain.spawner" ] store result entity @s Pos[1] double 1 run scoreboard players get @s abch.anvil_rain.Y
+# because spreadplayers grounds it
+#execute store result entity @s Pos[1] doubl
+execute store result entity @s Pos[1] double 1 run scoreboard players get #y abch.tnt_rain
 
-# Get random number between 1 and 60
-scoreboard players set in abch.rng.math 1
-scoreboard players set in1 abch.rng.math 60
-function abchc:apis/rng/range
-scoreboard players operation @e[ type=marker, name="abch.anvil_rain.spawner" ] abch.anvil_rain.random = out abch.rng.math
+#> Particles
+execute at @s run particle large_smoke ~ ~ ~ 0.25 0.25 0.25 0.025 3 force
 
-# Run anvil spawning function
-execute as @e[ type=marker, name="abch.anvil_rain.spawner" ] at @s run function abchc:modifiers/anvil_rain/rain
-
-# Anvil particles
-execute as @e[ type=marker, name="abch.anvil_rain.spawner" ] at @s run particle minecraft:smoke ~ ~ ~ 0.1 0.1 0.1 0.2 15 normal
-execute as @e[ type=marker, name="abch.anvil_rain.spawner" ] at @s run particle minecraft:block minecraft:anvil ~ ~ ~ 0.1 0.1 0.1 0.2 15 normal
+# Run tnt spawning function
+execute at @s run function abchc:modifiers/tnt_rain/rain
 
 # Kill marker
-kill @e[ type=marker, name="abch.anvil_rain.spawner" ]
+kill @s

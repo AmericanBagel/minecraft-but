@@ -1,13 +1,26 @@
-## Commands
-# 25% chance to rain anvils from Y255 unless disabled
-execute as @a[ tag=!abch.blacklist ] at @s if score anvil_rain.sky abch.config matches 1 if predicate abchc:25pct run function abchc:modifiers/anvil_rain/spawn_sky
+#> abchc:modifiers/tnt_rain/loop
+#
+# Loop for tnt spawning
+#
+# @within abchc:modifiers/tnt_rain/main
+# @context root
+# @input
+#   score tnt_rain.sky abch.config
+#       Whether to spawn tnts from the sky
+#   score tnt_rain.relative abch.config
+#       Whether to spawn tnts above player
 
-# 25% chance to rain anvils above player unless disabled
-execute as @a[ tag=!abch.blacklist ] at @s if score anvil_rain.relative abch.config matches 1 if predicate abchc:25pct run function abchc:modifiers/anvil_rain/spawn_relative
 
-## Loop
+#> Commands
+# 25% chance to rain tnts from Y319 unless disabled
+execute as @a[ tag=!abch.blacklist ] at @s if score tnt_rain.sky abch.config matches 1 if predicate abchc:25pct run function abchc:modifiers/tnt_rain/spawn_sky
+
+# 25% chance to rain tnts above player unless disabled
+execute as @a[ tag=!abch.blacklist ] at @s if score tnt_rain.relative abch.config matches 1 if predicate abchc:25pct run function abchc:modifiers/tnt_rain/relative
+
+#> Loop
 # Decrement loop
-scoreboard players remove anvil_rain.loop abch.config 1
+scoreboard players remove tnt_rain.loop abch.config 1
 
 # Continue loop
-execute if score anvil_rain.loop abch.config matches 1.. run function abchc:modifiers/anvil_rain/loop
+execute if score tnt_rain.loop abch.config matches 1.. run function abchc:modifiers/tnt_rain/loop

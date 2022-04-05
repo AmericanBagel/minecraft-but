@@ -3,6 +3,7 @@ scoreboard objectives add abch.menu.page dummy
 #> Config
 ## Difficulty config
 # If no value is assigned to global difficulty, set it to normal (2)
+# 0 = Peaceful
 # 1 = Easy
 # 2 = Normal
 # 3 = Hard
@@ -34,8 +35,9 @@ function abch.ex3:update_status
 function abch.ex4:update_status
 
 ## Gamerules
-execute unless score gamerule.mobGriefing abch.config matches 0..1 store result score gamerule.mobGriefing abch.config run gamerule mobGriefing
-execute unless score gamerule.showDeathMessages abch.config matches 0..1 store result score gamerule.showDeathMessages abch.config run gamerule mobGriefing
+execute store result score gamerule.mobGriefing abch.config run gamerule mobGriefing
+execute store result score gamerule.showDeathMessages abch.config run gamerule showDeathMessages
+execute store result score gamerule.sendCommandFeedback abch.config run gamerule sendCommandFeedback
 
 scoreboard objectives add abch.isSpawned dummy
 
@@ -55,6 +57,7 @@ scoreboard players set #8 abch.math 8
 scoreboard players set #2 abch.math 2
 scoreboard players set #1 abch.math 1
 scoreboard players set #200 abch.math 200
+scoreboard players set #20 abch.math 20
 
 ##### Teams ####
 team add abchc.color.dark_red
@@ -131,7 +134,7 @@ execute unless score degradation.speed abch.config matches 0..1 run scoreboard p
 # tnt_rain.grief - Should TNT grief? - Integer - Def 1
 execute unless score tnt_rain.grief abch.config matches 0..1 store result score tnt_rain.grief abch.config run gamerule mobGriefing
 
-# tnt_rain.sky - Summon tnt from the sky (Y255)? - BOOLEAN - DEF 1
+# tnt_rain.sky - Summon tnt from the sky (319)? - BOOLEAN - DEF 1
 execute unless score anvil_rain.sky abch.config matches 0..1 run scoreboard players set anvil_rain.sky abch.config 1
 
 # tnt_rain.relative - Summon tnts above players? (+~15)? - BOOLEAN - DEF 1

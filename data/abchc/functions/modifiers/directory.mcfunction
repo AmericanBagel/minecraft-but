@@ -63,6 +63,7 @@ execute if score random_teleport abch.toggle matches 1 run function abchc:modifi
 execute if score realistic_spider abch.toggle matches 1 run function abchc:modifiers/realistic_spiders/main
 execute if score schlatt_mode abch.toggle matches 1 run function abchc:modifiers/schlatt_mode/main
 execute if score stacked_pigs abch.toggle matches 1 run function abchc:modifiers/stacked_pigs/main
+execute if score stick_together abch.toggle matches 1 run function abchc:modifiers/stick_together/main
 execute if score super_sponge abch.toggle matches 1 run function abchc:modifiers/super_sponge/main
 execute if score superhot abch.toggle matches 1 run function abchc:modifiers/superhot/main
 execute if score sus_injury abch.toggle matches 1 run function abchc:modifiers/suspicious_injury/main
