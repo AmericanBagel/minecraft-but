@@ -293,5 +293,28 @@
                 "type": "number"
             }
         }
-    }
+    },
+    "random_teleport": {
+        "info": {
+            "name": "You randomly teleport",
+            "description": "Ever wanted to randomly teleport? No? Well now you can!",
+            "id": "random_teleport",
+            "category": "teleporting"
+        },
+        "config": {
+            "chance": {
+                "name": "Chance",
+                "description": "This is the chance that a player will teleport every second.",
+                "id": "chance",
+                "type": "number"
+            },
+            "radius": {
+                "name": "Teleport radius",
+                "description": "How far should players, at maximum, be randomly teleported away?",
+                "id": "radius",
+                "type": "number"
+            }
+        }
+    },
+    
 }
