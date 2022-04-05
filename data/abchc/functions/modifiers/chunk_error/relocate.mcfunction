@@ -28,7 +28,7 @@ execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run scoreboard p
 #If the total of the player's
 #execute as @e[type=armor_stand,name="abch.chunkError",tag=abch.CEvoid] at @s unless score @s abch.chunk_error.total = @p abch.chunk_error.total run setblock ~ 35 ~ light_blue_wool
 execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run function abchc:modifiers/chunk_error/error_sound
-execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run fill ~16 255 ~16 ~ 150 ~ air
+execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run fill ~16 319 ~16 ~ 150 ~ air
 execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run fill ~16 149 ~16 ~ 50 ~ air
 execute as @e[ type=armor_stand, name="abch.chunkError" ] at @s run fill ~16 49 ~16 ~ 0 ~ air
 execute as @e[ type=armor_stand, name="abch.chunkError", tag=abch.CEvoid ] at @s unless score @s abch.chunk_error.total = @p abch.chunk_error.total run kill @e[ type=armor_stand, name="abch.chunkError" ]
