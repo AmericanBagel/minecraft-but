@@ -69,7 +69,7 @@ execute if score superhot abch.toggle matches 1 run function abchc:modifiers/sup
 execute if score sus_injury abch.toggle matches 1 run function abchc:modifiers/suspicious_injury/main
 execute if score tp_arrows abch.toggle matches 1 run function abchc:modifiers/tp_arrows/main
 execute if score tp_sneak abch.toggle matches 1 run function abchc:modifiers/tp_sneak/main
-#execute if score tnt_rain abch.toggle matches 1 run function abchc:modifiers/tnt_rain/main
+execute if score tnt_rain abch.toggle matches 1 run function abchc:modifiers/tnt_rain/main
 execute if score tnt_bats abch.toggle matches 1 run function abchc:modifiers/tnt_bats/main
 execute if score totems_of_dying abch.toggle matches 1 run function abchc:modifiers/totems_of_dying/main
 execute if score toxic_grass abch.toggle matches 1 run function abchc:modifiers/toxic_grass/main
@@ -82,6 +82,9 @@ execute if score walk_leveling abch.toggle matches 1 run function abchc:modifier
 execute if score waning_wellness abch.toggle matches 1 run function abchc:modifiers/waning_wellness/main
 execute if score yeet abch.toggle matches 1 run function abchc:modifiers/yeet/main
 execute if score ytpwyl abch.toggle matches 1 run function abchc:modifiers/you_tp_where_you_look/main
+
+#> Update modifier total
+function abchc:modifiers/total
 
 
 #> Reset criteria-based scoreboards
