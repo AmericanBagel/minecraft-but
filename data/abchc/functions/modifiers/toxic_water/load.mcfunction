@@ -1,0 +1,1 @@
+execute unless score difficulty.toxic_water abch.config matches 0..3 run scoreboard players operation difficulty.toxic_water abch.config = difficulty.global abch.config

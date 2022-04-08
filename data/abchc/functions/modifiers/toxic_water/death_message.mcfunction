@@ -1,0 +1,1 @@
+execute as @e[tag=abch.toxic_water.death_message] at @s run tellraw @a [{"selector":"@a[tag=abch.toxic_water.death_message]"},{"text":" touched water."}]
