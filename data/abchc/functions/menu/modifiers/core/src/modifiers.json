@@ -136,7 +136,7 @@
             "name": "Colors kill you",
             "description": "According to Prof. H. D. Magnomore, recent solar flares have increased the radioactivity of highly energetic colors. Magnomore advises people to limit their exposures to lethal colors.",
             "id": "deadly_colors",
-            "category": "miscellaneous"
+            "category": "misc"
         },
         "config": {
             "interval": {
@@ -316,5 +316,26 @@
             }
         }
     },
-    
+    "2020_mode": {
+        "info": {
+            "name": "You social distance",
+            "description": "2020 all over again! If you go near players, you'll take damage. This makes co-op and PvP more complicated. No more charging in with a netherite axe and Strength II. Get creative! Use your bow, or even some explosive snowballs!",
+            "id": "2020_mode",
+            "category": "misc"
+        },
+        "config": {
+            "player": {
+                "name": "Push away players",
+                "description": "Should players be pushed away from other players?",
+                "id": "player",
+                "type": "toggle"
+            },
+            "entity": {
+                "name": "Push away entities",
+                "description": "Should entities be pushed away from other players?",
+                "id": "entity",
+                "type": "toggle"
+            }
+        }
+    }
 }
