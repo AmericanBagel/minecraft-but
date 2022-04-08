@@ -83,4 +83,23 @@ execute if score waning_wellness abch.toggle matches 1 run function abchc:modifi
 execute if score yeet abch.toggle matches 1 run function abchc:modifiers/yeet/main
 execute if score ytpwyl abch.toggle matches 1 run function abchc:modifiers/you_tp_where_you_look/main
 
-scoreboard players reset @a abch.deaths
+
+#> Reset criteria-based scoreboards
+# This prevents unexpected behavior of criteria scoreboard
+# based modifier actions acting upon load.
+# i.e. taking damage, turning on ender blood, being teleported
+scoreboard players reset * abch.deaths
+scoreboard players reset * abch.no_walk
+scoreboard players reset * abch.sneak
+scoreboard players reset * abch.jump
+scoreboard players reset * abch.mobkill
+scoreboard players reset * abch.pacifist.kill
+scoreboard players reset * abch.blinding_damage
+scoreboard players reset * abch.damage_nausea
+scoreboard players reset * abch.death
+scoreboard players reset * abch.deadly_falls
+scoreboard players reset * abch.esSneak
+scoreboard players reset * abch.ender_blood.damage
+scoreboard players reset * abch.suspicious_injury.damage
+execute unless score walk_leveling abch.toggle matches 1 run scoreboard players reset * abch.walk_leveling.xp
+scoreboard players reset * abch.tp_sneak.sneak
