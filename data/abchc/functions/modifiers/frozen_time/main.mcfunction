@@ -6,7 +6,7 @@
 # @within abchc:modifiers/directory
 
 #> Give all non-blacklisted, non-ignored mobs which have gravity and AI enabled the frozen tag
-tag @e[tag=!abch.blacklist,tag=!global.ignore,type=!player,nbt={NoAI:0b,NoGravity:0b},type=#abchc:living_base] add abch.frozen_time
+tag @e[tag=!abch.blacklist,tag=!global.ignore,type=#abchc:living_base,nbt={NoAI:0b,NoGravity:0b}] add abch.frozen_time
 
 #> Give mobs with frozen tag slowness, no gravity, and no ai
 effect give @e[tag=abch.frozen_time] slowness 1 255 true
