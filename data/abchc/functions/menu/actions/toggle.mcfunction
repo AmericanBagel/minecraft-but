@@ -10,4 +10,4 @@ execute if score .global abch.toggle matches 1 run scoreboard players set #temp 
 
 scoreboard players operation .global abch.toggle = #temp abch.toggle
 
-function abchc:menu/directory
+function abchc:menu/find_page

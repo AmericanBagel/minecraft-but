@@ -13,4 +13,4 @@ function abchc:modifiers/chunk_error/load
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/directory
+function abchc:menu/find_page

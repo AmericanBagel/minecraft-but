@@ -715,10 +715,10 @@ modifiersList.forEach(element => {
         if (fs.existsSync(`../${element}`) === false) fs.mkdirSync(`../${element}`);
 
         // Create "on" function
-        fs.writeFileSync(`../${element}/on.mcfunction`,`#> abchc:menu/modifiers/core/${element}/on\n#Automatically generated toggle on function for ${element}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${element} abch.toggle 1\n\n# Run load function\nfunction abchc:modifiers/${element}/load\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/directory`)
+        fs.writeFileSync(`../${element}/on.mcfunction`,`#> abchc:menu/modifiers/core/${element}/on\n#Automatically generated toggle on function for ${element}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${element} abch.toggle 1\n\n# Run load function\nfunction abchc:modifiers/${element}/load\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/find_page`)
 
         // Create "off" function
-        fs.writeFileSync(`../${element}/off.mcfunction`, `#> abchc:menu/modifiers/core/${element}/off\n#Automatically generated toggle off function for ${element}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${element} abch.toggle 0\n\n# Run unload function\nfunction abchc:modifiers/${element}/unload\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/directory`)
+        fs.writeFileSync(`../${element}/off.mcfunction`, `#> abchc:menu/modifiers/core/${element}/off\n#Automatically generated toggle off function for ${element}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${element} abch.toggle 0\n\n# Run unload function\nfunction abchc:modifiers/${element}/unload\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/find_page`)
 
         //file written successfully
 

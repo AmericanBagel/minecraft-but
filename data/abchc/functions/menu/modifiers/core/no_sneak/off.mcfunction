@@ -13,4 +13,4 @@ function abchc:modifiers/no_sneak/unload
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/directory
+function abchc:menu/find_page

@@ -19,4 +19,4 @@ execute if score #temp abch.config matches ..0 run scoreboard players set #temp 
 scoreboard players operation difficulty.global abch.config = #temp abch.config
 
 #> Update page
-function abchc:menu/directory
+function abchc:menu/find_page

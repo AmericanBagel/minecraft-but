@@ -1,6 +1,6 @@
 #> abchc:menu/manage_villager
 # Manage villager right-click detection
-# @within abchc:menu/directory
+# @within abchc:menu/find_page
 # @context player
 
 #> Set .search to player SID score

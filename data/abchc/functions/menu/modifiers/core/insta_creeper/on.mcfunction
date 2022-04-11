@@ -13,4 +13,4 @@ function abchc:modifiers/insta_creeper/load
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/directory
+function abchc:menu/find_page

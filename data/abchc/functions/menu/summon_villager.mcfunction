@@ -1,6 +1,6 @@
 #> abchc:menu/summon_villager
 # SUmmon villager for right click detection
-# @within abchc:menu/directory
+# @within abchc:menu/find_page
 # @context player
 
 # Add init tag to player
