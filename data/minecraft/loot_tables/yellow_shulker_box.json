@@ -48,6 +48,7 @@
                     ]
                   },
                   {
+                    "type": "shulker_box",
                     "function": "minecraft:set_contents",
                     "entries": [
                       {
