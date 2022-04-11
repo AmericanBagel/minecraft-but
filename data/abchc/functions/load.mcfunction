@@ -1,6 +1,13 @@
 scoreboard objectives add abch.menu.page dummy
 
 #> Config
+## Toggle
+scoreboard objectives add abch.toggle dummy
+# If no value is assigned to toggle, set it to 1
+execute unless score .global abch.toggle matches 0..1 run scoreboard players set .global abch.toggle 1
+
+scoreboard objectives add abch.config dummy
+
 ## Difficulty config
 # If no value is assigned to global difficulty, set it to normal (2)
 # 0 = Peaceful
@@ -9,11 +16,6 @@ scoreboard objectives add abch.menu.page dummy
 # 3 = Hard
 execute if score difficulty.sync abch.config matches 1.. store result score difficulty.global abch.config run difficulty 
 execute if score difficulty.global abch.config matches 0 run scoreboard players set difficulty.global abch.config 1
-
-## Toggle
-scoreboard objectives add abch.toggle dummy
-# If no value is assigned to toggle, set it to 1
-execute unless score .global abch.toggle matches 0..1 run scoreboard players set .global abch.toggle 1
 
 ## Expansion Pack Support
 scoreboard objectives add abch.expansion dummy
@@ -44,7 +46,6 @@ scoreboard objectives add abch.isSpawned dummy
 scoreboard objectives add abch.debug dummy
 scoreboard objectives add abch.modifier dummy
 scoreboard objectives add abch.timer dummy
-scoreboard objectives add abch.config dummy
 scoreboard objectives add abch.default dummy
 scoreboard objectives add abch.minute dummy
 scoreboard objectives add abch.deaths deathCount
