@@ -1,16 +1,18 @@
 #> abchc:modifiers/tnt_bats/try_spawn
-# Try to spawn a bat
-# @context hostile mob
-# @within abchc:modifiers/tnt_bats/main
+# Try to spawn a bat from a non-bat entity
+# @within abchc:modifiers/tnt_bats/**
+# @context non-bat mob
+# @input
+#   score tnt_bats.percent abch.config
+#       Percent chance to spawn a new bat from a non-bat entity
 
-# If score is 1, 1% chance of spawning bats
-execute if score tnt_bats.difficulty abch.config matches 1 if predicate abchc:1pct unless entity @a[distance=..20] run function abchc:modifiers/tnt_bats/spawn_bat
+#> Get random number between 1 and 100
+scoreboard players set in abch.rng.math 1
+scoreboard players set in1 abch.rng.math 100
+function abchc:apis/rng/range
 
-# If score is 2 or nothing, 5% chance of spawning bats
-execute unless score tnt_bats.difficulty abch.config matches ..1 unless score tnt_bats.difficulty abch.config matches 3.. if predicate abchc:5pct unless entity @a[distance=..20] run function abchc:modifiers/tnt_bats/spawn_bat
+#> If the number is within the percent range, spawn
+execute if score out abch.rng.math <= tnt_bats.percent abch.config run function abchc:modifiers/tnt_bats/spawn_bat
 
-# If score is 3, 15% of spawning bats
-execute if score tnt_bats.difficulty abch.config matches 3.. if predicate abchc:15pct unless entity @a[distance=..20] run function abchc:modifiers/tnt_bats/spawn_bat
-
-# Add tag to prevent further spawning
+#> Tag entity so entity won't run this function again
 tag @s add abch.tnt_bats.spawned
