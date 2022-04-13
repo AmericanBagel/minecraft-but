@@ -1,1 +1,1 @@
-execute if predicate abchc:25pct run function abchc:modifiers/degradation/mark
+function abchc:modifiers/degradation/mark
