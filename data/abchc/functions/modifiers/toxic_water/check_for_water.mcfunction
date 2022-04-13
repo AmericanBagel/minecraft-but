@@ -3,7 +3,10 @@
 # @within abchc:modifiers/toxic_water/main
 # @context player
 
-#> Remove tag if player is on water
+#> Give player out of water tag
+tag @s add abch.toxic_water.out_of_water
+
+#> Remove tag if player is in water
 execute if block ~ ~ ~ #abchc:water run tag @s remove abch.toxic_water.out_of_water
 execute if block ~ ~ ~ #aestd1:all[waterlogged=true] run tag @s remove abch.toxic_water.out_of_water
 
@@ -14,9 +17,4 @@ execute if block ~ ~1 ~ #aestd1:all[waterlogged=true] run tag @s remove abch.tox
 execute if data entity @s RootVehicle.Entity{id:"minecraft:boat"} run function abchc:modifiers/toxic_water/boat_check
 
 #> If it's raining, check if player has sky above
-execute if predicate abchc:raining run function abchc:modifiers/toxic_water/rain/start
-
-## Check if player is standing on boat
-#execute store result score $y abch.toxic_water run data get entity @s Pos[1] 10000
-#scoreboard players operation $y abch.toxic_water %= #10000 abch.math
-#execute if score $y abch.toxic_water matches 857 run tag @s add abch.toxic_water.out_of_water
+execute unless entity @s[tag=!abch.toxic_water.out_of_water] unless score toxic_water.rain abch.config matches 0 if predicate abchc:raining run function abchc:modifiers/toxic_water/rain/start

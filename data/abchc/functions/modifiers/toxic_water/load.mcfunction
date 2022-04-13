@@ -6,13 +6,22 @@
 
 #> Timer to play sound
 scoreboard objectives add abch.toxic_water.timer dummy
+scoreboard objectives add abch.toxic_water.deaths deathCount
 scoreboard objectives add abch.toxic_water dummy
 
 #> Configs
 # If difficulty isn't set, default to global difficulty
-execute unless score toxic_water.difficulty abch.config matches -2147483648..2147483647 run scoreboard players operation toxic_water.difficulty abch.config = difficulty.global abch.config
-scoreboard players operation toxic_water.difficulty abch.default = difficulty.global abch.config
+execute unless score difficulty.toxic_water abch.config matches -2147483648..2147483647 run scoreboard players operation difficulty.toxic_water abch.config = difficulty.global abch.config
+scoreboard players operation difficulty.toxic_water abch.default = difficulty.global abch.config
 
-# Dolphins grace
-execute unless score toxic_water.dolphins_grace abch.config matches 0..1 run scoreboard players set toxic_water.dolphins_grace abch.config 1
-execute unless score toxic_water.dolphins_grace abch.config matches 0..1 run scoreboard players set toxic_water.dolphins_grace abch.config 1
+# Rain mercy
+scoreboard players set toxic_water.rain abch.default 1
+execute unless score toxic_water.rain abch.config matches 0..1 run scoreboard players set toxic_water.rain abch.config 1
+
+# Warning message in actionbar
+scoreboard players set toxic_water.warning abch.default 1
+execute unless score toxic_water.warning abch.config matches 0..1 run scoreboard players set toxic_water.rain abch.config 1
+
+# Warning sound
+scoreboard players set toxic_water.sfx abch.default 1
+execute unless score toxic_water.sfx abch.config matches 0..1 run scoreboard players set toxic_water.rain abch.config 1

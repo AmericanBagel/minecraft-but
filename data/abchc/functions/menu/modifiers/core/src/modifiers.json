@@ -396,5 +396,34 @@
                 "type": "toggle"
             }
         }
+    },
+    "toxic_water": {
+        "info": {
+            "name": "You can't touch water",
+            "description": "Touching water or being exposed to rain kills you.",
+            "id": "toxic_water",
+            "category": "challenges",
+            "difficulty": true
+        },
+        "config": {
+            "rain": {
+                "name": "Rain protection",
+                "description": "Should players be killed by rain?",
+                "id": "rain",
+                "type": "toggle"
+            },
+            "warning": {
+                "name": "Warning message",
+                "description": "Should players get a warning message in their actionbar when they touch water?",
+                "id": "warning",
+                "type": "toggle"
+            },
+            "sfx": {
+                "name": "Warning sound",
+                "description": "Should a warning sound be played when players touch water?",
+                "id": "sfx",
+                "type": "toggle"
+            }
+        }
     }
 }
