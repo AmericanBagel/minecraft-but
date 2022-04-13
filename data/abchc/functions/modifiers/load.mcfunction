@@ -15,6 +15,7 @@ function abchc:modifiers/mermaid/load
 function abchc:modifiers/toxic_water/load
 function abchc:modifiers/unstable_inv/load
 function abchc:modifiers/limited_inventory/load
+function abchc:modifiers/look_straight/load
 function abchc:modifiers/random_teleport/load
 function abchc:modifiers/troglodyte/load
 function abchc:modifiers/teleport_chorus/load

@@ -238,20 +238,10 @@
             "name": "Light kills you",
             "description": "Players die when they enter light. Higher light levels damage players more, eventually killing them.",
             "id": "troglodyte",
-            "category": "challenges"
+            "category": "challenges",
+            "difficulty": true
         },
         "config": {
-            "difficulty": {
-                "name": "Difficulty",
-                "description": "How unforgiving the modifier should be. Ranges from Easy, Normal, to Hard.",
-                "id": "difficulty",
-                "type": "string",
-                "strings": [
-                    "Easy",
-                    "Normal",
-                    "Hard"
-                ]
-            }
         }
     },
     "death_swap": {
@@ -423,6 +413,44 @@
                 "description": "Should a warning sound be played when players touch water?",
                 "id": "sfx",
                 "type": "toggle"
+            }
+        }
+    },
+    "look_straight": {
+        "info": {
+            "name": "You have to look in one direction",
+            "description": "Players are forced to look in a customizable direction.",
+            "id": "look_straight",
+            "category": "challenges"
+        },
+        "config": {
+            "x": {
+                "name": "X axis (pitch)",
+                "description": "Should players be forced to look a certain direction on the X axis (aka pitch or vertically)? This setting could make actions like looking down to dig down more complicated...",
+                "id": "x",
+                "type": "toggle"
+            },
+            "y": {
+                "name": "Y axis (yaw)",
+                "description": "Should players be forced to look a certain direction on the Y axis (aka yaw or horizontally). This setting could movement and PvP more complicated...",
+                "id": "y",
+                "type": "toggle"
+            },
+            "x_rot": {
+                "Name": "X axis (pitch) rotation",
+                "description": "If X axis is enabled, what direction should players be forced to look (from -90 to 90)?",
+                "id": "x_rot",
+                "type": "range",
+                "min": -90,
+                "max": 90
+            },
+            "y_rot": {
+                "Name": "Y axis (yaw) rotation",
+                "description": "If Y axis is enabled, what direction should players be forced to look (from -90 to 90)?",
+                "id": "y_rot",
+                "type": "range",
+                "min": -90,
+                "max": 90
             }
         }
     }
