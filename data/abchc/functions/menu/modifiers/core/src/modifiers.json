@@ -337,5 +337,29 @@
                 "type": "toggle"
             }
         }
+    },
+    "fire_walker": {
+        "info": {
+            "name": "Everything around you turns to fire",
+            "description": "Your journey blazes behind it a path of ashen sorrow and furious cinders.",
+            "id": "fire_walker",
+            "category": "chaos"
+        },
+        "config": {
+            "rate": {
+                "name": "Rate",
+                "description": "The rate at which blocks around players turn to fire",
+                "id": "rate",
+                "type": "range",
+                "min": 1,
+                "max": 2147483647
+            },
+            "effect": {
+                "name": "Fire resistance",
+                "description": "Should players get fire resistance? Disable this if you want death. Disabling it will not be fun. Do not think about it, you sadist! You just want to watch the world burn, don't you? Monster. Didn't your parents tell you to not play with fire?",
+                "id": "effect",
+                "type": "toggle"
+            }
+        }
     }
 }
