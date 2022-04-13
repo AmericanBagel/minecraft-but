@@ -106,3 +106,4 @@ scoreboard players reset * abch.ender_blood.damage
 scoreboard players reset * abch.suspicious_injury.damage
 execute unless score walk_leveling abch.toggle matches 1 run scoreboard players reset * abch.walk_leveling.xp
 scoreboard players reset * abch.tp_sneak.sneak
+execute unless score mermaid abch.toggle matches 1 run scoreboard players reset * abch.mermaid.deaths

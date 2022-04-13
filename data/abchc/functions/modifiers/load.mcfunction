@@ -11,6 +11,7 @@ function abchc:modifiers/creeper_nukes/load
 function abchc:modifiers/death_swap/load
 function abchc:modifiers/degradation/load
 function abchc:modifiers/fire_walker/load
+function abchc:modifiers/mermaid/load
 function abchc:modifiers/unstable_inv/load
 function abchc:modifiers/limited_inventory/load
 function abchc:modifiers/random_teleport/load
