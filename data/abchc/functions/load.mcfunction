@@ -128,9 +128,6 @@ scoreboard objectives add abch.webCdwn dummy
 scoreboard objectives add abch.tntRand dummy
 scoreboard objectives add abch.lightning dummy
 
-## Degradation
-# degradation.speed - Degradation speed - INTEGER - DEF 1
-execute unless score degradation.speed abch.config matches 0..1 run scoreboard players set degradation.speed abch.config 1
 
 ## TNT Rain
 # tnt_rain.grief - Should TNT grief? - Integer - Def 1
