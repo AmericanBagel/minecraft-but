@@ -51,7 +51,9 @@ scoreboard objectives add abch.minute dummy
 scoreboard objectives add abch.deaths deathCount
 
 scoreboard objectives add abch.math dummy
+scoreboard players set #10000 abch.math 10000
 scoreboard players set #100 abch.math 100
+scoreboard players set #384 abch.math 319
 scoreboard players set #neginf abch.math -2147483647
 scoreboard players set #inf abch.math 2147483647
 scoreboard players set #8 abch.math 8
