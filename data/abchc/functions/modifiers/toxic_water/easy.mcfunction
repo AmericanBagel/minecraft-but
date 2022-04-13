@@ -1,1 +1,0 @@
-effect give @s wither 1 2 true

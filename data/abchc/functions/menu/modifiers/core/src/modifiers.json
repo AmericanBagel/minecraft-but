@@ -361,5 +361,40 @@
                 "type": "toggle"
             }
         }
+    },
+    "mermaid": {
+        "info": {
+            "name": "You can't leave water",
+            "description": "Leaving water kills you except when it's raining. If it's raining, you can survive only if rain is falling on you. If a block above you blocks the rain, you will die.",
+            "id": "mermaid",
+            "category": "challenges",
+            "difficulty": true
+        },
+        "config": {
+            "rain": {
+                "name": "Rain protection",
+                "description": "Should players be able to go on land if it is raining?",
+                "id": "rain",
+                "type": "toggle"
+            },
+            "dolphins_grace": {
+                "name": "Dolphin's Grace",
+                "description": "Should players who are in water receive dolphin's grace, which grants them more speed underwater?",
+                "id": "dolphins_grace",
+                "type": "toggle"
+            },
+            "warning": {
+                "name": "Warning message",
+                "description": "Should players get a warning message in their actionbar when they leave water?",
+                "id": "warning",
+                "type": "toggle"
+            },
+            "sfx": {
+                "name": "Warning sound",
+                "description": "Should a warning sound be played when players leave water?",
+                "id": "sfx",
+                "type": "toggle"
+            }
+        }
     }
 }
