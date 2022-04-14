@@ -84,13 +84,6 @@ scoreboard objectives remove abch.suspicious_injury.effect
 scoreboard objectives remove abch.ytpwyl.limit
 scoreboard objectives remove abch.ytpwyl.timer
 
-scoreboard objectives remove abch.lag.timer
-scoreboard objectives remove abch.lag.UUID1
-scoreboard objectives remove abch.lag.UUID2
-scoreboard objectives remove abch.lag.UUID3
-scoreboard objectives remove abch.lag.UUID4
-scoreboard objectives remove abch.lagCount
-
 scoreboard objectives remove abch.walk_leveling.lvl
 scoreboard objectives remove abch.walk_leveling.lvl2
 scoreboard objectives remove abch.wlFactor

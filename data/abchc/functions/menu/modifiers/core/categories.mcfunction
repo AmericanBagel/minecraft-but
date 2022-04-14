@@ -134,7 +134,6 @@ tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text
 # Lightning is everywhere (lightning_storm)
 # The world disintegrates (degradation) 
 # Chunks randomly delete (chunk_error)
-# It lags (lag)
 # World generation features randomly spawn (feature_fanatic)
 
 ## Miscellaneous
@@ -187,7 +186,6 @@ tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text
 # You can't eat meat (herbivore)
 # Creepers instantly explode (insta_creeper)
 # You can't stop moving (keep_moving)
-# It lags (lag)
 # Items randomly fall out of your inventory (lazy_inventory)
 # Lightning is everywhere (lightning_storm)
 # You have no inventory (limited_inventory)

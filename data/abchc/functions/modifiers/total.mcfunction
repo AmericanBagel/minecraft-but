@@ -42,7 +42,6 @@ scoreboard players operation $total abch.toggle += flying_skeletons abch.toggle
 scoreboard players operation $total abch.toggle += food_poisoning abch.toggle
 scoreboard players operation $total abch.toggle += insta_creeper abch.toggle
 scoreboard players operation $total abch.toggle += keep_moving abch.toggle
-scoreboard players operation $total abch.toggle += lag abch.toggle
 scoreboard players operation $total abch.toggle += lazy_inventory abch.toggle
 scoreboard players operation $total abch.toggle += lightning_storm abch.toggle
 scoreboard players operation $total abch.toggle += limited_inventory abch.toggle

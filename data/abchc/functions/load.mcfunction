@@ -197,13 +197,6 @@ scoreboard objectives add abch.suspicious_injury.effect dummy
 scoreboard objectives add abch.ytpwyl.limit dummy
 scoreboard objectives add abch.ytpwyl.timer dummy
 
-scoreboard objectives add abch.lag.timer dummy
-scoreboard objectives add abch.lag.UUID1 dummy
-scoreboard objectives add abch.lag.UUID2 dummy
-scoreboard objectives add abch.lag.UUID3 dummy
-scoreboard objectives add abch.lag.UUID4 dummy
-scoreboard objectives add abch.lagCount dummy
-
 scoreboard objectives add abch.walk_leveling.lvl dummy
 scoreboard objectives add abch.walk_leveling.lvl2 dummy
 scoreboard objectives add abch.walk_leveling.xp minecraft.custom:minecraft.walk_one_cm
@@ -222,8 +215,6 @@ scoreboard objectives add abch.modifier.temp dummy
 # Distance library
 function abchc:apis/dist/load
 function abchc:apis/rng/init
-
-function abchc:modifiers/lag/load
 
 function abchc:modifiers/vengeful_slimes/rng/zprivate/init
 
