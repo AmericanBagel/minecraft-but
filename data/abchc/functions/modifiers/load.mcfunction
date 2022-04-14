@@ -11,6 +11,7 @@ function abchc:modifiers/creeper_nukes/load
 function abchc:modifiers/death_swap/load
 function abchc:modifiers/degradation/load
 function abchc:modifiers/fire_walker/load
+function abchc:modifiers/fast_arrows/load
 function abchc:modifiers/mermaid/load
 function abchc:modifiers/no_gravity/load
 function abchc:modifiers/toxic_water/load

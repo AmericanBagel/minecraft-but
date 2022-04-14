@@ -21,7 +21,6 @@ execute if score diamonds_to_coal abch.toggle matches 1 run function abchc:modif
 execute if score effect_arrows abch.toggle matches 1 run function abchc:modifiers/effect_arrows/main
 execute if score ender_blood abch.toggle matches 1 run function abchc:modifiers/ender_blood/main
 execute if score explosive_arrows abch.toggle matches 1 run function abchc:modifiers/explosive_arrows/main
-execute if score explosive_coal abch.toggle matches 1 run function abchc:modifiers/explosive_coal/main
 execute if score explosive_eggs abch.toggle matches 1 run function abchc:modifiers/explosive_eggs/main
 execute if score explosive_sight abch.toggle matches 1 run function abchc:modifiers/explosive_sight/main
 execute if score explosive_snowballs abch.toggle matches 1 run function abchc:modifiers/explosive_snowballs/main
@@ -42,7 +41,6 @@ execute if score limited_inventory abch.toggle matches 1 run function abchc:modi
 execute if score look_straight abch.toggle matches 1 run function abchc:modifiers/look_straight/main
 execute if score loose_hotbar abch.toggle matches 1 run function abchc:modifiers/loose_hotbar/main
 execute if score mermaid abch.toggle matches 1 run function abchc:modifiers/mermaid/main
-execute if score meteor abch.toggle matches 1 run function abchc:modifiers/meteor/main
 execute if score midas_touch abch.toggle matches 1 run function abchc:modifiers/midas_touch/main
 execute if score mobs_glow abch.toggle matches 1 run function abchc:modifiers/mobs_glow/main
 execute if score necro_skeletons abch.toggle matches 1 run function abchc:modifiers/necro_skeletons/main
@@ -52,7 +50,7 @@ execute if score no_sneak abch.toggle matches 1 run function abchc:modifiers/no_
 execute if score no_walk abch.toggle matches 1 run function abchc:modifiers/no_walk/main
 execute if score op_bats abch.toggle matches 1 run function abchc:modifiers/op_bats/main
 execute if score overworld_ghasts abch.toggle matches 1 run function abchc:modifiers/overworld_ghasts/main
-execute if score pacifist abch.toggle matches 1 run function abchc:modifiers/pacifists/main
+execute if score pacifist abch.toggle matches 1 run function abchc:modifiers/pacifist/main
 execute if score pigification abch.toggle matches 1 run function abchc:modifiers/pigification/main
 execute if score piglinator abch.toggle matches 1 run function abchc:modifiers/piglinator/main
 execute if score players_glow abch.toggle matches 1 run function abchc:modifiers/players_glow/main

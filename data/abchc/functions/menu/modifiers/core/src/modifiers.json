@@ -497,5 +497,53 @@
                 "type": "toggle"
             }
         }
+    },
+    "explosive_arrows": {
+        "info": {
+            "name": "Arrows explode",
+            "description": "Fun for the whole family! Great with 'Arrows are fast'!",
+            "id": "explosive_arrows",
+            "category": "explosions"
+        },
+        "config": {
+            "radius": {
+                "name": "Explosion radius",
+                "description": "How large explosions should be. Negative values don't destroy blocks but damage mobs.",
+                "id": "radius",
+                "type": "number"
+            }
+        }
+    },
+    "explosive_eggs": {
+        "info": {
+            "name": "Eggs explode",
+            "description": "Scrambled? Devilled? Boiled? Explosive?",
+            "id": "explosive_arrows",
+            "category": "explosions"
+        },
+        "config": {
+            "radius": {
+                "name": "Explosion radius",
+                "description": "How large explosions should be. Negative values don't destroy blocks but damage mobs.",
+                "id": "radius",
+                "type": "number"
+            }
+        }
+    },
+    "explosive_snowballs": {
+        "info": {
+            "name": "Snowballs explode",
+            "description": "balls.",
+            "id": "explosive_arrows",
+            "category": "explosions"
+        },
+        "config": {
+            "radius": {
+                "name": "Explosion radius",
+                "description": "How large explosions should be. Negative values don't destroy blocks but damage mobs.",
+                "id": "radius",
+                "type": "number"
+            }
+        }
     }
 }

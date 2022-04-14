@@ -112,8 +112,6 @@ tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text
 
 ## Explosions
 # Bats have TNT (tnt_bats)
-# Giant meteors randomly rain from the sky (meteor)
-# Coal explodes (explosive_coal)
 # Eggs explode (explosive_eggs)
 # Phantoms explode (explosive_phantoms)
 # Everywhere you look explodes (explosive_sight)
@@ -170,7 +168,6 @@ tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text
 # Explosives are delicate (delicate_explosives)
 # Arrows have random effects (effect_arrows)
 # You teleport when you get hurt (ender_blood)
-# Coal explodes (explosive_coal)
 # Eggs explode (explosive_eggs)
 # Phantoms explode (explosive_phantoms)
 # Everywhere you look explodes (explosive_sight)
@@ -192,7 +189,6 @@ tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text
 # You can only go one direction (look_straight)
 # You have to live underwater (mermaid)
 # Water becomes toxic
-# Giant meteors randomly rain from the sky (meteor)
 # Blocks turn OP beneath you (midas_touch)
 # Mobs glow (mobs_glow)
 # Mobs randomly TP to you (mobs_to_to_you)
