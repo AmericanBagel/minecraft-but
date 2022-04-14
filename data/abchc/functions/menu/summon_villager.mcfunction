@@ -7,7 +7,7 @@
 tag @s add abch.menu.init
 
 # Summon villager with init tag
-summon villager ~ ~100 ~ {NoAI:1b,Silent:1b,Offers:{},Tags:["abch","abch.menu","abch.menu.init"],Team:"abchc.no_collision"}
+summon villager ~ ~100 ~ {NoAI:1b,Silent:1b,Offers:{},Tags:["abch","abch.menu","abch.menu.init","global.ignore"],Team:"abchc.no_collision"}
 effect give @e[tag=abch.menu] invisibility 100000 255 true
 
 # Increase global sid score
