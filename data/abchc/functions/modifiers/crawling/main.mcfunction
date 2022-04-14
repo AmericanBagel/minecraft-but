@@ -12,7 +12,7 @@ tag @a[ tag=abch.crawling.creative ] remove abch.crawling.creative
 execute unless score crawling.creative abch.config matches 1 run tag @a[ gamemode=creative ] add abch.crawling.creative
 
 # Detect jumps so players don't have barriers above them while jumping
-execute as @a[tag=!abch.crawling.blacklist, nbt=!{abilities:{flying:1b}}, nbt=!{OnGround:0b}, tag=!abch.crawling.creative ] at @s run function abchc:modifiers/crawling/barrier
+execute as @a[tag=!abch.crawling.blacklist, nbt=!{abilities:{flying:1b}}, nbt=!{OnGround:0b}, tag=!abch.crawling.creative ] at @s run function abchc:modifiers/crawling/barriers
 
 # If the marker's barrier was removed or a player is not under it, remove it
 execute as @e[ name="abch.crawling.marker" ] at @s unless block ~ ~ ~ minecraft:barrier run function abchc:modifiers/crawling/remove
