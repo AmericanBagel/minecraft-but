@@ -21,7 +21,6 @@ execute if score diamonds_to_coal abch.toggle matches 1 run function abchc:modif
 execute if score effect_arrows abch.toggle matches 1 run function abchc:modifiers/effect_arrows/main
 execute if score ender_blood abch.toggle matches 1 run function abchc:modifiers/ender_blood/main
 execute if score explosive_arrows abch.toggle matches 1 run function abchc:modifiers/explosive_arrows/main
-execute if score explosive_bush abch.toggle matches 1 run function abchc:modifiers/explosive_bush/main
 execute if score explosive_coal abch.toggle matches 1 run function abchc:modifiers/explosive_coal/main
 execute if score explosive_eggs abch.toggle matches 1 run function abchc:modifiers/explosive_eggs/main
 execute if score explosive_sight abch.toggle matches 1 run function abchc:modifiers/explosive_sight/main

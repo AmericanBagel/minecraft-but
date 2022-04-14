@@ -27,7 +27,6 @@ scoreboard players operation $total abch.toggle += diamonds_to_coal abch.toggle
 scoreboard players operation $total abch.toggle += effect_arrows abch.toggle
 scoreboard players operation $total abch.toggle += ender_blood abch.toggle
 scoreboard players operation $total abch.toggle += explosive_arrows abch.toggle
-scoreboard players operation $total abch.toggle += explosive_bush abch.toggle
 scoreboard players operation $total abch.toggle += explosive_coal abch.toggle
 scoreboard players operation $total abch.toggle += explosive_eggs abch.toggle
 scoreboard players operation $total abch.toggle += explosive_sight abch.toggle
