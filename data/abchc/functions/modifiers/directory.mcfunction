@@ -1,3 +1,15 @@
+#> abchc:modifiers/directory
+# Main modifier function for runnig and managing other modifiers
+# @within abchc:main
+# @context root
+# @input
+#   score <modifier> abch.toggle
+#       Boolean for modifier's toggle status. 0 = off, 1 = on.
+
+function abchc:modifiers/off
+
+#> 🎛️ If manual mode (1) is enabled, run manual function
+#> Run modifiers if they are enabled
 execute if score 2020_mode abch.toggle matches 1 run function abchc:modifiers/2020_mode/main
 execute if score anvil_rain abch.toggle matches 1 run function abchc:modifiers/anvil_rain/main
 execute if score bedrock_touch abch.toggle matches 1 run function abchc:modifiers/bedrock_touch/main
