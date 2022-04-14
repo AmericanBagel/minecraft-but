@@ -7,16 +7,19 @@
 function abchc:menu/actions/click
 
 #> Set difficulty to temp score
-scoreboard players operation #temp abch.config = difficulty.global abch.config
+scoreboard players operation #temp abch.config = difficulty.global abch.custom
 
 #> Increase temp score
 scoreboard players add #temp abch.config 1
 
-#> If it goes above 4, reset to 1 (Hard to Easy)
-execute if score #temp abch.config matches 4.. run scoreboard players set #temp abch.config 1
+#> If it goes above 4, reset to 1 (Hard to Peaceful)
+execute if score #temp abch.config matches 4.. run scoreboard players set #temp abch.config 0
 
 #> Set new difficulty temp score to difficulty
-scoreboard players operation difficulty.global abch.config = #temp abch.config
+scoreboard players operation difficulty.global abch.custom = #temp abch.config
+
+#> Set custom difficulty score to global difficulty
+scoreboard players operation difficulty.global abch.config = difficulty.global abch.custom
 
 #> Update page
 function abchc:menu/find_page

@@ -453,5 +453,43 @@
                 "max": 90
             }
         }
+    },
+    "herbivore": {
+        "info": {
+            "name": "You can't eat meat",
+            "description": "Due to rapid spread of a new strain of 'Alien Animal Disease', meat has been illegalized in all 14 systems of the Galactic Union.",
+            "id": "herbivore",
+            "category": "challenges",
+            "difficulty": true
+        },
+        "config": {
+        }
+    },
+    "carnivore": {
+        "info": {
+            "name": "You can only eat meat",
+            "description": "Greetings, ali--I mean fellow humans! It is with great joy that we announce that meat is good! Eat it! Eat it all! That Alien Animal Disease thing? That was just a conspiracy theory. Now eat it! Eat all the meat! You won't become a glorbazoid. We promise.",
+            "id": "carnivore",
+            "category": "challenges",
+            "difficulty": true
+        },
+        "config": {
+        }
+    },
+    "no_gravity": {
+        "info": {
+            "name": "There's no gravity",
+            "description": "There's no gravity! Get creative with trying to move up and down! Pro tip: boats are a great way to get around. Just hop in one and flyyyyyy!  ",
+            "id": "no_gravity",
+            "category": "challenges"
+        },
+        "config": {
+            "travel": {
+                "name": "Travel up & down",
+                "description": "Should players be able to go up and down by sneaking and looking up, respectively?",
+                "id": "travel",
+                "type": "toggle"
+            }
+        }
     }
 }

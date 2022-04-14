@@ -7,6 +7,8 @@ scoreboard objectives add abch.toggle dummy
 execute unless score .global abch.toggle matches 0..1 run scoreboard players set .global abch.toggle 1
 
 scoreboard objectives add abch.config dummy
+scoreboard objectives add abch.custom dummy
+scoreboard objectives add abch.default dummy
 
 ## Difficulty config
 # If no value is assigned to global difficulty, set it to normal (2)
@@ -14,8 +16,8 @@ scoreboard objectives add abch.config dummy
 # 1 = Easy
 # 2 = Normal
 # 3 = Hard
-execute if score difficulty.sync abch.config matches 1.. store result score difficulty.global abch.config run difficulty 
-execute if score difficulty.global abch.config matches 0 run scoreboard players set difficulty.global abch.config 1
+
+function abchc:modifiers/config
 
 ## Expansion Pack Support
 scoreboard objectives add abch.expansion dummy
