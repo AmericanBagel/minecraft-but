@@ -12,13 +12,12 @@
 #   score tnt_rain.loop
 #       How many loops left based on tnt_rain.chance
 
-#> Remove tnts when they land unless disabled
-execute as @e[ name="abch.tnt_rain.marker" ] at @s unless score tnt_rain.keep abch.config matches 1 run function abchc:modifiers/tnt_rain/mark_destroy
+#> Remove TNT before explosion if enabled
+execute as @e[type=tnt,tag=abch.tnt_rain,nbt={Fuse:1s}] at @s run function abchc:modifiers/tnt_rain/replace_tnt
 
 #> Loop
 # Set loop (which decrements until 0) to chance enum in config
-scoreboard players operation tnt_rain.loop abch.config = tnt_rain.chance abch.config
-scoreboard players set tnt_rain.loop abch.config 1
+scoreboard players operation $loop abch.tnt_rain = tnt_rain.chance abch.config
 
 # Start the loop
 function abchc:modifiers/tnt_rain/loop

@@ -13,14 +13,14 @@
 
 #> Commands
 # 25% chance to rain tnts from Y319 unless disabled
-execute as @a[ tag=!abch.blacklist ] at @s if score tnt_rain.sky abch.config matches 1 if predicate abchc:25pct run function abchc:modifiers/tnt_rain/spawn_sky
+execute as @a[ tag=!abch.blacklist, tag=!abch.tnt_rain.blacklist ] at @s if score tnt_rain.sky abch.config matches 1 if predicate abchc:25pct run function abchc:modifiers/tnt_rain/spawn_sky
 
 # 25% chance to rain tnts above player unless disabled
-execute as @a[ tag=!abch.blacklist ] at @s if score tnt_rain.relative abch.config matches 1 if predicate abchc:25pct run function abchc:modifiers/tnt_rain/relative
+execute as @a[ tag=!abch.blacklist, tag=!abch.tnt_rain.blacklist ] at @s if score tnt_rain.relative abch.config matches 1 if predicate abchc:25pct run function abchc:modifiers/tnt_rain/relative
 
 #> Loop
 # Decrement loop
-scoreboard players remove tnt_rain.loop abch.config 1
+scoreboard players remove $loop abch.tnt_rain 1
 
 # Continue loop
-execute if score tnt_rain.loop abch.config matches 1.. run function abchc:modifiers/tnt_rain/loop
+execute if score $loop abch.tnt_rain matches 1.. run function abchc:modifiers/tnt_rain/loop
