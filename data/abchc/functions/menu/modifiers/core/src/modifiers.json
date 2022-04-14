@@ -24,9 +24,15 @@
         },
         "config": {
             "grief": {
-                "name": "Griefing",
-                "description": "Should TNT grief?",
+                "name": "Respect mobGriefing",
+                "description": "Should TNT respect the mobGriefing gamerule? DOES NOT WORK ON PEACEFUL.",
                 "id": "grief",
+                "type": "toggle"
+            },
+            "radius": {
+                "name": "Explosion radius",
+                "description": "How large should TNT explosion radius be? Only works if Respect mobGriefing is enabled. DOES NOT WORK ON PEACEFUL.",
+                "id": "radius",
                 "type": "toggle"
             },
             "sky": {

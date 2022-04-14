@@ -113,7 +113,6 @@ tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text
 ## Explosions
 # Bats have TNT (tnt_bats)
 # Giant meteors randomly rain from the sky (meteor)
-# You randomly receive an explosive bush in your inventory (explosive_bush)
 # Coal explodes (explosive_coal)
 # Eggs explode (explosive_eggs)
 # Phantoms explode (explosive_phantoms)
@@ -172,7 +171,6 @@ tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text
 # Explosives are delicate (delicate_explosives)
 # Arrows have random effects (effect_arrows)
 # You teleport when you get hurt (ender_blood)
-# You randomly receive an explosive bush in your inventory (explosive_bush)
 # Coal explodes (explosive_coal)
 # Eggs explode (explosive_eggs)
 # Phantoms explode (explosive_phantoms)
