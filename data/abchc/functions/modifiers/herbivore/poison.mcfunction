@@ -1,2 +1,2 @@
-effect give @s minecraft:poison 30 1
-effect give @s minecraft:nausea 10 0
+execute unless score difficulty.herbivore abch.config matches 0..3 run function abchc:modifiers/herbivore/default
+execute if score difficulty.herbivore abch.config matches 0..3 run function abchc:modifiers/herbivore/custom
