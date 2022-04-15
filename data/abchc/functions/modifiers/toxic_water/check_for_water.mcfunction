@@ -17,4 +17,4 @@ execute if block ~ ~1 ~ #aestd1:all[waterlogged=true] run tag @s remove abch.tox
 execute if data entity @s RootVehicle.Entity{id:"minecraft:boat"} run function abchc:modifiers/toxic_water/boat_check
 
 #> If it's raining, check if player has sky above
-execute unless entity @s[tag=!abch.toxic_water.out_of_water] unless score toxic_water.rain abch.config matches 0 if predicate abchc:raining run function abchc:modifiers/toxic_water/rain/start
+execute unless entity @s[tag=!abch.toxic_water.out_of_water] unless score toxic_water.rain abch.config matches 0 if predicate abchc:raining if predicate is_sky:check_sky run function abchc:modifiers/toxic_water/rain
