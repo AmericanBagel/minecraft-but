@@ -14,6 +14,13 @@ schedule function abchc:menu/actions/enable_feedback 1t append
 #> Header
 tellraw @s ["\n\n\n\n\n\n\n\n\n\n\n\n",{"text":"---------------------------------------------","color":"#0F21C6"},"\n",{"text":"←|","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/main"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back to the main menu.","color":"#ECEFF5"}]}}," ",{"text":"Random","color":"#20CBA8","clickEvent":{"action":"run_command","value":"/function abchc:menu/main"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back to the main  menu.","color":"#ECEFF5"}]}},{"text":" Config","color":"#17B7CD","clickEvent":{"action":"run_command","value":"/function abchc:menu/main"}},"\n",{"text":"---------------------------------------------","color":"#0F21C6"}]
 
+#> Reroll
+# Reroll modifiers on click
+# If config is set, show toggle based on config
+tellraw @p [{"text":"[⚄] ","color":"#DA3333","clickEvent":{"action":"run_command","value":"/function abchc:menu/random/reroll"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to select new random modifiers.","color":"#ECEFF5"}]}},{"text":"Reroll modifiers","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/random/reroll"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to select new random modifiers.","color":"#ECEFF5"}]}},"\n"]
+
+# ⚄
+
 #> Interval
 # How often should modifiers be selected? Set this to 0 for modifiers to never be rerolled.
 # ID: interval
