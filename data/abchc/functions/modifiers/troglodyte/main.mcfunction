@@ -5,11 +5,13 @@
 # @context root
 
 #> Config
-execute as @a[tag=!abch.blacklist] if score troglodyte.difficulty abch.config matches 1 run function abchc:modifiers/troglodyte/easy
-execute as @a[tag=!abch.blacklist] if score troglodyte.difficulty abch.config matches 2 run function abchc:modifiers/troglodyte/normal
-execute as @a[tag=!abch.blacklist] if score troglodyte.difficulty abch.config matches 3 run function abchc:modifiers/troglodyte/hard
+execute as @a[tag=!abch.blacklist] if score difficulty.troglodyte abch.config matches 0 run function abchc:modifiers/troglodyte/peaceful
+execute as @a[tag=!abch.blacklist] if score difficulty.troglodyte abch.config matches 1 run function abchc:modifiers/troglodyte/easy
+execute as @a[tag=!abch.blacklist] if score difficulty.troglodyte abch.config matches 2 run function abchc:modifiers/troglodyte/normal
+execute as @a[tag=!abch.blacklist] if score difficulty.troglodyte abch.config matches 3 run function abchc:modifiers/troglodyte/hard
 
 #> Default
-execute as @a[tag=!abch.blacklist] unless score troglodyte.difficulty abch.config matches -2147483648..2147483647 if score troglodyte.difficulty abch.default matches 1 run function abchc:modifiers/troglodyte/easy
-execute as @a[tag=!abch.blacklist] unless score troglodyte.difficulty abch.config matches -2147483648..2147483647 if score troglodyte.difficulty abch.default matches 2 run function abchc:modifiers/troglodyte/normal
-execute as @a[tag=!abch.blacklist] unless score troglodyte.difficulty abch.config matches -2147483648..2147483647 if score troglodyte.difficulty abch.default matches 3 run function abchc:modifiers/troglodyte/hard
+execute as @a[tag=!abch.blacklist] unless score difficulty.troglodyte abch.config matches -2147483648..2147483647 if score difficulty.troglodyte abch.default matches 0 run function abchc:modifiers/troglodyte/peaceful
+execute as @a[tag=!abch.blacklist] unless score difficulty.troglodyte abch.config matches -2147483648..2147483647 if score difficulty.troglodyte abch.default matches 1 run function abchc:modifiers/troglodyte/easy
+execute as @a[tag=!abch.blacklist] unless score difficulty.troglodyte abch.config matches -2147483648..2147483647 if score difficulty.troglodyte abch.default matches 2 run function abchc:modifiers/troglodyte/normal
+execute as @a[tag=!abch.blacklist] unless score difficulty.troglodyte abch.config matches -2147483648..2147483647 if score difficulty.troglodyte abch.default matches 3 run function abchc:modifiers/troglodyte/hard

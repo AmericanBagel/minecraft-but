@@ -3,4 +3,4 @@
 # @within abchc:modifiers/load
 # @context root
 
-scoreboard players operation troglodyte.difficulty abch.default = difficulty.global abch.config
+scoreboard players operation difficulty.troglodyte abch.default = difficulty.global abch.config
