@@ -1,1 +1,1 @@
-effect give @a[ tag=!abch.blacklist ] glowing 1 0 true
+effect give @a[ tag=!abch.blacklist, tag=!abch.players_glow.blacklist ] glowing 1 0 true

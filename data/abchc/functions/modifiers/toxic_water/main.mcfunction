@@ -14,5 +14,8 @@ execute as @a[ tag=!abch.blacklist, tag=!abch.toxic_water.blacklist, gamemode=!c
 #> If player is in water, give effects
 execute as @a[ tag=!abch.blacklist, tag=!abch.toxic_water.blacklist, gamemode=!creative, gamemode=!spectator, tag=!abch.toxic_water.out_of_water] at @s run function abchc:modifiers/toxic_water/in_water
 
+#> If player is in rain, give effects
+execute as @a[ tag=!abch.blacklist, tag=!abch.toxic_water.blacklist, gamemode=!creative, gamemode=!spectator, tag=abch.toxic_water.rain] at @s if score toxic_water.rain abch.config matches 1 run function abchc:modifiers/toxic_water/in_rain
+
 #> If player is out of water, clear effects applied if player was outside water
-execute as @a[ tag=!abch.blacklist, tag=!abch.toxic_water.blacklist, gamemode=!creative, gamemode=!spectator, tag=abch.toxic_water.out_of_water ] at @s run function abchc:modifiers/toxic_water/out_of_water
+execute as @a[ tag=!abch.blacklist, tag=!abch.toxic_water.blacklist, gamemode=!creative, gamemode=!spectator, tag=abch.toxic_water.out_of_water, tag=!abch.toxic_water.rain ] at @s run function abchc:modifiers/toxic_water/out_of_water

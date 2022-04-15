@@ -1,5 +1,5 @@
-#> abchc:modifiers/total
-# Calculate total number of active modifiers
+#> abchc:modifiers/manual_total
+# Calculate total number of active modifiers on manual mode
 # @within abchc:directory
 # @context root
 

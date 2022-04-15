@@ -3,9 +3,9 @@
 # Applies effects based on light level
 
 execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/0 run effect give @s regeneration 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/0 run effect give @s night_vision 1 0 true
+execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/0 run effect give @s night_vision 1 2 true
 
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/1 run effect give @s night_vision 1 0 true
+execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/1 run effect give @s night_vision 1 2 true
 
 execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/8 run effect give @s slowness 1 0 true
 

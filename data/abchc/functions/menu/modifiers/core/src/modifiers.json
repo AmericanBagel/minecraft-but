@@ -545,5 +545,53 @@
                 "type": "number"
             }
         }
+    },
+    "random": {
+        "info": {
+            "name": "Random",
+            "description": "Modifiers are randomly selected. Highly configurable.",
+            "id": "random",
+            "type": "random"
+        },
+        "config": {
+            "mode": {
+                "name": "Mode",
+                "description": "Modes affect how modifiers are selected -- either manually or randomly.",
+                "id": "mode",
+                "type": "range",
+                "min": 1,
+                "max": 2
+            },
+            "interval": {
+                "name": "Interval",
+                "description": "How often in minutes should modifiers be selected? Set this to 0 for modifiers to never be rerolled.",
+                "id": "interval",
+                "type": "number"
+            },
+            "interval_rand": {
+                "name": "Interval random offset",
+                "description": "By how many seconds should the interval be randomized at maximum? If you want players to always be ready for the modifiers to change, set this to something high! If you don't want any random interval, set it to 0." ,
+                "id": "interval_rand",
+                "type": "number"
+            },
+            "modifiers": {
+                "name": "Max modifiers",
+                "description": "How many modifiers can be allowed at the same time?",
+                "id": "modifiers",
+                "type": "number"
+            },
+            "chance": {
+                "name": "Chance factor",
+                "description": "How likely is it to select more modifiers? In other words, how rare should getting higher amounts of modifiers be? The probability is roughly 1 / ( (modifiers / 10) + 1) if that makes sense to you.",
+                "id": "chance",
+                "type": "number"
+            },
+            "reroll": {
+                "name": "Disable modifiers",
+                "description": "Should modifiers be entirely re-rolled or should modifiers be added, with more modifiers being enabled over time? Enabling this encourages speedrunning -- the longer you're in the game, the more modifiers activate.",
+                "id": "reroll",
+                "type": "toggle"
+            }
+        }
     }
 }
