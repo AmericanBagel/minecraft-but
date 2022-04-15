@@ -8,6 +8,8 @@
 #> Remove 5 from score
 scoreboard players remove random.interval abch.config 5
 
+execute if score random.interval abch.config matches ..-1 run scoreboard players set random.interval abch.config 0
+
 #> Click sound
 function abchc:menu/actions/click
 

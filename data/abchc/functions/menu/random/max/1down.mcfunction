@@ -8,6 +8,8 @@
 #> Remove 1 from score
 scoreboard players remove random.max abch.config 1
 
+execute if score random.max abch.config matches ..-1 run scoreboard players set random.max abch.config 0
+
 #> Click sound
 function abchc:menu/actions/click
 

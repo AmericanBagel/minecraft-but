@@ -8,6 +8,8 @@
 #> Remove 1 from score
 scoreboard players remove random.chance abch.config 1
 
+execute if score random.chance abch.config matches ..-1 run scoreboard players set random.chance abch.config 0
+
 #> Click sound
 function abchc:menu/actions/click
 

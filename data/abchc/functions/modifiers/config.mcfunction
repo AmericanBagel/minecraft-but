@@ -10,6 +10,10 @@ schedule function abchc:modifiers/config 10t
 scoreboard players set random.interval abch.default 5
 execute unless score random.interval abch.config matches -2147483648..2147483647 run scoreboard players set random.interval abch.config 5
 
+scoreboard players set random.interval_rand abch.default 15
+execute unless score random.interval_rand abch.config matches -2147483648..2147483647 run scoreboard players set random.interval_rand abch.config 15
+
+
 scoreboard players set random.rand abch.default 30
 execute unless score random.interval_rand abch.config matches -2147483648..2147483647 run scoreboard players set random.interval_rand abch.config 30
 
