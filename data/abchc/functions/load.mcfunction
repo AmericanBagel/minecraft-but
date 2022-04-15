@@ -6,9 +6,16 @@ scoreboard objectives add abch.toggle dummy
 # If no value is assigned to toggle, set it to 1
 execute unless score .global abch.toggle matches 0..1 run scoreboard players set .global abch.toggle 1
 
+scoreboard players set $total_modifiers abch.toggle 77
+
 scoreboard objectives add abch.config dummy
 scoreboard objectives add abch.custom dummy
 scoreboard objectives add abch.default dummy
+
+execute unless score mode abch.config matches 1..2 run scoreboard players set mode abch.config 1
+
+scoreboard objectives add abch.random dummy
+scoreboard objectives add abch.random.toggle dummy
 
 ## Difficulty config
 # If no value is assigned to global difficulty, set it to normal (2)
@@ -53,17 +60,19 @@ scoreboard objectives add abch.minute dummy
 scoreboard objectives add abch.deaths deathCount
 
 scoreboard objectives add abch.math dummy
-scoreboard players set #10000 abch.math 10000
-scoreboard players set #100 abch.math 100
-scoreboard players set #384 abch.math 319
-scoreboard players set #neginf abch.math -2147483647
 scoreboard players set #inf abch.math 2147483647
+scoreboard players set #10000 abch.math 10000
+scoreboard players set #384 abch.math 319
+scoreboard players set #200 abch.math 200
+scoreboard players set #100 abch.math 100
+scoreboard players set #60 abch.math 60
+scoreboard players set #40 abch.math 40
+scoreboard players set #20 abch.math 20
 scoreboard players set #8 abch.math 8
 scoreboard players set #2 abch.math 2
 scoreboard players set #1 abch.math 1
-scoreboard players set #200 abch.math 200
-scoreboard players set #20 abch.math 20
 scoreboard players set #-1 abch.math -1
+scoreboard players set #neginf abch.math -2147483647
 
 ##### Teams ####
 team add abchc.color.dark_red
