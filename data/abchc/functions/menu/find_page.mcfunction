@@ -8,6 +8,7 @@
 
 execute as @a at @s if score @s abch.menu.page matches 1 run function abchc:menu/main
 execute as @a at @s if score @s abch.menu.page matches 2 run function abchc:menu/information
+execute as @a at @s if score @s abch.menu.page matches 3 run function abchc:menu/uninstall
 execute as @a at @s if score @s abch.menu.page matches 10 run function abchc:menu/modifiers/directory
 execute as @a at @s if score @s abch.menu.page matches 11 run function abchc:menu/modifiers/core/categories
 execute as @a at @s if score @s abch.menu.page matches 12 run function abchc:menu/modifiers/core/challenges
