@@ -6,6 +6,9 @@
 #> Click sound
 function abchc:menu/actions/click
 
+#> If there is no custom difficulty value, get from default
+execute unless score difficulty.global abch.custom matches -2147483648..2147483647 run scoreboard players operation difficulty.global abch.custom = difficulty.global abch.default
+
 #> Set difficulty to temp score
 scoreboard players operation #temp abch.config = difficulty.global abch.custom
 
