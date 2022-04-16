@@ -1,1 +1,1 @@
-effect give @a[ tag=!abch.blacklist, tag=!abch.blindness.blacklist ] blindness 1 0 true
+effect give @a[ tag=!abch.blacklist, tag=!abch.blindness.blacklist, gamemode=!creative, gamemode=!spectator  ] blindness 1 0 true

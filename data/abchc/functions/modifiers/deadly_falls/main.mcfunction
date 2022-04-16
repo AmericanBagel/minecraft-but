@@ -1,1 +1,1 @@
-execute as @a[ advancements={ abchc:fall_dmg=true }, scores={ abch.deadly_falls=1.. } ] at @s run function abchc:modifiers/deadly_falls/kill
+execute as @a[ advancements={ abchc:fall_dmg=true }, scores={ abch.deadly_falls=1.. }, gamemode=!creative, gamemode=!spectator ] at @s run function abchc:modifiers/deadly_falls/kill

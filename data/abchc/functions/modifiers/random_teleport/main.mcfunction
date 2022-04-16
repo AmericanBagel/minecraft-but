@@ -5,4 +5,4 @@
 # @context root
 
 # Roll to teleport allowed players
-execute as @a[ tag=!abch.blacklist, tag=!abch.random_teleport.blacklist, tag=!global.ignore ] at @s run function abchc:modifiers/random_teleport/rand
+execute as @a[ tag=!abch.blacklist, tag=!abch.random_teleport.blacklist, tag=!global.ignore, gamemode=!spectator  ] at @s run function abchc:modifiers/random_teleport/rand
