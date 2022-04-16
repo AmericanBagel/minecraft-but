@@ -1,2 +1,2 @@
-execute as @a[ tag=!abch.blacklist, tag=!global.ignore ] at @s run function abchc:modifiers/walk_leveling/leveling
-execute as @a[ tag=!abch.blacklist, tag=!global.ignore ] at @s run function abchc:modifiers/walk_leveling/effect
+execute as @a[ tag=!abch.blacklist, tag=!global.ignore, tag=!abch.walk_leveling.blacklist ] at @s run function abchc:modifiers/walk_leveling/leveling
+execute as @a[ tag=!abch.blacklist, tag=!global.ignore, tag=!abch.walk_leveling.blacklist ] at @s run function abchc:modifiers/walk_leveling/effect

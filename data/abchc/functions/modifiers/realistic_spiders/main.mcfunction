@@ -1,4 +1,4 @@
-execute as @e[ type=spider ] at @s unless score @s abch.webCdwn matches ..119 if entity @a[ distance=..6 ] run function abchc:modifiers/realistic_spiders/webshot
+execute as @e[ type=spider , tag=!global.ignore ] at @s unless score @s abch.webCdwn matches ..119 if entity @a[ distance=..6 ] run function abchc:modifiers/realistic_spiders/webshot
 
 execute as @e[ type=armor_stand, name="web_rider1" ] at @s if entity @e[ type=falling_block, name="web1", limit=1, sort=nearest, distance=..3 ] at @e[ type=falling_block, name="web1", limit=1, sort=nearest, distance=..3 ] run tp @s ~ ~ ~
 execute as @e[ type=armor_stand, name="web_rider2" ] at @s if entity @e[ type=falling_block, name="web2", limit=1, sort=nearest, distance=..3 ] at @e[ type=falling_block, name="web2", limit=1, sort=nearest, distance=..3 ] run tp @s ~ ~ ~

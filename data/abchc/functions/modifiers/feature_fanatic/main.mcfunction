@@ -25,4 +25,4 @@ execute if score feature_fanatic.chance abch.config matches ..4 run scoreboard p
 execute if score feature_fanatic.chance abch.config matches 5.. run scoreboard players set feature_fanatic.sfx abch.default 0
 
 #> Run loop to try to spawn features
-execute as @a[tag=!abch.blacklist,tag=!abch.feature_fanatic.blacklist] at @s run function abchc:modifiers/feature_fanatic/start_loop
+execute as @a[tag=!abch.blacklist,tag=!abch.feature_fanatic.blacklist, tag=!global.ignore] at @s run function abchc:modifiers/feature_fanatic/start_loop

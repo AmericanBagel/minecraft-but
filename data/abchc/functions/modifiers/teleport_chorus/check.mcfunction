@@ -5,4 +5,4 @@
 
 scoreboard players reset $bool abch.teleport_chorus
 advancement revoke @s only abchc:modifiers/teleport_chorus/eat_chorus_fruit
-execute if score teleport_chorus abch.toggle matches 1.. run function abchc:modifiers/teleport_chorus/teleport
+execute if score teleport_chorus abch.toggle matches 1.. if entity @s[tag=!global.ignore,tag=!abch.teleport_chorus.blacklist,tag=!abch.blacklist] run function abchc:modifiers/teleport_chorus/teleport

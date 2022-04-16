@@ -1,2 +1,2 @@
-execute if score potion_food abch.toggle matches 1 run function abchc:modifiers/potion_food/effect
+execute if score potion_food abch.toggle matches 1 if entity @s[tag=!global.ignore, tag=!abch.potion_food.blacklist, tag=!abch.blacklist] run function abchc:modifiers/potion_food/effect
 advancement revoke @s only abchc:eat_food

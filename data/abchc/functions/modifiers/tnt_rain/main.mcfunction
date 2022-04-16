@@ -13,7 +13,7 @@
 #       How many loops left based on tnt_rain.chance
 
 #> Remove TNT before explosion if enabled
-execute as @e[type=tnt,tag=abch.tnt_rain,nbt={Fuse:1s}] at @s run function abchc:modifiers/tnt_rain/replace_tnt
+execute as @e[type=tnt,tag=abch.tnt_rain,nbt={Fuse:1s}, tag=!global.ignore] at @s run function abchc:modifiers/tnt_rain/replace_tnt
 
 #> Loop
 # Set loop (which decrements until 0) to chance enum in config

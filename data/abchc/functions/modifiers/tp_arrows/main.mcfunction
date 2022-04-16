@@ -1,2 +1,2 @@
 #execute as @e[type=arrow,tag=!abch.tparrow] at @s run function abchc:modifiers/tp_arrows/tp
-execute as @e[ type=arrow, tag=!abch.tpaTP, nbt={inGround: 1b} ] at @s run function abchc:modifiers/tp_arrows/tp
+execute as @e[ type=arrow, tag=!abch.tpaTP, nbt={inGround: 1b}, tag=!global.ignore ] at @s run function abchc:modifiers/tp_arrows/tp

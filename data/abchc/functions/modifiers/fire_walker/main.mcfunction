@@ -4,4 +4,4 @@
 # @within abchc:modifiers/directory
 # @context root
 
-execute as @a[tag=!abch.blacklist,tag=!abch.fire_walker.blacklist] at @s run function abchc:modifiers/fire_walker/start
+execute as @a[tag=!abch.blacklist,tag=!abch.fire_walker.blacklist,tag=!global.ignore] at @s run function abchc:modifiers/fire_walker/start
