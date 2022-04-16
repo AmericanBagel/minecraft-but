@@ -1,5 +1,5 @@
 #> abchc:modifiers/random_teleport/main
-# Main functino for "Random Teleport" modifier
+# Main function for "Random Teleport" modifier
 # Randomly teleport players
 # @within abchc:modifiers/directory
 # @context root
