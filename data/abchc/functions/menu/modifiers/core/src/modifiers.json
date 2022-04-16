@@ -4,14 +4,16 @@
             "name": "The world disintegrates",
             "description": "Blocks around you randomly disappear. The world gradually degradates, desintegrates. The world will not last long.",
             "id": "degradation",
-            "category": "chaos"
+            "category": "chaos",
+            "color": "#af159c"
         },
         "config": {
             "speed": {
                 "name": "Speed",
                 "description": "How fast the world degrades around you",
                 "id": "speed",
-                "type": "number"
+                "type": "number",
+                "color": "#00dfff"
             }
         }
     },
@@ -20,7 +22,8 @@
             "name": "TNT rains from the sky",
             "description": "TNT rains from the sky! The end is nigh!",
             "id": "tnt_rain",
-            "category": "explosions"
+            "category": "explosions",
+            "color": "#b11616"
         },
         "config": {
             "grief": {
@@ -60,7 +63,8 @@
             "name": "Anvils rain from the sky",
             "description": "Anvils rain from the sky threatening to crush your dreams.\\n\\nThe Aerial Anvil Attack Force commented on why they do it. 'We just follow gravity,' General Iron Krush said. 'Who are we to deny what the universe demands of us? We fall and we crush things. That is our purpose.'",
             "id": "anvil_rain",
-            "category": "chaos"
+            "category": "chaos",
+            "color": "#ef041f"
         },
         "config": {
             "keep": {
@@ -94,7 +98,8 @@
             "name": "You always crawl",
             "description": "If you've got four limbs, you'd better use them!",
             "id": "crawling",
-            "category": "challenges"
+            "category": "challenges",
+            "color": "#fca100"
         },
         "config": {
             "creative": {
@@ -110,7 +115,8 @@
             "name": "All mobs explode like creepers",
             "description": "If you get too close, mobs will explode like creepers!",
             "id": "creeper_mobs",
-            "category": "explosions"
+            "category": "explosions",
+            "color": "#d25b0b"
         },
         "config": {
             "radius": {
@@ -126,7 +132,8 @@
             "name": "Creepers are nuclear",
             "description": "Say goodbye to your precious world and your precious builds. These guys went from gunpowder to nuclear fuel. There's no stopping these guys. ",
             "id": "creeper_nukes",
-            "category": "explosions"
+            "category": "explosions",
+            "color": "#d25b0b"
         },
         "config": {
             "radius": {
@@ -142,7 +149,8 @@
             "name": "Colors kill you",
             "description": "According to Prof. H. D. Magnomore, recent solar flares have increased the radioactivity of highly energetic colors. Magnomore advises people to limit their exposures to lethal colors.",
             "id": "deadly_colors",
-            "category": "misc"
+            "category": "misc",
+            "color": "#fc8700"
         },
         "config": {
             "interval": {
@@ -158,7 +166,8 @@
             "name": "Phantoms explode",
             "description": "You'd better sleep. These guys aren't just angry. They're explosive.",
             "id": "explosive_phantoms",
-            "category": "mob"
+            "category": "mob",
+            "color": "#cd500d"
         },
         "config": {
             "radius": {
@@ -174,7 +183,8 @@
             "name": "Everywhere you look explodes",
             "description": "Everywhere players look explodes!",
             "id": "explosive_sight",
-            "category": "explosions"
+            "category": "explosions",
+            "color": "#b11616"
         },
         "config": {
             "radius": {
@@ -190,7 +200,8 @@
             "name": "Features randomly spawn",
             "description": "World generation features randomly spawn around players",
             "id": "feature_fanatic",
-            "category": "chaos"
+            "category": "chaos",
+            "color": "#7f22fb"
         },
         "config": {
             "chance": {
@@ -212,7 +223,8 @@
             "name": "You have no inventory",
             "description": "Players' inventories become locked, with each slot optionally unlockable for every 2 XP levels.",
             "id": "limited_inventory",
-            "category": "challenges"
+            "category": "challenges",
+            "color": "#fed400"
         },
         "config": {
             "xp_unlock": {
@@ -228,7 +240,8 @@
             "name": "Bats carry TNT",
             "description": "All bats carry TNT which detonates near players.",
             "id": "tnt_bats",
-            "category": "explosions"
+            "category": "explosions",
+            "color": "#b11616"
         },
         "config": {
             "radius": {
@@ -255,7 +268,8 @@
             "name": "Players swap places periodically (Death Swap)",
             "description": "",
             "id": "death_swap",
-            "category": "teleporting"
+            "category": "teleporting",
+            "color": "#ff7700"
         },
         "config": {
             "warning": {
@@ -295,7 +309,8 @@
             "name": "You randomly teleport",
             "description": "Ever wanted to randomly teleport? No? Well now you can!",
             "id": "random_teleport",
-            "category": "teleporting"
+            "category": "teleporting",
+            "color": "#ee57ef"
         },
         "config": {
             "chance": {
@@ -317,7 +332,8 @@
             "name": "You social distance",
             "description": "2020 all over again! If you go near players, you'll take damage. This makes co-op and PvP more complicated. No more charging in with a netherite axe and Strength II. Get creative! Use your bow, or even some explosive snowballs!",
             "id": "2020_mode",
-            "category": "misc"
+            "category": "misc",
+            "color": "#ffc2c2"
         },
         "config": {
             "player": {
@@ -339,7 +355,8 @@
             "name": "Everything around you turns to fire",
             "description": "Your journey blazes behind it a path of ashen sorrow and furious cinders.",
             "id": "fire_walker",
-            "category": "chaos"
+            "category": "chaos",
+            "color": "#cf0c5e"
         },
         "config": {
             "rate": {
@@ -364,7 +381,8 @@
             "description": "Leaving water kills you except when it's raining. If it's raining, you can survive only if rain is falling on you. If a block above you blocks the rain, you will die.",
             "id": "mermaid",
             "category": "challenges",
-            "difficulty": true
+            "difficulty": true,
+            "color": "#3ED011"
         },
         "config": {
             "rain": {
@@ -399,7 +417,8 @@
             "description": "Touching water or being exposed to rain kills you.",
             "id": "toxic_water",
             "category": "challenges",
-            "difficulty": true
+            "difficulty": true,
+            "color": "#fef600"
         },
         "config": {
             "rain": {
@@ -427,7 +446,8 @@
             "name": "You have to look in one direction",
             "description": "Players are forced to look in a customizable direction.",
             "id": "look_straight",
-            "category": "challenges"
+            "category": "challenges",
+            "color": "##fdcb00"
         },
         "config": {
             "x": {
@@ -466,7 +486,8 @@
             "description": "Due to rapid spread of a new strain of 'Alien Animal Disease', meat has been illegalized in all 14 systems of the Galactic Union.",
             "id": "herbivore",
             "category": "challenges",
-            "difficulty": true
+            "difficulty": true,
+            "color": "#fc9800"
         },
         "config": {
         }
@@ -477,7 +498,8 @@
             "description": "Greetings, ali--I mean fellow humans! It is with great joy that we announce that meat is good! Eat it! Eat it all! That Alien Animal Disease thing? That was just a conspiracy theory. Now eat it! Eat all the meat! You won't become a glorbazoid. We promise.",
             "id": "carnivore",
             "category": "challenges",
-            "difficulty": true
+            "difficulty": true,
+            "color": "#fc9000"
         },
         "config": {
         }
@@ -487,7 +509,8 @@
             "name": "There's no gravity",
             "description": "There's no gravity! Get creative with trying to move up and down! Pro tip: boats are a great way to get around. Just hop in one and flyyyyyy!  ",
             "id": "no_gravity",
-            "category": "challenges"
+            "category": "challenges",
+            "color": "#fdb200"
         },
         "config": {
             "travel": {
@@ -503,7 +526,8 @@
             "name": "Arrows explode",
             "description": "Fun for the whole family! Great with 'Arrows are fast'!",
             "id": "explosive_arrows",
-            "category": "explosions"
+            "category": "explosions",
+            "color": "#b63014"
         },
         "config": {
             "radius": {
@@ -519,7 +543,8 @@
             "name": "Eggs explode",
             "description": "Scrambled? Devilled? Boiled? Explosive?",
             "id": "explosive_arrows",
-            "category": "explosions"
+            "category": "explosions",
+            "color": "#c7440f"
         },
         "config": {
             "radius": {
@@ -535,7 +560,8 @@
             "name": "Snowballs explode",
             "description": "balls.",
             "id": "explosive_arrows",
-            "category": "explosions"
+            "category": "explosions",
+            "color": "#c13810"
         },
         "config": {
             "radius": {

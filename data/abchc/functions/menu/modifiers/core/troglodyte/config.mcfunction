@@ -1,5 +1,5 @@
 #> abchc:menu/modifiers/core/troglodyte/config
-# Config menu for undefined made with
+# Config menu for troglodyte made with
 # ../src/index.js
 #
 # @within abchc:menu/**

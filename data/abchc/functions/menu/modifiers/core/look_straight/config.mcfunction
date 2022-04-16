@@ -1,5 +1,5 @@
 #> abchc:menu/modifiers/core/look_straight/config
-# Config menu for undefined made with
+# Config menu for look_straight made with
 # ../src/index.js
 #
 # @within abchc:menu/**

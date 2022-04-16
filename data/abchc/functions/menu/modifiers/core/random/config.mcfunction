@@ -1,5 +1,5 @@
 #> abchc:menu/modifiers/core/random/config
-# Config menu for undefined made with
+# Config menu for random made with
 # ../src/index.js
 #
 # @within abchc:menu/**
