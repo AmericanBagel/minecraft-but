@@ -576,8 +576,7 @@
         "info": {
             "name": "Random",
             "description": "Modifiers are randomly selected. Highly configurable.",
-            "id": "random",
-            "type": "random"
+            "id": "random"
         },
         "config": {
             "mode": {
