@@ -1,22 +1,22 @@
 data merge entity @s {CustomPotionEffects:[{Id:32b,Amplifier:1b,Duration:20}]}
 
-scoreboard players set in abch.rng.math 1 
-scoreboard players set in1 abch.rng.math 33
-function abchc:apis/rng/range
-execute store result entity @s CustomPotionEffects[0].Id byte 1 run scoreboard players get out abch.rng.math
+scoreboard players set $min random 1 
+scoreboard players set $max random 33
+function random:uniform
+execute store result entity @s CustomPotionEffects[0].Id byte 1 run scoreboard players get $out random
 tellraw @a ["Id: ",{"score":{"objective": "abch.rng.math","name": "out"}}]
 
 
-scoreboard players set in abch.rng.math 1
-scoreboard players set in1 abch.rng.math 5
-function abchc:apis/rng/range
-execute store result entity @s CustomPotionEffects[0].Amplifier byte 1 run scoreboard players get out abch.rng.math
+scoreboard players set $min random 1
+scoreboard players set $max random 5
+function random:uniform
+execute store result entity @s CustomPotionEffects[0].Amplifier byte 1 run scoreboard players get $out random
 tellraw @a ["Amplifier: ",{"score":{"objective": "abch.rng.math","name": "out"}}]
 
-scoreboard players set in abch.rng.math 1
-scoreboard players set in1 abch.rng.math 10
-function abchc:apis/rng/range
-execute store result entity @s CustomPotionEffects[0].Duration byte 1 run scoreboard players get out abch.rng.math
+scoreboard players set $min random 1
+scoreboard players set $max random 10
+function random:uniform
+execute store result entity @s CustomPotionEffects[0].Duration byte 1 run scoreboard players get $out random
 tellraw @a ["Duration: ",{"score":{"objective": "abch.rng.math","name": "out"}}]
 
 ##data modify entity @s CustomPotionEffects[0].Id set value 10

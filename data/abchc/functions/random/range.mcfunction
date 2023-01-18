@@ -8,20 +8,20 @@
 #       per roll.
 #   
 # @output
-#   scor ein abch.rng.math
+#   scor e$min random
 #       Minimum random number
-#   score in1 abch.rng.math
+#   score $max random
 #       Maximum random number
 #
 #   score modifiers abch.random
 #       How many modifiers to enable
 
 # Set minimum to 1 and max to max config
-scoreboard players set in abch.rng.math 1
-scoreboard players operation in1 abch.rng.math = random.max abch.config
+scoreboard players set $min random 1
+scoreboard players operation $max random = random.max abch.config
 
 # Get random number
-function abchc:apis/rng/range
+function random:uniform
 
 # Return randum number as modifiers enum
-scoreboard players operation modifiers abch.random = out abch.rng.math
+scoreboard players operation modifiers abch.random = $out random

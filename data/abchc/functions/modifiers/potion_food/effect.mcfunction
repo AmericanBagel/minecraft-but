@@ -1,13 +1,13 @@
-scoreboard players set in abch.rng.math 1
-scoreboard players set in1 abch.rng.math 29
-function abchc:apis/rng/range
-scoreboard players operation @s pfEffect = out abch.rng.math
+scoreboard players set $min random 1
+scoreboard players set $max random 29
+function random:uniform
+scoreboard players operation @s pfEffect = $out random
 
 
-scoreboard players set in abch.rng.math 1
-scoreboard players set in1 abch.rng.math 10
-function abchc:apis/rng/range
-scoreboard players operation @s abch.pfLevel = out abch.rng.math
+scoreboard players set $min random 1
+scoreboard players set $max random 10
+function random:uniform
+scoreboard players operation @s abch.pfLevel = $out random
 
 execute if score @s abch.potion_food.lvl matches 1 if score @s pfEffect matches 1 run effect give @s speed 60 0 false
 execute if score @s abch.potion_food.lvl matches 1 if score @s pfEffect matches 2 run effect give @s slowness 60 0 false

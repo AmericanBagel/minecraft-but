@@ -24,18 +24,18 @@ scoreboard players operation int_seconds abch.random *= #60 abch.math
 
 ## Get offset values
 # Divide base offset by two
-scoreboard players operation in1 abch.rng.math = random.interval_rand abch.config
-scoreboard players operation in1 abch.rng.math /= #2 abch.math
+scoreboard players operation $max random = random.interval_rand abch.config
+scoreboard players operation $max random /= #2 abch.math
 
 ## Get negative offset
-scoreboard players operation in abch.rng.math = in1 abch.rng.math
-scoreboard players operation in abch.rng.math *= #-1 abch.math
+scoreboard players operation $min random = $max random
+scoreboard players operation $min random *= #-1 abch.math
 
 ## Get random number
-function abchc:apis/rng/range
+function random:uniform
 
 ## Apply offset to interval
-scoreboard players operation int_seconds abch.random -= out abch.rng.math
+scoreboard players operation int_seconds abch.random -= $out random
 
 ## Get interval in ticks
 scoreboard players operation interval abch.random = int_seconds abch.random

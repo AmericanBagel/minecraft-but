@@ -9,13 +9,13 @@
 # looking, so I just hardcoded it.
 
 #> Get random number
-scoreboard players set in abch.rng.math 1
-scoreboard players set in abch.rng.math 60
-function abchc:apis/rng/range
+scoreboard players set $min random 1
+scoreboard players set $min random 60
+function random:uniform
 
 #> tnt selction tree
-execute if score out abch.rng.math matches 1..12 run function abchc:modifiers/tnt_rain/tnt/1
-execute if score out abch.rng.math matches 13..24 run function abchc:modifiers/tnt_rain/tnt/2
-execute if score out abch.rng.math matches 25..36 run function abchc:modifiers/tnt_rain/tnt/3
-execute if score out abch.rng.math matches 37..48 run function abchc:modifiers/tnt_rain/tnt/4
-execute if score out abch.rng.math matches 49..60 run function abchc:modifiers/tnt_rain/tnt/5
+execute if score $out random matches 1..12 run function abchc:modifiers/tnt_rain/tnt/1
+execute if score $out random matches 13..24 run function abchc:modifiers/tnt_rain/tnt/2
+execute if score $out random matches 25..36 run function abchc:modifiers/tnt_rain/tnt/3
+execute if score $out random matches 37..48 run function abchc:modifiers/tnt_rain/tnt/4
+execute if score $out random matches 49..60 run function abchc:modifiers/tnt_rain/tnt/5

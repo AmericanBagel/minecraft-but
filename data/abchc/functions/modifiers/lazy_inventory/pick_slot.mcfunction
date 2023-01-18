@@ -18,24 +18,23 @@
 #       How many indeces to delete in
 #       reading player's inventory
 
+data remove storage abch.__temp__:lazy_inventory Inventory
+
 #> Load player's inventory into storage
 data modify storage abch.__temp__:lazy_inventory Inventory set from entity @s Inventory
 
 # Select a random index in the beginning by taking your random number modulo the array size, and keep iterating through the storage array for as many steps as the chosen index is high
 
 #> Random number up to amount of Inventory indeces
+execute store result score $length abch.lazy_inventory run data get entity @s Inventory
+
 # Generate random number
-function abchc:apis/rng/lcg
+scoreboard players set $min random 0
+scoreboard players operation $max random = $length abch.lazy_inventory
+function random:uniform
 
 # Set $index to random number
-scoreboard players operation $index abch.lazy_inventory = out abch.rng.math
-
-# Set $length to amount of items in player's Inventory
-execute store result score $length abch.lazy_inventory run data get entity @p Inventory
-
-# Get remainder of random number divided by player's Inventory length into $index
-# random number % $length = $index
-scoreboard players operation $index abch.lazy_inventory %= $length abch.lazy_inventory
+scoreboard players operation $index abch.lazy_inventory = $out random
 
 #> Randomly remove slots
 # Delete indeces per $index
@@ -71,10 +70,13 @@ execute if score $slot abch.lazy_inventory matches 100..103 run function abchc:m
 # 12/41
 
 #> Plop SFX
-playsound minecraft:entity.item.pickup master @a ~ ~ ~ 1 0.5
+execute unless score $length abch.lazy_inventory matches 0 run playsound minecraft:entity.item.pickup master @a ~ ~ ~ 1 0.5
 
 #> Reset scoreboard
-scoreboard players reset @s abch.lazy_inventory.damage
+scoreboard players reset @s abch.lazy_inventory
+scoreboard players reset @s abch.lazy_inventory.x
+scoreboard players reset @s abch.lazy_inventory.y
+scoreboard players reset @s abch.lazy_inventory.z
 
 #> Kill stone item (in case something was unsuccessful)
 kill @e[type=item,nbt={Item:{id:"minecraft:stone",tag:{abch:{lazy_inventory:{temp:1b}}}}}]

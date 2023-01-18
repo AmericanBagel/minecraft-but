@@ -3,9 +3,9 @@
 # @within abchc:modifiers/tnt_rain/spawn_relative
 # @context tnt spawner
 # @input
-#   score in abch.rng.math
+#   score $min random
 #       Minimum number for RNG
-#   score in1 abch.rng.math
+#   score $max random
 #       Maximum number for RNG
 # @output
 # score #offset abch.tnt_rain
@@ -13,13 +13,13 @@
 #   for a more random, natural feel.
 
 # Set minimum number to 1
-scoreboard players set in abch.rng.math 15
+scoreboard players set $min random 15
 
 # Set maximum number to 15
-scoreboard players set in1 abch.rng.math 25
+scoreboard players set $max random 25
 
 # Run LCG, get random number
-function abchc:apis/rng/range
+function random:uniform
 
 # Set LCG output to score
-scoreboard players operation #offset abch.tnt_rain = out abch.rng.math
+scoreboard players operation #offset abch.tnt_rain = $out random

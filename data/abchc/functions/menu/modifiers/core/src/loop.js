@@ -5,7 +5,7 @@ let text = ``;
 for (let i = 1; i < modifiersList.length; i++) {
     const element = modifiersList[i];
 
-    text += `execute if score out abch.rng.math matches ${i} run scoreboard players set ${element} abch.random.toggle 1\n`
+    text += `execute if score $out random matches ${i} run scoreboard players set ${element} abch.random.toggle 1\n`
     
 }
 

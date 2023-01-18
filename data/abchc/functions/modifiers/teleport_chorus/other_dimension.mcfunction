@@ -1,7 +1,7 @@
-scoreboard players set in abch.rng.math 1
-scoreboard players set in1 abch.rng.math 3
-function abchc:apis/rng/range
+scoreboard players set $min random 1
+scoreboard players set $max random 3
+function random:uniform
 
-execute if score out abch.rng.math matches 1 run function abchc:modifiers/teleport_chorus/tp_overworld
-execute if score out abch.rng.math matches 2 run function abchc:modifiers/teleport_chorus/tp_nether
-execute if score out abch.rng.math matches 3 run function abchc:modifiers/teleport_chorus/tp_end
+execute if score $out random matches 1 run function abchc:modifiers/teleport_chorus/tp_overworld
+execute if score $out random matches 2 run function abchc:modifiers/teleport_chorus/tp_nether
+execute if score $out random matches 3 run function abchc:modifiers/teleport_chorus/tp_end

@@ -8,7 +8,7 @@
 #   score #y abch.tnt_rain
 #       Y pos of tnt spawner to preserve
 #       Y pos after spreadplayers
-#   score out abch.rng.math
+#   score $out random
 #       Output of LCG, random number 
 
 ## Y pos storing
@@ -20,7 +20,7 @@
 #function abchc:modifiers/tnt_rain/get_offset
 
 # Add marker's Y offset score to marker's Y score so it spawns above player
-#scoreboard players operation #y abch.tnt_rain += out abch.rng.math
+#scoreboard players operation #y abch.tnt_rain += $out random
 #spreadplayers ~ ~ 0 25 false @s
 #spreadplayers ~ ~ 0 25 false @s
 #
@@ -47,7 +47,7 @@ execute store result score #y abch.tnt_rain run data get entity @s Pos[1]
 function abchc:modifiers/tnt_rain/get_offset
 
 # Add marker's Y offset score to marker's Y score so it spawns above player
-scoreboard players operation #y abch.tnt_rain += out abch.rng.math
+scoreboard players operation #y abch.tnt_rain += $out random
 
 # Randomly teleport the marker around
 spreadplayers ~ ~ 0 25 false @s

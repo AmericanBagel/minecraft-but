@@ -6,12 +6,12 @@
 #   score prob abch.rng.math
 #       Probability of incrementing number. Higher numbers increase rarity
 #       or 1 / ((n / 1000) + 1000)
-#   score max abch.rng.math
+#   score $max random
 #       Max number; number to stop incrementing once met
 # @output
-#   score out abch.rng.math
+#   score $out random
 #       Random number within range
 
 scoreboard players set prob abch.rng.math 1000
-scoreboard players set max abch.rng.math 6
+scoreboard players set $max random 6
 function abchc:apis/rng/exponential

@@ -1,10 +1,10 @@
 summon armor_stand ~ ~ ~ {CustomName: '{"text":"abch.tntRain"}', Invisible: 1b}
 spreadplayers ~ ~ 1 50 false @e[ type=armor_stand, name="abch.tntRain" ]
 
-scoreboard players set in abch.rng.math 1
+scoreboard players set $min random 1
 scoreboard players set in60 abch.rng.math 60
-function abchc:apis/rng/range
-scoreboard players operation @e[ type=armor_stand, name="abch.tntRain" ] abch.tntRand = out abch.rng.math
+function random:uniform
+scoreboard players operation @e[ type=armor_stand, name="abch.tntRain" ] abch.tntRand = $out random
 
 execute as @e[ type=armor_stand, name="abch.tntRain" ] at @s if score @s abch.tntRand matches 1 run summon tnt ~ ~15 ~ {Fuse: 80s, Motion: [ 0.55d, 0.0d, 0.0d ]}
 execute as @e[ type=armor_stand, name="abch.tntRain" ] at @s if score @s abch.tntRand matches 2 run summon tnt ~ ~15 ~ {Fuse: 80s, Motion: [ 0.0d, 0.0d, 0.55d ]}

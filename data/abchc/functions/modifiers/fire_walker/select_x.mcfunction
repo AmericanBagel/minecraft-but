@@ -4,10 +4,10 @@
 # @context player
 
 #> Get random bool for positive or negative
-scoreboard players set in abch.rng.math 0
-scoreboard players set in1 abch.rng.math 1
-function abchc:apis/rng/range
+scoreboard players set $min random 0
+scoreboard players set $max random 1
+function random:uniform
 
 #> Select between positive or negative
-execute if score out abch.rng.math matches 0 run function abchc:modifiers/fire_walker/x/negative
-execute if score out abch.rng.math matches 1 run function abchc:modifiers/fire_walker/x/positive
+execute if score $out random matches 0 run function abchc:modifiers/fire_walker/x/negative
+execute if score $out random matches 1 run function abchc:modifiers/fire_walker/x/positive

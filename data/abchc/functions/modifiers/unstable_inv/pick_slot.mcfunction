@@ -24,18 +24,17 @@ data modify storage abch.__temp__:unstable_inv Inventory set from entity @s Inve
 # Select a random index in the beginning by taking your random number modulo the array size, and keep iterating through the storage array for as many steps as the chosen index is high
 
 #> Random number up to amount of Inventory indeces
-# Generate random number
-function abchc:apis/rng/lcg
-
-# Set $index to random number
-scoreboard players operation $index abch.unstable_inv = out abch.rng.math
-
 # Set $length to amount of items in player's Inventory
 execute store result score $length abch.unstable_inv run data get entity @p Inventory
 
-# Get remainder of random number divided by player's Inventory length into $index
-# random number % $length = $index
-scoreboard players operation $index abch.unstable_inv %= $length abch.unstable_inv
+scoreboard players set $min random 0
+scoreboard players operation $max random = $length abch.unstable_inv
+
+# Generate random number
+function random:uniform
+
+# Set $index to random number
+scoreboard players operation $index abch.unstable_inv = $out random
 
 #> Randomly remove slots
 # Delete indeces per $index

@@ -93,6 +93,17 @@
             }
         }
     },
+    "botanophobia": {
+        "info": {
+            "name": "You can't touch grass (or nature)",
+            "description": "Sorry, Twitter users. This one isn't for you.",
+            "id": "botanophobia",
+            "category": "challenges",
+            "color": "#feed00"
+        },
+        "config": {
+        }
+    },
     "crawling": {
         "info": {
             "name": "You always crawl",

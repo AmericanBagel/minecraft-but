@@ -6,22 +6,22 @@
 #   score random_teleport.chance abch.config
 #       Chance per second to teleport player
 #
-#   score in abch.rng.math
+#   score $min random
 #       Minimum for random number range
-#   score in1 abch.rng.math
+#   score $max random
 #       Maximum for random number range
-#   score out abch.rng.math
+#   score $out random
 #       Output from LCG, random number between in and in1
 
 #> RNG
 # Set minimum
-scoreboard players set in abch.rng.math 1
+scoreboard players set $min random 1
 
 # Set maximum to 2000 (100 * 20 for chance to teleport per second)
-scoreboard players set in1 abch.rng.math 2000
+scoreboard players set $max random 2000
 
 # Roll
-function abchc:apis/rng/range
+function random:uniform
 
 #> If random number is within max chance, teleport
-execute if score out abch.rng.math <= random_teleport.chance abch.config run function abchc:modifiers/random_teleport/tp/start_search
+execute if score $out random <= random_teleport.chance abch.config run function abchc:modifiers/random_teleport/tp/start_search

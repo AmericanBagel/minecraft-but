@@ -9,4 +9,4 @@
 
 execute if score $slot abch.lazy_inventory matches 9..17 run function abchc:modifiers/lazy_inventory/slot/inventory/1
 execute if score $slot abch.lazy_inventory matches 18..26 run function abchc:modifiers/lazy_inventory/slot/inventory/2
-execute if score $slot abch.lazy_inventory matches 27..35 run function abchc:modifiers/lazy_inventory/slot/inventory/3vvvvvv
+execute if score $slot abch.lazy_inventory matches 27..35 run function abchc:modifiers/lazy_inventory/slot/inventory/3

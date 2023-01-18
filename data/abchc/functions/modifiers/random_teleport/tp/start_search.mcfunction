@@ -31,17 +31,17 @@ scoreboard players operation $rmax abch.random_teleport = random_teleport.radius
 
 #> Get offsets
 # Get random number for X pos between 1 and 16
-scoreboard players operation in abch.rng.math = $rmin abch.random_teleport
-scoreboard players operation in1 abch.rng.math = $rmax abch.random_teleport
-function abchc:apis/rng/range
+scoreboard players operation $min random = $rmin abch.random_teleport
+scoreboard players operation $max random = $rmax abch.random_teleport
+function random:uniform
 # Store offset into score
-scoreboard players operation $x_offset abch.random_teleport = out abch.rng.math
+scoreboard players operation $x_offset abch.random_teleport = $out random
 
 # Get random number for Z pos between -16 and 16 (32 total)
-scoreboard players set in abch.rng.math -16
-scoreboard players set in1 abch.rng.math 16
-function abchc:apis/rng/range
-scoreboard players operation $z_offset abch.random_teleport = out abch.rng.math
+scoreboard players set $min random -16
+scoreboard players set $max random 16
+function random:uniform
+scoreboard players operation $z_offset abch.random_teleport = $out random
 
 #> Apply offsets
 # Add X and Z offsets to pos score

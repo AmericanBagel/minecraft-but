@@ -1,7 +1,7 @@
-scoreboard players set in abch.rng.math 1
-scoreboard players set in1 abch.rng.math 29
-function abchc:apis/rng/range
-scoreboard players operation @s abch.suspicious_injury.effect = out abch.rng.math
+scoreboard players set $min random 1
+scoreboard players set $max random 29
+function random:uniform
+scoreboard players operation @s abch.suspicious_injury.effect = $out random
 
 execute if score @s abch.suspicious_injury.effect matches 1 run effect give @s speed 60 8 false
 execute if score @s abch.suspicious_injury.effect matches 2 run effect give @s slowness 60 8 false
