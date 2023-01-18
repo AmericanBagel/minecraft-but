@@ -135,7 +135,7 @@ tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text
 # Lightning is everywhere (lightning_storm)
 # The world disintegrates (degradation) 
 # Chunks randomly delete (chunk_error)
-# World generation features randomly spawn (feature_fanatic)
+# World generation features randomly spawn (random_structures)
 
 ## Miscellaneous
 # Arrows are fast (fast_arrows)
@@ -178,7 +178,7 @@ tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text
 # XP explodes (explosive_xp)
 # Arrows are fast (fast_arrows)
 # Creepers are fast (fast_creepers)
-# World generation features randomly spawn (feature_fanatic)
+# World generation features randomly spawn (random_structures)
 # Fire rains from the sky (fire_rain)
 # You leave a trail of fire (fire_walker)
 # Skeletons fly on bats (flying_skeletons)

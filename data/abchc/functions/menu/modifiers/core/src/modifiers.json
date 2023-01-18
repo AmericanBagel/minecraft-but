@@ -195,24 +195,24 @@
             }
         }
     },
-    "feature_fanatic": {
+    "random_structures": {
         "info": {
-            "name": "Features randomly spawn",
-            "description": "World generation features randomly spawn around players",
-            "id": "feature_fanatic",
+            "name": "Structures randomly spawn",
+            "description": "Structures and world generation features randomly spawn around you, making the terrain absolutely chaotic!",
+            "id": "random_structures",
             "category": "chaos",
             "color": "#7f22fb"
         },
         "config": {
             "chance": {
                 "name": "Chance",
-                "description": "How likely feature spawning is",
+                "description": "How likely/often structure spawning is",
                 "id": "chance",
                 "type": "number"
             },
             "sfx": {
                 "name": "Sound effects",
-                "description": "Whether to play sound effects when a feature is spawned or not. By default, sound effects are disabled if the chance is above 4 to preserve your precious eardrums.",
+                "description": "Whether to play sound effects when a structre is spawned or not. By default, sound effects are disabled if the chance is above 4 to preserve your precious eardrums. You're welcome.",
                 "id": "sfx",
                 "type": "toggle"
             }

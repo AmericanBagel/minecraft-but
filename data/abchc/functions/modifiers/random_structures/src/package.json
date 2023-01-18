@@ -1,0 +1,11 @@
+{
+  "name": "mcdata-downloader",
+  "version": "1.0.0",
+  "description": "Download and parse Arcensoth's mcdata repo for features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AmericanBagel",
+  "license": "ISC"
+}
