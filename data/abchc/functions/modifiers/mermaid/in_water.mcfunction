@@ -12,8 +12,10 @@ effect clear @s wither
 ## Give effects
 execute unless entity @s[tag=abch.mermaid.rain] run effect give @s water_breathing 1 255 true
 execute unless entity @s[tag=abch.mermaid.rain] run effect give @s conduit_power 1 2 true
+execute unless entity @s[tag=abch.mermaid.rain] run effect give @s haste 1 8 true
 
 execute unless entity @s[tag=abch.mermaid.rain] unless score mermaid.dolphins_grace abch.config matches 0 run effect give @s dolphins_grace 1 0 true
+
 
 #> Clear warning message
 execute if score @s abch.mermaid.timer matches 1.. run title @s actionbar ""

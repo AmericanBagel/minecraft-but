@@ -4,15 +4,16 @@
 # @within abchc:modifiers/mermaid/main
 # @context players outside water
 
-#> Effects based on difficulty
-execute if score @s abch.mermaid.timer matches 2.. if score difficulty.mermaid abch.config matches 0 run effect give @s poison 3 1 true
-execute if score @s abch.mermaid.timer matches 2.. unless score difficulty.mermaid abch.config matches 0 unless score difficulty.mermaid abch.config matches 2..3 run effect give @s wither 2 0 true
-execute if score @s abch.mermaid.timer matches 2.. if score difficulty.mermaid abch.config matches 2 run effect give @s instant_damage 1 0 true
-execute if score @s abch.mermaid.timer matches 20.. if score difficulty.mermaid abch.config matches 3 run kill @s
-
 #> Get tick number of second for warning text and danger tone
 scoreboard players operation $tick abch.mermaid = @s abch.mermaid.timer
 scoreboard players operation $tick abch.mermaid %= #20 abch.math
+
+#> Effects based on difficulty
+execute if score @s abch.mermaid.timer matches 4.. if score difficulty.mermaid abch.config matches 0 run effect give @s poison 3 1 true
+execute if score @s abch.mermaid.timer matches 4.. unless score difficulty.mermaid abch.config matches 0 unless score difficulty.mermaid abch.config matches 2..3 run effect give @s wither 2 0 true
+execute if score @s abch.mermaid.timer matches 20.. if score difficulty.mermaid abch.config matches 3 run kill @s
+
+execute if score @s abch.mermaid.timer matches 20.. if score difficulty.mermaid abch.config matches 2 if score $tick abch.mermaid matches ..19 run effect give @s instant_damage 1 0 true
 
 #> Warning text
 #execute unless predicate abchc:raining run title @s actionbar {"text":"Get back in the water!","color":"red","bold":true}
