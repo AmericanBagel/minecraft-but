@@ -7,7 +7,7 @@ const outdent = require('outdent');
 // Require modifiers JSON
 let { modifiers, categories } = require('./modifiers.json');
 
-modifiers = Object.values(modifiers);
+modifiers = modifiers;
 
 // For each modifier
 modifiers.forEach((modifier) => {
