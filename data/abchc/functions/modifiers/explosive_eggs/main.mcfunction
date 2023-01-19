@@ -5,4 +5,4 @@ execute as @e[ type=creeper, tag=abch.explosive_eggs.creeper, tag=!global.ignore
 execute as @e[ type=chicken, nbt={EggLayTime: 1}, tag=!global.ignore ] at @s run summon item ~ ~ ~ {Health: 1000, Item: {id: "minecraft:egg", Count: 64b}}
 
 execute as @e[ type=egg, tag=!abch.eeMarked, tag=!global.ignore ] at @s run function abchc:modifiers/explosive_eggs/mark
-execute as @e[ type=area_effect_cloud, name="abch.eeMarker", tag=!global.ignore ] at @s run function abchc:modifiers/explosive_eggs/tick
+execute as @e[ type=area_effect_cloud, name="abch.eeMarker" ] at @s run function abchc:modifiers/explosive_eggs/tick
