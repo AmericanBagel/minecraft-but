@@ -19,9 +19,6 @@ entries.forEach(element => {
     // Info containing name, description, id, and category
     const info = object.info;
 
-    // Entry array of configs for modifier
-    const configs = Object.entries(object.config);
-
     // Parent directory, directory of modifier
     // e.g. `../anvil_rain`
     const modifierDir = `../${modifier}`;
@@ -36,8 +33,13 @@ entries.forEach(element => {
     // If it's an invalid valid hex code, set it to default color
     if (color == undefined || /^#([a-f0-9]){6}$/i.test(color) === false) color = '#20CBA8';
 
+    // Entry array of configs for modifier
+    if (typeof object?.config !== "null" | "undefined") {
+        const configs = Object.entries(object?.config);
+        const hasConfig = true;
+
     // Create config page
-    let configFile =
+let configFile =
 `#> abchc:menu/modifiers/core/${modifier}/config
 # Config menu for ${element[0]} made with
 # ../src/index.js
@@ -50,7 +52,7 @@ gamerule sendCommandFeedback false
 
 #> Set sendCommandFeedback back next tick
 schedule function abchc:menu/actions/enable_feedback 1t append
-  
+    
 #> Header
 tellraw @s ["\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n",{"text":"---------------------------------------------","color":"#0F21C6"},"\\n",{"text":"←|","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${info.category}"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back.","color":"#ECEFF5"}]}}," ",{"text":"${info.name}","color":"${color}","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${info.category}"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back.","color":"#ECEFF5"}]}},{"text":" Config","color":"#17B7CD","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${info.category}"}},"\\n",{"text":"---------------------------------------------","color":"#0F21C6"}]
 
@@ -66,11 +68,11 @@ tellraw @p [{"text":"[","color":"#0F21C6","clickEvent":{"action":"suggest_comman
         if (fs.existsSync(difficultyDir) === false) {
             // If it doesn't create it.
             fs.mkdirSync(difficultyDir)
-          }
+            }
         /*
             Now that we know the difficulty directory exists, let's create the difficulty files.
             We're basically going to use a modified version of the "string" files.
-          
+            
             I know I could just use string for this, but that would require manually setting
             difficulty configs for each modifier, and considering that all difficulty files should
             be nearly identical and most modifiers should use difficulty settings, I think it's
@@ -224,7 +226,7 @@ function abchc:menu/modifiers/core/${modifier}/config`
 # ID: ${cf.id}
 # Type: ${cf.type}
 execute unless score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.default"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/5up"}}]
-          
+            
 execute if score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.config"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/5up"}}]`;
 
                 // Create folder for config if it doesn't exist
@@ -232,7 +234,7 @@ execute if score ${namespace} abch.config matches -2147483648..2147483647 run te
 
                 /* Write 1up function
                 for increasing score by 1
-          
+            
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/1up.mcfunction */
                 fs.writeFileSync(
             `../${modifier}/${id}/1up.mcfunction`,
@@ -252,11 +254,11 @@ function abchc:menu/actions/click
 #> Update menu
 function abchc:menu/modifiers/core/${modifier}/config`);
 
-          /* Write 5up function
-          for increasing score by 5
-          
-          e.g. abchc:menu/modifiers/core/anvil_rain/rate/5up.mcfunction */
-          fs.writeFileSync(
+            /* Write 5up function
+            for increasing score by 5
+            
+            e.g. abchc:menu/modifiers/core/anvil_rain/rate/5up.mcfunction */
+            fs.writeFileSync(
             `${configDir}/5up.mcfunction`,
 `#> abchc:menu/modifiers/core/${modifier}/${id}/5up
 # Increase ${modifier} config score ${id} by 5
@@ -274,11 +276,11 @@ function abchc:menu/actions/click
 #> Update menu
 function abchc:menu/modifiers/core/${modifier}/config`);
 
-          /* Write 5down function
-          for decreasing score by 5
-          
-          e.g. abchc:menu/modifiers/core/anvil_rain/rate/5down.mcfunction */
-          fs.writeFileSync(
+            /* Write 5down function
+            for decreasing score by 5
+            
+            e.g. abchc:menu/modifiers/core/anvil_rain/rate/5down.mcfunction */
+            fs.writeFileSync(
             `${configDir}/5down.mcfunction`,
 `#> abchc:menu/modifiers/core/${modifier}/${id}/5down
 # Decrease ${modifier} config score ${id} by 5
@@ -296,11 +298,11 @@ function abchc:menu/actions/click
 #> Update menu
 function abchc:menu/modifiers/core/${modifier}/config`);
 
-          /* Write 1down function
-          for decreasing score by 1
-          
-          e.g. abchc:menu/modifiers/core/anvil_rain/rate/1down.mcfunction */
-          fs.writeFileSync(
+            /* Write 1down function
+            for decreasing score by 1
+            
+            e.g. abchc:menu/modifiers/core/anvil_rain/rate/1down.mcfunction */
+            fs.writeFileSync(
             `${configDir}/1down.mcfunction`,
 `#> abchc:menu/modifiers/core/${modifier}/${id}/1down
 # Decrease ${modifier} config score ${id} by 1
@@ -353,7 +355,7 @@ function abchc:menu/modifiers/core/${modifier}/config`
 # ID: ${cf.id}
 # Type: ${cf.type}
 execute unless score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.default"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/5up"}}]
-          
+            
 execute if score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.config"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/5up"}}]`;
 
                 // Create folder for config if it doesn't exist
@@ -361,7 +363,7 @@ execute if score ${namespace} abch.config matches -2147483648..2147483647 run te
 
                 /* Write 1up function
                 for increasing score by 1
-          
+            
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/1up.mcfunction */
                 fs.writeFileSync(
             `../${modifier}/${id}/1up.mcfunction`,
@@ -389,7 +391,7 @@ function abchc:menu/modifiers/core/${modifier}/config`);
 
                 /* Write 5up function
                 for increasing score by 5
-          
+            
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/5up.mcfunction */
                 fs.writeFileSync(
                     `../${modifier}/${id}/5up.mcfunction`,
@@ -417,7 +419,7 @@ function abchc:menu/modifiers/core/${modifier}/config`);
 
                 /* Write 1down function
                 for decreasing score by 1
-          
+            
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/1down.mcfunction */
                 fs.writeFileSync(
                     `../${modifier}/${id}/1down.mcfunction`,
@@ -445,7 +447,7 @@ function abchc:menu/modifiers/core/${modifier}/config`);
         
                         /* Write 5down function
                         for decreasing score by 5
-                  
+                    
                         e.g. abchc:menu/modifiers/core/anvil_rain/rate/5down.mcfunction */
                         fs.writeFileSync(
                             `../${modifier}/${id}/5down.mcfunction`,
@@ -515,7 +517,7 @@ execute if data storage abchc:menu/modifiers/core/${modifier} ${id} run tellraw 
 
                 /* Write up function
                 for increasing score by 1
-          
+            
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/up.mcfunction */
                 fs.writeFileSync(
             `../${modifier}/${id}/up.mcfunction`,
@@ -545,7 +547,7 @@ function abchc:menu/modifiers/core/${modifier}/config`);
 
                 /* Write down function
                 for decreasing score by 1
-          
+            
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/down.mcfunction */
                 fs.writeFileSync(
                     `../${modifier}/${id}/down.mcfunction`,
@@ -715,9 +717,12 @@ function abchc:menu/modifiers/core/${modifier}/config`
 
     // Write config page since all configs are added
     fs.writeFileSync(`${modifierDir}/config.mcfunction`, configFile);
+    } else {
+        const hasConfig = false;
+    };
 });
 
-const modifiersList = require('./modifiers_list.json');
+const modifiersList = Object.keys(modifiers);
 
 modifiersList.forEach(element => {
     try {
