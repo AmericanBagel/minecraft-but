@@ -1,5 +1,5 @@
 scoreboard players set $min random 1
-scoreboard players set $max random 19
+scoreboard players set $max random 9
 
 function random:uniform
 

@@ -25,10 +25,10 @@ execute at @s facing entity @p[ tag=abch.death_orb.this] eyes run particle porta
 execute at @s facing entity @p[ tag=abch.death_orb.this] eyes run particle reverse_portal ^ ^ ^ 0 0 0 .35 15 force
 
 
-execute if entity @e[tag=abch.death_orb.detonated,type=player] if score showDeathMessages abch.config matches 1 run gamerule showDeathMessages false
+execute if entity @e[tag=abch.death_orb.detonated,type=player] if score gamerule.showDeathMessages abch.config matches 1 run gamerule showDeathMessages false
 execute if entity @e[tag=abch.death_orb.detonated,type=player] run tag @e[tag=abch.death_orb.detonated,type=player] add abch.death_orb.death
-#execute if score showDeathMessages abch.config matches 1 run tellraw @a ["",{"selector":"@p"}," tasted the eternal void"]
-#execute if score showDeathMessages abch.config matches 1 run gamerule showDeathMessages true
+#execute if score gamerule.showDeathMessages abch.config matches 1 run tellraw @a ["",{"selector":"@p"}," tasted the eternal void"]
+#execute if score gamerule.showDeathMessages abch.config matches 1 run gamerule showDeathMessages true
 
 execute if entity @e[tag=abch.death_orb.detonated,type=player] run stopsound @a * entity.generic.hurt
 
