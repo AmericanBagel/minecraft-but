@@ -2,47 +2,48 @@
 const fs = require('fs');
 const Gradient = require('javascript-color-gradient');
 const { colorGradient } = require('javascript-color-gradient');
-const outdent = require('outdent')
+const outdent = require('outdent');
 
 // Require modifiers JSON
 const modifiers = require('./modifiers.json');
 
 // Convert modifiers object to array to use forEach
-const entries = Object.entries(modifiers)
+const entries = Object.entries(modifiers);
 
 // For each modifier
-entries.forEach(element => {
-    // ID of the modifier used as name in object
-    // e.g. 'anvil_rain'
-    const modifier = element[0];
+entries.forEach((element) => {
+	// ID of the modifier used as name in object
+	// e.g. 'anvil_rain'
+	const modifier = element[0];
 
-    // Object containing info and config
-    const object = element[1];
+	// Object containing info and config
+	const object = element[1];
 
-    // Info containing name, description, id, and category
-    const info = object.info;
+	// Info containing name, description, id, and category
+	const info = object.info;
 
-    // Parent directory, directory of modifier
-    // e.g. `../anvil_rain`
-    const modifierDir = `../${modifier}`;
+	// Parent directory, directory of modifier
+	// e.g. `../anvil_rain`
+	const modifierDir = `../${modifier}`;
 
-    // Create folder for modifier if folder doesn't exist
-    if (fs.existsSync(modifierDir) === false) {
-      fs.mkdirSync(modifierDir)
-    }
+	// Create folder for modifier if folder doesn't exist
+	if (fs.existsSync(modifierDir) === false) {
+		fs.mkdirSync(modifierDir);
+	}
 
-    // Get modifier color
-    let color = info.color;
-    // If it's an invalid valid hex code, set it to default color
-    if (color == undefined || /^#([a-f0-9]){6}$/i.test(color) === false) color = '#20CBA8';
+	// Get modifier color
+	let color = info.color;
+	// If it's an invalid valid hex code, set it to default color
+	if (color == undefined || /^#([a-f0-9]){6}$/i.test(color) === false)
+		color = '#20CBA8';
 
-    // Entry array of configs for modifier
-    if (typeof object?.config !== "null" | "undefined") {
-        const configs = Object.entries(object?.config);
-        const hasConfig = true;
+	// Entry array of configs for modifier
+	if ((typeof object?.config !== 'null') | 'undefined') {
+		const configs = Object.entries(object?.config);
+		const hasConfig = true;
 
-    // Create config page
-let configFile = outdent`
+		// Create config page
+		let configFile = outdent`
     #> abchc:menu/modifiers/core/${modifier}/config
     # Config menu for ${element[0]} made with
     # ../src/index.js
@@ -63,17 +64,17 @@ let configFile = outdent`
     tellraw @p [{"text":"[","color":"#0F21C6","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}},{"text":"✎","color":"#0F21C6","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}},{"text":"] ","color":"#0F21C6","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}},{"text":"Blacklist player","color":"#ECEFF5","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}}]
     `;
 
-    // If difficulty is enabled,
-    if (info.difficulty === true) {
-        // Define difficulty directory const for prettier code
-        const difficultyDir = `${modifierDir}/difficulty`;
+		// If difficulty is enabled,
+		if (info.difficulty === true) {
+			// Define difficulty directory const for prettier code
+			const difficultyDir = `${modifierDir}/difficulty`;
 
-        // check if the "difficulty" directory exists.
-        if (fs.existsSync(difficultyDir) === false) {
-            // If it doesn't create it.
-            fs.mkdirSync(difficultyDir)
-            }
-        /*
+			// check if the "difficulty" directory exists.
+			if (fs.existsSync(difficultyDir) === false) {
+				// If it doesn't create it.
+				fs.mkdirSync(difficultyDir);
+			}
+			/*
             Now that we know the difficulty directory exists, let's create the difficulty files.
             We're basically going to use a modified version of the "string" files.
             
@@ -83,8 +84,8 @@ let configFile = outdent`
             better to just code in direct support for difficulty
         */
 
-        // Add difficulty tellraw to main config file
-        configFile += outdent`
+			// Add difficulty tellraw to main config file
+			configFile += outdent`
             \n\n##> Difficulty selector
             #> Global difficulty
             # Peaceful
@@ -102,11 +103,12 @@ let configFile = outdent`
             execute if score difficulty.${modifier} abch.config matches 2 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]   ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/previous_difficulty"}},{"text":"Normal ☯","color":"#E4EB18","hoverEvent":{"action":"show_text","contents":[{"text":"Normal","color":"#E4EB18"},{"text":" is the default difficulty with modifiers just the way they were intended — not too easy but not too hard.","color":"#ECEFF5"}]}},{"text":"    [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/next_difficulty"}},"\\n"]
             execute if score difficulty.${modifier} abch.config matches 3 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]     ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/previous_difficulty"}},{"text":"Hard ☠","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Hard","color":"#FF0000"},{"text":" is the most brutal difficulty for people who like absolute destruction and chaos. Destruction? Certainly. Death? More than you can count. Lag? Oh yeah! Fun? ¯\\\\_(ツ)_/¯","color":"#ECEFF5"}]}},{"text":"     [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/difficulty/next_difficulty"}},"\\n"]\n`;
 
-                /* Previous difficulty function
+			/* Previous difficulty function
 
                 e.g. abchc:menu/modifiers/core/anvil_rain/difficulty/previous_difficulty.mcfunction */
-                fs.writeFileSync(`../${modifier}/difficulty/previous_difficulty.mcfunction`,
-                    outdent`
+			fs.writeFileSync(
+				`../${modifier}/difficulty/previous_difficulty.mcfunction`,
+				outdent`
                         #> abchc:menu/${modifier}/difficulty/previous_difficulty
                         # Go to the previous difficulty for ${modifier}
                         # Generated with the script at '../src/index.js'
@@ -134,14 +136,15 @@ let configFile = outdent`
 
                         #> Update menu
                         function abchc:menu/modifiers/core/${modifier}/config
-                `);
+                `
+			);
 
-                /* Next difficulty function
+			/* Next difficulty function
 
                 e.g. abchc:menu/modifiers/core/anvil_rain/difficulty/next_difficulty.mcfunction */
-                fs.writeFileSync(
-                    `../${modifier}/difficulty/next_difficulty.mcfunction`,
-                    outdent`
+			fs.writeFileSync(
+				`../${modifier}/difficulty/next_difficulty.mcfunction`,
+				outdent`
                     #> abchc:menu/${modifier}/difficulty/next_difficulty
                     # Go to the next difficulty for ${modifier}
                     # Generated with the script at '../src/index.js'
@@ -169,15 +172,16 @@ let configFile = outdent`
 
                     #> Update menu
                     function abchc:menu/modifiers/core/${modifier}/config
-                    `);
+                    `
+			);
 
-            /* Write reset function
+			/* Write reset function
             for resetting score
 
             e.g. abchc:menu/modifiers/core/anvil_rain/rate/reset.mcfunction */
-            fs.writeFileSync(
-                `../${modifier}/difficulty/reset.mcfunction`,
-                outdent`
+			fs.writeFileSync(
+				`../${modifier}/difficulty/reset.mcfunction`,
+				outdent`
                 #> abchc:menu/modifiers/core/${modifier}/difficulty/reset
                 # Reset ${modifier} difficulty to global difficulty
                 # Generated with the script at '../src/index.js'
@@ -194,42 +198,42 @@ let configFile = outdent`
                 #> Update menu
                 function abchc:menu/modifiers/core/${modifier}/config
                 `
-            );
+			);
+		}
 
-    } 
+		// For each config
+		configs.forEach((element) => {
+			// ID of config value
+			// e.g. 'rate'
+			const id = element[0];
 
-    // For each config
-    configs.forEach(element => {
-        // ID of config value
-        // e.g. 'rate'
-        const id = element[0];
-
-        /* Config object containing a proper name of config value,
+			/* Config object containing a proper name of config value,
         description of config value, an id for namespaces, the type
         of the config value (between number, range, string, and toggle),
         and various type-specific values such as min and max for range/string
         and an array of different strings for string type. */
-        const cf = element[1];
+			const cf = element[1];
 
-        // Function scoreboard enum namespace
-        // e.g. anvil_rain.rate
-        const namespace = `${modifier}.${id}`
+			// Function scoreboard enum namespace
+			// e.g. anvil_rain.rate
+			const namespace = `${modifier}.${id}`;
 
-        // Relative path for config directory
-        // e.g. '../anvil_rain/rate/`
-        const configDir = `${modifierDir}/${id}`;
+			// Relative path for config directory
+			// e.g. '../anvil_rain/rate/`
+			const configDir = `${modifierDir}/${id}`;
 
-        // Get modifier color
-        let color = cf.color;
-        // If it's an invalid valid hex code, set it to default color
-        if (color == undefined || /^#([a-f0-9]){6}$/i.test(color) === false) color = '#ECEFF5';
+			// Get modifier color
+			let color = cf.color;
+			// If it's an invalid valid hex code, set it to default color
+			if (color == undefined || /^#([a-f0-9]){6}$/i.test(color) === false)
+				color = '#ECEFF5';
 
-        // Config types
-        switch (cf.type) {
-            case 'number':
-                // Add tellraw section for interacting with config
-                // to main config function
-                configFile += outdent`
+			// Config types
+			switch (cf.type) {
+				case 'number':
+					// Add tellraw section for interacting with config
+					// to main config function
+					configFile += outdent`
                     \n\n#> ${cf.name}
                     # ${cf.description}
                     # ID: ${cf.id}
@@ -238,16 +242,17 @@ let configFile = outdent`
                                 
                     execute if score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.config"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/5up"}}]`;
 
-                                    // Create folder for config if it doesn't exist
-                                    if (fs.existsSync(configDir) === false) fs.mkdirSync(configDir);
+					// Create folder for config if it doesn't exist
+					if (fs.existsSync(configDir) === false)
+						fs.mkdirSync(configDir);
 
-                                    /* Write 1up function
+					/* Write 1up function
                                     for increasing score by 1
                                 
                                     e.g. abchc:menu/modifiers/core/anvil_rain/rate/1up.mcfunction */
-                                    fs.writeFileSync(
-                                `../${modifier}/${id}/1up.mcfunction`,
-                    `#> abchc:menu/modifiers/core/${modifier}/${id}/1up
+					fs.writeFileSync(
+						`../${modifier}/${id}/1up.mcfunction`,
+						`#> abchc:menu/modifiers/core/${modifier}/${id}/1up
                     # Increase ${modifier} config score ${id} by 1
                     # Generated with the script at '../src/index.js'
                     #
@@ -262,15 +267,16 @@ let configFile = outdent`
 
                     #> Update menu
                     function abchc:menu/modifiers/core/${modifier}/config
-                `);
+                `
+					);
 
-            /* Write 5up function
+					/* Write 5up function
             for increasing score by 5
             
             e.g. abchc:menu/modifiers/core/anvil_rain/rate/5up.mcfunction */
-            fs.writeFileSync(
-                `${configDir}/5up.mcfunction`,
-                outdent`
+					fs.writeFileSync(
+						`${configDir}/5up.mcfunction`,
+						outdent`
                     #> abchc:menu/modifiers/core/${modifier}/${id}/5up
                     # Increase ${modifier} config score ${id} by 5
                     # Generated with the script at '../src/index.js'
@@ -287,15 +293,15 @@ let configFile = outdent`
                     #> Update menu
                     function abchc:menu/modifiers/core/${modifier}/config
                 `
-            );
+					);
 
-            /* Write 5down function
+					/* Write 5down function
             for decreasing score by 5
             
             e.g. abchc:menu/modifiers/core/anvil_rain/rate/5down.mcfunction */
-            fs.writeFileSync(
-            `${configDir}/5down.mcfunction`,
-            outdent`
+					fs.writeFileSync(
+						`${configDir}/5down.mcfunction`,
+						outdent`
                 #> abchc:menu/modifiers/core/${modifier}/${id}/5down
                 # Decrease ${modifier} config score ${id} by 5
                 # Generated with the script at '../src/index.js'
@@ -312,15 +318,15 @@ let configFile = outdent`
                 #> Update menu
                 function abchc:menu/modifiers/core/${modifier}/config
                 `
-            );
+					);
 
-            /* Write 1down function
+					/* Write 1down function
             for decreasing score by 1
             
             e.g. abchc:menu/modifiers/core/anvil_rain/rate/1down.mcfunction */
-            fs.writeFileSync(
-            `${configDir}/1down.mcfunction`,
-            outdent`
+					fs.writeFileSync(
+						`${configDir}/1down.mcfunction`,
+						outdent`
                 #> abchc:menu/modifiers/core/${modifier}/${id}/1down
                 # Decrease ${modifier} config score ${id} by 1
                 # Generated with the script at '../src/index.js'
@@ -337,15 +343,15 @@ let configFile = outdent`
                 #> Update menu
                 function abchc:menu/modifiers/core/${modifier}/config
                 `
-            );
+					);
 
-            /* Write reset function
+					/* Write reset function
             for resetting score
 
             e.g. abchc:menu/modifiers/core/anvil_rain/rate/reset.mcfunction */
-            fs.writeFileSync(
-                `${configDir}/reset.mcfunction`,
-                outdent`
+					fs.writeFileSync(
+						`${configDir}/reset.mcfunction`,
+						outdent`
                 #> abchc:menu/modifiers/core/${modifier}/${id}/reset
                 # Reset ${modifier} config score ${id} to default
                 # Generated with the script at '../src/index.js'
@@ -365,12 +371,12 @@ let configFile = outdent`
                 #> Update menu
                 function abchc:menu/modifiers/core/${modifier}/config
                 `
-            );
-                break;
-            case 'range':
-                // Add tellraw section for interacting with config
-                // to main config function
-                configFile += outdent`
+					);
+					break;
+				case 'range':
+					// Add tellraw section for interacting with config
+					// to main config function
+					configFile += outdent`
                     \n\n#> ${cf.name}
                     # ${cf.description}
                     # ID: ${cf.id}
@@ -379,16 +385,17 @@ let configFile = outdent`
                                 
                     execute if score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.config"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/5up"}}]`;
 
-                                    // Create folder for config if it doesn't exist
-                                    if (fs.existsSync(configDir) === false) fs.mkdirSync(configDir);
+					// Create folder for config if it doesn't exist
+					if (fs.existsSync(configDir) === false)
+						fs.mkdirSync(configDir);
 
-                                    /* Write 1up function
+					/* Write 1up function
                                     for increasing score by 1
                                 
                                     e.g. abchc:menu/modifiers/core/anvil_rain/rate/1up.mcfunction */
-                                    fs.writeFileSync(
-                                `../${modifier}/${id}/1up.mcfunction`,
-                    `#> abchc:menu/modifiers/core/${modifier}/${id}/1up
+					fs.writeFileSync(
+						`../${modifier}/${id}/1up.mcfunction`,
+						`#> abchc:menu/modifiers/core/${modifier}/${id}/1up
                     # Increase ${modifier} config score ${id} by 1
                     # Generated with the script at '../src/index.js'
                     #
@@ -409,15 +416,16 @@ let configFile = outdent`
 
                     #> Update menu
                     function abchc:menu/modifiers/core/${modifier}/config
-                `);
+                `
+					);
 
-                /* Write 5up function
+					/* Write 5up function
                 for increasing score by 5
             
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/5up.mcfunction */
-                fs.writeFileSync(
-                    `../${modifier}/${id}/5up.mcfunction`,
-                    outdent`
+					fs.writeFileSync(
+						`../${modifier}/${id}/5up.mcfunction`,
+						outdent`
                         #> abchc:menu/modifiers/core/${modifier}/${id}/5up
                         # Increase ${modifier} config score ${id} by 5
                         # Generated with the script at '../src/index.js'
@@ -439,15 +447,16 @@ let configFile = outdent`
 
                         #> Update menu
                         function abchc:menu/modifiers/core/${modifier}/config
-                    `);
+                    `
+					);
 
-                /* Write 1down function
+					/* Write 1down function
                 for decreasing score by 1
             
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/1down.mcfunction */
-                fs.writeFileSync(
-                    `../${modifier}/${id}/1down.mcfunction`,
-                    outdent`
+					fs.writeFileSync(
+						`../${modifier}/${id}/1down.mcfunction`,
+						outdent`
                     #> abchc:menu/modifiers/core/${modifier}/${id}/1down
                     # Increase ${modifier} config score ${id} by 1
                     # Generated with the script at '../src/index.js'
@@ -470,15 +479,15 @@ let configFile = outdent`
                     #> Update menu
                     function abchc:menu/modifiers/core/${modifier}/config
                     `
-                );
-        
-                /* Write 5down function
+					);
+
+					/* Write 5down function
                 for decreasing score by 5
             
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/5down.mcfunction */
-                fs.writeFileSync(
-                    `../${modifier}/${id}/5down.mcfunction`,
-                    outdent`
+					fs.writeFileSync(
+						`../${modifier}/${id}/5down.mcfunction`,
+						outdent`
                         #> abchc:menu/modifiers/core/${modifier}/${id}/5down
                         # Increase ${modifier} config score ${id} by 5
                         # Generated with the script at '../src/index.js'
@@ -501,15 +510,15 @@ let configFile = outdent`
                         #> Update menu
                         function abchc:menu/modifiers/core/${modifier}/config
                     `
-                );
+					);
 
-            /* Write reset function
+					/* Write reset function
             for resetting score
 
             e.g. abchc:menu/modifiers/core/anvil_rain/rate/reset.mcfunction */
-            fs.writeFileSync(
-                `${configDir}/reset.mcfunction`,
-                outdent`
+					fs.writeFileSync(
+						`${configDir}/reset.mcfunction`,
+						outdent`
                     #> abchc:menu/modifiers/core/${modifier}/${id}/reset
                     # Reset ${modifier} config score ${id} to default
                     # Generated with the script at '../src/index.js'
@@ -529,12 +538,12 @@ let configFile = outdent`
                     #> Update menu
                     function abchc:menu/modifiers/core/${modifier}/config
                 `
-            );
-                break;
-            case 'string':
-                // Add tellraw section for interacting with config
-                // to main config function
-                configFile += outdent`
+					);
+					break;
+				case 'string':
+					// Add tellraw section for interacting with config
+					// to main config function
+					configFile += outdent`
                     \n\n#> ${cf.name}
                     # ${cf.description}
                     # ID: ${cf.id}
@@ -544,16 +553,17 @@ let configFile = outdent`
                     execute if data storage abchc:menu/modifiers/core/${modifier} ${id} run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":" [←] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/down"}},{"nbt":"${id}","storage":"abchc:menu/modifiers/core/${modifier}","color":"#ECEFF5"},{"text":" [→] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/up"}}]
                 `;
 
-                // Create folder for config if it doesn't exist
-                if (fs.existsSync(configDir) === false) fs.mkdirSync(configDir);
+					// Create folder for config if it doesn't exist
+					if (fs.existsSync(configDir) === false)
+						fs.mkdirSync(configDir);
 
-                /* Write up function
+					/* Write up function
                 for increasing score by 1
             
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/up.mcfunction */
-                fs.writeFileSync(
-                    `../${modifier}/${id}/up.mcfunction`,
-                    outdent`
+					fs.writeFileSync(
+						`../${modifier}/${id}/up.mcfunction`,
+						outdent`
                         #> abchc:menu/modifiers/core/${modifier}/${id}/up
                         # Increase ${modifier} config score ${id} by 1
                         # Generated with the script at '../src/index.js'
@@ -566,8 +576,12 @@ let configFile = outdent`
 
                         #> If number outside range, reset score
                         # If below minimum, set to max
-                        execute if score ${namespace} abch.config matches ..0 run scoreboard players set ${namespace} abch.config ${cf.strings.length + 1}
-                        execute if score ${namespace} abch.config matches ${cf.strings.length + 1}.. run scoreboard players set ${namespace} abch.config 1
+                        execute if score ${namespace} abch.config matches ..0 run scoreboard players set ${namespace} abch.config ${
+							cf.strings.length + 1
+						}
+                        execute if score ${namespace} abch.config matches ${
+							cf.strings.length + 1
+						}.. run scoreboard players set ${namespace} abch.config 1
 
                         #> Set string based on score
                         function abchc:menu/modifiers/core/${modifier}/${id}/update_string
@@ -578,15 +592,15 @@ let configFile = outdent`
                         #> Update menu
                         function abchc:menu/modifiers/core/${modifier}/config
                     `
-                );
+					);
 
-                /* Write down function
+					/* Write down function
                 for decreasing score by 1
             
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/down.mcfunction */
-                fs.writeFileSync(
-                    `../${modifier}/${id}/down.mcfunction`,
-                    outdent`
+					fs.writeFileSync(
+						`../${modifier}/${id}/down.mcfunction`,
+						outdent`
                         #> abchc:menu/modifiers/core/${modifier}/${id}/down
                         # Increase ${modifier} config score ${id} by 1
                         # Generated with the script at '../src/index.js'
@@ -599,8 +613,12 @@ let configFile = outdent`
 
                         #> If number outside range, reset score
                         # If below minimum, set to max
-                        execute if score ${namespace} abch.config matches ..0 run scoreboard players set ${namespace} abch.config ${cf.strings.length + 1}
-                        execute if score ${namespace} abch.config matches ${cf.strings.length + 1}.. run scoreboard players set ${namespace} abch.config 1
+                        execute if score ${namespace} abch.config matches ..0 run scoreboard players set ${namespace} abch.config ${
+							cf.strings.length + 1
+						}
+                        execute if score ${namespace} abch.config matches ${
+							cf.strings.length + 1
+						}.. run scoreboard players set ${namespace} abch.config 1
 
                         #> Set string based on score
                         function abchc:menu/modifiers/core/${modifier}/${id}/update_string
@@ -611,15 +629,15 @@ let configFile = outdent`
                         #> Update menu
                         function abchc:menu/modifiers/core/${modifier}/config
                     `
-                );
+					);
 
-            /* Write update_string function
+					/* Write update_string function
             for updating string based on score
 
             e.g. abchc:menu/modifiers/core/anvil_rain/rate/update_string.mcfunction */
 
-            // Add header
-            let update_string = outdent`
+					// Add header
+					let update_string = outdent`
                 #> abchc:menu/modifiers/core/${modifier}/${id}/update_string
                 # Update displayed string based on score ${namespace}
                 # the script in ../src
@@ -630,32 +648,37 @@ let configFile = outdent`
                 #> Update
             `;
 
-            // Add command for each array element
-            for (let i = 0; i < cf.strings.length; i++) {
-                const element = cf.strings[i];
-                update_string +=
-                    `\nexecute if score ${namespace} abch.config matches ${i + 1} run ` +
-                    `data modify storage abchc:menu/modifiers/core/${modifier} ${id} set value ${cf.strings[i]}`
-            }
+					// Add command for each array element
+					for (let i = 0; i < cf.strings.length; i++) {
+						const element = cf.strings[i];
+						update_string +=
+							`\nexecute if score ${namespace} abch.config matches ${
+								i + 1
+							} run ` +
+							`data modify storage abchc:menu/modifiers/core/${modifier} ${id} set value ${cf.strings[i]}`;
+					}
 
-            // Add footer
-            update_string += outdent`
+					// Add footer
+					update_string += outdent`
                 \n\n#> Click sound
                 function abchc:menu/actions/click
                             
                 #> Update menu
-                function abchc:menu/modifiers/core/${modifier}/config`
-                            
-                            // Write to file
-                            fs.writeFileSync(`${configDir}/update_string.mcfunction`, update_string);
+                function abchc:menu/modifiers/core/${modifier}/config`;
 
-                            /* Write reset function
+					// Write to file
+					fs.writeFileSync(
+						`${configDir}/update_string.mcfunction`,
+						update_string
+					);
+
+					/* Write reset function
                             for resetting score
 
                             e.g. abchc:menu/modifiers/core/anvil_rain/rate/reset.mcfunction */
-                            fs.writeFileSync(
-                                `${configDir}/reset.mcfunction`,
-                                outdent`
+					fs.writeFileSync(
+						`${configDir}/reset.mcfunction`,
+						outdent`
                                     #> abchc:menu/modifiers/core/${modifier}/${id}/reset
                                     # Reset ${modifier} config score ${id} to default
                                     # Generated with the script at '../src/index.js'
@@ -678,12 +701,12 @@ let configFile = outdent`
                                     #> Update menu
                                     function abchc:menu/modifiers/core/${modifier}/config
                                 `
-                            );
-                break;
-            case 'toggle':
-                // Add tellraw section for interacting with config
-                // to main config function
-                configFile += outdent`
+					);
+					break;
+				case 'toggle':
+					// Add tellraw section for interacting with config
+					// to main config function
+					configFile += outdent`
                     \n\n#> ${cf.name}
                     # ${cf.description}
                     # ID: ${cf.id}
@@ -698,15 +721,16 @@ let configFile = outdent`
                     execute unless score ${namespace} abch.config matches -2147483648..2147483647 if score ${namespace} abch.default matches 1.. run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/toggle"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/toggle"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/toggle"}},{"text":" [✔] ","color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier}/${id}/toggle"}},{"text":"${cf.name}","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}}]
                 `;
 
-                // Create folder for config if it doesn't exist
-                if (fs.existsSync(configDir) === false) fs.mkdirSync(configDir);
+					// Create folder for config if it doesn't exist
+					if (fs.existsSync(configDir) === false)
+						fs.mkdirSync(configDir);
 
-                /* Write toggle function
+					/* Write toggle function
 
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/1up.mcfunction */
-                fs.writeFileSync(
-                    `../${modifier}/${id}/toggle.mcfunction`,
-                    outdent`
+					fs.writeFileSync(
+						`../${modifier}/${id}/toggle.mcfunction`,
+						outdent`
                         #> abchc:menu/modifiers/core/${modifier}/${id}/toggle
                         # Toggle ${modifier} config score ${id} between 0 and 1
                         # Generated with the script at '../src/index.js'
@@ -726,15 +750,15 @@ let configFile = outdent`
                         # Update menu
                         function abchc:menu/modifiers/core/${modifier}/config
                         `
-                    );
+					);
 
-            /* Write reset function
+					/* Write reset function
             for resetting score
 
             e.g. abchc:menu/modifiers/core/anvil_rain/rate/reset.mcfunction */
-            fs.writeFileSync(
-                `${configDir}/reset.mcfunction`,
-                outdent`
+					fs.writeFileSync(
+						`${configDir}/reset.mcfunction`,
+						outdent`
                     #> abchc:menu/modifiers/core/${modifier}/${id}/reset
                     # Reset ${modifier} config score ${id} to default
                     # Generated with the script at '../src/index.js'
@@ -754,41 +778,49 @@ let configFile = outdent`
                     #> Update menu
                     function abchc:menu/modifiers/core/${modifier}/config
                 `
-            );
-                break;
-        
-            default:
-                // If invalid config type was given, log error
-                console.error(`Invalid type '${cf.type}' in ${info.id}.${id}!`)
-                break;
-        }
-    });
+					);
+					break;
 
-    // Write config page since all configs are added
-    fs.writeFileSync(`${modifierDir}/config.mcfunction`, configFile);
-    } else {
-        const hasConfig = false;
-    };
+				default:
+					// If invalid config type was given, log error
+					console.error(
+						`Invalid type '${cf.type}' in ${info.id}.${id}!`
+					);
+					break;
+			}
+		});
+
+		// Write config page since all configs are added
+		fs.writeFileSync(`${modifierDir}/config.mcfunction`, configFile);
+	} else {
+		const hasConfig = false;
+	}
 });
 
 const modifiersList = Object.keys(modifiers);
 
-modifiersList.forEach(element => {
-    try {
-        // Create folder
-        if (fs.existsSync(`../${element}`) === false) fs.mkdirSync(`../${element}`);
+modifiersList.forEach((element) => {
+	try {
+		// Create folder
+		if (fs.existsSync(`../${element}`) === false)
+			fs.mkdirSync(`../${element}`);
 
-        // Create "on" function
-        fs.writeFileSync(`../${element}/on.mcfunction`,`#> abchc:menu/modifiers/core/${element}/on\n#Automatically generated toggle on function for ${element}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${element} abch.toggle 1\n\n# Run load function\nfunction abchc:modifiers/${element}/load\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/find_page`)
+		// Create "on" function
+		fs.writeFileSync(
+			`../${element}/on.mcfunction`,
+			`#> abchc:menu/modifiers/core/${element}/on\n#Automatically generated toggle on function for ${element}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${element} abch.toggle 1\n\n# Run load function\nfunction abchc:modifiers/${element}/load\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/find_page`
+		);
 
-        // Create "off" function
-        fs.writeFileSync(`../${element}/off.mcfunction`, `#> abchc:menu/modifiers/core/${element}/off\n#Automatically generated toggle off function for ${element}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${element} abch.toggle 0\n\n# Run unload function\nfunction abchc:modifiers/${element}/unload\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/find_page`)
+		// Create "off" function
+		fs.writeFileSync(
+			`../${element}/off.mcfunction`,
+			`#> abchc:menu/modifiers/core/${element}/off\n#Automatically generated toggle off function for ${element}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${element} abch.toggle 0\n\n# Run unload function\nfunction abchc:modifiers/${element}/unload\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/find_page`
+		);
 
-        //file written successfully
-
-      } catch (err) {
-        console.error(err)
-      }
+		//file written successfully
+	} catch (err) {
+		console.error(err);
+	}
 });
 
-console.log("Wrote files!")
+console.log('Wrote files!');
