@@ -55,7 +55,7 @@
 	"Modifier JSON": {
 		"prefix": "mjson",
 		"body": [
-			"\"${1:id}\": {",
+			"{",
 			"    \"info\": {",
 			"        \"name\": \"${2:name}\",",
 			"        \"description\": \"${3:description}\",",
@@ -63,12 +63,6 @@
 			"        \"category\": \"${4:category}\"",
 			"    },",
 			"    \"config\": {",
-			"        \"${5:id}\": {",
-			"            \"name\": \"${6:name}\",",
-			"            \"description\": \"${7:description}\",",
-			"            \"id\": \"${5:id}\",",
-			"            \"type\": \"${9:type}\"",
-			"        }",
 			"    }",
 			"},",
 			"${0}"
