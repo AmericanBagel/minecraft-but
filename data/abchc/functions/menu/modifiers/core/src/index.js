@@ -447,7 +447,7 @@ let configFile = outdent`
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/1down.mcfunction */
                 fs.writeFileSync(
                     `../${modifier}/${id}/1down.mcfunction`,
-                    output`
+                    outdent`
                     #> abchc:menu/modifiers/core/${modifier}/${id}/1down
                     # Increase ${modifier} config score ${id} by 1
                     # Generated with the script at '../src/index.js'
@@ -478,7 +478,7 @@ let configFile = outdent`
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/5down.mcfunction */
                 fs.writeFileSync(
                     `../${modifier}/${id}/5down.mcfunction`,
-                    output`
+                    outdent`
                         #> abchc:menu/modifiers/core/${modifier}/${id}/5down
                         # Increase ${modifier} config score ${id} by 5
                         # Generated with the script at '../src/index.js'
