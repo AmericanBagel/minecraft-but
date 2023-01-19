@@ -43,7 +43,11 @@ scoreboard players operation creeper_mobs.type abch.default = difficulty.global 
 #execute unless score creeper_mobs.type abch.config matches 1..3 run scoreboard players operation creeper_mobs.type abch.config = creeper_mobs.type abch.default
 
 # Set mob griefing score default to score
-scoreboard players operation creeper_mobs.mobGriefing abch.default = gamerule.mobGriefing abch.config
+execute if score gamerule.mobGriefing abch.config matches 1 if score difficulty.global abch.config matches 1 run scoreboard players set creeper_mobs.radius abch.default 2
+execute if score gamerule.mobGriefing abch.config matches 1 if score difficulty.global abch.config matches 2 run scoreboard players set creeper_mobs.radius abch.default 3
+execute if score gamerule.mobGriefing abch.config matches 1 if score difficulty.global abch.config matches 3 run scoreboard players set creeper_mobs.radius abch.default 4
+
+
 #execute unless score creeper_mobs.mobGriefing abch.config matches 0..1 run scoreboard players operation creeper_mobs.mobGriefing abch.config = creeper_mobs.mobGriefing abch.default
 
 # Set default explosion radius based on difficulty
