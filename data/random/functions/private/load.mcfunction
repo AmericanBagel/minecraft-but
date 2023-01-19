@@ -3,7 +3,7 @@
 # Sets up the scoreboard for RNG
 #
 # @private
-# @handles #minecraft:load
+# @handles #load:load
 
 # Definitions for Data-pack Helper Plus
 #define storage random:input
@@ -38,3 +38,7 @@ scoreboard players set #65536 random 65536
 scoreboard players set #lcg_a random 1630111353
 scoreboard players set #lcg_c random 1623164762
 scoreboard players set #lcg_m random 2147483647
+
+#> Lantern Load
+# Lantern Load compatibility See https://github.com/LanternMC/load#avoiding-the-minecrafttick-tag
+scoreboard players set random load.status 1

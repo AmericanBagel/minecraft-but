@@ -1,6 +1,5 @@
 {
-  "values": [
-    "random:private/load",
-    "abchc:load"
-  ]
+    "values": [
+        "#load:_private/load"
+    ]
 }
