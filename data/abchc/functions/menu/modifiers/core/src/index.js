@@ -1,5 +1,8 @@
 // Require deps
 const fs = require('fs');
+const Gradient = require('javascript-color-gradient');
+const { colorGradient } = require('javascript-color-gradient');
+const outdent = require('outdent')
 
 // Require modifiers JSON
 const modifiers = require('./modifiers.json');
@@ -32,6 +35,8 @@ entries.forEach(element => {
     let color = info.color;
     // If it's an invalid valid hex code, set it to default color
     if (color == undefined || /^#([a-f0-9]){6}$/i.test(color) === false) color = '#20CBA8';
+
+
 
     // Entry array of configs for modifier
     if (typeof object?.config !== "null" | "undefined") {
