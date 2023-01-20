@@ -713,6 +713,16 @@
 				"difficulty": true
 			},
 			"config": {}
-		}
+		},
+        {
+            "info": {
+                "name": "Taking damage blinds you",
+                "description": "According to recent research, fatal anemia can, among other symptoms, cause blindness!",
+                "id": "blinding_damage",
+                "category": "challenges"
+            },
+            "config": {
+            }
+        }
 	]
 }
