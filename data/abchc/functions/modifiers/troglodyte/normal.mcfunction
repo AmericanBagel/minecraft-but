@@ -1,68 +1,20 @@
 #> abchc:modifiers/troglodyte/normal
-# Normal difficulty for troglodyte
+# normal difficulty for troglodyte
 # Applies effects based on light level
 
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/0 run effect give @s regeneration 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/0 run effect give @s speed 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/0 run effect give @s jump_boost 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/0 run effect give @s strength 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/0 run effect give @s haste 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/0 run effect give @s night_vision 1 2 true
-
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/1 run effect give @s regeneration 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/1 run effect give @s speed 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/1 run effect give @s haste 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/1 run effect give @s night_vision 1 2 true
-
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/2 run effect give @s regeneration 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/2 run effect give @s night_vision 1 2 true
-
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/3 run effect give @s night_vision 1 2 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/4 run effect give @s night_vision 1 2 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/5 run effect give @s night_vision 1 2 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/6 run effect give @s night_vision 1 2 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/7 run effect give @s night_vision 1 2 true
-
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/8 run effect give @s slowness 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/8 run effect give @s night_vision 1 2 true
-
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/9 run effect give @s slowness 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/9 run effect give @s weakness 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/9 run effect give @s mining_fatigue 1 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/9 run effect give @s night_vision 1 2 true
-
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/10 run effect give @s slowness 1 1 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/10 run effect give @s weakness 1 1 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/10 run effect give @s mining_fatigue 1 1 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/10 run effect give @s night_vision 1 2 true
-
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/11 run effect give @s slowness 1 2 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/11 run effect give @s weakness 1 2 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/11 run effect give @s mining_fatigue 1 2 true
-#execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/11 run effect give @s nausea 1 2 true
-
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/12 run effect give @s slowness 1 2 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/12 run effect give @s weakness 1 2 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/12 run effect give @s mining_fatigue 1 2 true
-#execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/12 run effect give @s nausea 4 0 true
-
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/13 run effect give @s slowness 1 2 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/13 run effect give @s weakness 1 2 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/13 run effect give @s mining_fatigue 1 2 true
-#execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/13 run effect give @s nausea 4 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/13 run effect give @s wither 1 1 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/13 run effect give @s blindness 2 0 true
-
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/14 run effect give @s slowness 1 2 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/14 run effect give @s weakness 1 2 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/14 run effect give @s mining_fatigue 1 2 true
-#execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/14 run effect give @s nausea 4 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/14 run effect give @s wither 1 10 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/14 run effect give @s blindness 2 2 true
-
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/15 run effect give @s slowness 1 2 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/15 run effect give @s weakness 1 3 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/15 run effect give @s mining_fatigue 1 2 true
-#execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/15 run effect give @s nausea 4 0 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/15 run effect give @s wither 1 10 true
-execute as @a[ tag=!abch.blacklist ] at @s if predicate abchc:troglodyte/15 run effect give @s blindness 2 2 true
+execute at @s if predicate abchc:troglodyte/0 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/0
+execute at @s if predicate abchc:troglodyte/1 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/1
+execute at @s if predicate abchc:troglodyte/2 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/2
+execute at @s if predicate abchc:troglodyte/3 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/3
+execute at @s if predicate abchc:troglodyte/4 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/4
+execute at @s if predicate abchc:troglodyte/5 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/5
+execute at @s if predicate abchc:troglodyte/6 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/6
+execute at @s if predicate abchc:troglodyte/7 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/7
+execute at @s if predicate abchc:troglodyte/8 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/8
+execute at @s if predicate abchc:troglodyte/9 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/9
+execute at @s if predicate abchc:troglodyte/10 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/10
+execute at @s if predicate abchc:troglodyte/11 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/11
+execute at @s if predicate abchc:troglodyte/12 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/12
+execute at @s if predicate abchc:troglodyte/13 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/13
+execute at @s if predicate abchc:troglodyte/14 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/14
+execute at @s if predicate abchc:troglodyte/15 run function abchc:modifiers/troglodyte/difficulty/normal/light_level/15
