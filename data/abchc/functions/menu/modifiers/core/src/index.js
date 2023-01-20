@@ -4,9 +4,11 @@ const Gradient = require('javascript-color-gradient');
 const { colorGradient } = require('javascript-color-gradient');
 const outdent = require('outdent');
 const path = require('path')
+const jsonc = require('jsonc')
 
 // Require modifiers JSON
-let { modifiers, categories } = require('./modifiers.json');
+let { modifiers, categories } = jsonc.parse('' + fs.readFileSync('./modifiers.jsonc'));
+
 
 function parseDescription (description) {
     if (typeof description === 'object') {
