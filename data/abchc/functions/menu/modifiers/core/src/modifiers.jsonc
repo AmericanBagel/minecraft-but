@@ -61,7 +61,7 @@
 			]
 		},
 		{
-			"id": "mobs",
+			"id": "mob",
 			"name": "Mobs",
 			"description": "Modifiers that directly relate to or modify mobs.",
 			"color": "#3ED011",
@@ -71,7 +71,7 @@
 			]
 		},
 		{
-			"id": "miscellaneous",
+			"id": "misc",
 			"name": "Miscellaneous",
 			"description": "Anything that I'm too lazy to fit into any other category.",
 			"color": "#A8A8A8",
@@ -142,7 +142,8 @@
 			"description": "Sorry, Twitter users. This one isn't for you.",
 			"id": "botanophobia",
 			"category": "challenges",
-			"color": "#feed00"
+			"color": "#feed00",
+			"difficulty": "true"
 		},
 		{
 			"config": {},
@@ -294,7 +295,7 @@
 			},
 			"name": "Eggs explode",
 			"description": "Scrambled? Devilled? Boiled? Explosive?",
-			"id": "explosive_arrows",
+			"id": "explosive_eggs",
 			"category": "explosions",
 			"color": "#c7440f"
 		},
@@ -563,6 +564,7 @@
 			"category": "teleporting",
 			"color": "#ee57ef"
 		},
+		/*
 		{
 			"config": {
 				"affect_players": {
@@ -590,6 +592,7 @@
 			"category": "challenges",
 			"color": "#fda900"
 		},
+		*/
 		{
 			"config": {
 				"radius": {
@@ -686,6 +689,353 @@
 			"description": "According to recent research, fatal anemia can, among other symptoms, cause blindness!",
 			"id": "blinding_damage",
 			"category": "challenges"
+		},
+		{
+			"name": "All fall damage kills you",
+			"description": "Any amount of fall damage is lethal. Pro tip: get a water bucket.",
+			"id": "deadly_falls",
+			"category": "challenges"
+		},
+		{
+			"name": "You can't stop moving",
+			"description": "Keep moving, buddy. Or else. Crafting something? Be quick there, pal. You don't want to stay still for too long, friend.",
+			"id": "keep_moving",
+			"category": "challenges",
+			"config": {
+			}
+		},
+		{
+			"name": "An orb of death relentlessly follows you",
+			"description": "An orb of death pursues you, never stopping, always moving towards your inevitable demise. Don't think you can run away. The farther away you are, the faster it gets. The void is always reaching, always thirsting for your demise.\n\n\"Some people call me cruel,\" Death Orb said. \"I just do what I've always aspired to be. Since a child, I've always dreamed of bringing the Eternal Void, Ever Consuming, Ever Destroying, Always Thirsting. This truly is a dream come true. I thank everyone who has helped me come into this position. I especially thank my mother, who always helps when I doubt myself. The Void will come, the Void will consume, the Always Nothingness will reign because of what you've all done for me. Thank you all so much,\" he said, tears in his eyes.",
+			"id": "death_orb",
+			"category": "chaos",
+			"config": {
+				"corrupt": {
+					"id": "corrupt",
+					"name": "Corrupting Aura",
+					"description": "Should the Death Orb have a corrupting aura which degrades and infects the blocks around it?",
+					"type": "toggle"
+				}
+			}
+		},
+		{
+			"name": "Fire rains from the sky",
+			"description": "Fire rains from the sky. The end is nigh.",
+			"id": "fire_rain",
+			"category": "chaos",
+			"config": {
+			}
+		},
+		{
+			"name": "Lightning is everywhere",
+			"description": "Lightning, thunder! So electric! Lightning alights the heavens, and the roar of thunder shakes the world!",
+			"id": "lightning_storm",
+			"category": "chaos",
+			"config": {
+				"times": {
+					"id": "times",
+					"name":"Lightning spawn rate",
+					"description": "How much or often should lightning spawn?",
+					"type": "range",
+					"min": "1",
+					"max": "2147483647"
+				}
+			}
+		},
+		{
+			"name": "[ ERR: CHUNK ERROR IN R.0.0.MCA ]",
+			"description": "Due to an error in chunk loading, chunks around players have a chance to disappear.",
+			"id": "chunk_error",
+			"config": {
+			}
+		},
+		{
+			"name": "You get random potion effects",
+			"description": "Every minute, you get a random effect of a random level. You can get good effets, but beware the bad!",
+			"id": "random_effects",
+			"category": "effects",
+			"config": {
+				// #23
+			}
+		},
+		{
+			"name": "Taking damage gives you a random effect",
+			"description": "When you take damage, you get a random potion effect",
+			"id": "suspicious_injury",
+			"category": "effects",
+			"config": {
+				// TODO: #25 Config to enable or disable different potion effects
+			}
+		},
+		{
+			"name": "Food gives you random potion effects",
+			"description": "Eating food gives you a random potion effect. You can configure this modifier to give a specific potion effect for each kind of food.",
+			"id": "potion_food",
+			"category": "effects",
+			"config": {
+			}
+		},
+		{
+			"name": "Glowing",
+			"description": "Players or mobs glow, depending on your configuration. They can glow permanently or at an interval such as every minute.",
+			"id": "glowing",
+			"category": "effects",
+			"config": {
+			}
+		},
+		{
+			"name": "Taking damage nauseates you",
+			"description": "Nausea, the most annoying effect. Imagine getting it every time you get hit! It might make you actually nauseous in real life!",
+			"id": "damage_nausea",
+			"category": "effects",
+			"config": {
+			}
+		},
+		{
+			"name": "You are blind.",
+			"description": "You can only see a few blocks in front of you, permanently blinded! Beating the game when you can only see a few blocks in front of you is a difficult challenge. Are you up to the task?",
+			"id": "blindness",
+			"category": "effects",
+			"config": {
+			}
+		},
+		{
+			"name": "You can't jump",
+			// TROUBLE HERE! IF SOMETHING WENT WRONG IN THE SCRIPT, IT'S NOT PROPERLY ESCAPING THIS VVV
+			"description": "{\"text\":\"If you jump, you die.\n\nPro tips: TURN OFF AUTOJUMP. Get creative. Use water buckets, ladders, stairs, or anything to give yourself a boost. If you want to make sure you absolutely can't jump, set your jump key to nothing.\n\nIf you see \"Not Bound\", you're good:\"},{\"keybind\":\"key.jump\"}",
+			"id": "no_jump",
+			"category": "mechanic",
+			"config": {
+			}
+		},
+		{
+			"name": "You can't sneak",
+			"description": "If you sneak, you die. No more bridging across ravines for you! No more hiding from the Warden for you! ",
+			"id": "no_sneak",
+			"category": "mechanic",
+			"config": {
+			}
+		},
+		{
+			"name": "You can't sprint",
+			"description": "Minecraft as it was meant to be. Sprinting is such a waste. It removes all your precious hunger and saturation all for what -- a minor speed boost? Insulting. Almost as bad as stal.",
+			"id": "schlatt_mode",
+			"category": "mechanic",
+			"config": {
+			}
+		},
+		{
+			"name": "You can't kill anything",
+			// TODO: #26 Pacifist - Update detection to 'execute on ...' or use a library for kill detection
+			"description": "If you kill anything, you die. An eye for an eye, a tooth for a tooth, you monster! Do you realize that zombies haves homes? If you want to kill something, get creative, because I am too lazy to code every single edge case!",
+			"id": "pacifist",
+			"category": "mechanic",
+			"config": {
+			}
+		},
+		{
+			"name": "Arrows are fast",
+			"description": "Arrows fly nearly instantly!",
+			"id": "fast_arrows",
+			"category": "misc",
+			"config": {
+			}
+		},
+		{
+			"name": "Mobs explode into confetti when they die",
+			"description": "Why can't death be fun? Mobs explode into a cloud of confetti when they die! ",
+			"id": "confetti_funeral",
+			"category": "misc",
+			"config": {
+			}
+		},
+		{
+			"name": "Bedrock spawns beneath your feet",
+			"description": "A simple, yet annoying modifier: blocks below you turn into bedrock. Now you actually can't dig straight down! This modifier was inspired by my dislike of Minecraft: Bedrock Edition. This modifier is almost as annoying as Minecoins and the Minecraft Store!",
+			"id": "bedrock_touch",
+			"category": "misc",
+			"config": {
+			}
+		},
+		{
+			"name": "OP blocks spawn below your feet",
+			"description": "Midas' touch! Blocks below you turn into valuable blocks! Make way for clickbaity YouTube videos! Make way!",
+			"id": "midas_touch",
+			"category": "misc",
+			"config": {
+			}
+		},
+		{
+			"name": "Time only moves when you move",
+			"description": "Time moves when you move! Time freezes when you freeze! Just like SUPERHOT (a very good game).",
+			"id": "superhot",
+			"category": "misc",
+			"config": {
+			}
+		},
+		{
+			"name": "Time randomly freezes",
+			"description": "Time randomly freezes, with only players unfrozen. Use this to your advantage! ",
+			"id": "frozen_time",
+			"category": "misc",
+			"config": {
+			}
+		},
+		{
+			"name": "You have to social distance",
+			"description": "2020 all over again! If you go near players, you'll take damage. This makes co-op and PvP more complicated. No more charging in with a netherite axe and Strength II. Get creative! Use your bow, or even some explosive snowballs (wink, wink)!",
+			"id": "2020_mode",
+			"category": "misc",
+			"config": {
+				"player": {
+					"id": "player",
+					"name": "Affect players",
+					"description": "Should players be pushed apart from each other? This modifier as it was intended.",
+					"type": "toggle"
+				},
+				"entity": {
+					"id": "entity",
+					"name": "Affect entities",
+					"description": "Should entities be pushed apart from each other?",
+					"type": "toggle"
+				}
+			}
+		},
+		{
+			"name": "Bats are OP",
+			"description": "Bats: useless no more.",
+			"id": "op_bats",
+			"category": "mob",
+			"config": {
+			}
+		},
+		{
+			"name": "Ghasts spawn in the overworld",
+			"description": "Because we need more flying mobs! Why not ones that shoot fireballs and sound like angry cats? ",
+			"id": "overworld_ghasts",
+			"category": "mob",
+			"config": {
+			}
+		},
+		{
+			"name": "Mobs get pigified",
+			"description": "Mobs turn into pigs randomly. More pigs. Any complaints? No? Good.",
+			"id": "pigification",
+			"category": "mob",
+			"config": {
+			}
+		},
+		{
+			"name": "Pigs turn into piglins",
+			"description": "Pigs randomly turn into piglins. Great when combined with \"Mobs get pigified\".",
+			"id": "piglinator",
+			"category": "mob",
+			"config": {
+			}
+		},
+		{
+			"name": "Towers of pigs spawn",
+			"description": "TOWER OF PIGS SPAWN! BACON TOWERS! Great with \"Pigs turn into piglins\"! ",
+			"id": "stacked_pigs",
+			"category": "mob",
+			"config": {
+			}
+		},
+		{
+			"name": "Spiders get new abilities",
+			"description": "Shooting webs, injecting poison, jumping toward players, summoning cave spiders, spiders transform from a boring, annoying mobs to dangerous threats. ",
+			"id": "realistic_spiders",
+			"category": "mob",
+			"config": {
+			}
+		},
+		{
+			"name": "Skeletons fly",
+			"description": "Thought skeletons were annoying enough? Try hitting them now! ",
+			"id": "flying_skeletons",
+			"category": "mob",
+			"config": {
+			}
+		},
+		{
+			"name": "Mobs randomly TP to you",
+			"description": "Mobs will randomly TP to players. This means all mobs, even zombies and creepers! Be prepared!",
+			"id": "mobs_tp_to_you",
+			"category": "teleporting",
+			"config": {
+			}
+		},
+		{
+			"name": "You teleport when you get hurt",
+			"description": "After being infused with ender man blood, you teleport when you get hurt just like an ender man! This can save you in tough situations, but it can also get you lost!",
+			"id": "ender_blood",
+			"category": "teleporting",
+			"config": {
+				"radius": {
+					"id": "radius",
+					"name": "Teleport radius",
+					"description": "How far players should be teleported, at most, when they are hurt. And I didn't even use /spreadplayers so it would be configurable without hardcoding it! Do I deserve a pat on the back or what? Who needs binary search trees?"
+				}
+			}
+		},
+		{
+			"name": "You randomly teleport to other dimensions",
+			"description": "Players randomly teleport to other dimensions with configurable triggers. When you get hurt? Go for it! Randomly? Go for it! Every X minutes? Go for it! Configure this modifier to your dreams.\n\nPro tips: Build a nether portal ASAP. Always be equipped. A visit to the end could, and likely will, mean your death. Try to get good armor, at least iron, as fast as possible. Bring a bunch of beds with you -- they explode the nether and the end. If you get teleported to the nether and you're smart, you'll trade with piglins to get obsidian and kill mobs to get a fire charge to build a portal.\n\nNOTE: Unfortunately not compatible with non-vanilla dimensions. Although, if you REALLY want a dimension to be compatible with this, leave a comment on PlanetMinecraft or submit an issue on GitHub.",
+			"id": "teleport_chorus",
+			"category": "teleporting",
+			"config": {
+			}
+		},
+		{
+			// TODO: #27 yeet - Randomize directions instead of hardcoding
+			"name": "Mobs get yeeted",
+			"description": "Just going to the farm and... THE COWS GOT OUT? THEY GOT YEETED OUT? HOLY COW!\n\nMobs will randomly get yeeted in a random direction.",
+			"id": "yeet",
+			"category": "mob",
+			"config": {
+			}
+		},
+		{
+			"name": "When you die, you lose a heart",
+			"description": "You permanently lose a heart each time you die! The horror! Inspired by MacchuPicchu's incredible -- and much higher quality -- data pack on PlanetMinecraft. Seriously, check it out.",
+			"id": "waning_wellness",
+			"config": {
+
+			}
+		},
+		{
+			// TODO: Use a binary search tree to make more efficient. Seriously, 256 'execute if' commands? Come on!
+			"name": "You get faster the more you walk",
+			"description": "Just like an RPG!",
+			"id": "walk_leveling",
+			"category": "effects",
+			"config": {
+
+			}
+		},
+		{
+			"name": "Creepers randomly explode",
+			"description": "Everyone gets allergies.",
+			"id":"volatile_creepers",
+			"config": {
+				
+			}
+		},
+		{
+			"name": "Items fall out when you take damage",
+			"description": "When you take damage, a random slot from your inventory will fall out. Be careful!",
+			"id": "unstable_inv",
+			"category": "challenge",
+			"config": {
+			}
+		},
+		{
+			"name": "Arrows teleport you",
+			"description": "When you fire an arrow, it will teleport you wherever it lands. If you want to make an explosive landing, enable \"Arrows are explosive\"!",
+			"id": "tp_arrows",
+			"config": {
+
+			}
 		}
 	]
 }
