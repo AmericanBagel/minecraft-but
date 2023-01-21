@@ -5,67 +5,84 @@
 			"name": "Challenges",
 			"description": "Modifiers which involve a central challenge, such as \"You can't touch x\" or \"if you do x, you die\".",
 			"color": "#E4EB18",
-			"gradient": ["#ffff00", "#ff7700"]
+			"gradient": [
+				"#ffff00",
+				"#ff7700"
+			]
 		},
 		{
 			"id": "explosions",
 			"name": "Explosions",
 			"description": "EXPLOSIONS! EXPLOSIONS EVERYWHERE! MWAHAHAHAHAHAHA!!!!",
 			"color": "#CF2020",
-			"gradient": ["#b11616", "#e98a05"]
+			"gradient": [
+				"#b11616",
+				"#e98a05"
+			]
 		},
 		{
 			"id": "chaos",
 			"name": "Chaos",
 			"description": "Absolute, utter chaos. You thought explosions were bad? Check out the chaos section. It's, well, chaotic.",
 			"color": "#FF0000",
-			"gradient": ["#ff0000", "#7f22fb"]
+			"gradient": [
+				"#ff0000",
+				"#7f22fb"
+			]
 		},
 		{
 			"id": "mechanic",
 			"name": "Mechanic",
 			"description": "Anything relating to core gameplay mechanics like running or jumping.",
 			"color": "#20CBA8",
-			"gradient": ["#00edff", "#00ff75"]
+			"gradient": [
+				"#00edff",
+				"#00ff75"
+			]
 		},
 		{
 			"id": "teleporting",
 			"name": "Teleporting",
 			"description": "Anything relating to teleporting. Become an ender man!",
 			"color": "#C300FF",
-			"gradient": ["#ff51ec", "#aa72ff"]
+			"gradient": [
+				"#ff51ec",
+				"#aa72ff"
+			]
 		},
 		{
 			"id": "effects",
 			"name": "Effects",
 			"description": "Modifiers that involve potion effects.",
 			"color": "#17B7CD",
-			"gradient": ["#62a8ff", "#1cff00"]
+			"gradient": [
+				"#62a8ff",
+				"#1cff00"
+			]
 		},
 		{
 			"id": "mobs",
 			"name": "Mobs",
 			"description": "Modifiers that directly relate to or modify mobs.",
 			"color": "#3ED011",
-			"gradient": ["#22ff37", "#ff3737"]
+			"gradient": [
+				"#22ff37",
+				"#ff3737"
+			]
 		},
 		{
 			"id": "miscellaneous",
 			"name": "Miscellaneous",
 			"description": "Anything that I'm too lazy to fit into any other category.",
 			"color": "#A8A8A8",
-			"gradient": ["#aff4ff", "#ffc2c2"]
+			"gradient": [
+				"#aff4ff",
+				"#ffc2c2"
+			]
 		}
 	],
 	"modifiers": [
 		{
-			"info": {
-				"name": "You social distance",
-				"description": "2020 all over again! If you go near players, you'll take damage. This makes co-op and PvP more complicated. No more charging in with a netherite axe and Strength II. Get creative! Use your bow, or even some explosive snowballs!",
-				"id": "2020_mode",
-				"category": "misc",
-				"color": "#ffc2c2"
-			},
 			"config": {
 				"player": {
 					"name": "Push away players",
@@ -79,16 +96,14 @@
 					"id": "entity",
 					"type": "toggle"
 				}
-			}
+			},
+			"name": "You social distance",
+			"description": "2020 all over again! If you go near players, you'll take damage. This makes co-op and PvP more complicated. No more charging in with a netherite axe and Strength II. Get creative! Use your bow, or even some explosive snowballs!",
+			"id": "2020_mode",
+			"category": "misc",
+			"color": "#ffc2c2"
 		},
 		{
-			"info": {
-				"name": "Anvils rain from the sky",
-				"description": "Anvils rain from the sky threatening to crush your dreams.\\n\\nThe Aerial Anvil Attack Force commented on why they do it. 'We just follow gravity,' General Iron Krush said. 'Who are we to deny what the universe demands of us? We fall and we crush things. That is our purpose.'",
-				"id": "anvil_rain",
-				"category": "chaos",
-				"color": "#ef041f"
-			},
 			"config": {
 				"keep": {
 					"name": "Keep anvils",
@@ -114,37 +129,31 @@
 					"id": "chance",
 					"type": "number"
 				}
-			}
+			},
+			"name": "Anvils rain from the sky",
+			"description": "Anvils rain from the sky threatening to crush your dreams.\\n\\nThe Aerial Anvil Attack Force commented on why they do it. 'We just follow gravity,' General Iron Krush said. 'Who are we to deny what the universe demands of us? We fall and we crush things. That is our purpose.'",
+			"id": "anvil_rain",
+			"category": "chaos",
+			"color": "#ef041f"
 		},
 		{
-			"info": {
-				"name": "You can't touch grass (or nature)",
-				"description": "Sorry, Twitter users. This one isn't for you.",
-				"id": "botanophobia",
-				"category": "challenges",
-				"color": "#feed00"
-			},
-			"config": {}
+			"config": {},
+			"name": "You can't touch grass (or nature)",
+			"description": "Sorry, Twitter users. This one isn't for you.",
+			"id": "botanophobia",
+			"category": "challenges",
+			"color": "#feed00"
 		},
 		{
-			"info": {
-				"name": "You can only eat meat",
-				"description": "Greetings, ali--I mean fellow humans! It is with great joy that we announce that meat is good! Eat it! Eat it all! That Alien Animal Disease thing? That was just a conspiracy theory. Now eat it! Eat all the meat! You won't become a glorbazoid. We promise.",
-				"id": "carnivore",
-				"category": "challenges",
-				"difficulty": true,
-				"color": "#fc9000"
-			},
-			"config": {}
+			"config": {},
+			"name": "You can only eat meat",
+			"description": "Greetings, ali--I mean fellow humans! It is with great joy that we announce that meat is good! Eat it! Eat it all! That Alien Animal Disease thing? That was just a conspiracy theory. Now eat it! Eat all the meat! You won't become a glorbazoid. We promise.",
+			"id": "carnivore",
+			"category": "challenges",
+			"difficulty": true,
+			"color": "#fc9000"
 		},
 		{
-			"info": {
-				"name": "You always crawl",
-				"description": "If you've got four limbs, you'd better use them!",
-				"id": "crawling",
-				"category": "challenges",
-				"color": "#fca100"
-			},
 			"config": {
 				"creative": {
 					"name": "Crawl creative players",
@@ -152,16 +161,14 @@
 					"id": "creative",
 					"type": "toggle"
 				}
-			}
+			},
+			"name": "You always crawl",
+			"description": "If you've got four limbs, you'd better use them!",
+			"id": "crawling",
+			"category": "challenges",
+			"color": "#fca100"
 		},
 		{
-			"info": {
-				"name": "All mobs explode like creepers",
-				"description": "If you get too close, mobs will explode like creepers!",
-				"id": "creeper_mobs",
-				"category": "explosions",
-				"color": "#d25b0b"
-			},
 			"config": {
 				"radius": {
 					"name": "Explosion radius",
@@ -169,16 +176,14 @@
 					"id": "radius",
 					"type": "number"
 				}
-			}
+			},
+			"name": "All mobs explode like creepers",
+			"description": "If you get too close, mobs will explode like creepers!",
+			"id": "creeper_mobs",
+			"category": "explosions",
+			"color": "#d25b0b"
 		},
 		{
-			"info": {
-				"name": "Creepers are nuclear",
-				"description": "Say goodbye to your precious world and your precious builds. These guys went from gunpowder to nuclear fuel. There's no stopping these guys. ",
-				"id": "creeper_nukes",
-				"category": "explosions",
-				"color": "#d25b0b"
-			},
 			"config": {
 				"radius": {
 					"name": "Explosion radius",
@@ -186,16 +191,14 @@
 					"id": "radius",
 					"type": "number"
 				}
-			}
+			},
+			"name": "Creepers are nuclear",
+			"description": "Say goodbye to your precious world and your precious builds. These guys went from gunpowder to nuclear fuel. There's no stopping these guys. ",
+			"id": "creeper_nukes",
+			"category": "explosions",
+			"color": "#d25b0b"
 		},
 		{
-			"info": {
-				"name": "Colors kill you",
-				"description": "According to Prof. H. D. Magnomore, recent solar flares have increased the radioactivity of highly energetic colors. Magnomore advises people to limit their exposures to lethal colors.",
-				"id": "deadly_colors",
-				"category": "misc",
-				"color": "#fc8700"
-			},
 			"config": {
 				"interval": {
 					"name": "Killing interval",
@@ -203,16 +206,14 @@
 					"id": "interval",
 					"type": "number"
 				}
-			}
+			},
+			"name": "Colors kill you",
+			"description": "According to Prof. H. D. Magnomore, recent solar flares have increased the radioactivity of highly energetic colors. Magnomore advises people to limit their exposures to lethal colors.",
+			"id": "deadly_colors",
+			"category": "misc",
+			"color": "#fc8700"
 		},
 		{
-			"info": {
-				"name": "Players swap places periodically (Death Swap)",
-				"description": "",
-				"id": "death_swap",
-				"category": "teleporting",
-				"color": "#ff7700"
-			},
 			"config": {
 				"warning": {
 					"name": "Swap warnings",
@@ -244,16 +245,14 @@
 					"id": "interval_max",
 					"type": "number"
 				}
-			}
+			},
+			"name": "Players swap places periodically (Death Swap)",
+			"description": "",
+			"id": "death_swap",
+			"category": "teleporting",
+			"color": "#ff7700"
 		},
 		{
-			"info": {
-				"name": "The world disintegrates",
-				"description": "Blocks around you randomly disappear. The world gradually degradates, desintegrates. The world will not last long.",
-				"id": "degradation",
-				"category": "chaos",
-				"color": "#af159c"
-			},
 			"config": {
 				"speed": {
 					"name": "Speed",
@@ -262,16 +261,14 @@
 					"type": "number",
 					"color": "#00dfff"
 				}
-			}
+			},
+			"name": "The world disintegrates",
+			"description": "Blocks around you randomly disappear. The world gradually degradates, desintegrates. The world will not last long.",
+			"id": "degradation",
+			"category": "chaos",
+			"color": "#af159c"
 		},
 		{
-			"info": {
-				"name": "Arrows explode",
-				"description": "Fun for the whole family! Great with 'Arrows are fast'!",
-				"id": "explosive_arrows",
-				"category": "explosions",
-				"color": "#b63014"
-			},
 			"config": {
 				"radius": {
 					"name": "Explosion radius",
@@ -279,16 +276,14 @@
 					"id": "radius",
 					"type": "number"
 				}
-			}
+			},
+			"name": "Arrows explode",
+			"description": "Fun for the whole family! Great with 'Arrows are fast'!",
+			"id": "explosive_arrows",
+			"category": "explosions",
+			"color": "#b63014"
 		},
 		{
-			"info": {
-				"name": "Eggs explode",
-				"description": "Scrambled? Devilled? Boiled? Explosive?",
-				"id": "explosive_arrows",
-				"category": "explosions",
-				"color": "#c7440f"
-			},
 			"config": {
 				"radius": {
 					"name": "Explosion radius",
@@ -296,16 +291,14 @@
 					"id": "radius",
 					"type": "number"
 				}
-			}
+			},
+			"name": "Eggs explode",
+			"description": "Scrambled? Devilled? Boiled? Explosive?",
+			"id": "explosive_arrows",
+			"category": "explosions",
+			"color": "#c7440f"
 		},
 		{
-			"info": {
-				"name": "Phantoms explode",
-				"description": "You'd better sleep. These guys aren't just angry. They're explosive.",
-				"id": "explosive_phantoms",
-				"category": "mob",
-				"color": "#cd500d"
-			},
 			"config": {
 				"radius": {
 					"name": "Explosion radius",
@@ -313,16 +306,14 @@
 					"id": "radius",
 					"type": "number"
 				}
-			}
+			},
+			"name": "Phantoms explode",
+			"description": "You'd better sleep. These guys aren't just angry. They're explosive.",
+			"id": "explosive_phantoms",
+			"category": "mob",
+			"color": "#cd500d"
 		},
 		{
-			"info": {
-				"name": "Everywhere you look explodes",
-				"description": "Everywhere players look explodes!",
-				"id": "explosive_sight",
-				"category": "explosions",
-				"color": "#b11616"
-			},
 			"config": {
 				"radius": {
 					"name": "Explosion radius",
@@ -330,16 +321,14 @@
 					"id": "radius",
 					"type": "number"
 				}
-			}
+			},
+			"name": "Everywhere you look explodes",
+			"description": "Everywhere players look explodes!",
+			"id": "explosive_sight",
+			"category": "explosions",
+			"color": "#b11616"
 		},
 		{
-			"info": {
-				"name": "Snowballs explode",
-				"description": "balls.",
-				"id": "explosive_arrows",
-				"category": "explosions",
-				"color": "#c13810"
-			},
 			"config": {
 				"radius": {
 					"name": "Explosion radius",
@@ -347,16 +336,14 @@
 					"id": "radius",
 					"type": "number"
 				}
-			}
+			},
+			"name": "Snowballs explode",
+			"description": "balls.",
+			"id": "explosive_arrows",
+			"category": "explosions",
+			"color": "#c13810"
 		},
 		{
-			"info": {
-				"name": "Everything around you turns to fire",
-				"description": "Your journey blazes behind it a path of ashen sorrow and furious cinders.",
-				"id": "fire_walker",
-				"category": "chaos",
-				"color": "#cf0c5e"
-			},
 			"config": {
 				"rate": {
 					"name": "Rate",
@@ -372,27 +359,23 @@
 					"id": "effect",
 					"type": "toggle"
 				}
-			}
+			},
+			"name": "Everything around you turns to fire",
+			"description": "Your journey blazes behind it a path of ashen sorrow and furious cinders.",
+			"id": "fire_walker",
+			"category": "chaos",
+			"color": "#cf0c5e"
 		},
 		{
-			"info": {
-				"name": "You can't eat meat",
-				"description": "Due to rapid spread of a new strain of 'Alien Animal Disease', meat has been illegalized in all 14 systems of the Galactic Union.",
-				"id": "herbivore",
-				"category": "challenges",
-				"difficulty": true,
-				"color": "#fc9800"
-			},
-			"config": {}
+			"config": {},
+			"name": "You can't eat meat",
+			"description": "Due to rapid spread of a new strain of 'Alien Animal Disease', meat has been illegalized in all 14 systems of the Galactic Union.",
+			"id": "herbivore",
+			"category": "challenges",
+			"difficulty": true,
+			"color": "#fc9800"
 		},
 		{
-			"info": {
-				"name": "You have no inventory",
-				"description": "Players' inventories become locked, with each slot optionally unlockable for every 2 XP levels.",
-				"id": "limited_inventory",
-				"category": "challenges",
-				"color": "#fed400"
-			},
 			"config": {
 				"xp_unlock": {
 					"name": "Unlock slots with XP",
@@ -400,16 +383,14 @@
 					"id": "xp_unlock",
 					"type": "toggle"
 				}
-			}
+			},
+			"name": "You have no inventory",
+			"description": "Players' inventories become locked, with each slot optionally unlockable for every 2 XP levels.",
+			"id": "limited_inventory",
+			"category": "challenges",
+			"color": "#fed400"
 		},
 		{
-			"info": {
-				"name": "You can only look in one direction",
-				"description": "Players are forced to look in a customizable direction.",
-				"id": "look_straight",
-				"category": "challenges",
-				"color": "##fdcb00"
-			},
 			"config": {
 				"x": {
 					"name": "X axis (pitch)",
@@ -439,17 +420,14 @@
 					"min": -90,
 					"max": 90
 				}
-			}
+			},
+			"name": "You can only look in one direction",
+			"description": "Players are forced to look in a customizable direction.",
+			"id": "look_straight",
+			"category": "challenges",
+			"color": "##fdcb00"
 		},
 		{
-			"info": {
-				"name": "You can't leave water",
-				"description": "Leaving water kills you except when it's raining. If it's raining, you can survive only if rain is falling on you. If a block above you blocks the rain, you will die.",
-				"id": "mermaid",
-				"category": "challenges",
-				"difficulty": true,
-				"color": "#3ED011"
-			},
 			"config": {
 				"rain": {
 					"name": "Rain protection",
@@ -475,16 +453,15 @@
 					"id": "sfx",
 					"type": "toggle"
 				}
-			}
+			},
+			"name": "You can't leave water",
+			"description": "Leaving water kills you except when it's raining. If it's raining, you can survive only if rain is falling on you. If a block above you blocks the rain, you will die.",
+			"id": "mermaid",
+			"category": "challenges",
+			"difficulty": true,
+			"color": "#3ED011"
 		},
 		{
-			"info": {
-				"name": "There's no gravity",
-				"description": "There's no gravity! Get creative with trying to move up and down! Pro tip: boats are a great way to get around. Just hop in one and flyyyyyy!  ",
-				"id": "no_gravity",
-				"category": "challenges",
-				"color": "#fdb200"
-			},
 			"config": {
 				"travel": {
 					"name": "Travel up & down",
@@ -492,14 +469,14 @@
 					"id": "travel",
 					"type": "toggle"
 				}
-			}
+			},
+			"name": "There's no gravity",
+			"description": "There's no gravity! Get creative with trying to move up and down! Pro tip: boats are a great way to get around. Just hop in one and flyyyyyy!  ",
+			"id": "no_gravity",
+			"category": "challenges",
+			"color": "#fdb200"
 		},
 		{
-			"info": {
-				"name": "Random",
-				"description": "Modifiers are randomly selected. Highly configurable.",
-				"id": "random"
-			},
 			"config": {
 				"mode": {
 					"name": "Mode",
@@ -539,16 +516,12 @@
 					"id": "reroll",
 					"type": "toggle"
 				}
-			}
+			},
+			"name": "Random",
+			"description": "Modifiers are randomly selected. Highly configurable.",
+			"id": "random"
 		},
 		{
-			"info": {
-				"name": "Structures randomly spawn",
-				"description": "Structures and world generation features randomly spawn around you, making the terrain absolutely chaotic!",
-				"id": "random_structures",
-				"category": "chaos",
-				"color": "#7f22fb"
-			},
 			"config": {
 				"chance": {
 					"name": "Chance",
@@ -562,16 +535,14 @@
 					"id": "sfx",
 					"type": "toggle"
 				}
-			}
+			},
+			"name": "Structures randomly spawn",
+			"description": "Structures and world generation features randomly spawn around you, making the terrain absolutely chaotic!",
+			"id": "random_structures",
+			"category": "chaos",
+			"color": "#7f22fb"
 		},
 		{
-			"info": {
-				"name": "You randomly teleport",
-				"description": "Ever wanted to randomly teleport? No? Well now you can!",
-				"id": "random_teleport",
-				"category": "teleporting",
-				"color": "#ee57ef"
-			},
 			"config": {
 				"chance": {
 					"name": "Chance",
@@ -585,16 +556,14 @@
 					"id": "radius",
 					"type": "number"
 				}
-			}
+			},
+			"name": "You randomly teleport",
+			"description": "Ever wanted to randomly teleport? No? Well now you can!",
+			"id": "random_teleport",
+			"category": "teleporting",
+			"color": "#ee57ef"
 		},
 		{
-			"info": {
-				"name": "Gravity is reversed",
-				"description": "Basically Australia. How do they even stay on earth? Anti-gravity fields?",
-				"id": "reverse_gravity",
-				"category": "challenges",
-				"color": "#fda900"
-			},
 			"config": {
 				"affect_players": {
 					"name": "Affect players",
@@ -614,16 +583,14 @@
 					"id": "affect_entities",
 					"type": "toggle"
 				}
-			}
+			},
+			"name": "Gravity is reversed",
+			"description": "Basically Australia. How do they even stay on earth? Anti-gravity fields?",
+			"id": "reverse_gravity",
+			"category": "challenges",
+			"color": "#fda900"
 		},
 		{
-			"info": {
-				"name": "Bats carry TNT",
-				"description": "All bats carry TNT which detonates near players.",
-				"id": "tnt_bats",
-				"category": "explosions",
-				"color": "#b11616"
-			},
 			"config": {
 				"radius": {
 					"name": "Explosion radius",
@@ -631,16 +598,14 @@
 					"id": "radius",
 					"type": "number"
 				}
-			}
+			},
+			"name": "Bats carry TNT",
+			"description": "All bats carry TNT which detonates near players.",
+			"id": "tnt_bats",
+			"category": "explosions",
+			"color": "#b11616"
 		},
 		{
-			"info": {
-				"name": "TNT rains from the sky",
-				"description": "TNT rains from the sky! The end is nigh!",
-				"id": "tnt_rain",
-				"category": "explosions",
-				"color": "#b11616"
-			},
 			"config": {
 				"grief": {
 					"name": "Respect mobGriefing",
@@ -672,17 +637,14 @@
 					"id": "chance",
 					"type": "number"
 				}
-			}
+			},
+			"name": "TNT rains from the sky",
+			"description": "TNT rains from the sky! The end is nigh!",
+			"id": "tnt_rain",
+			"category": "explosions",
+			"color": "#b11616"
 		},
 		{
-			"info": {
-				"name": "You can't touch water",
-				"description": "Touching water or being exposed to rain kills you.",
-				"id": "toxic_water",
-				"category": "challenges",
-				"difficulty": true,
-				"color": "#fef600"
-			},
 			"config": {
 				"rain": {
 					"name": "Rain protection",
@@ -702,27 +664,28 @@
 					"id": "sfx",
 					"type": "toggle"
 				}
-			}
+			},
+			"name": "You can't touch water",
+			"description": "Touching water or being exposed to rain kills you.",
+			"id": "toxic_water",
+			"category": "challenges",
+			"difficulty": true,
+			"color": "#fef600"
 		},
 		{
-			"info": {
-				"name": "Light kills you",
-				"description": "Players die when they enter light. Higher light levels damage players more, eventually killing them.",
-				"id": "troglodyte",
-				"category": "challenges",
-				"difficulty": true
-			},
-			"config": {}
+			"config": {},
+			"name": "Light kills you",
+			"description": "Players die when they enter light. Higher light levels damage players more, eventually killing them.",
+			"id": "troglodyte",
+			"category": "challenges",
+			"difficulty": true
 		},
-        {
-            "info": {
-                "name": "Taking damage blinds you",
-                "description": "According to recent research, fatal anemia can, among other symptoms, cause blindness!",
-                "id": "blinding_damage",
-                "category": "challenges"
-            },
-            "config": {
-            }
-        }
+		{
+			"config": {},
+			"name": "Taking damage blinds you",
+			"description": "According to recent research, fatal anemia can, among other symptoms, cause blindness!",
+			"id": "blinding_damage",
+			"category": "challenges"
+		}
 	]
 }

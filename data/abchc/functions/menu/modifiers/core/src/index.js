@@ -91,7 +91,7 @@ categories.forEach(category => {
             
             #> Modifiers\n
         `;
-        const modsInCategory = modifiers.filter(modifier => modifier.info.category === category.id);
+        const modsInCategory = modifiers.filter(modifier => modifier.category === category.id);
 
         console.log(category.id + ' ' + modsInCategory.length)
 
@@ -107,22 +107,22 @@ categories.forEach(category => {
 
         for (let i = 0; i < modsInCategory.length; i++) {
             const modifier = modsInCategory[i];
-            modifierDescription = parseDescription(modifier.info.description);
+            modifierDescription = parseDescription(modifier.description);
 
-            if (Object.values(modifier.config).length > 0 | modifier.info.difficulty === true) {
+            if (Object.values(modifier.config).length > 0 | modifier.difficulty === true) {
                 categoryFunction += outdent`
-                    ## ${modifier.info.name} (${modifier.info.id})
-                    # ${modifier.info.description}
-                    execute unless score ${modifier.info.id} abch.toggle matches 1 run tellraw @s [{"text":" [✖] ","bold":false,"color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/on"}},{"text":"[","color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/config"}},{"text":"⚙","bold":true,"color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/config"}},{"text":"] ","color":"#CACACA","bold":false,"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/config"}},{"text":"${modifier.info.name}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
+                    ## ${modifier.name} (${modifier.id})
+                    # ${modifier.description}
+                    execute unless score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✖] ","bold":false,"color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/on"}},{"text":"[","color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"⚙","bold":true,"color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"] ","color":"#CACACA","bold":false,"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"${modifier.name}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
 
-                    execute if score ${modifier.info.id} abch.toggle matches 1 run tellraw @s [{"text":" [✔] ","bold":false,"color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/off"}},{"text":"[","color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/config"}},{"text":"⚙","bold":true,"color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/config"}},{"text":"] ","color":"#CACACA","bold":false,"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/config"}},{"text":"${modifier.info.name}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
+                    execute if score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✔] ","bold":false,"color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/off"}},{"text":"[","color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"⚙","bold":true,"color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"] ","color":"#CACACA","bold":false,"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"${modifier.name}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
                 `;
             } else {
                 categoryFunction += outdent`
-                    ## ${modifier.info.name} (${modifier.info.id})
-                    # ${modifier.info.description}
-                    execute if score ${modifier.info.id} abch.toggle matches 1 run tellraw @s [{"text":" [✖] ","bold":false,"color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/on"}},{"text":"${modifier.info.id}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
-                    execute if score ${modifier.info.id} abch.toggle matches 1 run tellraw @s [{"text":" [✔] ","bold":false,"color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/off"}},{"text":"${modifier.info.id}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
+                    ## ${modifier.name} (${modifier.id})
+                    # ${modifier.description}
+                    execute if score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✖] ","bold":false,"color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/on"}},{"text":"${modifier.id}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
+                    execute if score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✔] ","bold":false,"color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/off"}},{"text":"${modifier.id}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
                 `;
             }
         }
@@ -143,13 +143,12 @@ modifiers.forEach((modifier) => {
 	// ID of the modifier used as name in object
 	// e.g. 'anvil_rain'
 
-	// Info containing name, description, id, and category
-	const { info, config } = modifier;
-    const { name, description, id, category, difficulty } = info
+	// containing name, description, id, and category
+	const { name, description, id, category, difficulty, config } = modifier;
 
 	// Parent directory, directory of modifier
 	// e.g. `../anvil_rain`
-	const modifierDir = `../${modifier.info.id}`;
+	const modifierDir = `../${modifier.id}`;
 
 	// Create folder for modifier if folder doesn't exist
 	if (fs.existsSync(modifierDir) === false) {
@@ -157,8 +156,8 @@ modifiers.forEach((modifier) => {
 	}
 
 	// If it's an invalid valid hex code, set it to default color
-    let color = modifier.info.color;
-	if (modifier.info.color == undefined || /^#([a-f0-9]) {6}$/i.test(modifier.info.color) === false) {
+    let color = modifier.color;
+	if (modifier.color == undefined || /^#([a-f0-9]) {6}$/i.test(modifier.color) === false) {
 		const color = '#20CBA8';
     }
 
@@ -169,13 +168,13 @@ modifiers.forEach((modifier) => {
     // Create "on" function
     fs.writeFileSync(
         `${modifierDir}/on.mcfunction`,
-        `#> abchc:menu/modifiers/core/${modifier.info.id}/on\n#Automatically generated toggle on function for ${modifier.info.id}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${modifier.info.id} abch.toggle 1\n\n# Run load function\nfunction abchc:modifiers/${modifier.info.id}/load\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/find_page`
+        `#> abchc:menu/modifiers/core/${modifier.id}/on\n#Automatically generated toggle on function for ${modifier.id}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${modifier.id} abch.toggle 1\n\n# Run load function\nfunction abchc:modifiers/${modifier.id}/load\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/find_page`
     );
 
     // Create "off" function
     fs.writeFileSync(
         `${modifierDir}/off.mcfunction`,
-        `#> abchc:menu/modifiers/core/${modifier.info.id}/off\n#Automatically generated toggle off function for ${modifier.info.id}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${modifier.info.id} abch.toggle 0\n\n# Run unload function\nfunction abchc:modifiers/${modifier.info.id}/unload\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/find_page`
+        `#> abchc:menu/modifiers/core/${modifier.id}/off\n#Automatically generated toggle off function for ${modifier.id}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${modifier.id} abch.toggle 0\n\n# Run unload function\nfunction abchc:modifiers/${modifier.id}/unload\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/find_page`
     );
 
 
@@ -186,8 +185,8 @@ modifiers.forEach((modifier) => {
 
 		// Create config page
 		let configFile = outdent`
-    #> abchc:menu/modifiers/core/${info.id}/config
-    # Config menu for ${info.id} made with
+    #> abchc:menu/modifiers/core/${modifier.id}/config
+    # Config menu for ${modifier.id} made with
     # ../src/index.js
     #
     # @within abchc:menu/**
@@ -200,10 +199,10 @@ modifiers.forEach((modifier) => {
     schedule function abchc:menu/actions/enable_feedback 1t append
         
     #> Header
-    tellraw @s ["\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n",{"text":"---------------------------------------------","color":"#0F21C6"},"\\n",{"text":"←|","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${info.category}"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back.","color":"#ECEFF5"}]}}," ",{"text":"${info.name}","color":"${color}","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${info.category}"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back.","color":"#ECEFF5"}]}},{"text":" Config","color":"#17B7CD","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${info.category}"}},"\\n",{"text":"---------------------------------------------","color":"#0F21C6"}]
+    tellraw @s ["\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n",{"text":"---------------------------------------------","color":"#0F21C6"},"\\n",{"text":"←|","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.category}"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back.","color":"#ECEFF5"}]}}," ",{"text":"${modifier.name}","color":"${color}","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.category}"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to go back.","color":"#ECEFF5"}]}},{"text":" Config","color":"#17B7CD","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.category}"}},"\\n",{"text":"---------------------------------------------","color":"#0F21C6"}]
 
     #> Blacklist
-    tellraw @p [{"text":"[","color":"#0F21C6","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier.info.id}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}},{"text":"✎","color":"#0F21C6","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier.info.id}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}},{"text":"] ","color":"#0F21C6","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier.info.id}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}},{"text":"Blacklist player","color":"#ECEFF5","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier.info.id}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}}]
+    tellraw @p [{"text":"[","color":"#0F21C6","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier.id}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}},{"text":"✎","color":"#0F21C6","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier.id}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}},{"text":"] ","color":"#0F21C6","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier.id}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}},{"text":"Blacklist player","color":"#ECEFF5","clickEvent":{"action":"suggest_command","value":"/tag player add abch.${modifier.id}.blacklist"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to blacklist a player.\\n\\nReplace 'player' with the player you want to blacklist.","color":"#ECEFF5"}]}}]
     `;
 
 		// If difficulty is enabled,
@@ -231,41 +230,41 @@ modifiers.forEach((modifier) => {
             \n\n##> Difficulty selector
             #> Global difficulty
             # Peaceful
-            execute unless score difficulty.${modifier.info.id} abch.config matches 0..3 if score difficulty.global abch.config matches 0 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]  ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/previous_difficulty"}},{"text":"Peaceful ☮","color":"#44F044","hoverEvent":{"action":"show_text","contents":[{"text":"Peaceful","color":"#44F044"},{"text":" is just as its name implies: peaceful! Is it perfectly easy and relaxing? Yes! Is it fun? Well...","color":"#ECEFF5"}]}},{"text":"  [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/next_difficulty"}},"\\n"]
+            execute unless score difficulty.${modifier.id} abch.config matches 0..3 if score difficulty.global abch.config matches 0 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]  ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/previous_difficulty"}},{"text":"Peaceful ☮","color":"#44F044","hoverEvent":{"action":"show_text","contents":[{"text":"Peaceful","color":"#44F044"},{"text":" is just as its name implies: peaceful! Is it perfectly easy and relaxing? Yes! Is it fun? Well...","color":"#ECEFF5"}]}},{"text":"  [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/next_difficulty"}},"\\n"]
             # Easy
-            execute unless score difficulty.${modifier.info.id} abch.config matches 0..3 if score difficulty.global abch.config matches 1 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]     ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/previous_difficulty"}},{"text":"Easy ☺","color":"#3ED011","hoverEvent":{"action":"show_text","contents":[{"text":"Easy","color":"#3ED011"},{"text":" is the difficulty for people looking for a relaxed, casual experience. Don't listen to your friends! Oh, you don't have friends? Uh... Anyway, You're not a chicken! You're just...","color":"#ECEFF5"}]}},{"text":"     [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/next_difficulty"}},"\\n"]
+            execute unless score difficulty.${modifier.id} abch.config matches 0..3 if score difficulty.global abch.config matches 1 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]     ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/previous_difficulty"}},{"text":"Easy ☺","color":"#3ED011","hoverEvent":{"action":"show_text","contents":[{"text":"Easy","color":"#3ED011"},{"text":" is the difficulty for people looking for a relaxed, casual experience. Don't listen to your friends! Oh, you don't have friends? Uh... Anyway, You're not a chicken! You're just...","color":"#ECEFF5"}]}},{"text":"     [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/next_difficulty"}},"\\n"]
             # Normal
-            execute unless score difficulty.${modifier.info.id} abch.config matches 0..3 if score difficulty.global abch.config matches 2 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]   ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/previous_difficulty"}},{"text":"Normal ☯","color":"#E4EB18","hoverEvent":{"action":"show_text","contents":[{"text":"Normal","color":"#E4EB18"},{"text":" is the default difficulty with modifiers just the way they were intended — not too easy but not too hard.","color":"#ECEFF5"}]}},{"text":"    [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/next_difficulty"}},"\\n"]
+            execute unless score difficulty.${modifier.id} abch.config matches 0..3 if score difficulty.global abch.config matches 2 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]   ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/previous_difficulty"}},{"text":"Normal ☯","color":"#E4EB18","hoverEvent":{"action":"show_text","contents":[{"text":"Normal","color":"#E4EB18"},{"text":" is the default difficulty with modifiers just the way they were intended — not too easy but not too hard.","color":"#ECEFF5"}]}},{"text":"    [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/next_difficulty"}},"\\n"]
             # Hard
-            execute unless score difficulty.${modifier.info.id} abch.config matches 0..3 if score difficulty.global abch.config matches 3 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]     ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/previous_difficulty"}},{"text":"Hard ☠","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Hard","color":"#FF0000"},{"text":" is the most brutal difficulty for people who like absolute destruction and chaos. Destruction? Certainly. Death? More than you can count. Lag? Oh yeah! Fun? ¯\\\\_(ツ)_/¯","color":"#ECEFF5"}]}},{"text":"     [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/next_difficulty"}},"\\n"]
+            execute unless score difficulty.${modifier.id} abch.config matches 0..3 if score difficulty.global abch.config matches 3 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]     ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/previous_difficulty"}},{"text":"Hard ☠","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Hard","color":"#FF0000"},{"text":" is the most brutal difficulty for people who like absolute destruction and chaos. Destruction? Certainly. Death? More than you can count. Lag? Oh yeah! Fun? ¯\\\\_(ツ)_/¯","color":"#ECEFF5"}]}},{"text":"     [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/next_difficulty"}},"\\n"]
 
             #> Modifier-specific difficulty (local difficulty)
-            execute if score difficulty.${modifier.info.id} abch.config matches 0 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]  ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/previous_difficulty"}},{"text":"Peaceful ☮","color":"#44F044","hoverEvent":{"action":"show_text","contents":[{"text":"Peaceful","color":"#44F044"},{"text":" is just as its name implies: peaceful! Is it perfectly easy and relaxing? Yes! Is it fun? Well...","color":"#ECEFF5"}]}},{"text":"  [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/next_difficulty"}},"\\n"]
-            execute if score difficulty.${modifier.info.id} abch.config matches 1 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]     ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/previous_difficulty"}},{"text":"Easy ☺","color":"#3ED011","hoverEvent":{"action":"show_text","contents":[{"text":"Easy","color":"#3ED011"},{"text":" is the difficulty for people looking for a relaxed, casual experience. Don't listen to your friends! Oh, you don't have friends? Uh... Anyway, You're not a chicken! You're just...","color":"#ECEFF5"}]}},{"text":"     [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/next_difficulty"}},"\\n"]
-            execute if score difficulty.${modifier.info.id} abch.config matches 2 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]   ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/previous_difficulty"}},{"text":"Normal ☯","color":"#E4EB18","hoverEvent":{"action":"show_text","contents":[{"text":"Normal","color":"#E4EB18"},{"text":" is the default difficulty with modifiers just the way they were intended — not too easy but not too hard.","color":"#ECEFF5"}]}},{"text":"    [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/next_difficulty"}},"\\n"]
-            execute if score difficulty.${modifier.info.id} abch.config matches 3 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]     ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/previous_difficulty"}},{"text":"Hard ☠","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Hard","color":"#FF0000"},{"text":" is the most brutal difficulty for people who like absolute destruction and chaos. Destruction? Certainly. Death? More than you can count. Lag? Oh yeah! Fun? ¯\\\\_(ツ)_/¯","color":"#ECEFF5"}]}},{"text":"     [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/difficulty/next_difficulty"}},"\\n"]\n`;
+            execute if score difficulty.${modifier.id} abch.config matches 0 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]  ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/previous_difficulty"}},{"text":"Peaceful ☮","color":"#44F044","hoverEvent":{"action":"show_text","contents":[{"text":"Peaceful","color":"#44F044"},{"text":" is just as its name implies: peaceful! Is it perfectly easy and relaxing? Yes! Is it fun? Well...","color":"#ECEFF5"}]}},{"text":"  [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/next_difficulty"}},"\\n"]
+            execute if score difficulty.${modifier.id} abch.config matches 1 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]     ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/previous_difficulty"}},{"text":"Easy ☺","color":"#3ED011","hoverEvent":{"action":"show_text","contents":[{"text":"Easy","color":"#3ED011"},{"text":" is the difficulty for people looking for a relaxed, casual experience. Don't listen to your friends! Oh, you don't have friends? Uh... Anyway, You're not a chicken! You're just...","color":"#ECEFF5"}]}},{"text":"     [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/next_difficulty"}},"\\n"]
+            execute if score difficulty.${modifier.id} abch.config matches 2 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]   ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/previous_difficulty"}},{"text":"Normal ☯","color":"#E4EB18","hoverEvent":{"action":"show_text","contents":[{"text":"Normal","color":"#E4EB18"},{"text":" is the default difficulty with modifiers just the way they were intended — not too easy but not too hard.","color":"#ECEFF5"}]}},{"text":"    [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/next_difficulty"}},"\\n"]
+            execute if score difficulty.${modifier.id} abch.config matches 3 run tellraw @s [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/reset"}},{"text":" Difficulty: ","color":"#20CBA8"},{"text":"[←]     ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to decrease the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/previous_difficulty"}},{"text":"Hard ☠","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Hard","color":"#FF0000"},{"text":" is the most brutal difficulty for people who like absolute destruction and chaos. Destruction? Certainly. Death? More than you can count. Lag? Oh yeah! Fun? ¯\\\\_(ツ)_/¯","color":"#ECEFF5"}]}},{"text":"     [→]","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to increase the difficulty.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/difficulty/next_difficulty"}},"\\n"]\n`;
 
 			/* Previous difficulty function
 
                 e.g. abchc:menu/modifiers/core/anvil_rain/difficulty/previous_difficulty.mcfunction */
 			fs.writeFileSync(
-				`../${modifier.info.id}/difficulty/previous_difficulty.mcfunction`,
+				`../${modifier.id}/difficulty/previous_difficulty.mcfunction`,
 				outdent`
-                        #> abchc:menu/${modifier.info.id}/difficulty/previous_difficulty
-                        # Go to the previous difficulty for ${modifier.info.id}
+                        #> abchc:menu/${modifier.id}/difficulty/previous_difficulty
+                        # Go to the previous difficulty for ${modifier.id}
                         # Generated with the script at '../src/index.js'
                         #
-                        # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                        # @within abchc:menu/modifiers/core/${modifier.id}/**
                         # @context player
 
                         #> Click sound
                         function abchc:menu/actions/click
 
                         #> If difficulty isn't set, get from global
-                        execute unless score difficulty.${modifier.info.id} abch.config matches 0..3 run scoreboard players operation difficulty.${modifier.info.id} abch.config = difficulty.global abch.config
+                        execute unless score difficulty.${modifier.id} abch.config matches 0..3 run scoreboard players operation difficulty.${modifier.id} abch.config = difficulty.global abch.config
 
                         #> Set difficulty to temp score
-                        scoreboard players operation #temp abch.config = difficulty.${modifier.info.id} abch.config
+                        scoreboard players operation #temp abch.config = difficulty.${modifier.id} abch.config
 
                         #> Decrease temp score
                         scoreboard players remove #temp abch.config 1
@@ -274,10 +273,10 @@ modifiers.forEach((modifier) => {
                         execute if score #temp abch.config matches ..-1 run scoreboard players set #temp abch.config 3
 
                         #> Set new difficulty temp score to difficulty
-                        scoreboard players operation difficulty.${modifier.info.id} abch.config = #temp abch.config
+                        scoreboard players operation difficulty.${modifier.id} abch.config = #temp abch.config
 
                         #> Update menu
-                        function abchc:menu/modifiers/core/${modifier.info.id}/config
+                        function abchc:menu/modifiers/core/${modifier.id}/config
                 `
 			);
 
@@ -285,23 +284,23 @@ modifiers.forEach((modifier) => {
 
                 e.g. abchc:menu/modifiers/core/anvil_rain/difficulty/next_difficulty.mcfunction */
 			fs.writeFileSync(
-				`../${modifier.info.id}/difficulty/next_difficulty.mcfunction`,
+				`../${modifier.id}/difficulty/next_difficulty.mcfunction`,
 				outdent`
-                    #> abchc:menu/${modifier.info.id}/difficulty/next_difficulty
-                    # Go to the next difficulty for ${modifier.info.id}
+                    #> abchc:menu/${modifier.id}/difficulty/next_difficulty
+                    # Go to the next difficulty for ${modifier.id}
                     # Generated with the script at '../src/index.js'
                     #
-                    # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                    # @within abchc:menu/modifiers/core/${modifier.id}/**
                     # @context player
 
                     #> Click sound
                     function abchc:menu/actions/click
 
                     #> If difficulty isn't set, get from global
-                    execute unless score difficulty.${modifier.info.id} abch.config matches 0..3 run scoreboard players operation difficulty.${modifier.info.id} abch.config = difficulty.global abch.config
+                    execute unless score difficulty.${modifier.id} abch.config matches 0..3 run scoreboard players operation difficulty.${modifier.id} abch.config = difficulty.global abch.config
 
                     #> Set difficulty to temp score
-                    scoreboard players operation #temp abch.config = difficulty.${modifier.info.id} abch.config
+                    scoreboard players operation #temp abch.config = difficulty.${modifier.id} abch.config
 
                     #> Add temp score
                     scoreboard players add #temp abch.config 1
@@ -310,10 +309,10 @@ modifiers.forEach((modifier) => {
                     execute if score #temp abch.config matches 4.. run scoreboard players set #temp abch.config 0
 
                     #> Set new difficulty temp score to difficulty
-                    scoreboard players operation difficulty.${modifier.info.id} abch.config = #temp abch.config
+                    scoreboard players operation difficulty.${modifier.id} abch.config = #temp abch.config
 
                     #> Update menu
-                    function abchc:menu/modifiers/core/${modifier.info.id}/config
+                    function abchc:menu/modifiers/core/${modifier.id}/config
                     `
 			);
 
@@ -322,23 +321,23 @@ modifiers.forEach((modifier) => {
 
             e.g. abchc:menu/modifiers/core/anvil_rain/rate/reset.mcfunction */
 			fs.writeFileSync(
-				`../${modifier.info.id}/difficulty/reset.mcfunction`,
+				`../${modifier.id}/difficulty/reset.mcfunction`,
 				outdent`
-                #> abchc:menu/modifiers/core/${modifier.info.id}/difficulty/reset
-                # Reset ${modifier.info.id} difficulty to global difficulty
+                #> abchc:menu/modifiers/core/${modifier.id}/difficulty/reset
+                # Reset ${modifier.id} difficulty to global difficulty
                 # Generated with the script at '../src/index.js'
                 #
-                # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                # @within abchc:menu/modifiers/core/${modifier.id}/**
                 # @context player
 
                 #> Click sound
                 function abchc:menu/actions/click
 
                 #> Reset to global difficulty
-                scoreboard players operation difficulty.${modifier.info.id} abch.config = difficulty.global abch.config
+                scoreboard players operation difficulty.${modifier.id} abch.config = difficulty.global abch.config
 
                 #> Update menu
-                function abchc:menu/modifiers/core/${modifier.info.id}/config
+                function abchc:menu/modifiers/core/${modifier.id}/config
                 `
 			);
 		}
@@ -357,7 +356,7 @@ modifiers.forEach((modifier) => {
 
 			// Function scoreboard enum namespace
 			// e.g. anvil_rain.rate
-			const namespace = `${modifier.info.id}.${cf.id}`;
+			const namespace = `${modifier.id}.${cf.id}`;
 
 			// Relative path for config directory
 			// e.g. '../anvil_rain/rate/`
@@ -379,9 +378,9 @@ modifiers.forEach((modifier) => {
                         # ${cf.description}
                         # ID: ${cf.id}
                         # Type: ${cf.type}
-                        execute unless score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":" ${cf.name}: ","color":"${cf.color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.default"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/5up"}}]
+                        execute unless score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":" ${cf.name}: ","color":"${cf.color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.default"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/5up"}}]
                                     
-                        execute if score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.config"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/5up"}}]
+                        execute if score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.config"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/5up"}}]
                         `;
 
 					// Create folder for config if it doesn't exist
@@ -393,12 +392,12 @@ modifiers.forEach((modifier) => {
                                 
                                     e.g. abchc:menu/modifiers/core/anvil_rain/rate/1up.mcfunction */
 					fs.writeFileSync(
-						`../${modifier.info.id}/${cf.id}/1up.mcfunction`,
-						`#> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/1up
-                    # Increase ${modifier.info.id} config score ${cf.id} by 1
+						`../${modifier.id}/${cf.id}/1up.mcfunction`,
+						`#> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/1up
+                    # Increase ${modifier.id} config score ${cf.id} by 1
                     # Generated with the script at '../src/index.js'
                     #
-                    # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                    # @within abchc:menu/modifiers/core/${modifier.id}/**
                     # @context player
 
                     #> Add 1 to score
@@ -408,7 +407,7 @@ modifiers.forEach((modifier) => {
                     function abchc:menu/actions/click
 
                     #> Update menu
-                    function abchc:menu/modifiers/core/${modifier.info.id}/config
+                    function abchc:menu/modifiers/core/${modifier.id}/config
                 `
 					);
 
@@ -419,11 +418,11 @@ modifiers.forEach((modifier) => {
 					fs.writeFileSync(
 						`${configDir}/5up.mcfunction`,
 						outdent`
-                    #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/5up
-                    # Increase ${modifier.info.id} config score ${cf.id} by 5
+                    #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/5up
+                    # Increase ${modifier.id} config score ${cf.id} by 5
                     # Generated with the script at '../src/index.js'
                     #
-                    # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                    # @within abchc:menu/modifiers/core/${modifier.id}/**
                     # @context player
 
                     #> Add 5 to score
@@ -433,7 +432,7 @@ modifiers.forEach((modifier) => {
                     function abchc:menu/actions/click
 
                     #> Update menu
-                    function abchc:menu/modifiers/core/${modifier.info.id}/config
+                    function abchc:menu/modifiers/core/${modifier.id}/config
                 `
 					);
 
@@ -444,11 +443,11 @@ modifiers.forEach((modifier) => {
 					fs.writeFileSync(
 						`${configDir}/5down.mcfunction`,
 						outdent`
-                #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/5down
-                # Decrease ${modifier.info.id} config score ${cf.id} by 5
+                #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/5down
+                # Decrease ${modifier.id} config score ${cf.id} by 5
                 # Generated with the script at '../src/index.js'
                 #
-                # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                # @within abchc:menu/modifiers/core/${modifier.id}/**
                 # @context player
 
                 #> Remove 5 from score
@@ -458,7 +457,7 @@ modifiers.forEach((modifier) => {
                 function abchc:menu/actions/click
 
                 #> Update menu
-                function abchc:menu/modifiers/core/${modifier.info.id}/config
+                function abchc:menu/modifiers/core/${modifier.id}/config
                 `
 					);
 
@@ -469,11 +468,11 @@ modifiers.forEach((modifier) => {
 					fs.writeFileSync(
 						`${configDir}/1down.mcfunction`,
 						outdent`
-                #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/1down
-                # Decrease ${modifier.info.id} config score ${cf.id} by 1
+                #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/1down
+                # Decrease ${modifier.id} config score ${cf.id} by 1
                 # Generated with the script at '../src/index.js'
                 #
-                # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                # @within abchc:menu/modifiers/core/${modifier.id}/**
                 # @context player
 
                 #> Remove 1 from score
@@ -483,7 +482,7 @@ modifiers.forEach((modifier) => {
                 function abchc:menu/actions/click
 
                 #> Update menu
-                function abchc:menu/modifiers/core/${modifier.info.id}/config
+                function abchc:menu/modifiers/core/${modifier.id}/config
                 `
 					);
 
@@ -494,11 +493,11 @@ modifiers.forEach((modifier) => {
 					fs.writeFileSync(
 						`${configDir}/reset.mcfunction`,
 						outdent`
-                #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset
-                # Reset ${modifier.info.id} config score ${cf.id} to default
+                #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset
+                # Reset ${modifier.id} config score ${cf.id} to default
                 # Generated with the script at '../src/index.js'
                 #
-                # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                # @within abchc:menu/modifiers/core/${modifier.id}/**
                 # @context player
 
                 #> Reset
@@ -511,7 +510,7 @@ modifiers.forEach((modifier) => {
                 function abchc:menu/actions/click
 
                 #> Update menu
-                function abchc:menu/modifiers/core/${modifier.info.id}/config
+                function abchc:menu/modifiers/core/${modifier.id}/config
                 `
 					);
 					break;
@@ -523,9 +522,9 @@ modifiers.forEach((modifier) => {
                     # ${cf.description}
                     # ID: ${cf.id}
                     # Type: ${cf.type}
-                    execute unless score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.default"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/5up"}}]
+                    execute unless score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.default"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/5up"}}]
                                 
-                    execute if score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.config"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/5up"}}]`;
+                    execute if score ${namespace} abch.config matches -2147483648..2147483647 run tellraw @p ["",{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":"[«] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/5down"}},{"text":" [‹] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/1down"}},{"score":{"name":"${namespace}","objective":"abch.config"},"color":"#ECEFF5"},{"text":" [›] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/1up"}},{"text":" [»]","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/5up"}}]`;
 
 					// Create folder for config if it doesn't exist
 					if (fs.existsSync(configDir) === false)
@@ -536,12 +535,12 @@ modifiers.forEach((modifier) => {
                                 
                                     e.g. abchc:menu/modifiers/core/anvil_rain/rate/1up.mcfunction */
 					fs.writeFileSync(
-						`../${modifier.info.id}/${cf.id}/1up.mcfunction`,
-						`#> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/1up
-                    # Increase ${modifier.info.id} config score ${cf.id} by 1
+						`../${modifier.id}/${cf.id}/1up.mcfunction`,
+						`#> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/1up
+                    # Increase ${modifier.id} config score ${cf.id} by 1
                     # Generated with the script at '../src/index.js'
                     #
-                    # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                    # @within abchc:menu/modifiers/core/${modifier.id}/**
                     # @context player
 
                     #> Add 1 to score
@@ -557,7 +556,7 @@ modifiers.forEach((modifier) => {
                     function abchc:menu/actions/click
 
                     #> Update menu
-                    function abchc:menu/modifiers/core/${modifier.info.id}/config
+                    function abchc:menu/modifiers/core/${modifier.id}/config
                 `
 					);
 
@@ -566,13 +565,13 @@ modifiers.forEach((modifier) => {
             
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/5up.mcfunction */
 					fs.writeFileSync(
-						`../${modifier.info.id}/${cf.id}/5up.mcfunction`,
+						`../${modifier.id}/${cf.id}/5up.mcfunction`,
 						outdent`
-                        #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/5up
-                        # Increase ${modifier.info.id} config score ${cf.id} by 5
+                        #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/5up
+                        # Increase ${modifier.id} config score ${cf.id} by 5
                         # Generated with the script at '../src/index.js'
                         #
-                        # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                        # @within abchc:menu/modifiers/core/${modifier.id}/**
                         # @context player
 
                         #> Add 5 to score
@@ -588,7 +587,7 @@ modifiers.forEach((modifier) => {
                         function abchc:menu/actions/click
 
                         #> Update menu
-                        function abchc:menu/modifiers/core/${modifier.info.id}/config
+                        function abchc:menu/modifiers/core/${modifier.id}/config
                     `
 					);
 
@@ -597,13 +596,13 @@ modifiers.forEach((modifier) => {
             
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/1down.mcfunction */
 					fs.writeFileSync(
-						`../${modifier.info.id}/${cf.id}/1down.mcfunction`,
+						`../${modifier.id}/${cf.id}/1down.mcfunction`,
 						outdent`
-                    #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/1down
-                    # Increase ${modifier.info.id} config score ${cf.id} by 1
+                    #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/1down
+                    # Increase ${modifier.id} config score ${cf.id} by 1
                     # Generated with the script at '../src/index.js'
                     #
-                    # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                    # @within abchc:menu/modifiers/core/${modifier.id}/**
                     # @context player
 
                     #> Remove 1 from score
@@ -619,7 +618,7 @@ modifiers.forEach((modifier) => {
                     function abchc:menu/actions/click
 
                     #> Update menu
-                    function abchc:menu/modifiers/core/${modifier.info.id}/config
+                    function abchc:menu/modifiers/core/${modifier.id}/config
                     `
 					);
 
@@ -628,13 +627,13 @@ modifiers.forEach((modifier) => {
             
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/5down.mcfunction */
 					fs.writeFileSync(
-						`../${modifier.info.id}/${cf.id}/5down.mcfunction`,
+						`../${modifier.id}/${cf.id}/5down.mcfunction`,
 						outdent`
-                        #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/5down
-                        # Increase ${modifier.info.id} config score ${cf.id} by 5
+                        #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/5down
+                        # Increase ${modifier.id} config score ${cf.id} by 5
                         # Generated with the script at '../src/index.js'
                         #
-                        # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                        # @within abchc:menu/modifiers/core/${modifier.id}/**
                         # @context player
 
                         #> Remove 5 from score
@@ -650,7 +649,7 @@ modifiers.forEach((modifier) => {
                         function abchc:menu/actions/click
 
                         #> Update menu
-                        function abchc:menu/modifiers/core/${modifier.info.id}/config
+                        function abchc:menu/modifiers/core/${modifier.id}/config
                     `
 					);
 
@@ -661,11 +660,11 @@ modifiers.forEach((modifier) => {
 					fs.writeFileSync(
 						`${configDir}/reset.mcfunction`,
 						outdent`
-                    #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset
-                    # Reset ${modifier.info.id} config score ${cf.id} to default
+                    #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset
+                    # Reset ${modifier.id} config score ${cf.id} to default
                     # Generated with the script at '../src/index.js'
                     #
-                    # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                    # @within abchc:menu/modifiers/core/${modifier.id}/**
                     # @context player
 
                     #> Reset
@@ -678,7 +677,7 @@ modifiers.forEach((modifier) => {
                     function abchc:menu/actions/click
 
                     #> Update menu
-                    function abchc:menu/modifiers/core/${modifier.info.id}/config
+                    function abchc:menu/modifiers/core/${modifier.id}/config
                 `
 					);
 					break;
@@ -690,9 +689,9 @@ modifiers.forEach((modifier) => {
                     # ${cf.description}
                     # ID: ${cf.id}
                     # Type: ${cf.type}
-                    execute unless data storage abchc:menu/modifiers/core/${modifier.info.id} ${cf.id} run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":" [←] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/down"}},{"text":"${cf.strings[0]}","color":"#ECEFF5"},{"text":" [→] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/up"}}]
+                    execute unless data storage abchc:menu/modifiers/core/${modifier.id} ${cf.id} run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":" [←] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/down"}},{"text":"${cf.strings[0]}","color":"#ECEFF5"},{"text":" [→] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/up"}}]
                     # If value is set, display value
-                    execute if data storage abchc:menu/modifiers/core/${modifier.info.id} ${cf.id} run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":" [←] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/down"}},{"nbt":"${cf.id}","storage":"abchc:menu/modifiers/core/${modifier.info.id}","color":"#ECEFF5"},{"text":" [→] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/up"}}]
+                    execute if data storage abchc:menu/modifiers/core/${modifier.id} ${cf.id} run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset"}},{"text":" ${cf.name}: ","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}},{"text":" [←] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/down"}},{"nbt":"${cf.id}","storage":"abchc:menu/modifiers/core/${modifier.id}","color":"#ECEFF5"},{"text":" [→] ","color":"#ECEFF5","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/up"}}]
                 `;
 
 					// Create folder for config if it doesn't exist
@@ -704,13 +703,13 @@ modifiers.forEach((modifier) => {
             
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/up.mcfunction */
 					fs.writeFileSync(
-						`../${modifier.info.id}/${cf.id}/up.mcfunction`,
+						`../${modifier.id}/${cf.id}/up.mcfunction`,
 						outdent`
-                        #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/up
-                        # Increase ${modifier.info.id} config score ${cf.id} by 1
+                        #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/up
+                        # Increase ${modifier.id} config score ${cf.id} by 1
                         # Generated with the script at '../src/index.js'
                         #
-                        # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                        # @within abchc:menu/modifiers/core/${modifier.id}/**
                         # @context player
 
                         #> Add 1 to score
@@ -726,13 +725,13 @@ modifiers.forEach((modifier) => {
 						}.. run scoreboard players set ${namespace} abch.config 1
 
                         #> Set string based on score
-                        function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/update_string
+                        function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/update_string
 
                         #> Click sound
                         function abchc:menu/actions/click
 
                         #> Update menu
-                        function abchc:menu/modifiers/core/${modifier.info.id}/config
+                        function abchc:menu/modifiers/core/${modifier.id}/config
                     `
 					);
 
@@ -741,13 +740,13 @@ modifiers.forEach((modifier) => {
             
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/down.mcfunction */
 					fs.writeFileSync(
-						`../${modifier.info.id}/${cf.id}/down.mcfunction`,
+						`../${modifier.id}/${cf.id}/down.mcfunction`,
 						outdent`
-                        #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/down
-                        # Increase ${modifier.info.id} config score ${cf.id} by 1
+                        #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/down
+                        # Increase ${modifier.id} config score ${cf.id} by 1
                         # Generated with the script at '../src/index.js'
                         #
-                        # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                        # @within abchc:menu/modifiers/core/${modifier.id}/**
                         # @context player
 
                         #> Remove 1 from score
@@ -763,13 +762,13 @@ modifiers.forEach((modifier) => {
 						}.. run scoreboard players set ${namespace} abch.config 1
 
                         #> Set string based on score
-                        function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/update_string
+                        function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/update_string
 
                         #> Click sound
                         function abchc:menu/actions/click
 
                         #> Update menu
-                        function abchc:menu/modifiers/core/${modifier.info.id}/config
+                        function abchc:menu/modifiers/core/${modifier.id}/config
                     `
 					);
 
@@ -780,11 +779,11 @@ modifiers.forEach((modifier) => {
 
 					// Add header
 					let update_string = outdent`
-                #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/update_string
+                #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/update_string
                 # Update displayed string based on score ${namespace}
                 # the script in ../src
                 #
-                # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                # @within abchc:menu/modifiers/core/${modifier.id}/**
                 # @context player
 
                 #> Update
@@ -797,7 +796,7 @@ modifiers.forEach((modifier) => {
 							`\nexecute if score ${namespace} abch.config matches ${
 								i + 1
 							} run ` +
-							`data modify storage abchc:menu/modifiers/core/${modifier.info.id} ${cf.id} set value ${cf.strings[i]}`;
+							`data modify storage abchc:menu/modifiers/core/${modifier.id} ${cf.id} set value ${cf.strings[i]}`;
 					}
 
 					// Add footer
@@ -806,7 +805,7 @@ modifiers.forEach((modifier) => {
                 function abchc:menu/actions/click
                             
                 #> Update menu
-                function abchc:menu/modifiers/core/${modifier.info.id}/config`;
+                function abchc:menu/modifiers/core/${modifier.id}/config`;
 
 					// Write to file
 					fs.writeFileSync(
@@ -821,11 +820,11 @@ modifiers.forEach((modifier) => {
 					fs.writeFileSync(
 						`${configDir}/reset.mcfunction`,
 						outdent`
-                                    #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset
-                                    # Reset ${modifier.info.id} config score ${cf.id} to default
+                                    #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset
+                                    # Reset ${modifier.id} config score ${cf.id} to default
                                     # Generated with the script at '../src/index.js'
                                     #
-                                    # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                                    # @within abchc:menu/modifiers/core/${modifier.id}/**
                                     # @context player
 
                                     #> Reset
@@ -838,10 +837,10 @@ modifiers.forEach((modifier) => {
                                     function abchc:menu/actions/click
 
                                     #> Update string
-                                    function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/update_string
+                                    function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/update_string
 
                                     #> Update menu
-                                    function abchc:menu/modifiers/core/${modifier.info.id}/config
+                                    function abchc:menu/modifiers/core/${modifier.id}/config
                                 `
 					);
 					break;
@@ -855,12 +854,12 @@ modifiers.forEach((modifier) => {
                     # Type: ${cf.type}
 
                     # If config is set, show toggle based on config
-                    execute if score ${namespace} abch.config matches ..0 run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":" [✖] ","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":"${cf.name}","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}}]
-                    execute if score ${namespace} abch.config matches 1.. run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":" [✔] ","color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":"${cf.name}","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}}]
+                    execute if score ${namespace} abch.config matches ..0 run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":" [✖] ","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":"${cf.name}","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}}]
+                    execute if score ${namespace} abch.config matches 1.. run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":" [✔] ","color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":"${cf.name}","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}}]
 
                     # If no config is set, show togglebased on default
-                    execute unless score ${namespace} abch.config matches -2147483648..2147483647 unless score ${namespace} abch.default matches 1.. run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":" [✖] ","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":"${cf.name}","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}}]
-                    execute unless score ${namespace} abch.config matches -2147483648..2147483647 if score ${namespace} abch.default matches 1.. run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":" [✔] ","color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle"}},{"text":"${cf.name}","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}}]
+                    execute unless score ${namespace} abch.config matches -2147483648..2147483647 unless score ${namespace} abch.default matches 1.. run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":" [✖] ","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":"${cf.name}","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}}]
+                    execute unless score ${namespace} abch.config matches -2147483648..2147483647 if score ${namespace} abch.default matches 1.. run tellraw @p [{"text":"[","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":"⟲","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":"]","color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":" [✔] ","color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle"}},{"text":"${cf.name}","color":"${color}","hoverEvent":{"action":"show_text","contents":[{"text":"${cf.description}","color":"#ECEFF5"}]}}]
                 `;
 
 					// Create folder for config if it doesn't exist
@@ -871,13 +870,13 @@ modifiers.forEach((modifier) => {
 
                 e.g. abchc:menu/modifiers/core/anvil_rain/rate/1up.mcfunction */
 					fs.writeFileSync(
-						`../${modifier.info.id}/${cf.id}/toggle.mcfunction`,
+						`../${modifier.id}/${cf.id}/toggle.mcfunction`,
 						outdent`
-                        #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/toggle
-                        # Toggle ${modifier.info.id} config score ${cf.id} between 0 and 1
+                        #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/toggle
+                        # Toggle ${modifier.id} config score ${cf.id} between 0 and 1
                         # Generated with the script at '../src/index.js'
                         #
-                        # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                        # @within abchc:menu/modifiers/core/${modifier.id}/**
                         # @context player
 
                         # Add score
@@ -890,7 +889,7 @@ modifiers.forEach((modifier) => {
                         function abchc:menu/actions/click
 
                         # Update menu
-                        function abchc:menu/modifiers/core/${modifier.info.id}/config
+                        function abchc:menu/modifiers/core/${modifier.id}/config
                         `
 					);
 
@@ -901,11 +900,11 @@ modifiers.forEach((modifier) => {
 					fs.writeFileSync(
 						`${configDir}/reset.mcfunction`,
 						outdent`
-                    #> abchc:menu/modifiers/core/${modifier.info.id}/${cf.id}/reset
-                    # Reset ${modifier.info.id} config score ${cf.id} to default
+                    #> abchc:menu/modifiers/core/${modifier.id}/${cf.id}/reset
+                    # Reset ${modifier.id} config score ${cf.id} to default
                     # Generated with the script at '../src/index.js'
                     #
-                    # @within abchc:menu/modifiers/core/${modifier.info.id}/**
+                    # @within abchc:menu/modifiers/core/${modifier.id}/**
                     # @context player
 
                     #> Reset
@@ -918,7 +917,7 @@ modifiers.forEach((modifier) => {
                     function abchc:menu/actions/click
 
                     #> Update menu
-                    function abchc:menu/modifiers/core/${modifier.info.id}/config
+                    function abchc:menu/modifiers/core/${modifier.id}/config
                 `
 					);
 					break;
@@ -926,7 +925,7 @@ modifiers.forEach((modifier) => {
 				default:
 					// If invalid config type was given, log error
 					console.error(
-						`Invalid type '${cf.type}' in ${modifier.info.id}.${cf.id}!`
+						`Invalid type '${cf.type}' in ${modifier.id}.${cf.id}!`
 					);
 					break;
 			}
