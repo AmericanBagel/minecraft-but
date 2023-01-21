@@ -4,7 +4,7 @@
 # @context player
 
 #> Chance to place feature
-execute if predicate abchc:25pct run function abchc:modifiers/random_structures/pick_place
+execute if predicate abchc:2pct run function abchc:modifiers/random_structures/pick_place
 
 #> Remove counter
 scoreboard players remove #counter abch.modifier.temp 1

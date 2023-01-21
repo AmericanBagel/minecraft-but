@@ -5,5 +5,4 @@
 # @context player
 
 summon marker ~ ~ ~ {Tags:["global.ignore","marker","abch","abch.random_structures"],CustomName:'{"text":"abch.random_structures"}'}
-spreadplayers ~ ~ 5 40 false @e[type=marker,tag=abch.random_structures]
-execute as @e[type=marker,tag=abch.random_structures] at @s run function abchc:modifiers/random_structures/place_feature
+spreadplayers ~ ~ 5 100 false @e[type=marker,tag=abch.random_structures]

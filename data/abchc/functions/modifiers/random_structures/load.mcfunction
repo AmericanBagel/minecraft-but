@@ -10,4 +10,4 @@
 #   score random_structures.chance abch.config
 #       Customized chance to spawn a feature
 
-scoreboard players set random_structures.chance abch.default 2
+scoreboard players set random_structures.chance abch.default 1
