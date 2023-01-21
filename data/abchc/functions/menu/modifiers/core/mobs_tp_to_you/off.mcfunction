@@ -13,4 +13,4 @@ function abchc:modifiers/mobs_tp_to_you/unload
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/find_page
+function abchc:menu/modifiers/core/teleporting

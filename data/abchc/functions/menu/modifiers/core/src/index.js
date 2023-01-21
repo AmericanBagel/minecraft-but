@@ -167,13 +167,13 @@ modifiers.forEach((modifier) => {
     // Create "on" function
     fs.writeFileSync(
         `${modifierDir}/on.mcfunction`,
-        `#> abchc:menu/modifiers/core/${modifier.id}/on\n#Automatically generated toggle on function for ${modifier.id}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${modifier.id} abch.toggle 1\n\n# Run load function\nfunction abchc:modifiers/${modifier.id}/load\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/find_page`
+        `#> abchc:menu/modifiers/core/${modifier.id}/on\n#Automatically generated toggle on function for ${modifier.id}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${modifier.id} abch.toggle 1\n\n# Run load function\nfunction abchc:modifiers/${modifier.id}/load\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/modifiers/core/${modifier.category}`
     );
 
     // Create "off" function
     fs.writeFileSync(
         `${modifierDir}/off.mcfunction`,
-        `#> abchc:menu/modifiers/core/${modifier.id}/off\n#Automatically generated toggle off function for ${modifier.id}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${modifier.id} abch.toggle 0\n\n# Run unload function\nfunction abchc:modifiers/${modifier.id}/unload\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/find_page`
+        `#> abchc:menu/modifiers/core/${modifier.id}/off\n#Automatically generated toggle off function for ${modifier.id}\n# @within abchc:menu/**\n# @context player\n\n# Toggle\nscoreboard players set ${modifier.id} abch.toggle 0\n\n# Run unload function\nfunction abchc:modifiers/${modifier.id}/unload\n\n# Click sound\nfunction abchc:menu/actions/click\n\n# Update menu\nfunction abchc:menu/modifiers/core/${modifier.category}`
     );
 
 

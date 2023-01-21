@@ -13,4 +13,4 @@ function abchc:modifiers/explosive_arrows/load
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/find_page
+function abchc:menu/modifiers/core/explosions

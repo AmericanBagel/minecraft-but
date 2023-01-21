@@ -13,4 +13,4 @@ function abchc:modifiers/anvil_rain/unload
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/find_page
+function abchc:menu/modifiers/core/chaos

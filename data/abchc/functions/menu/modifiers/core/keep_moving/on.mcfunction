@@ -13,4 +13,4 @@ function abchc:modifiers/keep_moving/load
 function abchc:menu/actions/click
 
 # Update menu
-function abchc:menu/find_page
+function abchc:menu/modifiers/core/challenges
