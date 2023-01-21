@@ -1,4 +1,6 @@
 # ![Minecraft, but MEGAPACK](./assets/title.png)
+See the PlanetMinecraft page here: https://www.planetminecraft.com/data-packs/5537948
+
 
 # ![🤔 Why?](./assets/why.png)
 Browsing through [PlanetMinecraft's data pack page](https://www.planetminecraft.com/data-packs/), you will quickly notice the amount of "Minecraft, but" data packs that flood it. You might think all these data packs sound fun. After playing with one, you might want to use several. What if you used 5, 10, 15, even 20 different "Minecraft, but" data packs? You'll quickly find yourself annoyed with having to manually type out `/datapack disable "file/..."`. You will also find it annoying that very few of them are customizable! For the data packs that are customizable, you will often forget how you were supposed to customize them in the first place! Managing several of these data packs quickly turns into a nightmare.
@@ -113,9 +115,22 @@ To open the menu, run the command `/function abchc:give_item`. Bam! Now you have
 
 Click on the "Modifier" button to see a list of categories. Feel free to look around these categories. If you need to go back in a menu, just click the back arrow. Now that you've looked around these categories, try enabling a modifier by just clicking on its name or the [X] button.
 
+# ![Credits](./assets/credits.png)
+So many people have helped with this project, it's hard to keep count. Still, here's my best attempt at some sort of "Thank you" list:
+- [The Minecraft Commands Discord server](https://discord.gg/QAFXFtZ). These people are awesome.
+- [CloudWolfYT](https://cloudwolfyt.github.io/index.html) for his scoreboard tree generator, `is_sky` predicate, and probably more I can't think of.
+- [MC Datapack Conventions](https://mc-datapacks.github.io/en/index.html) for conventions to make datapack behave well together
+- @Aeldrion 's [AESTD tag library](https://github.com/Aeldrion/AESTD-tag-library) for saving me a whole lot of typing and saving my hands and the [Minecraft Random](https://github.com/Aeldrion/Minecraft-Random) library which makes most of these modifiers possible!
+- [rx97's distance calculation function](https://github.com/rx-modules/gists/blob/main/dist/dist.mcfunction)
+- [SkylinerW's raycast function generator](https://www.skylinerw.com/vdvman1/raycast/) based on [vdvman1's raycast functions](https://discordapp.com/channels/154777837382008833/157097006500806656/537829416894595083) in the [Minecraft Commands Discord server](https://discord.gg/QAFXFtZ)
+- [Cylinderbox](planetminecraft.com/member/cylinderbox/)'s [Minecraft, but colors are deadly](https://planetminecraft.com/data-pack/minecraft-but-colors-are-deadly/) datapack which served as inspiration for the "Colors are deadly" modifier
+- any future contributors to this datapack
+- and the obligatory **YOU** for reading this and hopefully playing my data pack! You're the reason I make them!
 
 # 🏷️ Todo / Future
 For plans for the future of this datapack, please view the [GitHub project for this datapack](https://github.com/users/AmericanBagel/projects/2/views/1) or refer to the issues.
 
 # 👥 Contributing
 Feel free to contribute. Any help is appreciated. If it's something as simple as removing an unnecessary `at @s` or even just cleaning up comments, it helps a lot!
+
+If you're no good with git and GitHub and commands, I totally understand! You can, however, suggest a modifier in the Issues page! Just give it the 'modifier' and 'enhancement' tags!
