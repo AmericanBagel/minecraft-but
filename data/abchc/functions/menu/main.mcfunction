@@ -60,12 +60,19 @@ execute if score mode abch.config matches 2 run tellraw @p ["",{"text":"[","colo
 tellraw @s ["\n",{"text":"[","color":"#dd0606","clickEvent":{"action":"run_command","value":"/function abchc:uninstall"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to ","color":"#eceff5"}, {"text":"uninstall","bold":true,"color":"#ff0000"},{"text":" this data pack. This will ","color":"#eceff5"},{"text":"permanently ","bold":true,"color":"#ff0000"},{"text":"and ","color":"#eceff5"},{"text":"irrevocably ","bold":true,"color":"#ff0000"},{"text":"remove the configurations you have made.","color":"#eceff5"}]}},{"text":"⚠","bold":true,"color":"#dd0606","clickEvent":{"action":"run_command","value":"/function abchc:uninstall"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to ","color":"#eceff5"}, {"text":"uninstall","bold":true,"color":"#ff0000"},{"text":" this data pack. This will ","color":"#eceff5"},{"text":"permanently ","bold":true,"color":"#ff0000"},{"text":"and ","color":"#eceff5"},{"text":"irrevocably ","bold":true,"color":"#ff0000"},{"text":"remove the configurations you have made.","color":"#eceff5"}]}},{"text":"]","color":"#dd0606","clickEvent":{"action":"run_command","value":"/function abchc:uninstall"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to ","color":"#eceff5"}, {"text":"uninstall","bold":true,"color":"#ff0000"},{"text":" this data pack. This will ","color":"#eceff5"},{"text":"permanently ","bold":true,"color":"#ff0000"},{"text":"and ","color":"#eceff5"},{"text":"irrevocably ","bold":true,"color":"#ff0000"},{"text":"remove the configurations you have made.","color":"#eceff5"}]}},{"text":" Uninstall","color":"#dd0606","clickEvent":{"action":"run_command","value":"/function abchc:uninstall"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to ","color":"#eceff5"}, {"text":"uninstall","bold":true,"color":"#ff0000"},{"text":" this data pack. This will ","color":"#eceff5"},{"text":"permanently ","bold":true,"color":"#ff0000"},{"text":"and ","color":"#eceff5"},{"text":"irrevocably ","bold":true,"color":"#ff0000"},{"text":"remove the configurations you have made.","color":"#eceff5"}]}}]
 
 #> Expansion Packs
-execute if data storage abch.ex1 title run tellraw @p {"nbt":"title","storage":"abch.ex1","interpret":true}
-execute if data storage abch.ex2 title run tellraw @p {"nbt":"title","storage":"abch.ex2","interpret":true}
-execute if data storage abch.ex3 title run tellraw @p {"nbt":"title","storage":"abch.ex3","interpret":true}
-execute if data storage abch.ex4 title run tellraw @p {"nbt":"title","storage":"abch.ex4","interpret":true}
-execute if data storage abch.ex5 title run tellraw @p {"nbt":"title","storage":"abch.ex5","interpret":true}
-execute if data storage abch.ex6 title run tellraw @p {"nbt":"title","storage":"abch.ex6","interpret":true}
-execute if data storage abch.ex7 title run tellraw @p {"nbt":"title","storage":"abch.ex7","interpret":true}
-execute if data storage abch.ex8 title run tellraw @p {"nbt":"title","storage":"abch.ex8","interpret":true}
-execute if data storage abch.ex9 title run tellraw @p {"nbt":"title","storage":"abch.ex9","interpret":true}
+execute if data storage abch.ex1 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex1","interpret":true}
+execute if data storage abch.ex2 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex2","interpret":true}
+execute if data storage abch.ex3 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex3","interpret":true}
+execute if data storage abch.ex4 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex4","interpret":true}
+execute if data storage abch.ex5 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex5","interpret":true}
+execute if data storage abch.ex6 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex6","interpret":true}
+execute if data storage abch.ex7 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex7","interpret":true}
+execute if data storage abch.ex8 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex8","interpret":true}
+execute if data storage abch.ex9 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex9","interpret":true}
+execute if data storage abch.ex10 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex10","interpret":true}
+execute if data storage abch.ex11 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex11","interpret":true}
+execute if data storage abch.ex12 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex12","interpret":true}
+execute if data storage abch.ex13 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex13","interpret":true}
+execute if data storage abch.ex14 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex14","interpret":true}
+execute if data storage abch.ex15 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex15","interpret":true}
+execute if data storage abch.ex16 main_menu run tellraw @p {"nbt":"title","storage":"abch.ex16","interpret":true}

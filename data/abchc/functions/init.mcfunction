@@ -36,25 +36,6 @@ scoreboard objectives add abch.random.toggle dummy
 
 function abchc:modifiers/config
 
-## Expansion Pack Support
-scoreboard objectives add abch.expansion dummy
-# Reset expansion pack loaded status so
-# it's always updated after loading
-scoreboard players reset * abch.expansion
-
-## Add scores together for total
-scoreboard players operation $total abch.expansion = $1 abch.expansion
-scoreboard players operation $total abch.expansion += $2 abch.expansion
-scoreboard players operation $total abch.expansion += $3 abch.expansion
-scoreboard players operation $total abch.expansion += $4 abch.expansion
-scoreboard players operation $total abch.expansion += $5 abch.expansion
-
-## Run expansion pack loading functions
-function abch.ex1:update_status
-function abch.ex2:update_status
-function abch.ex3:update_status
-function abch.ex4:update_status
-
 ## Gamerules
 execute store result score gamerule.mobGriefing abch.config run gamerule mobGriefing
 execute store result score gamerule.showDeathMessages abch.config run gamerule showDeathMessages
@@ -233,12 +214,39 @@ scoreboard objectives add abch.modifier.temp dummy
 #> APIs
 # Distance library
 function abchc:apis/dist/load
-function abchc:apis/rng/init
 
 function abchc:modifiers/vengeful_slimes/rng/zprivate/init
+
+## Expansion Pack Support
+scoreboard objectives add abch.expansion dummy
+# Reset expansion pack loaded status so
+# it's always updated after loading
+scoreboard players reset * abch.expansion
+
+## Add scores together for total
+scoreboard players operation $total abch.expansion = #1 abch.expansion
+scoreboard players operation $total abch.expansion += #2 abch.expansion
+scoreboard players operation $total abch.expansion += #3 abch.expansion
+scoreboard players operation $total abch.expansion += #4 abch.expansion
+scoreboard players operation $total abch.expansion += #5 abch.expansion
+scoreboard players operation $total abch.expansion += #6 abch.expansion
+scoreboard players operation $total abch.expansion += #7 abch.expansion
+scoreboard players operation $total abch.expansion += #8 abch.expansion
+scoreboard players operation $total abch.expansion += #9 abch.expansion
+scoreboard players operation $total abch.expansion += #10 abch.expansion
+scoreboard players operation $total abch.expansion += #11 abch.expansion
+scoreboard players operation $total abch.expansion += #12 abch.expansion
+scoreboard players operation $total abch.expansion += #13 abch.expansion
+scoreboard players operation $total abch.expansion += #14 abch.expansion
+scoreboard players operation $total abch.expansion += #15 abch.expansion
+scoreboard players operation $total abch.expansion += #16 abch.expansion
+
+## Run expansion pack loading functions
+function #abchc:load
 
 #> Functions
 function abchc:minute
 
-#> Run main (tick) function
-schedule function abchc:main 1t
+#> Run main (tick) functions
+# Tag used for expansion pack support
+schedule function #abchc:main 1t
