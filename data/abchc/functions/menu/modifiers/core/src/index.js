@@ -109,10 +109,10 @@ categories.forEach(category => {
             const modifier = modsInCategory[i];
             modifierDescription = parseDescription(modifier.description);
 
-            if (Object.values(modifier.config).length > 0 | modifier.difficulty === true) {
+            if (category.id === 'mob' ) console.log(modifier.id);
+            if (Object.values(modifier?.config).length > 0 | modifier.difficulty === true) {
                 categoryFunction += outdent`
                     ## ${modifier.name} (${modifier.id})
-                    # ${modifier.description}
                     execute unless score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✖] ","bold":false,"color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/on"}},{"text":"[","color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"⚙","bold":true,"color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"] ","color":"#CACACA","bold":false,"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"${modifier.name}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
 
                     execute if score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✔] ","bold":false,"color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/off"}},{"text":"[","color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"⚙","bold":true,"color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"] ","color":"#CACACA","bold":false,"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"${modifier.name}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
@@ -120,9 +120,8 @@ categories.forEach(category => {
             } else {
                 categoryFunction += outdent`
                     ## ${modifier.name} (${modifier.id})
-                    # ${modifier.description}
-                    execute if score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✖] ","bold":false,"color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/on"}},{"text":"${modifier.id}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
-                    execute if score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✔] ","bold":false,"color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/off"}},{"text":"${modifier.id}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
+                    execute unless score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✖] ","bold":false,"color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/on"}},{"text":"     ","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}},{"text":"${modifier.name}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
+                    execute if score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✔] ","bold":false,"color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/off"}},{"text":"     ","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}},{"text":"${modifier.name}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
                 `;
             }
         }
@@ -937,5 +936,14 @@ modifiers.forEach((modifier) => {
 		const hasConfig = false;
 	}
 });
+
+fs.writeFileSync(path.join(__dirname, '../../../../random/set_total_modifiers.mcfunction'), outdent`
+        #> abchc:random/set_total_modifiers
+        # Set total modifiers. Run on load.
+        # @within abchc:init
+
+        scoreboard players set #total_modifiers abch.toggle ${modifiers.length}
+    `
+);
 
 console.log('Wrote files!');
