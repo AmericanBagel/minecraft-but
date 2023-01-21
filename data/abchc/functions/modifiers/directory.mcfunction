@@ -6,8 +6,6 @@
 #   score <modifier> abch.toggle
 #       Boolean for modifier's toggle status. 0 = off, 1 = on.
 
-function abchc:modifiers/off
-
 #> 🎛️ If manual mode (1) is enabled, run manual function
 execute if score mode abch.config matches 1 run function abchc:modifiers/manual
 

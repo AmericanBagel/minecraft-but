@@ -953,4 +953,56 @@ fs.writeFileSync(path.join(__dirname, '../../../../random/set_total_modifiers.mc
     `
 );
 
+let modifiersOffFunction = outdent`
+    #> abchc:modifiers/off
+    #
+    # If modifiers are turned off, run off functions.
+    #
+    # This is for modifiers which need clean up after
+    # being turned off, including cleaning up
+    # lasting markers (markers which last more than one tick),
+    # removing old tags, and clearing scoreboards.
+    #
+    # This script is automatically generated.
+    #
+    # @within abchc:**
+    # @context root
+    # @input
+    #   score <modifier> abch.toggle
+    #       This represents any modifier's boolean value for if it is enabled or disabled.
+    #   score #<modifier> abch.toggle
+    #       The value of the modifier in the previous tick used for comparing to
+    #       current tick.\n\n
+`;
+
+modifiers.forEach(modifier => {
+    modifiersOffFunction += outdent`
+        # If ${modifier.id} was on but is now off, run clean-up off function
+        execute if score #${modifier.id} abch.toggle matches 1 if score ${modifier.id} abch.toggle matches 0 run function abchc:modifiers/${modifier.id}/off
+        # Set its status to future old status
+        scoreboard players operation #${modifier.id} abch.toggle = ${modifier.id} abch.toggle\n\n
+    `;
+})
+
+fs.writeFileSync(path.join(__dirname, '../../../../modifiers/off.mcfunction'), modifiersOffFunction)
+
+let manualFunction = outdent`
+    #> abchc:modifiers/manual
+    # Run modifiers if they're enabled on manual mode
+    # @within abchc:modifiers/directory
+    # @context root
+
+    #> Update modifier total
+    #function abchc:modifiers/manual_total
+
+    #> Run modifiers\n
+`;
+
+modifiers.forEach(modifier => {
+    manualFunction += `execute if score ${modifier.id} abch.toggle matches 1 run function abchc:modifiers/${modifier.id}/main\n`
+})
+
+fs.writeFileSync(path.join(__dirname, '../../../../modifiers/manual.mcfunction'), manualFunction)
+
+
 console.log('Wrote files!');

@@ -7,10 +7,7 @@
 function abchc:modifiers/uninstall
 
 #> Run uninstall for expansion packs
-function abch.ex1:uninstall
-function abch.ex2:uninstall
-function abch.ex3:uninstall
-function abch.ex4:uninstall
+function #abchc:uninstall
 
 # Remove teams
 team remove abchc.color.dark_red
@@ -103,4 +100,4 @@ scoreboard objectives remove abch.modifier.temp
 #> APIs
 # Distance library
 function abchc:apis/dist/uninstall
-function abchc:apis/rng/uninstall
+function random:private/uninstall

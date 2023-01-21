@@ -885,26 +885,6 @@
 			}
 		},
 		{
-			"name": "You have to social distance",
-			"description": "2020 all over again! If you go near players, you'll take damage. This makes co-op and PvP more complicated. No more charging in with a netherite axe and Strength II. Get creative! Use your bow, or even some explosive snowballs (wink, wink)!",
-			"id": "2020_mode",
-			"category": "misc",
-			"config": {
-				"player": {
-					"id": "player",
-					"name": "Affect players",
-					"description": "Should players be pushed apart from each other? This modifier as it was intended.",
-					"type": "toggle"
-				},
-				"entity": {
-					"id": "entity",
-					"name": "Affect entities",
-					"description": "Should entities be pushed apart from each other?",
-					"type": "toggle"
-				}
-			}
-		},
-		{
 			"name": "Bats are OP",
 			"description": "Bats: useless no more.",
 			"id": "op_bats",

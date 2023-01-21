@@ -2,4 +2,4 @@
 # Set total modifiers. Run on load.
 # @within abchc:init
 
-scoreboard players set #total_modifiers abch.toggle 68
+scoreboard players set #total_modifiers abch.toggle 67

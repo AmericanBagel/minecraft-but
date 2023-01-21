@@ -16,8 +16,6 @@ scoreboard objectives add abch.toggle dummy
 # If no value is assigned to toggle, set it to 1
 execute unless score .global abch.toggle matches 0..1 run scoreboard players set .global abch.toggle 1
 
-scoreboard players set $total_modifiers abch.toggle 77
-
 scoreboard objectives add abch.config dummy
 scoreboard objectives add abch.custom dummy
 scoreboard objectives add abch.default dummy
@@ -241,6 +239,10 @@ scoreboard players operation $total abch.expansion += #14 abch.expansion
 scoreboard players operation $total abch.expansion += #15 abch.expansion
 scoreboard players operation $total abch.expansion += #16 abch.expansion
 
+#> Set total modifiers
+# Separated to another file for easy automation
+function abchc:random/set_total_modifiers
+
 ## Run expansion pack loading functions
 function #abchc:load
 
@@ -250,3 +252,6 @@ function abchc:minute
 #> Run main (tick) functions
 # Tag used for expansion pack support
 schedule function #abchc:main 1t
+
+#> Other schedules
+schedule function abchc:10s 1t
