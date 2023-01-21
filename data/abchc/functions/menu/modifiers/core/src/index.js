@@ -937,6 +937,13 @@ modifiers.forEach((modifier) => {
 	}
 });
 
+let enableModifiersFunction = '';
+for (let i = 0; i < modifiers.length; i++) {
+    enableModifiersFunction += `execute if score $out random matches ${i + 1} run scoreboard players set ${modifiers[i].id} abch.random.toggle 1\n`
+}
+fs.writeFileSync(path.join(__dirname, '../../../../random/enable_modifiers.mcfunction'), enableModifiersFunction)
+
+
 fs.writeFileSync(path.join(__dirname, '../../../../random/set_total_modifiers.mcfunction'), outdent`
         #> abchc:random/set_total_modifiers
         # Set total modifiers. Run on load.
