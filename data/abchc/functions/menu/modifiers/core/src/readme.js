@@ -27,4 +27,3 @@ categories.forEach((category) => {
 
 text += '</details>';
 
-console.log(text);
