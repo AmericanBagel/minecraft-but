@@ -7,7 +7,7 @@
 #> Get random number
 scoreboard players set $min random 1
 scoreboard players set $max random 31
-function abchc:aps/rng/range
+function random:uniform
 
 #> Place random structure
 execute if score $out random matches 0 run place structure minecraft:ancient_city ~ ~ ~
