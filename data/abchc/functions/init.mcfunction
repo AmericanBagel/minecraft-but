@@ -6,6 +6,10 @@
 
 scoreboard objectives add abch.menu.page dummy
 
+# Trigger command to give menu
+scoreboard objectives add abch.give_menu trigger
+scoreboard players enable @e[ gamemode=creative ] abch.give_menu
+
 #> Config
 ## Toggle
 scoreboard objectives add abch.toggle dummy
