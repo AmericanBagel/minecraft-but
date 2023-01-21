@@ -120,7 +120,7 @@ So many people have helped with this project, it's hard to keep count. Still, he
 - [The Minecraft Commands Discord server](https://discord.gg/QAFXFtZ). These people are awesome.
 - [CloudWolfYT](https://cloudwolfyt.github.io/index.html) for his scoreboard tree generator, `is_sky` predicate, and probably more I can't think of.
 - [MC Datapack Conventions](https://mc-datapacks.github.io/en/index.html) for conventions to make datapack behave well together
-- [Aeldrion](https://github.com/Aeldrion]'s [AESTD tag library](https://github.com/Aeldrion/AESTD-tag-library) for saving me a whole lot of typing and saving my hands and the [Minecraft Random](https://github.com/Aeldrion/Minecraft-Random) library which makes most of these modifiers possible!
+- [Aeldrion](https://github.com/Aeldrion)'s [AESTD tag library](https://github.com/Aeldrion/AESTD-tag-library) for saving me a whole lot of typing and saving my hands and the [Minecraft Random](https://github.com/Aeldrion/Minecraft-Random) library which makes most of these modifiers possible!
 - [rx97's distance calculation function](https://github.com/rx-modules/gists/blob/main/dist/dist.mcfunction)
 - [SkylinerW's raycast function generator](https://www.skylinerw.com/vdvman1/raycast/) based on [vdvman1's raycast functions](https://discordapp.com/channels/154777837382008833/157097006500806656/537829416894595083) in the [Minecraft Commands Discord server](https://discord.gg/QAFXFtZ)
 - [Cylinderbox](planetminecraft.com/member/cylinderbox/)'s [Minecraft, but colors are deadly](https://planetminecraft.com/data-pack/minecraft-but-colors-are-deadly/) datapack which served as inspiration for the "Colors are deadly" modifier
