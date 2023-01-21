@@ -61,7 +61,7 @@
 			]
 		},
 		{
-			"id": "mob",
+			"id": "mobs",
 			"name": "Mobs",
 			"description": "Modifiers that directly relate to or modify mobs.",
 			"color": "#3ED011",
@@ -311,7 +311,7 @@
 			"name": "Phantoms explode",
 			"description": "You'd better sleep. These guys aren't just angry. They're explosive.",
 			"id": "explosive_phantoms",
-			"category": "mob",
+			"category": "mobs",
 			"color": "#cd500d"
 		},
 		{
@@ -694,7 +694,10 @@
 			"name": "All fall damage kills you",
 			"description": "Any amount of fall damage is lethal. Pro tip: get a water bucket.",
 			"id": "deadly_falls",
-			"category": "challenges"
+			"category": "challenges",
+			"config": {
+				
+			}
 		},
 		{
 			"name": "You can't stop moving",
@@ -737,8 +740,8 @@
 					"name":"Lightning spawn rate",
 					"description": "How much or often should lightning spawn?",
 					"type": "range",
-					"min": "1",
-					"max": "2147483647"
+					"min": 1,
+					"max": 2147483647
 				}
 			}
 		},
@@ -882,30 +885,10 @@
 			}
 		},
 		{
-			"name": "You have to social distance",
-			"description": "2020 all over again! If you go near players, you'll take damage. This makes co-op and PvP more complicated. No more charging in with a netherite axe and Strength II. Get creative! Use your bow, or even some explosive snowballs (wink, wink)!",
-			"id": "2020_mode",
-			"category": "misc",
-			"config": {
-				"player": {
-					"id": "player",
-					"name": "Affect players",
-					"description": "Should players be pushed apart from each other? This modifier as it was intended.",
-					"type": "toggle"
-				},
-				"entity": {
-					"id": "entity",
-					"name": "Affect entities",
-					"description": "Should entities be pushed apart from each other?",
-					"type": "toggle"
-				}
-			}
-		},
-		{
 			"name": "Bats are OP",
 			"description": "Bats: useless no more.",
 			"id": "op_bats",
-			"category": "mob",
+			"category": "mobs",
 			"config": {
 			}
 		},
@@ -913,7 +896,7 @@
 			"name": "Ghasts spawn in the overworld",
 			"description": "Because we need more flying mobs! Why not ones that shoot fireballs and sound like angry cats? ",
 			"id": "overworld_ghasts",
-			"category": "mob",
+			"category": "mobs",
 			"config": {
 			}
 		},
@@ -921,7 +904,7 @@
 			"name": "Mobs get pigified",
 			"description": "Mobs turn into pigs randomly. More pigs. Any complaints? No? Good.",
 			"id": "pigification",
-			"category": "mob",
+			"category": "mobs",
 			"config": {
 			}
 		},
@@ -929,7 +912,7 @@
 			"name": "Pigs turn into piglins",
 			"description": "Pigs randomly turn into piglins. Great when combined with \"Mobs get pigified\".",
 			"id": "piglinator",
-			"category": "mob",
+			"category": "mobs",
 			"config": {
 			}
 		},
@@ -937,7 +920,7 @@
 			"name": "Towers of pigs spawn",
 			"description": "TOWER OF PIGS SPAWN! BACON TOWERS! Great with \"Pigs turn into piglins\"! ",
 			"id": "stacked_pigs",
-			"category": "mob",
+			"category": "mobs",
 			"config": {
 			}
 		},
@@ -945,7 +928,7 @@
 			"name": "Spiders get new abilities",
 			"description": "Shooting webs, injecting poison, jumping toward players, summoning cave spiders, spiders transform from a boring, annoying mobs to dangerous threats. ",
 			"id": "realistic_spiders",
-			"category": "mob",
+			"category": "mobs",
 			"config": {
 			}
 		},
@@ -953,7 +936,7 @@
 			"name": "Skeletons fly",
 			"description": "Thought skeletons were annoying enough? Try hitting them now! ",
 			"id": "flying_skeletons",
-			"category": "mob",
+			"category": "mobs",
 			"config": {
 			}
 		},
@@ -974,7 +957,10 @@
 				"radius": {
 					"id": "radius",
 					"name": "Teleport radius",
-					"description": "How far players should be teleported, at most, when they are hurt. And I didn't even use /spreadplayers so it would be configurable without hardcoding it! Do I deserve a pat on the back or what? Who needs binary search trees?"
+					"description": "How far players should be teleported, at most, when they are hurt. And I didn't even use /spreadplayers so it would be configurable without hardcoding it! Do I deserve a pat on the back or what? Who needs binary search trees?",
+					"type": "range",
+					"min": 0,
+					"max": 2147483647
 				}
 			}
 		},
@@ -991,7 +977,7 @@
 			"name": "Mobs get yeeted",
 			"description": "Just going to the farm and... THE COWS GOT OUT? THEY GOT YEETED OUT? HOLY COW!\n\nMobs will randomly get yeeted in a random direction.",
 			"id": "yeet",
-			"category": "mob",
+			"category": "mobs",
 			"config": {
 			}
 		},

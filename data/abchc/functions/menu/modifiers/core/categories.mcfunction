@@ -50,7 +50,7 @@ tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text
 tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Modifiers that directly relate to or modify mobs.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/mobs"}},{"text":"Mobs","color":"#3ED011","hoverEvent":{"action":"show_text","contents":[{"text":"Modifiers that directly relate to or modify mobs.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/mobs"}}]
 
 # Miscellaneous
-tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Anything that I'm too lazy to fit into any other category.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/miscellaneous"}},{"text":"Miscellaneous","color":"#A8A8A8","hoverEvent":{"action":"show_text","contents":[{"text":"Anything that I'm too lazy to fit into any other category.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/miscellaneous"}}]
+tellraw @s [{"text":" |→ ","color":"#ECEFF5","hoverEvent":{"action":"show_text","contents":[{"text":"Anything that I'm too lazy to fit into any other category.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/misc"}},{"text":"Miscellaneous","color":"#A8A8A8","hoverEvent":{"action":"show_text","contents":[{"text":"Anything that I'm too lazy to fit into any other category.","color":"#ECEFF5"}]},"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/misc"}}]
 
 
 # Newline

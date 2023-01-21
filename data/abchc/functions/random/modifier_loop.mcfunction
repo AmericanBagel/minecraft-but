@@ -15,13 +15,13 @@
 #> Get random number
 # Set minimum to 1, maximum to total modifier count
 scoreboard players set in abch.rng.max 1
-scoreboard players operation $max random = $total_modifiers abch.toggle
+scoreboard players operation $max random = #total_modifiers abch.toggle
 
 # Get random number in specified range
 function random:uniform
 
 #> Enable random modifier
-function abchc:random/tree/l3/l3_0
+function abchc:random/enable_modifier
 
 #> Decrement score
 scoreboard players remove #loop abch.random 1

@@ -109,10 +109,10 @@ categories.forEach(category => {
             const modifier = modsInCategory[i];
             modifierDescription = parseDescription(modifier.description);
 
-            if (Object.values(modifier.config).length > 0 | modifier.difficulty === true) {
+            if (category.id === 'mob' ) console.log(modifier.id);
+            if (Object.values(modifier?.config).length > 0 | modifier.difficulty === true) {
                 categoryFunction += outdent`
                     ## ${modifier.name} (${modifier.id})
-                    # ${modifier.description}
                     execute unless score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✖] ","bold":false,"color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/on"}},{"text":"[","color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"⚙","bold":true,"color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"] ","color":"#CACACA","bold":false,"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"${modifier.name}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
 
                     execute if score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✔] ","bold":false,"color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/off"}},{"text":"[","color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"⚙","bold":true,"color":"#CACACA","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"] ","color":"#CACACA","bold":false,"clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/config"}},{"text":"${modifier.name}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
@@ -120,9 +120,8 @@ categories.forEach(category => {
             } else {
                 categoryFunction += outdent`
                     ## ${modifier.name} (${modifier.id})
-                    # ${modifier.description}
-                    execute if score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✖] ","bold":false,"color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/on"}},{"text":"${modifier.id}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
-                    execute if score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✔] ","bold":false,"color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/off"}},{"text":"${modifier.id}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
+                    execute unless score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✖] ","bold":false,"color":"#FF0000","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/on"}},{"text":"     ","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}},{"text":"${modifier.name}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
+                    execute if score ${modifier.id} abch.toggle matches 1 run tellraw @s [{"text":" [✔] ","bold":false,"color":"#3ED011","clickEvent":{"action":"run_command","value":"/function abchc:menu/modifiers/core/${modifier.id}/off"}},{"text":"     ","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}},{"text":"${modifier.name}","bold":false,"color":"${categoryGradient[i]}","hoverEvent": {"action":"show_text","contents":[${modifierDescription}]}}]\n\n
                 `;
             }
         }
@@ -937,5 +936,73 @@ modifiers.forEach((modifier) => {
 		const hasConfig = false;
 	}
 });
+
+let enableModifiersFunction = '';
+for (let i = 0; i < modifiers.length; i++) {
+    enableModifiersFunction += `execute if score $out random matches ${i + 1} run scoreboard players set ${modifiers[i].id} abch.random.toggle 1\n`
+}
+fs.writeFileSync(path.join(__dirname, '../../../../random/enable_modifiers.mcfunction'), enableModifiersFunction)
+
+
+fs.writeFileSync(path.join(__dirname, '../../../../random/set_total_modifiers.mcfunction'), outdent`
+        #> abchc:random/set_total_modifiers
+        # Set total modifiers. Run on load.
+        # @within abchc:init
+
+        scoreboard players set #total_modifiers abch.toggle ${modifiers.length}
+    `
+);
+
+let modifiersOffFunction = outdent`
+    #> abchc:modifiers/off
+    #
+    # If modifiers are turned off, run off functions.
+    #
+    # This is for modifiers which need clean up after
+    # being turned off, including cleaning up
+    # lasting markers (markers which last more than one tick),
+    # removing old tags, and clearing scoreboards.
+    #
+    # This script is automatically generated.
+    #
+    # @within abchc:**
+    # @context root
+    # @input
+    #   score <modifier> abch.toggle
+    #       This represents any modifier's boolean value for if it is enabled or disabled.
+    #   score #<modifier> abch.toggle
+    #       The value of the modifier in the previous tick used for comparing to
+    #       current tick.\n\n
+`;
+
+modifiers.forEach(modifier => {
+    modifiersOffFunction += outdent`
+        # If ${modifier.id} was on but is now off, run clean-up off function
+        execute if score #${modifier.id} abch.toggle matches 1 if score ${modifier.id} abch.toggle matches 0 run function abchc:modifiers/${modifier.id}/off
+        # Set its status to future old status
+        scoreboard players operation #${modifier.id} abch.toggle = ${modifier.id} abch.toggle\n\n
+    `;
+})
+
+fs.writeFileSync(path.join(__dirname, '../../../../modifiers/off.mcfunction'), modifiersOffFunction)
+
+let manualFunction = outdent`
+    #> abchc:modifiers/manual
+    # Run modifiers if they're enabled on manual mode
+    # @within abchc:modifiers/directory
+    # @context root
+
+    #> Update modifier total
+    #function abchc:modifiers/manual_total
+
+    #> Run modifiers\n
+`;
+
+modifiers.forEach(modifier => {
+    manualFunction += `execute if score ${modifier.id} abch.toggle matches 1 run function abchc:modifiers/${modifier.id}/main\n`
+})
+
+fs.writeFileSync(path.join(__dirname, '../../../../modifiers/manual.mcfunction'), manualFunction)
+
 
 console.log('Wrote files!');
