@@ -15,6 +15,7 @@ jobs:
     needs: 
       - setup-nodejs-env
     steps:
+      - uses: actions/checkout@v3
       - name: Update Minecraft version
         working-directory: ${{ github.workspace }}/scripts
         run: node update-version.js

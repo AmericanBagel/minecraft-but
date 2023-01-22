@@ -14,6 +14,7 @@ jobs:
     needs: 
       - setup-nodejs-env
     steps:
+      - uses: actions/checkout@v3
       - name: Update modifiers
         working-directory: ${{ github.workspace }}/scripts
         run: node update-modifiers.cjs
