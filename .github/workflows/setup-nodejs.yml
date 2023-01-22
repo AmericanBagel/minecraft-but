@@ -1,6 +1,5 @@
 name: Setup NodeJS environment
 on:
-  - workflow_dispatch
   - workflow_call
 jobs: 
   setup-nodejs-env:

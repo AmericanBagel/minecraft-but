@@ -1,4 +1,4 @@
-name: Setup NodeJS environment
+name: Update version
 on:
   - workflow_dispatch
 jobs: 
