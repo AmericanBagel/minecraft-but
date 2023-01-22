@@ -1,4 +1,4 @@
-name: Setup NodeJS environment
+name: Reinstall NodeJS environment
 on:
   - workflow_dispatch
   - workflow_call
@@ -8,13 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Node.js environment
-        id: setup-nodejs-env
-        uses: actions/setup-node@v3.6.0
+      - uses: actions/setup-node@v3.6.0
         with:
           node-version: 19.x
-      - name: Cache
-        uses: actions/cache@v3
+      - uses: actions/cache@v3
         with:
           path: "scripts/node_modules"
           key: node-modules-${{ hashFiles('scripts/package.json') }}
