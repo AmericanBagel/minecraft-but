@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 19.x
           cache: 'npm'
-          cache-dependency-path: ./scripts/package-lock.json
+          cache-dependency-path: '*/package-lock.json'
       - name: NPM clean install
         id: ci
         working-directory: ./scripts
