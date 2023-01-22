@@ -9,14 +9,12 @@ jobs:
     steps:
       - name: Setup Node.js environment
         id: setup-nodejs-env
-        uses:
-          - checkout@v3
-          - actions/setup-node@v3.6.0
+        uses: checkout@v3
+        uses: actions/setup-node@v3.6.0
         with:
           node-version: 19.x
           cache: 'npm'
           cache-dependency-path: ./scripts/package-lock.json
-      - uses: actions
       - name: NPM clean install
         id: ci
         working-directory: ./scripts
