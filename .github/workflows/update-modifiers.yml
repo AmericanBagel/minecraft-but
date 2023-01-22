@@ -1,0 +1,19 @@
+name: Setup NodeJS environment
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - './scripts/update-modifiers.cjs'
+      - './scripts/modifiers.jsonc'
+jobs: 
+  setup-nodejs-env:
+    uses: ./.github/workflows/setup-nodejs.yml
+  update-version:
+    name: Update modifiers
+    runs-on: ubuntu-latest
+    needs: 
+      - setup-nodejs-env
+    steps:
+      - name: Update modifiers
+        working-directory: ./scripts
+        run: node update-modifiers.cjs

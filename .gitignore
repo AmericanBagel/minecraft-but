@@ -4,3 +4,6 @@ src/node_modules
 node_modules**
 src/server/**
 server/*
+src/latest-version/*
+**latest-version**
+**private**

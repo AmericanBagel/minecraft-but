@@ -1,0 +1,15 @@
+name: Setup NodeJS environment
+on:
+  - workflow_dispatch
+jobs: 
+  setup-nodejs-env:
+    uses: ./.github/workflows/setup-nodejs.yml
+  update-version:
+    name: Update Minecraft version
+    runs-on: ubuntu-latest
+    needs: 
+      - setup-nodejs-env
+    steps:
+      - name: Update Minecraft version
+        working-directory: ./scripts
+        run: node update-version.js

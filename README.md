@@ -14,7 +14,8 @@ The Megapack contains 67 gameplay modifiers (and more on the way), which are ess
 <details>
 <summary>Full list of modifiers</summary>
     <details>
-    <summary>Challenges (challenges)</summary>        - You can't touch grass (or nature) (botanophobia)<br>
+    <summary>Challenges (challenges)</summary>
+        - You can't touch grass (or nature) (botanophobia)<br>
         - You can only eat meat (carnivore)<br>
         - You always crawl (crawling)<br>
         - You can't eat meat (herbivore)<br>
@@ -29,7 +30,8 @@ The Megapack contains 67 gameplay modifiers (and more on the way), which are ess
         - You can't stop moving (keep_moving)<br>
     </details>
     <details>
-    <summary>Explosions (explosions)</summary>        - All mobs explode like creepers (creeper_mobs)<br>
+    <summary>Explosions (explosions)</summary>
+        - All mobs explode like creepers (creeper_mobs)<br>
         - Creepers are nuclear (creeper_nukes)<br>
         - Arrows explode (explosive_arrows)<br>
         - Eggs explode (explosive_eggs)<br>
@@ -39,7 +41,8 @@ The Megapack contains 67 gameplay modifiers (and more on the way), which are ess
         - TNT rains from the sky (tnt_rain)<br>
     </details>
     <details>
-    <summary>Chaos (chaos)</summary>        - Anvils rain from the sky (anvil_rain)<br>
+    <summary>Chaos (chaos)</summary>
+        - Anvils rain from the sky (anvil_rain)<br>
         - The world disintegrates (degradation)<br>
         - Everything around you turns to fire (fire_walker)<br>
         - Structures randomly spawn (random_structures)<br>
@@ -48,20 +51,23 @@ The Megapack contains 67 gameplay modifiers (and more on the way), which are ess
         - Lightning is everywhere (lightning_storm)<br>
     </details>
     <details>
-    <summary>Mechanic (mechanic)</summary>        - You can't jump (no_jump)<br>
+    <summary>Mechanic (mechanic)</summary>
+        - You can't jump (no_jump)<br>
         - You can't sneak (no_sneak)<br>
         - You can't sprint (schlatt_mode)<br>
         - You can't kill anything (pacifist)<br>
     </details>
     <details>
-    <summary>Teleporting (teleporting)</summary>        - Players swap places periodically (Death Swap) (death_swap)<br>
+    <summary>Teleporting (teleporting)</summary>
+        - Players swap places periodically (Death Swap) (death_swap)<br>
         - You randomly teleport (random_teleport)<br>
         - Mobs randomly TP to you (mobs_tp_to_you)<br>
         - You teleport when you get hurt (ender_blood)<br>
         - You randomly teleport to other dimensions (teleport_chorus)<br>
     </details>
     <details>
-    <summary>Effects (effects)</summary>        - You get random potion effects (random_effects)<br>
+    <summary>Effects (effects)</summary>
+        - You get random potion effects (random_effects)<br>
         - Taking damage gives you a random effect (suspicious_injury)<br>
         - Food gives you random potion effects (potion_food)<br>
         - Glowing (glowing)<br>
@@ -70,7 +76,8 @@ The Megapack contains 67 gameplay modifiers (and more on the way), which are ess
         - You get faster the more you walk (walk_leveling)<br>
     </details>
     <details>
-    <summary>Mobs (mobs)</summary>        - Phantoms explode (explosive_phantoms)<br>
+    <summary>Mobs (mobs)</summary>
+        - Phantoms explode (explosive_phantoms)<br>
         - Bats are OP (op_bats)<br>
         - Ghasts spawn in the overworld (overworld_ghasts)<br>
         - Mobs get pigified (pigification)<br>
@@ -81,7 +88,8 @@ The Megapack contains 67 gameplay modifiers (and more on the way), which are ess
         - Mobs get yeeted (yeet)<br>
     </details>
     <details>
-    <summary>Miscellaneous (misc)</summary>        - You social distance (2020_mode)<br>
+    <summary>Miscellaneous (misc)</summary>
+        - You social distance (2020_mode)<br>
         - Colors kill you (deadly_colors)<br>
         - Arrows are fast (fast_arrows)<br>
         - Mobs explode into confetti when they die (confetti_funeral)<br>
@@ -91,6 +99,7 @@ The Megapack contains 67 gameplay modifiers (and more on the way), which are ess
         - Time randomly freezes (frozen_time)<br>
     </details>
 </details>
+
 
 ### ![Configuration](./assets/configuration.png)
 I aim to make every modifier as customizable as possible. For example, in the "TNT rains from the sky" modifier, you can customize the rate at which the TNT spawns, toggle whether the TNT griefs (automatically set to the mobGriefing gamerule value), and if the TNT spawns from the sky and/or a few blocks above players.
