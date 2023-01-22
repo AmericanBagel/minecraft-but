@@ -7,7 +7,7 @@ on:
       - './scripts/modifiers.jsonc'
 jobs: 
   setup-nodejs-env:
-    uses: ./.github/workflows/setup-nodejs.yml
+    uses: ./.github/workflows/reinstall-nodejs.yml
   update-version:
     name: Update modifiers
     runs-on: ubuntu-latest
