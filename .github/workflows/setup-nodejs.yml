@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-node@v3.6.0
         with:
           node-version: 19.x
-      - Cache
+      - name: Cache
         uses: actions/cache@v3
         with:
           path: "scripts/node_modules"
