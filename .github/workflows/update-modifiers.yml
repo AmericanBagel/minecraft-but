@@ -15,5 +15,5 @@ jobs:
       - setup-nodejs-env
     steps:
       - name: Update modifiers
-        working-directory: ./scripts
+        working-directory: scripts
         run: node update-modifiers.cjs
