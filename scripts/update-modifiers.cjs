@@ -15,6 +15,38 @@ let { modifiers, categories } = jsonc.parse(
 	'' + fs.readFileSync('./modifiers.jsonc')
 );
 
+const scripts = [
+    "./readme.cjs"
+]
+
+function runScripts() {
+    console.info('Processing scripts...');
+
+    const funcs = scripts.map(function (script) {
+        console.log(`Running script ${script}`);
+        return exec.bind(null, `node ${script}`);
+    });
+
+    function getResults(err, data) {
+        if (err) {
+            return console.log(err);
+        }
+        data.forEach((result) => {
+            result.forEach((string) => {
+                const lines = string
+                    .split('\n')
+                    .filter((e) => e.length !== 0);
+                lines.forEach((line) => {
+                    console.log('	->', line);
+                });
+            });
+        });
+    }
+
+    // Run scripts scripts
+    async.parallel(funcs, getResults);
+}
+
 function parseDescription(description) {
 	if (typeof description === 'object') {
 		return JSON.stringify(description)
