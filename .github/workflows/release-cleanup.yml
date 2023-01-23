@@ -17,20 +17,9 @@ jobs:
       #  run: git fetch --all
       - run: pwd
       - run: ls -la
-
-      - name: Search & replace - *.mcfunction - s/abchc/minecraft_but.core/g
-        run: find . -type f -name "*.mcfunction" -not -path ".git"  -print0 | xargs -0 sed -i'' -e 's/abchc/minecraft_but.core/g'
-      - name: Search & replace - *.mcfunction - s/abch/minecraft_but/g
-        run: find . -type f -name "*.mcfunction" -not -path ".git"  -print0 | xargs -0 sed -i'' -e 's/abch/minecraft_but/g'
-      - name: Search & replace - *js - s/abchc/minecraft_but.core/g
-        run: find . -type f -name "*.js" -not -path ".git"  -print0 | xargs -0 sed -i'' -e 's/abchc/minecraft_but.core/g'
-      - name: Search & replace - *js - s/abch/minecraft_but/g
-        run: find . -type f -name "*.js" -not -path ".git"  -print0 | xargs -0 sed -i'' -e 's/abch/minecraft_but/g'
-      - name: Debug - ls
-        run: ls -lah ./data
       - name: Rename abchc to minecraft_but.core
         run: mv ./data/abchc ./data/minecraft_but.core
-      - name: Set .giignore to release .gitignore
+      - name: Set .gitignore to release .gitignore
         run: mv ./.gitignores/release .gitignore
       - name: Delete ignored files
         run: |
@@ -39,6 +28,12 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git rm -r --cached .
+      - name: Search & replace
+        run: |
+          patterns=("*.mcfunction" "*.js" "*.mjs" "*.cjs" "*.json" )
+          for i in "${patterns}"; do find . -type f -name "${i}" -not -path ".git"  -print0 | xargs -0 sed -i'' -e 's/abchc/minecraft_but.core/g' && find . -type f -name "${i}" -not -path ".git"  -print0 | xargs -0 sed -i'' -e 's/abch/minecraft_but/g'
+      - name: Debug - ls
+        run: ls -lah ./data
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "GitHub Action: Clean for release"
