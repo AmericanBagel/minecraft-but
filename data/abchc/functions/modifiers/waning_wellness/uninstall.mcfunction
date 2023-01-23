@@ -1,2 +1,0 @@
-scoreboard objectives remove abch.waning_wellness.death_time
-scoreboard objectives remove abch.waning_wellness.max_health

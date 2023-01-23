@@ -1,0 +1,2 @@
+scoreboard objectives remove minecraft_but.teleport_chorus
+scoreboard objectives remove minecraft_but.teleport_chorus.eat

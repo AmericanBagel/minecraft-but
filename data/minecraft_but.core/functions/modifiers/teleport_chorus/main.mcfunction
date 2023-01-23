@@ -1,0 +1,1 @@
+#execute as @a[scores={minecraft_but.eatCF=1..}] at @s run 

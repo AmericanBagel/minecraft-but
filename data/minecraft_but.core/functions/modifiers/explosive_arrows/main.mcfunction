@@ -1,0 +1,3 @@
+execute as @e[ type=arrow, nbt={inGround: 1b}, tag=!global.ignore ] at @s run summon creeper ~ ~ ~ {ExplosionRadius: 2b, Fuse: 0, Tags:["minecraft_but","minecraft_but.explosive_arrows"]}
+execute as @e[ type=creeper, tag=minecraft_but.explosive_arrows, tag=!global.ignore ] at @s store result entity @s ExplosionRadius byte 1 run scoreboard players get explosive_arrows.radius minecraft_but.config
+kill @e[ type=arrow, nbt={inGround: 1b} ]

@@ -1,2 +1,0 @@
-execute as @a[ tag=!abch.blacklist, scores={ abch.damage_nausea=1.. }, tag=!abch.damage_nausea.blacklist, gamemode=!creative, gamemode=!spectator  ] run effect give @s nausea 3 0 true
-scoreboard players reset @a[ tag=!abch.blacklist, tag=!global.ignore, tag=!abch.damage_nausea.blacklist, gamemode=!creative, gamemode=!spectator  ] abch.damage_nausea

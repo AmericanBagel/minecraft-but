@@ -1,0 +1,17 @@
+{
+    "display": {
+        "title": "Core",
+        "description": "The core of Minecraft, but MEGAPACK, packed with over 70 gameplay modifiers! Rename a Nether Star to \"Chaos Menu\" in an anvil and right click on it to get started!",
+        "icon": {
+            "item": "minecraft:conduit"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "parent": "global:americanbagel/minecraft_but",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

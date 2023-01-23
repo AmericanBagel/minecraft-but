@@ -1,0 +1,15 @@
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.5 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.73 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.6 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.83 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.63 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.55 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.55 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.77 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.53 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.67 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.79 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.7 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.79 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 0.78 1
+playsound minecraft:block.note_block.bass master @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] ~8 80 ~8 1.15 1

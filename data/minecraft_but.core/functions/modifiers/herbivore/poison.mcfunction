@@ -1,0 +1,2 @@
+execute unless score difficulty.herbivore minecraft_but.config matches 0..3 run function minecraft_but.core:modifiers/herbivore/default
+execute if score difficulty.herbivore minecraft_but.config matches 0..3 run function minecraft_but.core:modifiers/herbivore/custom

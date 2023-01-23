@@ -1,0 +1,3 @@
+scoreboard objectives remove minecraft_but.toxic_water.timer
+scoreboard objectives remove minecraft_but.toxic_water.deaths
+scoreboard objectives remove minecraft_but.toxic_water

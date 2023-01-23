@@ -1,9 +1,0 @@
-execute if score $slot abch.lazy_inventory matches 27 run item replace entity @s inventory.18 with air
-execute if score $slot abch.lazy_inventory matches 28 run item replace entity @s inventory.19 with air
-execute if score $slot abch.lazy_inventory matches 29 run item replace entity @s inventory.20 with air
-execute if score $slot abch.lazy_inventory matches 30 run item replace entity @s inventory.21 with air
-execute if score $slot abch.lazy_inventory matches 31 run item replace entity @s inventory.22 with air
-execute if score $slot abch.lazy_inventory matches 32 run item replace entity @s inventory.23 with air
-execute if score $slot abch.lazy_inventory matches 33 run item replace entity @s inventory.24 with air
-execute if score $slot abch.lazy_inventory matches 34 run item replace entity @s inventory.25 with air
-execute if score $slot abch.lazy_inventory matches 35 run item replace entity @s inventory.26 with air

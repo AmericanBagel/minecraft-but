@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "endereye": {
+            "trigger": "minecraft:used_ender_eye"
+        }
+    },
+    "requirements": [
+        [
+            "endereye"
+        ]
+    ],
+    "rewards": {
+        "function": "minecraft_but.core:modifiers/waning_wellness/check_milestone"
+    }
+}

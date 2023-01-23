@@ -1,0 +1,1 @@
+execute if score look_straight.y_rot minecraft_but.config matches 90..93 run function minecraft_but.core:modifiers/look_straight/y/tree/l0/l0_60

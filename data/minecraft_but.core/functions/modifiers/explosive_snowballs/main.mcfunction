@@ -1,0 +1,2 @@
+execute as @e[ type=snowball, tag=!minecraft_but.esMarked, tag=!global.ignore ] at @s run function minecraft_but.core:modifiers/explosive_snowballs/mark
+execute as @e[ type=area_effect_cloud, name="minecraft_but.esMarker" ] at @s run function minecraft_but.core:modifiers/explosive_snowballs/tick

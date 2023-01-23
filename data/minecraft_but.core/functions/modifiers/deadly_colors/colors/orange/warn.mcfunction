@@ -1,0 +1,1 @@
+data modify storage minecraft_but.core:modifiers/deadly_colors orange set value '{"text":"ORANGE ","bold":true,"color":"#F65B00"}'

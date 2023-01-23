@@ -1,7 +1,0 @@
-.vscode/settings.json
-**node_modules**
-**latest_version**
-scripts/latest-version.jar
-scripts/latest-version.json
-scripts/latest-version/**
-**latest-version**
