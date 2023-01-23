@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const dir = path.join(__dirname, '../data/abchc/functions/modifiers');
-const { program } = require('commander');
+const { program, Option } = require('commander');
 
 function getDirsInDir(filepath) {
 	return fs.readdirSync(filepath, { withFileTypes: true }).reduce((a, c) => {
@@ -72,24 +72,34 @@ function scanFile(filepath, output, verbose) {
 }
 
 program
-    .name('mcfunction-uninstall')
-    .description('A CLI tool to automatically create uninstall functions for your data pack by recursively scanning for scoreboard objectives and adding uninstall functions which remove them.')
-    .version('1.0.0')
-    .option("-v, --verbose", "Increase level of verbosity. How much you want STDOUT spammed.")
-    .path("-p, --perfile", "Writes uninstall functions next to the functions that added scoreboard objectives instead of one mcfunction.").conflicts("output")
-    .option("-o, --output <path>", "File path for complete uninstall function.", "./uninstall.mcfunction")
+    .name('mcf-uninstall')
+    .description('A CLI tool to automatically create uninstall functions for your datapack by recursively scanning for scoreboard objectives, teams, bossbars, and storage, and adding uninstall functions which remove them.')
+    .usage("[options] <paths...>")
+    .summary("create uninstall functions")
+    .addHelpText(
+        'after',
+        '\n\n' +
+            'Examples:\n' +
+            '   npx mcf-uninstall'
+        )
+    .addOption(new Option('1.0.0'))
+    .addOption(new Option("-a, --adjacent", "Writes uninstall functions next to the functions that added scoreboard objectives instead of one mcfunction.").conflicts("output"))
+    .addOption(new Option("-o, --output <path>", "File path for complete uninstall function.", "./uninstall.mcfunction").conflicts("adjacent"))
+    .addOption(new Option("-f, --function-tag", "Create function tag for all created uninstall functions. If one of the provided paths is a datapack directory, an unload function tag will be created for each namespace. If one of the provided paths is a datapack namespace or function folder, an unload function tag will be created.").implies({ adjecent: true }))
+    .addOption(new Option("-v, --verbose", "Enable debug logging"))
     .argument("<paths...>", "filepaths of directories or files with mcfunction files")
     .action((paths => {
-        const verbose = program.opts().isVerbose
-        const output = program.opts().output
+        console.log(program.opts())
 
+        /*
         paths.forEach(filepath => {
             if (isDirectory(filepath)) {
-                scanDir(filepath, output, verbose)
+                scanDir(filepath, output)
             } else {
-                scanFile(filepath, output, verbose)
+                scanFile(filepath)
             }
         })
+        */
 }))
 
 program.parse();

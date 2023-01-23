@@ -96,6 +96,16 @@ scoreboard objectives remove abch.tp_sneak.sneak
 scoreboard objectives remove abch.tp_sneak.raycast
 scoreboard objectives remove abch.tp_sneak.timer
 scoreboard objectives remove abch.modifier.temp
+scoreboard objectives remove abch.troglodyte.timer
+scoreboard objectives remove abch.random
+scoreboard objectives remove abch.random.toggle
+scoreboard objectives remove abch.troglodyte
+scoreboard objectives remove abch.troglodyte.played
+scoreboard objectives remove abch.troglodyte.mercy_timer
+scoreboard objectives remove test
+scoreboard objectives remove abch.give_menu
+scoreboard objectives remove abch.troglodyte.deaths
+scoreboard objectives remove load.status
 
 #> APIs
 # Distance library
