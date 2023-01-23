@@ -31,7 +31,7 @@ jobs:
       - name: Search & replace
         run: |
           find . -type f -name "*.mcfunction" -not -path ".git"  -print0 | xargs -0 -r sed -i'' -e 's/abchc/minecraft_but.core/g'
-          find . -type f -name ".mcfunction" -not -path ".git"  -print0 | xargs -0 -r sed -i'' -e 's/abch/minecraft_but/g'
+          find . -type f -name "*.mcfunction" -not -path ".git"  -print0 | xargs -0 -r sed -i'' -e 's/abch/minecraft_but/g'
           find . -type f -name "*.json" -not -path ".git"  -print0 | xargs -0 -r sed -i'' -e 's/abchc/minecraft_but.core/g'
           find . -type f -name "*.json" -not -path ".git"  -print0 | xargs -0 -r sed -i'' -e 's/abch/minecraft_but/g'
       - name: Debug - ls
