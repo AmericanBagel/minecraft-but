@@ -24,6 +24,8 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git rm -r --cached .
+      - name: Set .gitignore to release .gitignore
+        run: mv ./.gitignores/release .gitignore
       - name: Search & replace in files
         run: |
           find . -type f -name "*.mcfunction" -not -path ".git"  -print0 | xargs -0 -r sed -i'' -e 's/abchc/minecraft_but.core/g'
