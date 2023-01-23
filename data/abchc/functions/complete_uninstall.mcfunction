@@ -107,6 +107,9 @@ scoreboard objectives remove abch.give_menu
 scoreboard objectives remove abch.troglodyte.deaths
 scoreboard objectives remove load.status
 
+tp @e[tag=abchc] ~ -1000 ~
+tp @e[tag=abch] ~ -1000 ~
+
 #> APIs
 # Distance library
 function abchc:apis/dist/uninstall
