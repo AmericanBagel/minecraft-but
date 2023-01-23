@@ -11,10 +11,13 @@ jobs:
     name: Change namespace
     runs-on: ubuntu-latest
     steps:
-      #- name: Git checkout
-      #  uses: actions/checkout@v3
-      - name: Git fetch
-        run: git fetch --all
+      - name: Git checkout
+        uses: actions/checkout@v3
+      #- name: Git fetch
+      #  run: git fetch --all
+      - run: pwd
+      - run: ls -la
+      
       - name: Search & replace - *.mcfunction - s/abchc/minecraft_but.core/g
         run: find . -type f -name "*.mcfunction" -not -path ".git"  -print0 | xargs -0 sed -i'' -e 's/abchc/minecraft_but.core/g'
       - name: Search & replace - *.mcfunction - s/abch/minecraft_but/g
@@ -31,9 +34,14 @@ jobs:
         run: mv ./.gitignores/release .gitignore
       - name: Delete ignored files
         run: |
+          git branch
+          date > generated.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git rm -r --cached .
           git add .
           git commit -m "Drop files from .gitignore"
+          git push
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "GitHub Action: Clean for release"
