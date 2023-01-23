@@ -4,10 +4,10 @@ const fs = require('fs');
 const path = require('path');
 
 const { categories, modifiers } = jsonc.parse(
-	fs.readFileSync(path.join(__dirname, '../modifiers.jsonc'), 'utf-8')
+	fs.readFileSync(path.join(__dirname, './modifiers.jsonc'), 'utf-8')
 );
 
-const readmePath = path.join(__dirname, '../../README.md');
+const readmePath = path.join(__dirname, '../README.md');
 const readme = fs.readFileSync(readmePath, 'utf-8');
 
 let lines = [];
