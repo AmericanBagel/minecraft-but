@@ -1,9 +1,8 @@
 .vscode/settings.json
-src/node_modules
 **node_modules**
-node_modules**
-src/server/**
-server/*
-src/latest-version/*
+**latest_version**
+scripts/latest-version.jar
+scripts/latest-version.json
+scripts/version_manifest_v2.json
+scripts/latest-version/**
 **latest-version**
-**private**

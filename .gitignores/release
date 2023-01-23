@@ -1,11 +1,8 @@
 .vscode/settings.json
-src/node_modules
-*node_modules*
-node_modules*
-src/server/*
-server/*
-.gitignores/*
-scripts/*
-.vscode/*
+**node_modules**
+.gitignores/**
+scripts/**
+.vscode/**
 assets/menu.mp4
-*.code-*
+**.code-**
+.github/**
