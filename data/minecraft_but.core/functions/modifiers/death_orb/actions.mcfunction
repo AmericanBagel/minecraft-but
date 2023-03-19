@@ -33,8 +33,8 @@ function minecraft_but.core:modifiers/death_orb/get_distance
 function minecraft_but.core:modifiers/death_orb/visuals/directory
 
 #> Effects
-execute at @s run effect give @e[type=#minecraft_but.core:living_base,distance=..2] instant_damage 1 1
-execute at @s run effect give @e[type=#minecraft_but.core:living_base,distance=..2] wither 1 5
+execute at @s as @e[type=#minecraft_but.core:living_base,distance=..2] run damage @s 4 minecraft:magic
+# execute at @s run effect give @e[type=#minecraft_but.core:living_base,distance=..2] wither 1 5
 execute at @s run effect give @e[type=#minecraft_but.core:living_base,distance=..2] slowness 1 2
 
 execute at @s run effect give @e[type=#minecraft_but.core:living_base,distance=2..3] wither 1 3
