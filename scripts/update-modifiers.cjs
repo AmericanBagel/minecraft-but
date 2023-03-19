@@ -7,60 +7,65 @@ const path = require('path');
 const jsonc = require('jsonc');
 
 const namespaceDir = (__dirname, '../data/minecraft_but.core/functions/');
-const menuDir = path.join(__dirname, '../data/minecraft_but.core/functions/menu/');
-const coreDir = path.join(__dirname, '../data/minecraft_but.core/functions/menu/modifiers/core/');
+const menuDir = path.join(
+	__dirname,
+	'../data/minecraft_but.core/functions/menu/'
+);
+const coreDir = path.join(
+	__dirname,
+	'../data/minecraft_but.core/functions/menu/modifiers/core/'
+);
 
 // Require modifiers JSON
 let { modifiers, categories } = jsonc.parse(
 	'' + fs.readFileSync('./modifiers.jsonc')
 );
 
-const scripts = [
-    "./readme.cjs"
-]
+const scripts = ['./readme.cjs'];
 
 function runScripts() {
-    console.info('Processing scripts...');
+	console.info('Processing scripts...');
 
-    const funcs = scripts.map(function (script) {
-        console.log(`Running script ${script}`);
-        return exec.bind(null, `node ${script}`);
-    });
+	const funcs = scripts.map(function (script) {
+		console.log(`Running script ${script}`);
+		return exec.bind(null, `node ${script}`);
+	});
 
-    function getResults(err, data) {
-        if (err) {
-            return console.log(err);
-        }
-        data.forEach((result) => {
-            result.forEach((string) => {
-                const lines = string
-                    .split('\n')
-                    .filter((e) => e.length !== 0);
-                lines.forEach((line) => {
-                    console.log('	->', line);
-                });
-            });
-        });
-    }
+	function getResults(err, data) {
+		if (err) {
+			return console.log(err);
+		}
+		data.forEach((result) => {
+			result.forEach((string) => {
+				const lines = string.split('\n').filter((e) => e.length !== 0);
+				lines.forEach((line) => {
+					console.log('	->', line);
+				});
+			});
+		});
+	}
 
-    // Run scripts scripts
-    async.parallel(funcs, getResults);
+	// Run scripts scripts
+	async.parallel(funcs, getResults);
 }
 
 function parseDescription(description) {
-	if (typeof description === 'object') {
-		return JSON.stringify(description)
-			.replace(/"/g, '\\"')
-			.replace(/\n/g, '\\n');
-	} else if (typeof description === 'string') {
-		return `{"text":"${description
-			.replace(/"/g, '\\"')
-			.replace(/\n/g, '\\n')}","color":"#ECEFF5"}`;
-	} else {
-		throw new Error(
-			'Please use either a tellraw JSON object or a tellraw JSON string!'
-		);
-	}
+	if (typeof description === 'string') {
+        let out = '';
+		try {
+			out = description.replace(/"/g, '\\"').replace(/\n/g, '\\n');
+		} catch (e) {
+            throw error;
+		}
+	} else if (typeof description === 'object') {
+        out = JSON.stringify(description).replace(/"/g, '\\"')
+        .replace(/\n/g, '\\n');
+    } else {
+        throw new Error(
+            'Please use either a tellraw JSON object or a tellraw JSON string!'
+        );
+    }
+    return out;
 }
 
 let text = outdent`
@@ -762,11 +767,15 @@ modifiers.forEach((modifier) => {
 					fs.writeFileSync(
 						path.join(configDir, '/up.mcfunction'),
 						outdent`
-                        #> minecraft_but.core:menu/modifiers/core/${modifier.id}/${cf.id}/up
+                        #> minecraft_but.core:menu/modifiers/core/${
+							modifier.id
+						}/${cf.id}/up
                         # Increase ${modifier.id} config score ${cf.id} by 1
                         # Generated with the script at '../src/index.js'
                         #
-                        # @within minecraft_but.core:menu/modifiers/core/${modifier.id}/**
+                        # @within minecraft_but.core:menu/modifiers/core/${
+							modifier.id
+						}/**
                         # @context player
 
                         #> Add 1 to score
@@ -782,15 +791,17 @@ modifiers.forEach((modifier) => {
 						}.. run scoreboard players set ${namespace} minecraft_but.config 1
 
                         #> Set string based on score
-                        function minecraft_but.core:menu/modifiers/core/${modifier.id}/${
-							cf.id
-						}/update_string
+                        function minecraft_but.core:menu/modifiers/core/${
+							modifier.id
+						}/${cf.id}/update_string
 
                         #> Click sound
                         function minecraft_but.core:menu/actions/click
 
                         #> Update menu
-                        function minecraft_but.core:menu/modifiers/core/${modifier.id}/config
+                        function minecraft_but.core:menu/modifiers/core/${
+							modifier.id
+						}/config
                     `
 					);
 
@@ -801,13 +812,15 @@ modifiers.forEach((modifier) => {
 					fs.writeFileSync(
 						path.join(configDir, '/down.mcfunction'),
 						outdent`
-                        #> minecraft_but.core:menu/modifiers/core/${modifier.id}/${
-							cf.id
-						}/down
+                        #> minecraft_but.core:menu/modifiers/core/${
+							modifier.id
+						}/${cf.id}/down
                         # Increase ${modifier.id} config score ${cf.id} by 1
                         # Generated with the script at '../src/index.js'
                         #
-                        # @within minecraft_but.core:menu/modifiers/core/${modifier.id}/**
+                        # @within minecraft_but.core:menu/modifiers/core/${
+							modifier.id
+						}/**
                         # @context player
 
                         #> Remove 1 from score
@@ -823,15 +836,17 @@ modifiers.forEach((modifier) => {
 						}.. run scoreboard players set ${namespace} minecraft_but.config 1
 
                         #> Set string based on score
-                        function minecraft_but.core:menu/modifiers/core/${modifier.id}/${
-							cf.id
-						}/update_string
+                        function minecraft_but.core:menu/modifiers/core/${
+							modifier.id
+						}/${cf.id}/update_string
 
                         #> Click sound
                         function minecraft_but.core:menu/actions/click
 
                         #> Update menu
-                        function minecraft_but.core:menu/modifiers/core/${modifier.id}/config
+                        function minecraft_but.core:menu/modifiers/core/${
+							modifier.id
+						}/config
                     `
 					);
 
@@ -1008,7 +1023,9 @@ let enableModifiersFunction = '';
 for (let i = 0; i < modifiers.length; i++) {
 	enableModifiersFunction += `execute if score $out random matches ${
 		i + 1
-	} run scoreboard players set ${modifiers[i].id} minecraft_but.random.toggle 1\n`;
+	} run scoreboard players set ${
+		modifiers[i].id
+	} minecraft_but.random.toggle 1\n`;
 }
 fs.writeFileSync(
 	path.join(namespaceDir, '/random/enable_modifiers.mcfunction'),
