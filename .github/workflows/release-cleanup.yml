@@ -18,16 +18,24 @@ jobs:
       #  run: git fetch --all
       - run: pwd
       - run: ls -la
+      - name: Set .gitignore to release .gitignore
+        run: mv ./.gitignores/release .gitignore
       - name: Delete ignored files
         run: |
           git branch
           git config user.name github-actions
           git config user.email github-actions@github.com
           git rm -r --cached .
-      - name: Set .gitignore to release .gitignore
-        run: mv ./.gitignores/release .gitignore
       - name: Debug - ls
         run: ls -lah ./data
+      - name: Manual cleanup
+        run: |
+          rm -rf scripts
+          rm -rf assets
+          rm -rf .vscode
+          rm -rf .gitignores
+          rm -rf assets
+          rm -rf .github
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "GitHub Action: Clean for release"
