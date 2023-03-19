@@ -1,1 +1,0 @@
-execute as @a[tag=!minecraft_but.blacklist,tag=!minecraft_but.explosive_sight.raycast] at @s anchored eyes positioned ^ ^ ^ anchored minecraft_but.corerun function minecraft_but.core:modifiers/explosive_sight/raycast/start_ray

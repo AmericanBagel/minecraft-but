@@ -1,0 +1,1 @@
+#execute as @a[scores={abch.eatCF=1..}] at @s run 

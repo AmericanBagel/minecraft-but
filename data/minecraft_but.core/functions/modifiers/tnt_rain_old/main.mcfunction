@@ -1,1 +1,0 @@
-execute as @a[ tag=!minecraft_but.blacklist ] at @s if pminecraft_but.coreate minecraft_but.cominecraft_but.corepct run function minecraft_but.core:modifiers/tnt_rain/spawn

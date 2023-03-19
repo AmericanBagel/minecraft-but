@@ -1,0 +1,2 @@
+scoreboard objectives remove abch.limited_inventory
+scoreboard objectives remove abch.limited_inventory.slots

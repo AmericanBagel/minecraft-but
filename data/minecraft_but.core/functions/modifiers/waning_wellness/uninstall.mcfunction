@@ -1,2 +1,0 @@
-scoreboard objectives remove minecraft_but.waning_wellness.death_time
-scoreboard objectives remove minecraft_but.waning_wellness.max_health

@@ -1,1 +1,0 @@
-execute as @a[ advancements={ minecraft_but.coreraft_but.core:player_kill_cminecraft_but.corer=true, minecraft_but.core:player_kill_reinforcement=falminecraft_but.core] at @s run function minecraft_but.core:modifiers/creeper_reinforcements/reinforcements

@@ -1,0 +1,1 @@
+execute as @a[tag=!abch.blacklist,tag=!abch.explosive_sight.raycast] at @s anchored eyes positioned ^ ^ ^ anchored feet run function abchc:modifiers/explosive_sight/raycast/start_ray

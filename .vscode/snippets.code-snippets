@@ -37,7 +37,7 @@
 	"Debug": {
 		"prefix": "debug",
 		"body" : [
-			"execute if score global minecraft_but.debug matches 1 tellraw @a[tag=debug] [{\"text\":\"$RELATIVE_FILEPATH as ${1:executer}: {2:message}\"]"
+			"execute if score global abch.debug matches 1 tellraw @a[tag=debug] [{\"text\":\"$RELATIVE_FILEPATH as ${1:executer}: {2:message}\"]"
 		]
 	},
 	"Modifier Tellraw": {
@@ -45,8 +45,8 @@
 		"body": [
 			"## ${1:title} (${2:modifier})",
 			"# ${3:description} ",
-			"execute unless score ${2} minecraft_but.toggle matches 1 run tellraw @s [{\"text\":\" [✖] \",\"bold\":false,\"color\":\"#FF0000\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function minecraft_but.core:menu/modifiers/core/${2}/on\"}},{\"text\":\"[\",\"color\":\"#CACACA\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function minecraft_but.core:menu/modifiers/core/${2}/config\"}},{\"text\":\"⚙\",\"bold\":true,\"color\":\"#CACACA\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function minecraft_but.core:menu/modifiers/core/${2}/config\"}},{\"text\":\"] \",\"color\":\"#CACACA\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function minecraft_but.core:menu/modifiers/core/${2}/config\"}},{\"text\":\"${1}\",\"bold\":false,\"color\":\"#ECEFF5\",\"hoverEvent\": {\"action\":\"show_text\",\"contents\":[{\"text\":\"${3}\"}]}}]",
-			"execute if score ${2} minecraft_but.toggle matches 1 run tellraw @s [{\"text\":\" [✔] \",\"bold\":false,\"color\":\"#3ED011\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function minecraft_but.core:menu/modifiers/core/${2}/off\"}},{\"text\":\"[\",\"color\":\"#CACACA\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function minecraft_but.core:menu/modifiers/core/${2}/config\"}},{\"text\":\"⚙\",\"bold\":true,\"color\":\"#CACACA\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function minecraft_but.core:menu/modifiers/core/${2}/config\"}},{\"text\":\"] \",\"color\":\"#CACACA\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function minecraft_but.core:menu/modifiers/core/${2}/config\"}},{\"text\":\"${1}\",\"bold\":false,\"color\":\"#ECEFF5\",\"hoverEvent\": {\"action\":\"show_text\",\"contents\":[{\"text\":\"${3}\"}]}}]",
+			"execute unless score ${2} abch.toggle matches 1 run tellraw @s [{\"text\":\" [✖] \",\"bold\":false,\"color\":\"#FF0000\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function abchc:menu/modifiers/core/${2}/on\"}},{\"text\":\"[\",\"color\":\"#CACACA\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function abchc:menu/modifiers/core/${2}/config\"}},{\"text\":\"⚙\",\"bold\":true,\"color\":\"#CACACA\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function abchc:menu/modifiers/core/${2}/config\"}},{\"text\":\"] \",\"color\":\"#CACACA\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function abchc:menu/modifiers/core/${2}/config\"}},{\"text\":\"${1}\",\"bold\":false,\"color\":\"#ECEFF5\",\"hoverEvent\": {\"action\":\"show_text\",\"contents\":[{\"text\":\"${3}\"}]}}]",
+			"execute if score ${2} abch.toggle matches 1 run tellraw @s [{\"text\":\" [✔] \",\"bold\":false,\"color\":\"#3ED011\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function abchc:menu/modifiers/core/${2}/off\"}},{\"text\":\"[\",\"color\":\"#CACACA\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function abchc:menu/modifiers/core/${2}/config\"}},{\"text\":\"⚙\",\"bold\":true,\"color\":\"#CACACA\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function abchc:menu/modifiers/core/${2}/config\"}},{\"text\":\"] \",\"color\":\"#CACACA\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function abchc:menu/modifiers/core/${2}/config\"}},{\"text\":\"${1}\",\"bold\":false,\"color\":\"#ECEFF5\",\"hoverEvent\": {\"action\":\"show_text\",\"contents\":[{\"text\":\"${3}\"}]}}]",
 				"",
 				"${0}"
 		],

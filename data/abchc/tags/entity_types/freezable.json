@@ -1,0 +1,13 @@
+{
+	"description": "Mobs selected by frozen_time",
+	"values": [
+		{
+			"id": "#abchc:mobs",
+			"required": false
+		},
+		{
+			"id": "minecraft:armor_stand",
+			"required": false
+		}
+	]
+}

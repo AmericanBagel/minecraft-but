@@ -1,1 +1,0 @@
-data modify storage minecraft_but.coreraft_but.core:modifiers/deadly_colors red set value '{"text":"RED ","bold":"true","color":"#FE0200"}'

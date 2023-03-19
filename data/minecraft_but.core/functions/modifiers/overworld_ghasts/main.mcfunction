@@ -1,2 +1,0 @@
-execute as @e[ type=zombie, tag=!minecraft_but.noGhast, tag=!global.ignore ] at @s if pminecraft_but.coreate minecraft_but.cminecraft_but.corepct run function minecraft_but.core:modifiers/overworld_ghasts/summon
-tag @e[ type=zombie ] add minecraft_but.noGhast

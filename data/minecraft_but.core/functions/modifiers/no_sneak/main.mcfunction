@@ -1,6 +1,0 @@
-scoreboard players reset @a minecraft_but.sneak
-execute as @a[ tag=!minecraft_but.blacklist, tag=!minecraft_but.no_sneak.blacklist, tag=!global.ignore, scores={ minecraft_but.sneak=1.. }, gamemode=!creative, gamemode=!spectator  ] at @s run gamerule showDeathMessages false
-execute as @a[ tag=!minecraft_but.blacklist, tag=!minecraft_but.no_sneak.blacklist, tag=!global.ignore, scores={ minecraft_but.sneak=1.. }, gamemode=!creative, gamemode=!spectator  ] at @s run tellraw @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] [{"selector":"@s"},{"text":" sneaked out of this plane of existence."}]
-execute as @a[ tag=!minecraft_but.blacklist, tag=!minecraft_but.no_sneak.blacklist, tag=!global.ignore, scores={ minecraft_but.sneak=1.. }, gamemode=!creative, gamemode=!spectator  ] at @s run kill @s
-execute as @a[ tag=!minecraft_but.blacklist, tag=!minecraft_but.no_sneak.blacklist, tag=!global.ignore, scores={ minecraft_but.sneak=1.. }, gamemode=!creative, gamemode=!spectator  ] at @s run gamerule showDeathMessages true
-scoreboard players reset @a minecraft_but.sneak

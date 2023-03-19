@@ -1,1 +1,0 @@
-#function minecraft_but.coreraft_but.core:modifiers/random_effect/effect

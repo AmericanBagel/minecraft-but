@@ -1,1 +1,0 @@
-execute if score .global minecraft_but.timer matches 1200.. run tp @minecraft_but.corepe=#minecraft_but.core:mobs, tag=!global.ignore ] @r[ tag=!minecraft_but.blacklist, tag=!minecraft_but.mobs_tp_to_you.blacklist, tag=!global.ignore ]

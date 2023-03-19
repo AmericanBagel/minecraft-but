@@ -1,1 +1,0 @@
-data modify storage minecraft_but.coreraft_but.core:modifiers/deadly_colors dark set value '[{"text":"D","bold":true,"color":"black"},{"text":"A","bold":true,"color":"#2A2A2A"},{"text":"R","bold":true,"color":"#444544"},{"text":"K ","bold":true,"color":"#6D6C6D"}]'

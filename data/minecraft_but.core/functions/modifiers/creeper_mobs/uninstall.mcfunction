@@ -1,1 +1,0 @@
-scoreboard objectives remove minecraft_but.creeper_mobs.fuse

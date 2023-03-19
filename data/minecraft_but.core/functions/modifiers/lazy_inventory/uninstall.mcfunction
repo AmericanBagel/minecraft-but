@@ -1,4 +1,0 @@
-scoreboard objectives remove minecraft_but.lazy_inventory
-scoreboard objectives remove minecraft_but.lazy_inventory.x
-scoreboard objectives remove minecraft_but.lazy_inventory.y
-scoreboard objectives remove minecraft_but.lazy_inventory.z

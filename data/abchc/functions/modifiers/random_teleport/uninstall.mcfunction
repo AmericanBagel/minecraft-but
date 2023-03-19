@@ -1,0 +1,1 @@
+scoreboard objectives remove abch.random_teleport

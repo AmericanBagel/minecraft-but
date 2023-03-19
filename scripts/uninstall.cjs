@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const dir = path.join(__dirname, '../data/minecraft_but.core/functions/modifiers');
+const dir = path.join(__dirname, '../data/abchc/functions/modifiers');
 const { program, Option } = require('commander');
 
 function getDirsInDir(filepath) {

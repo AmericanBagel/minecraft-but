@@ -1,0 +1,2 @@
+execute unless score difficulty.carnivore abch.config matches 0..3 run function abchc:modifiers/carnivore/default
+execute if score difficulty.carnivore abch.config matches 0..3 run function abchc:modifiers/carnivore/custom

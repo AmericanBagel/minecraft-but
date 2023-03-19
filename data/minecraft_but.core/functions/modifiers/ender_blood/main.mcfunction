@@ -1,2 +1,0 @@
-execute as @a[ scores={ minecraft_but.ender_blood.damage=1.. }, tag=!minecraft_but.blacklist, tag=!global.ignore, tag=!minecraft_but.ender_blood.blacklist, gamemode=!creative, gamemode=!spectminecraft_but.core ] at @s run function minecraft_but.core:modifiers/ender_blood/tp/start_search
-scoreboard players reset @a[ tag=!minecraft_but.blacklist, tag=!global.ignore, tag=!minecraft_but.ender_blood.blacklist, gamemode=!creative, gamemode=!spectator  ] minecraft_but.ender_blood.damage

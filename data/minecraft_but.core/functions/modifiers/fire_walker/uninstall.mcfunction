@@ -1,5 +1,0 @@
-scoreboard objectives remove minecraft_but.fire_walker.total
-scoreboard objectives remove minecraft_but.fire_walker.walk
-scoreboard objectives remove minecraft_but.fire_walker.crouch
-scoreboard objectives remove minecraft_but.fire_walker.sprint
-scoreboard objectives remove minecraft_but.fire_walker

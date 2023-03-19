@@ -1,0 +1,5 @@
+execute as @a[ tag=!abch.blacklist, tag=!global.ignore, tag=!abch.ytpwyl.blacklist, tag=!creative, tag=!spectator ] run scoreboard players add @s abch.ytpwyl.timer 1
+execute as @a[ tag=!abch.blacklist, tag=!global.ignore, tag=!abch.ytpwyl.blacklist, tag=!creative, tag=!spectator ] at @s if score @s abch.ytpwyl.timer matches 60..79 if predicate abchc:025pct run function abchc:modifiers/you_tp_where_you_look/start_raycast
+execute as @a[ tag=!abch.blacklist, tag=!global.ignore, tag=!abch.ytpwyl.blacklist, tag=!creative, tag=!spectator ] at @s if score @s abch.ytpwyl.timer matches 80..99 if predicate abchc:035pct run function abchc:modifiers/you_tp_where_you_look/start_raycast
+execute as @a[ tag=!abch.blacklist, tag=!global.ignore, tag=!abch.ytpwyl.blacklist, tag=!creative, tag=!spectator ] at @s if score @s abch.ytpwyl.timer matches 100..119 if predicate abchc:005pct run function abchc:modifiers/you_tp_where_you_look/start_raycast
+execute as @a[ tag=!abch.blacklist, tag=!global.ignore, tag=!abch.ytpwyl.blacklist, tag=!creative, tag=!spectator ] at @s if score @s abch.ytpwyl.timer matches 120.. run function abchc:modifiers/you_tp_where_you_look/start_raycast

@@ -1,1 +1,0 @@
-data modify storage minecraft_but.coreraft_but.core:modifiers/deadly_colors light set value '[{"text":"L","bold":true,"color":"#FEFEFF"},{"text":"I","bold":true,"color":"#E5E5E5"},{"text":"G","bold":true,"color":"#D5D4D4"},{"text":"H","bold":true,"color":"#C3C3C2"},{"text":"T ","bold":true,"color":"#A3A3A2"}]'

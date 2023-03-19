@@ -1,2 +1,0 @@
-#execute as @e[type=arrow,tag=!minecraft_but.tparrow] at @s run minecraft_but.coreion minecraft_but.core:modifiers/tp_arrows/tp
-execute as @e[ type=arrow, tag=!minecraft_but.tpaTP, nbt={inGround: 1b}, tag=!global.ignore ] at @s run minecraft_but.coreion minecraft_but.core:modifiers/tp_arrows/tp

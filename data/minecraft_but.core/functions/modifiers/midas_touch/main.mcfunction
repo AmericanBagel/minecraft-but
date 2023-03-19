@@ -1,1 +1,0 @@
-execute as @a[ tag=!minecraft_but.blacklist, tag=!minecraft_but.midas_touch.blacklist, tag=!global.ignore, gamemode=!creative, gamemode=!spectator  ] at @s unless block ~ ~-1 ~ air run setblock ~ ~-1 ~ gold_block

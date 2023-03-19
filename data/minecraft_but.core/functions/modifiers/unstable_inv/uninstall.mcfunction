@@ -1,2 +1,0 @@
-scoreboard objectives remove minecraft_but.unstable_inv.damage
-scoreboard objectives remove minecraft_but.unstable_inv
