@@ -143,4 +143,4 @@ For plans for the future of this datapack, please view the [GitHub project for t
 # 👥 Contributing
 Feel free to contribute. Any help is appreciated. If it's something as simple as removing an unnecessary `at @s` or even just cleaning up comments, it helps a lot!
 
-If you're no good with git and GitHub and commands, I totally understand! You can, however, suggest a modifier in the Issues page! Just give it the 'modifier' and 'enhancement' tags!
+If you're no good with git and GitHub and commands, I totally understand! You can, however, suggest a modifier in the [Issues](https://github.com/AmericanBagel/minecraft-but/issues) page! Just give it the 'modifier' and 'enhancement' tags!
