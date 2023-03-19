@@ -750,7 +750,40 @@
 			"name": "[ ERR: CHUNK ERROR IN R.0.0.MCA ]",
 			"description": "Due to an error in chunk loading, chunks around players have a chance to disappear.",
 			"id": "chunk_error",
+			"category": "chaos",
 			"config": {
+				"chance": {
+					"id": "chance",
+					"name": "Chance",
+					"description": "Percent chance from 1-100 to delete a nearby chunk every second",
+					"type": "range",
+					"min": 1,
+					"max": 100
+				},
+				"min_spread": {
+					"id": "min_spread",
+					"name": "Minimum Spread",
+					"description": "Minimum distance from a player chunks should disappear. If you set it below 16, the chunk you stand on might be deleted.",
+					"type": "range",
+					"min": 1,
+					"max": 2147483647
+				},
+				"max_spread": {
+					"id": "max_spread",
+					"name": "Maximum Spread",
+					"description": "Maximum distance from a player chunks should disappear",
+					"type": "range",
+					"min": 1,
+					"max": 2147483647
+				},
+				"recursion_limit": {
+					"name": "Recursion Limit",
+					"id": "recursion_limit",
+					"description": "Technical option. When a chunk is being selected, this modifier checks if the chunk hasn't been deleted yet. To prevent a near-infinite loop in the case that most of the chunks nearby are deleted, how many times should the modifier check to see if the chunk has been deleted? The higher, the laggier but more likely the modifier is to end up picking a chunk to delete.",
+					"type": "range",
+					"min": 1,
+					"max": "2147483647"
+				}
 			}
 		},
 		{

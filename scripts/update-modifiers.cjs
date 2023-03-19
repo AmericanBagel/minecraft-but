@@ -15,6 +15,8 @@ let { modifiers, categories } = jsonc.parse(
 	'' + fs.readFileSync('./modifiers.jsonc')
 );
 
+modifiers.sort((a, b) => a.id.localeCompare(b.id))
+
 const scripts = [
     "./readme.cjs"
 ]
@@ -1082,5 +1084,26 @@ fs.writeFileSync(
 	path.join(namespaceDir, '/modifiers/manual.mcfunction'),
 	manualFunction
 );
+
+// Load functions
+let loadFunction =
+    outdent`#> minecraft_but.core:modifiers/load
+    # Directory for modifier load files which
+    # create scoreboards and manage default configs
+    # @within minecraft_but.core:load
+    # @context root\n\n\n`
+
+modifiers.forEach((modifier) => {
+    const filepath = path.join(namespaceDir, `/modifiers/${modifier.id}/load.mcfunction`);
+    console.log(filepath)
+    if (fs.existsSync(filepath)) {
+        loadFunction += `function minecraft_but.core:modifiers/${modifier.id}/load\n`;
+    }
+})
+
+fs.writeFileSync(
+    path.join(namespaceDir, '/modifiers/load.mcfunction'),
+    loadFunction
+)
 
 console.log('Wrote files!');
