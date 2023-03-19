@@ -120,7 +120,7 @@ By default, **manual mode** is enabled. **Manual mode** allows you to manually e
 
 [A video guide on opening the menu](./assets/menu.mp4)
 
-To open the menu, run the command `/function abchc:give_item`. Bam! Now you have the **Chaos Menu**. With this, just right click to bring up the menu. From here you will find different buttons. All that is important is the "Modifier" button, the "Difficulty" slider, and the "Uninstall" button. You can guess what each button does.
+To open the menu, run the command `/function minecraft_but.core:give_item`. Bam! Now you have the **Chaos Menu**. With this, just right click to bring up the menu. From here you will find different buttons. All that is important is the "Modifier" button, the "Difficulty" slider, and the "Uninstall" button. You can guess what each button does.
 
 Click on the "Modifier" button to see a list of categories. Feel free to look around these categories. If you need to go back in a menu, just click the back arrow. Now that you've looked around these categories, try enabling a modifier by just clicking on its name or the [X] button.
 

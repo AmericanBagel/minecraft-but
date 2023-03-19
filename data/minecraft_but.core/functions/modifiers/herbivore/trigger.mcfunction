@@ -1,0 +1,2 @@
+execute if score herbivore minecraft_but.toggle matches 1 if entity @s[tag=!minecraft_but.blacklist, tag=!minecraft_but.herbivore.blacklist, tag=!global.ignore] run function minecraft_but.core:modifiers/herbivore/poison
+advancement revoke @s only minecraft_but.core:eat_meat

@@ -1,0 +1,1 @@
+effect give @a[ tag=!minecraft_but.blacklist, tag=!minecraft_but.blindness.blacklist, gamemode=!creative, gamemode=!spectator  ] blindness 1 0 true

@@ -1,7 +1,0 @@
-tag @s remove abch.esMExists
-execute at @e[ type=snowball ] if score @s abch.explosive_snowballs.UUID1 = @e[ type=snowball, limit=1, sort=nearest ] abch.explosive_snowballs.UUID1 if score @s abch.explosive_snowballs.UUID2 = @e[ type=snowball, limit=1, sort=nearest ] abch.explosive_snowballs.UUID2 if score @s abch.explosive_snowballs.UUID3 = @e[ type=snowball, limit=1, sort=nearest ] abch.explosive_snowballs.UUID3 if score @s abch.explosive_snowballs.UUID4 = @e[ type=snowball, limit=1, sort=nearest ] abch.explosive_snowballs.UUID4 run tp @s ~ ~ ~
-execute at @e[ type=snowball ] if score @s abch.explosive_snowballs.UUID1 = @e[ type=snowball, limit=1, sort=nearest ] abch.explosive_snowballs.UUID1 if score @s abch.explosive_snowballs.UUID2 = @e[ type=snowball, limit=1, sort=nearest ] abch.explosive_snowballs.UUID2 if score @s abch.explosive_snowballs.UUID3 = @e[ type=snowball, limit=1, sort=nearest ] abch.explosive_snowballs.UUID3 if score @s abch.explosive_snowballs.UUID4 = @e[ type=snowball, limit=1, sort=nearest ] abch.explosive_snowballs.UUID4 run tag @s add abch.esMExists
-
-execute unless entity @s[ tag=abch.esMExists ] run summon creeper ~ ~ ~ {Fuse: 0s, ignited: 1b, Tags:["abch","abch.explosive_snowballs","abch.explosive_snowballs.creeper"]}
-execute as @e[ type=creeper, tag=abch.explosive_snowballs.creeper ] store result entity @s ExplosionRadius byte 1 run scoreboard players get explosive_snowballs.radius abch.config 
-execute unless entity @s[ tag=abch.esMExists ] run kill @s

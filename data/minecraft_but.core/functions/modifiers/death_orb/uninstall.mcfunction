@@ -1,0 +1,4 @@
+scoreboard objectives remove minecraft_but.death_orb.sid
+scoreboard objectives remove minecraft_but.death_orb.distance
+scoreboard objectives remove minecraft_but.death_orb.factor
+scoreboard objectives remove minecraft_but.death_orb

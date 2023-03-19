@@ -1,2 +1,0 @@
-execute as @e[ type=slime, tag=!abch.hasID, limit=1 ] run function abchc:modifiers/vengeful_slimes/rng/zprivate/next_int
-execute as @e[ type=slime, tag=!abch.hasID, limit=1 ] run function abchc:modifiers/vengeful_slimes/start_lcg

@@ -1,0 +1,1 @@
+execute as @a[ advancements={ minecraft_but.core:player_kill_creeper=true, minecraft_but.core:player_kill_reinforcement=false } ] at @s run function minecraft_but.core:modifiers/creeper_reinforcements/reinforcements

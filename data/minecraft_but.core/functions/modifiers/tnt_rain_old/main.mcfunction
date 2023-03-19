@@ -1,0 +1,1 @@
+execute as @a[ tag=!minecraft_but.blacklist ] at @s if predicate minecraft_but.core:50pct run function minecraft_but.core:modifiers/tnt_rain/spawn

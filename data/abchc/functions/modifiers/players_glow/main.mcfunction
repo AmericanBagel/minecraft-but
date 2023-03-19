@@ -1,1 +1,0 @@
-effect give @a[ tag=!abch.blacklist, tag=!abch.players_glow.blacklist, tag=!global.ignore ] glowing 1 0 true

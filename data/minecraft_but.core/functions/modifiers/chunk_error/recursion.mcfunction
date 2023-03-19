@@ -1,0 +1,2 @@
+execute unless entity @s[ y=0, dy=0 ] if block ~ ~-1 ~ #minecraft_but.core:air positioned ~ ~-1 ~ run function minecraft_but.core:modifiers/chunk_error/recursion
+execute unless entity @s[ y=0, dy=0 ] unless block ~ ~-1 ~ #minecraft_but.core:air run tag @s add minecraft_but.CEvoid

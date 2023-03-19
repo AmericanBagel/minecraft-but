@@ -1,0 +1,2 @@
+execute as @e[ type=slime, tag=!minecraft_but.hasID, limit=1 ] run function minecraft_but.core:modifiers/vengeful_slimes/rng/zprivate/next_int
+execute as @e[ type=slime, tag=!minecraft_but.hasID, limit=1 ] run function minecraft_but.core:modifiers/vengeful_slimes/start_lcg

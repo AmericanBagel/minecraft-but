@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "tag": "minecraft_but.core:food"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "minecraft_but.core:modifiers/potion_food/trigger"
+  }
+}

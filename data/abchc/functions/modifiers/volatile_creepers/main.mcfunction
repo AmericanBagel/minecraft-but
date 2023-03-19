@@ -1,2 +1,0 @@
-execute as @e[ type=creeper, tag=!global.ignore ] at @s if predicate abchc:0001pct run data merge entity @s {ignited: 1b}
-execute as @e[ type=creeper, nbt={HurtTime: 10s}, tag=!global.ignore ] run data modify entity @s ignited set value 1

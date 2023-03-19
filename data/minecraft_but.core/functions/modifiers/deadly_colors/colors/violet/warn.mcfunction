@@ -1,0 +1,1 @@
+data modify storage minecraft_but.core:modifiers/deadly_colors violet set value '{"text":"VIOLET ","bold":true,"color":"#CA00F7"}'

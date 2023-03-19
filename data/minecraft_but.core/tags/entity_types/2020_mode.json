@@ -1,0 +1,17 @@
+{
+	"description": "Allowed entities for 2020 mode modifier",
+	"values": [
+		{
+			"id": "#minecraft_but.core:mobs",
+			"required": false
+		},
+		{
+			"id": "minecraft:player",
+			"required": false
+		},
+		{
+			"id": "minecraft:item",
+			"required": true
+		}
+	]
+}

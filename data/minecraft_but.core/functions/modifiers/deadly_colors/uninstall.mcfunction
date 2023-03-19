@@ -1,0 +1,3 @@
+scoreboard objectives remove minecraft_but.deadly_colors.color
+scoreboard objectives remove minecraft_but.deadly_colors.color
+scoreboard objectives remove minecraft_but.deadly_colors
