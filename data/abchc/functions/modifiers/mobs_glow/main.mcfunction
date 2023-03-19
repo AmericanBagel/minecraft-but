@@ -1,1 +1,0 @@
-effect give @e[ tag=!abch.blacklist, tag=!abch.mobs_glow.blacklist, tag=!global.ignore, type=#aestd1:living_base ] glowing 1 0 true

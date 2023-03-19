@@ -1,2 +1,0 @@
-execute if score carnivore abch.toggle matches 1 if entity @s[tag=!abch.blacklist, tag=!abch.carnivore.blacklist, tag=!global.ignore, gamemode=!creative, gamemode=!spectator ] run function abchc:modifiers/carnivore/poison
-advancement revoke @s only abchc:eat_vegetable

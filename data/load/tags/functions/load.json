@@ -1,6 +1,6 @@
 {
     "values": [
         "random:private/load",
-        "abchc:load"
+        "minecraft_but.coreraft_but.core:load"
     ]
 }

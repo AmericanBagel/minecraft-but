@@ -1,0 +1,2 @@
+scoreboard objectives remove minecraft_but.limited_inventory
+scoreboard objectives remove minecraft_but.limited_inventory.slots

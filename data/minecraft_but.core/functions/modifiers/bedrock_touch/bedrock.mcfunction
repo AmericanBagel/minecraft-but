@@ -1,0 +1,1 @@
+execute positioned ~ ~-1 ~ unless block ~ ~ ~ #minecraft_but.coreraft_but.core:air run setblock ~ ~ ~ bedrock

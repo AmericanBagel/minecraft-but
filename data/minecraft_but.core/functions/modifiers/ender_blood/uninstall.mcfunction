@@ -1,0 +1,1 @@
+scoreboard objectives remove minecraft_but.ender_blood

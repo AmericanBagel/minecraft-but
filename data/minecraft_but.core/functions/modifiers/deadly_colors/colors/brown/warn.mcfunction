@@ -1,0 +1,1 @@
+data modify storage minecraft_but.coreraft_but.core:modifiers/deadly_colors brown set value '{"text":"BROWN ","bold":true,"color":"#774400"}'

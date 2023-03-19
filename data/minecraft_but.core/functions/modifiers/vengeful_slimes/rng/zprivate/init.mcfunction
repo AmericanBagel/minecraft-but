@@ -1,0 +1,1 @@
+execute unless score minecraft_but.vsLCG minecraft_but.vsMath matches ..0 unless score minecraft_but.vsLCG minecraft_minecraft_but.coresMath matches 1.. run function minecraft_but.core:modifiers/vengeful_slimes/rng/zprivate/uuid_reset

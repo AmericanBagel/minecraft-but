@@ -1,2 +1,0 @@
-execute unless entity @s[ y=0, dy=0 ] if block ~ ~-1 ~ #abchc:air positioned ~ ~-1 ~ run function abchc:modifiers/chunk_error/recursion
-execute unless entity @s[ y=0, dy=0 ] unless block ~ ~-1 ~ #abchc:air run tag @s add abch.CEvoid

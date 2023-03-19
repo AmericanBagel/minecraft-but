@@ -1,0 +1,1 @@
+execute as @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] at @s if pminecraft_but.coreate minecraft_but.core:minecraft_but.corepct run function minecraft_but.core:modifiers/chunk_error/spawn

@@ -1,0 +1,2 @@
+execute if score potion_food minecraft_but.toggle matches 1 if entity @s[tag=!global.ignore, tag=!minecraft_but.potion_food.blacklist, tag=!minecraft_bminecraft_but.coreacklist] run function minecraft_but.core:modifiers/potion_food/effect
+advancement revoke @s only minecraft_but.coreraft_but.core:eat_food

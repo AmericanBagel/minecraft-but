@@ -8,7 +8,7 @@
         "announce_to_chat": false,
         "show_toast": false
     },
-    "parent": "global:americanbagel/abch",
+    "parent": "global:americanbagel/minecraft_but",
     "criteria": {
         "trigger": {
             "trigger": "minecraft:tick"
