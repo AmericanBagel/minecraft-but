@@ -1,4 +1,5 @@
 {
+	"$schema": "https://raw.githubusercontent.com/AmericanBagel/minecraft-but/master/scripts/modifiers-schema.json",
 	"categories": [
 		{
 			"id": "challenges",
