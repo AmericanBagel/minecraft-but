@@ -1,6 +1,7 @@
 # ![Minecraft, but MEGAPACK](./assets/title.png)
 See the PlanetMinecraft page here: https://www.planetminecraft.com/data-packs/5537948
 
+The *Minecraft, but *MEGAPACK** is the "Minecraft, but" pack to end them all! The Megapack contains *70+* gameplay modifiers all in one data pack, and it features an intuitive menu to configure the data pack however you want!
 
 # ![🤔 Why?](./assets/why.png)
 Browsing through [PlanetMinecraft's data pack page](https://www.planetminecraft.com/data-packs/), you will quickly notice the amount of "Minecraft, but" data packs that flood it. You might think all these data packs sound fun. After playing with one, you might want to use several. What if you used 5, 10, 15, even 20 different "Minecraft, but" data packs? You'll quickly find yourself annoyed with having to manually type out `/datapack disable "file/..."`. You will also find it annoying that very few of them are customizable! For the data packs that are customizable, you will often forget how you were supposed to customize them in the first place! Managing several of these data packs quickly turns into a nightmare.
