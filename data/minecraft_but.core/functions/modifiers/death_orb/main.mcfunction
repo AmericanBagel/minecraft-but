@@ -12,3 +12,6 @@ execute as @a[tag=!minecraft_but.blacklist,tag=!minecraft_but.death_orb.blacklis
 
 # If no linked death orb was found, spawn one
 execute as @a[tag=minecraft_but.death_orb.spawn] at @s run function minecraft_but.core:modifiers/death_orb/spawn
+
+# Clean up old death orbs
+execute as @e[tag=minecraft_but.death_orb.marker] at @s run function minecraft_but.core:modifiers/death_orb/cleanup/search

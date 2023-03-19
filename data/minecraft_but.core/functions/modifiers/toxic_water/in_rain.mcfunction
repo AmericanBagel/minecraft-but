@@ -10,8 +10,8 @@ scoreboard players operation $3_secs minecraft_but.toxic_water %= #40 minecraft_
 
 #> Effects based on difficulty
 execute if score @s minecraft_but.toxic_water.timer matches 15.. if score difficulty.toxic_water minecraft_but.config matches 0 run effect give @s poison 3 1 true
-execute if score @s minecraft_but.toxic_water.timer matches 15.. unless score difficulty.toxic_water minecraft_but.config matches 0 unless score difficulty.toxic_water minecraft_but.config matches 2..3 run effect give @s wither 2 0 true
-execute if score $3_secs minecraft_but.toxic_water matches 1 if score difficulty.toxic_water minecraft_but.config matches 2 run effect give @s instant_damage 5 0 true
+execute if score @s minecraft_but.toxic_water.timer matches 15.. unless score difficulty.toxic_water minecraft_but.config matches 0 unless score difficulty.toxic_water minecraft_but.config matches 2..3 run damage @s 2 on_fire
+execute if score $3_secs minecraft_but.toxic_water matches 1 if score difficulty.toxic_water minecraft_but.config matches 2 run damage @s 4 on_fire
 execute if score @s minecraft_but.toxic_water.timer matches 60.. if score difficulty.toxic_water minecraft_but.config matches 3 run kill @s
 
 #> Get tick number of second for warning text and danger tone
