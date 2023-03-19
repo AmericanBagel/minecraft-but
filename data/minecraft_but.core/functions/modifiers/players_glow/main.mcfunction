@@ -1,1 +1,0 @@
-effect give @a[ tag=!minecraft_but.blacklist, tag=!minecraft_but.players_glow.blacklist, tag=!global.ignore ] glowing 1 0 true

@@ -1,4 +1,5 @@
 {
+	"$schema": "https://raw.githubusercontent.com/AmericanBagel/minecraft-but/master/scripts/modifiers-schema.json",
 	"categories": [
 		{
 			"id": "challenges",
@@ -784,6 +785,24 @@
 			"id": "glowing",
 			"category": "effects",
 			"config": {
+				"players": {
+					"name": "Players",
+					"description": "Should players glow?",
+					"id": "players",
+					"type": "toggle"
+				},
+				"mobs": {
+					"name": "Mobs",
+					"description": "Should mobs glow?",
+					"id": "mobs",
+					"type": "toggle"
+				},
+				"other": {
+					"name": "Other entities",
+					"description": "Should other entities, like items and arrows, glow?",
+					"id": "other",
+					"type": "toggle"
+				}
 			}
 		},
 		{

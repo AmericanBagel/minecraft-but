@@ -1,1 +1,0 @@
-effect give @e[ tag=!minecraft_but.blacklist, tag=!minecraft_but.mobs_glow.blacklist, tag=!global.ignore, type=#aestd1:living_base ] glowing 1 0 true
