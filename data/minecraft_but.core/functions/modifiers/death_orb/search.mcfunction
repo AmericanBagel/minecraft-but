@@ -18,5 +18,6 @@ tag @s add minecraft_but.death_orb.spawn
 
 # If there is a linked death orb, run actions
 # with the death orb as `@s` and the player as `@p`
-execute as @e[ name="minecraft_but.death_orb.marker", predicate=minecraft_but.core:modifiers/death_orb/sid ] if score @s minecraft_but.death_orb.sid = .search minecraft_but.death_orb.sid run function minecraft_but.core:modifiers/death_orb/actions
+# Distance 0.. to make death orb work across dimensions
+execute as @e[ name="minecraft_but.death_orb.marker", predicate=minecraft_but.core:modifiers/death_orb/sid, distance=0.. ] if score @s minecraft_but.death_orb.sid = .search minecraft_but.death_orb.sid run function minecraft_but.core:modifiers/death_orb/actions
 tag @s remove minecraft_but.death_orb.this
