@@ -427,7 +427,7 @@
 			"description": "Players are forced to look in a customizable direction.",
 			"id": "look_straight",
 			"category": "challenges",
-			"color": "##fdcb00"
+			"color": "#fdcb00"
 		},
 		{
 			"config": {
@@ -806,7 +806,14 @@
 		{
 			"name": "You can't jump",
 			// TROUBLE HERE! IF SOMETHING WENT WRONG IN THE SCRIPT, IT'S NOT PROPERLY ESCAPING THIS VVV
-			"description": "{\"text\":\"If you jump, you die.\n\nPro tips: TURN OFF AUTOJUMP. Get creative. Use water buckets, ladders, stairs, or anything to give yourself a boost. If you want to make sure you absolutely can't jump, set your jump key to nothing.\n\nIf you see \"Not Bound\", you're good:\"},{\"keybind\":\"key.jump\"}",
+			"description": [
+				{
+				"text":"If you jump, you die.\n\nPro tips: TURN OFF AUTOJUMP. Get creative. Use water buckets, ladders, stairs, or anything to give yourself a boost. If you want to make sure you absolutely can't jump, set your jump key to nothing.\n\nIf you see \"Not Bound\", you're good:"
+				},
+				{
+					"keybind": "key.jump"
+				}
+			],
 			"id": "no_jump",
 			"category": "mechanic",
 			"config": {
