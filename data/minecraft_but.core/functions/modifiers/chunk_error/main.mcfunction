@@ -1,1 +1,1 @@
-execute as @a[ tag=!minecraft_but.blacklist, tag=!global.ignore ] at @s if predicate minecraft_but.core:00083pct run function minecraft_but.core:modifiers/chunk_error/spawn
+execute as @a[ tag=!minecraft_but.blacklist, tag=!minecraft_but.chunk_error.blacklist, tag=!global.ignore ] at @s run function minecraft_but.core:modifiers/chunk_error/chance

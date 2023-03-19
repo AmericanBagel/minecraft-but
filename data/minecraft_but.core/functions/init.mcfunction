@@ -153,7 +153,7 @@ scoreboard objectives add minecraft_but.anvil_rain.Yoffset dummy
 
 scoreboard objectives add minecraft_but.random_effect.effect dummy
 scoreboard objectives add minecraft_but.random_effect.lvl dummy
-scoreboard objectives add minecraft_but.chunk_error.limit dummy
+scoreboard objectives add minecraft_but.chunk_error dummy
 scoreboard objectives add minecraft_but.chunk_error.x dummy
 scoreboard objectives add minecraft_but.chunk_error.z dummy
 scoreboard objectives add minecraft_but.chunk_error.total dummy

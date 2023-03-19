@@ -60,7 +60,7 @@ scoreboard objectives remove minecraft_but.anvil_rain.Y
 scoreboard objectives remove minecraft_but.anvil_rain.Yoffset
 scoreboard objectives remove minecraft_but.random_effect.effect
 scoreboard objectives remove minecraft_but.random_effect.lvl
-scoreboard objectives remove minecraft_but.chunk_error.limit
+scoreboard objectives remove minecraft_but.chunk_error
 scoreboard objectives remove minecraft_but.chunk_error.x
 scoreboard objectives remove minecraft_but.chunk_error.z
 scoreboard objectives remove minecraft_but.chunk_error.total

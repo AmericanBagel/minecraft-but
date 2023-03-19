@@ -13,4 +13,4 @@ function minecraft_but.core:modifiers/chunk_error/load
 function minecraft_but.core:menu/actions/click
 
 # Update menu
-function minecraft_but.core:menu/modifiers/core/undefined
+function minecraft_but.core:menu/modifiers/core/chaos
