@@ -5,6 +5,8 @@ on:
     paths:
       - './scripts/update-modifiers.cjs'
       - './scripts/modifiers.jsonc'
+  pull_request:
+    types: [closed]
 jobs: 
   setup-nodejs-env:
     uses: ./.github/workflows/reinstall-nodejs.yml
