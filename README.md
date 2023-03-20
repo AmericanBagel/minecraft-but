@@ -1,16 +1,16 @@
 # ![Minecraft, but MEGAPACK](./assets/title.png)
 See the PlanetMinecraft page here: https://www.planetminecraft.com/data-packs/5537948
 
-The *Minecraft, but *MEGAPACK** is the "Minecraft, but" pack to end them all! The Megapack contains *70+* gameplay modifiers all in one data pack, and it features an intuitive menu to configure the data pack however you want!
+The *Minecraft, but* **MEGAPACK** is the "Minecraft, but" pack to end them all! The Megapack contains *70+* gameplay modifiers all in one data pack, and it features an intuitive menu to configure the data pack however you want!
 
 # ![🤔 Why?](./assets/why.png)
 Browsing through [PlanetMinecraft's data pack page](https://www.planetminecraft.com/data-packs/), you will quickly notice the amount of "Minecraft, but" data packs that flood it. You might think all these data packs sound fun. After playing with one, you might want to use several. What if you used 5, 10, 15, even 20 different "Minecraft, but" data packs? You'll quickly find yourself annoyed with having to manually type out `/datapack disable "file/..."`. You will also find it annoying that very few of them are customizable! For the data packs that are customizable, you will often forget how you were supposed to customize them in the first place! Managing several of these data packs quickly turns into a nightmare.
 
-The **Minecraft, but MEGAPACK** aims to solve this problem by providing one centralized menu to manage all your gameplay modifiers. Gone are the days of typing `/datapack`! Gone are the days of having to revisit that PlanetMinecraft page again and again to remind yourself how to configure it! Gone are the days of having to find that inconveniently placed `.txt` file hidden away in the archived data pack file! Gone are the days of a chat flooded by 50 different "Minecraft, but" data packs every time you reload.
+The *Minecraft, but* **MEGAPACK** aims to solve this problem by providing one centralized menu to manage all your gameplay modifiers. Gone are the days of typing `/datapack`! Gone are the days of having to revisit that PlanetMinecraft page again and again to remind yourself how to configure it! Gone are the days of having to find that inconveniently placed `.txt` file hidden away in the archived data pack file! Gone are the days of a chat flooded by 50 different "Minecraft, but" data packs every time you reload.
 
 # ![📋 Features](./assets/features.png)
 ## ![⚙️ Modifiers](./assets/modifiers.png)
-The Megapack contains 67 gameplay modifiers (and more on the way), which are essentially "Minecraft, but" scenarios ranging from "Minecraft, but TNT rains from the sky" to "Minecraft, but items randomly fall out of your inventory". The list of modifiers is massive, so bear with me!
+The Megapack contains 70+ gameplay modifiers (and more on the way), which are essentially "Minecraft, but" scenarios ranging from "Minecraft, but TNT rains from the sky" to "Minecraft, but items randomly fall out of your inventory". The list of modifiers is massive, so I recommend you just check out the data pack instead! It's easy!
 
 <details>
 <summary>Full list of modifiers</summary>
@@ -121,9 +121,16 @@ By default, **manual mode** is enabled. **Manual mode** allows you to manually e
 
 [A video guide on opening the menu](./assets/menu.mp4)
 
-To open the menu, run the command `/function minecraft_but.core:give_item`. Bam! Now you have the **Chaos Menu**. With this, just right click to bring up the menu. From here you will find different buttons. All that is important is the "Modifier" button, the "Difficulty" slider, and the "Uninstall" button. You can guess what each button does.
+To open the menu, run the command `/function minecraft_but.core:give_item`. or rename a nether star "Chaos Menu" and right click it:
+[Rename a nether star to "Chaos Menu"(./assets/rename-chaos-menu.png)
+
+Now you have the **Chaos Menu**. With this, just right click to bring up the menu. From here you will find different buttons. All that is important is the "Modifiers" button, the "Difficulty" slider, and the "Uninstall" button. You can guess what each button does.
 
 Click on the "Modifier" button to see a list of categories. Feel free to look around these categories. If you need to go back in a menu, just click the back arrow. Now that you've looked around these categories, try enabling a modifier by just clicking on its name or the [X] button.
+
+---
+
+**TL;DR rename a nether star to "Chaos Menu" to open the menu to configure the data pack and toggle or configure modifiers. Enjoy!**
 
 # ![Credits](./assets/credits.png)
 So many people have helped with this project, it's hard to keep count. Still, here's my best attempt at some sort of "Thank you" list:
@@ -138,7 +145,7 @@ So many people have helped with this project, it's hard to keep count. Still, he
 - and the obligatory **YOU** for reading this and hopefully playing my data pack! You're the reason I make them!
 
 # 🏷️ Todo / Future
-For plans for the future of this datapack, please view the [GitHub project for this datapack](https://github.com/users/AmericanBagel/projects/2/views/1) or refer to the issues.
+
 
 # 👥 Contributing
 Feel free to contribute. Any help is appreciated. If it's something as simple as removing an unnecessary `at @s` or even just cleaning up comments, it helps a lot!
