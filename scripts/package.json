@@ -24,6 +24,7 @@
     "jsonc": "^2.0.0",
     "markdown-to-bbcode": "^0.3.2",
     "marked": "^4.2.12",
+    "mcf-uninstall": "^1.0.0",
     "md2bbc": "^1.1.0",
     "outdent": "^0.8.0",
     "path": "^0.12.7",
