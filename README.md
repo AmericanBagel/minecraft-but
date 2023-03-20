@@ -145,7 +145,7 @@ So many people have helped with this project, it's hard to keep count. Still, he
 - and the obligatory **YOU** for reading this and hopefully playing my data pack! You're the reason I make them!
 
 # 🏷️ Todo / Future
-
+For plans for the future of this datapack, please view the [GitHub project for this datapack](https://github.com/users/AmericanBagel/projects/2/views/1) or refer to the issues.
 
 # 👥 Contributing
 Feel free to contribute. Any help is appreciated. If it's something as simple as removing an unnecessary `at @s` or even just cleaning up comments, it helps a lot!
