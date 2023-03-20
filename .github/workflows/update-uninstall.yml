@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - master
 jobs: 
   setup-nodejs-env:
     uses: ./.github/workflows/reinstall-nodejs.yml
