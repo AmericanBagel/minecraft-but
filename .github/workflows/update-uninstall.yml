@@ -1,4 +1,4 @@
-name: Update modifiers
+name: Update uninstall function
 on:
   workflow_dispatch:
   push:
