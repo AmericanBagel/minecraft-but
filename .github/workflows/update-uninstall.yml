@@ -22,7 +22,7 @@ jobs:
         run: npm i mcf-uninstall
       - name: Run mcf-uninstall
         working-directory: ${{ github.workspace }}/scripts
-        run: npx mcf-uninstall -v --tag "!global" --storage "!random" "!iris" ../data/minecraft_but.core/functions/
+        run: npx mcf-uninstall ../data/minecraft_but.core/functions/ -v --tag "!global" --storage "!random" "!iris"
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "GitHub Action: Update uninstall function"
