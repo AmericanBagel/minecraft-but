@@ -8,7 +8,7 @@ jobs:
   setup-nodejs-env:
     uses: ./.github/workflows/reinstall-nodejs.yml
   update-version:
-    name: Update modifiers
+    name: Update uninstall function
     runs-on: ubuntu-latest
     needs: 
       - setup-nodejs-env
