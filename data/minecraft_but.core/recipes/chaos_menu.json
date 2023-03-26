@@ -1,0 +1,22 @@
+{
+	"type": "crafting_shaped",
+	"pattern": ["X#X", "#+#", "O#O"],
+	"key": {
+		"X": {
+			"item": "minecraft:structure_void"
+		},
+		"#": {
+			"item": "minecraft:command_block"
+		},
+		"+": {
+			"item": "minecraft:nether_star"
+		},
+		"O": {
+			"item": "minecraft:dragon_egg"
+		}
+	},
+	"result": {
+		"item": "minecraft:knowledge_book",
+		"count": 1
+	}
+}

@@ -4,7 +4,7 @@
 # @context menu player
 
 #> Check if player renamed nether star "Chaos Menu"
-execute as @a[nbt={SelectedItem:{id:"minecraft:nether_star",tag:{display:{Name:'{"text":"Chaos Menu"}'}}}}] run function minecraft_but.core:menu/give_item
+execute as @a[nbt={SelectedItem:{id:"minecraft:nether_star",tag:{display:{Name:'{"text":"Chaos Menu"}'}}}}] run function minecraft_but.core:menu/rename_item
 
 #> Check for players with chaos menu trigger
 execute as @a[scores={minecraft_but.give_menu=1..}] run function minecraft_but.core:menu/give_item

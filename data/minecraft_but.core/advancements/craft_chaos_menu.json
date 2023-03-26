@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "Unlocked": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft_but.core:chaos_menu"
+            }
+        }
+    },
+    "rewards": {
+        "function": "minecraft_but.core:menu/craft"
+    }
+}

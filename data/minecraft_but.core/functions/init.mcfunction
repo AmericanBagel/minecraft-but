@@ -10,6 +10,9 @@ scoreboard objectives add minecraft_but.menu.page dummy
 scoreboard objectives add minecraft_but.give_menu trigger
 scoreboard players enable @e[ gamemode=creative ] minecraft_but.give_menu
 
+#> Crafting
+recipe give @s minecraft_but.core:chaos_menu
+
 #> Config
 ## Toggle
 scoreboard objectives add minecraft_but.toggle dummy
