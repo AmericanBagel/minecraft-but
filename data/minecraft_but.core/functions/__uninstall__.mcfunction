@@ -109,6 +109,7 @@ scoreboard objectives remove minecraft_but.explosive_eggs.UUID1
 scoreboard objectives remove minecraft_but.explosive_eggs.UUID2
 scoreboard objectives remove minecraft_but.explosive_eggs.UUID3
 scoreboard objectives remove minecraft_but.explosive_eggs.UUID4
+scoreboard objectives remove minecraft_but.explosive_phantoms.interval
 scoreboard objectives remove minecraft_but.explosive_sight.raycast
 scoreboard objectives remove minecraft_but.fast_arrows
 scoreboard objectives remove minecraft_but.fire_walker.total
