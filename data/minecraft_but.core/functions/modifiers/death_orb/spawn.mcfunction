@@ -24,6 +24,8 @@ scoreboard players add .global minecraft_but.death_orb.sid 1
 
 # Set death orb's ID to the current global death orb count (for a unique ID shared with the player)
 scoreboard players operation @e[ name="minecraft_but.death_orb.marker", sort=nearest, limit=1, tag=minecraft_but.death_orb.init ] minecraft_but.death_orb.sid = .global minecraft_but.death_orb.sid
+execute as @e[ name="minecraft_but.death_orb.marker", sort=nearest, limit=1, tag=minecraft_but.death_orb.init ] run scoreboard players operation @s minecraft_but.death_orb.color = @s minecraft_but.death_orb.sid
+scoreboard players operation @e[ name="minecraft_but.death_orb.marker", sort=nearest, limit=1, tag=minecraft_but.death_orb.init ] minecraft_but.death_orb.color %= #8 minecraft_but.math
 
 # Set the player's ID to the current global death orb count (for a unique ID shared with the death orb)
 scoreboard players operation @p[ tag=minecraft_but.death_orb.init ] minecraft_but.death_orb.sid = .global minecraft_but.death_orb.sid

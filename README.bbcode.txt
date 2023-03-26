@@ -1,10 +1,11 @@
-[h1][img=https://github.com/AmericanBagel/minecraft-but/edit/master/README.mdassets/title.png][/h1]
+[h1][img=https://github.com/AmericanBagel/minecraft-but/blob/master/assets/title.png?raw=true][/h1]
 [div]See the PlanetMinecraft page here: [url=https://www.planetminecraft.com/data-packs/5537948]https://www.planetminecraft.com/data-packs/5537948[/url][/div]
-[h1][img=https://github.com/AmericanBagel/minecraft-but/edit/master/README.mdassets/why.png][/h1]
+[div]The [i]Minecraft, but [i]MEGAPACK[/i][/i] is the &quot;Minecraft, but&quot; pack to end them all! The Megapack contains [i]70+[/i] gameplay modifiers all in one data pack, and it features an intuitive menu to configure the data pack however you want![/div]
+[h1][img=https://github.com/AmericanBagel/minecraft-but/blob/master/assets/why.png?raw=true][/h1]
 [div]Browsing through [url=https://www.planetminecraft.com/data-packs/]PlanetMinecraft&#39;s data pack page[/url], you will quickly notice the amount of &quot;Minecraft, but&quot; data packs that flood it. You might think all these data packs sound fun. After playing with one, you might want to use several. What if you used 5, 10, 15, even 20 different &quot;Minecraft, but&quot; data packs? You&#39;ll quickly find yourself annoyed with having to manually type out [code]/datapack disable &quot;file/...&quot;[/code]. You will also find it annoying that very few of them are customizable! For the data packs that are customizable, you will often forget how you were supposed to customize them in the first place! Managing several of these data packs quickly turns into a nightmare.[/div]
 [div]The [b]Minecraft, but MEGAPACK[/b] aims to solve this problem by providing one centralized menu to manage all your gameplay modifiers. Gone are the days of typing [code]/datapack[/code]! Gone are the days of having to revisit that PlanetMinecraft page again and again to remind yourself how to configure it! Gone are the days of having to find that inconveniently placed [code].txt[/code] file hidden away in the archived data pack file! Gone are the days of a chat flooded by 50 different &quot;Minecraft, but&quot; data packs every time you reload.[/div]
-[h1][img=https://github.com/AmericanBagel/minecraft-but/edit/master/README.mdassets/features.png][/h1]
-[h2][img=https://github.com/AmericanBagel/minecraft-but/edit/master/README.mdassets/modifiers.png][/h2]
+[h1][img=https://github.com/AmericanBagel/minecraft-but/blob/master/assets/features.png?raw=true][/h1]
+[h2][img=https://github.com/AmericanBagel/minecraft-but/blob/master/assets/modifiers.png?raw=true][/h2]
 [div]The Megapack contains 67 gameplay modifiers (and more on the way), which are essentially &quot;Minecraft, but&quot; scenarios ranging from &quot;Minecraft, but TNT rains from the sky&quot; to &quot;Minecraft, but items randomly fall out of your inventory&quot;. The list of modifiers is massive, so bear with me![/div]
 <details>
 <summary>Full list of modifiers</summary>
@@ -96,21 +97,22 @@
 </details>
 
 
-[h3][img=https://github.com/AmericanBagel/minecraft-but/edit/master/README.mdassets/configuration.png][/h3]
+[h3][img=https://github.com/AmericanBagel/minecraft-but/blob/master/assets/configuration.png?raw=true][/h3]
 [div]I aim to make every modifier as customizable as possible. For example, in the &quot;TNT rains from the sky&quot; modifier, you can customize the rate at which the TNT spawns, toggle whether the TNT griefs (automatically set to the mobGriefing gamerule value), and if the TNT spawns from the sky and/or a few blocks above players.[/div]
 [div]If you want to reset the configuration for a modifier back to the defaults, each configuration option has a reset button that looks like [⟲].[/div]
-[h3][img=https://github.com/AmericanBagel/minecraft-but/edit/master/README.mdassets/difficulty.png][/h3]
+[h3][img=https://github.com/AmericanBagel/minecraft-but/blob/master/assets/difficulty.png?raw=true][/h3]
 [div]Can&#39;t decide what to configure? Many modifiers respect global [b]Difficulty[/b] and automatically change their configuration values to scale with the [b]Global Difficulty[/b], which automatically is set to the world difficulty with [b]Difficulty Sync[/b]. However, you can input a custom global [b]Difficulty[/b] which doesn&#39;t match the world difficulty. You can even configure the difficulty on a per-modifier basis, using each modifier&#39;s [b]Local Difficulty[/b] -- which is set to the Global Difficulty by default.[/div]
-[h3][img=https://github.com/AmericanBagel/minecraft-but/edit/master/README.mdassets/blacklisting.png][/h3]
+[h3][img=https://github.com/AmericanBagel/minecraft-but/blob/master/assets/blacklisting.png?raw=true][/h3]
 [div]Want to disable a modifier or all modifiers for a certain player? In the config menu of each modifier, you will find an option to blacklist a certain player from that modifier. Alternatively, you can blacklist a player from all modifiers in the main config menu. [b]Players in the spectator gamemode are always blacklisted from almost all modifiers.[/b][/div]
-[h3][img=https://github.com/AmericanBagel/minecraft-but/edit/master/README.mdassets/modes.png][/h3]
+[h3][img=https://github.com/AmericanBagel/minecraft-but/blob/master/assets/modes.png?raw=true][/h3]
 [div]By default, [b]manual mode[/b] is enabled. [b]Manual mode[/b] allows you to manually enable or disable modifiers -- the way the pack was meant to be. However, there is support for another mode, [b]Random Mode[/b]. Random mode randomly selects modifiers. However, it is highly recommended that you just stick with manual mode. Random mode is incredibly chaotic, unbalanced, and even not fun. However, I created it, so it would be a waste of effort to remove it 🤷. So if you have a world you need quickly destroyed, Random Mode is the way to do it.[/div]
-[h2][img=https://github.com/AmericanBagel/minecraft-but/edit/master/README.mdassets/menu.png][/h2]
-[h3][img=https://github.com/AmericanBagel/minecraft-but/edit/master/README.mdassets/opening-the-menu.png][/h3]
-[div][url=https://github.com/AmericanBagel/minecraft-but/edit/master/README.mdassets/menu.mp4]A video guide on opening the menu[/url][/div]
+[h2][img=https://github.com/AmericanBagel/minecraft-but/blob/master/assets/menu.png?raw=true][/h2]
+[h3][img=https://github.com/AmericanBagel/minecraft-but/blob/master/assets/opening-the-menu.png?raw=true][/h3]
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1zjDsJMT2Cc" title="A video guide on opening the menu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 [div]To open the menu, run the command [code]/function minecraft_but.core:give_item[/code]. Bam! Now you have the [b]Chaos Menu[/b]. With this, just right click to bring up the menu. From here you will find different buttons. All that is important is the &quot;Modifier&quot; button, the &quot;Difficulty&quot; slider, and the &quot;Uninstall&quot; button. You can guess what each button does.[/div]
 [div]Click on the &quot;Modifier&quot; button to see a list of categories. Feel free to look around these categories. If you need to go back in a menu, just click the back arrow. Now that you&#39;ve looked around these categories, try enabling a modifier by just clicking on its name or the [X] button.[/div]
-[h1][img=https://github.com/AmericanBagel/minecraft-but/edit/master/README.mdassets/credits.png][/h1]
+[h1][img=https://github.com/AmericanBagel/minecraft-but/blob/master/assets/credits.png?raw=true][/h1]
 [div]So many people have helped with this project, it&#39;s hard to keep count. Still, here&#39;s my best attempt at some sort of &quot;Thank you&quot; list:[/div]
 [ul]
 [li][url=https://discord.gg/QAFXFtZ]The Minecraft Commands Discord server[/url]. These people are awesome.[/li]
@@ -127,4 +129,4 @@
 [div]For plans for the future of this datapack, please view the [url=https://github.com/users/AmericanBagel/projects/2/views/1]GitHub project for this datapack[/url] or refer to the issues.[/div]
 [h1]👥 Contributing[/h1]
 [div]Feel free to contribute. Any help is appreciated. If it&#39;s something as simple as removing an unnecessary [code]at @s[/code] or even just cleaning up comments, it helps a lot![/div]
-[div]If you&#39;re no good with git and GitHub and commands, I totally understand! You can, however, suggest a modifier in the Issues page! Just give it the &#39;modifier&#39; and &#39;enhancement&#39; tags![/div]
+[div]If you&#39;re no good with git and GitHub and commands, I totally understand! You can, however, suggest a modifier in the [url=https://github.com/AmericanBagel/minecraft-but/issues]Issues[/url] page! Just give it the &#39;modifier&#39; and &#39;enhancement&#39; tags![/div]

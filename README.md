@@ -1,15 +1,15 @@
-# ![Minecraft, but MEGAPACK](./assets/title.png)
+# ![Minecraft, but MEGAPACK](https://github.com/AmericanBagel/minecraft-but/blob/master/assets/title.png?raw=true)
 See the PlanetMinecraft page here: https://www.planetminecraft.com/data-packs/5537948
 
 The *Minecraft, but* **MEGAPACK** is the "Minecraft, but" pack to end them all! The Megapack contains *70+* gameplay modifiers all in one data pack, and it features an intuitive menu to configure the data pack however you want!
 
-# ![🤔 Why?](./assets/why.png)
+# ![🤔 Why?](https://github.com/AmericanBagel/minecraft-but/blob/master/assets/why.png?raw=true)
 Browsing through [PlanetMinecraft's data pack page](https://www.planetminecraft.com/data-packs/), you will quickly notice the amount of "Minecraft, but" data packs that flood it. You might think all these data packs sound fun. After playing with one, you might want to use several. What if you used 5, 10, 15, even 20 different "Minecraft, but" data packs? You'll quickly find yourself annoyed with having to manually type out `/datapack disable "file/..."`. You will also find it annoying that very few of them are customizable! For the data packs that are customizable, you will often forget how you were supposed to customize them in the first place! Managing several of these data packs quickly turns into a nightmare.
 
 The *Minecraft, but* **MEGAPACK** aims to solve this problem by providing one centralized menu to manage all your gameplay modifiers. Gone are the days of typing `/datapack`! Gone are the days of having to revisit that PlanetMinecraft page again and again to remind yourself how to configure it! Gone are the days of having to find that inconveniently placed `.txt` file hidden away in the archived data pack file! Gone are the days of a chat flooded by 50 different "Minecraft, but" data packs every time you reload.
 
-# ![📋 Features](./assets/features.png)
-## ![⚙️ Modifiers](./assets/modifiers.png)
+# ![📋 Features](https://github.com/AmericanBagel/minecraft-but/blob/master/assets/features.png?raw=true)
+## ![⚙️ Modifiers](https://github.com/AmericanBagel/minecraft-but/blob/master/assets/modifiers.png?raw=true)
 The Megapack contains 70+ gameplay modifiers (and more on the way), which are essentially "Minecraft, but" scenarios ranging from "Minecraft, but TNT rains from the sky" to "Minecraft, but items randomly fall out of your inventory". The list of modifiers is massive, so I recommend you just check out the data pack instead! It's easy!
 
 <details>
@@ -102,27 +102,27 @@ The Megapack contains 70+ gameplay modifiers (and more on the way), which are es
 </details>
 
 
-### ![Configuration](./assets/configuration.png)
+### ![Configuration](https://github.com/AmericanBagel/minecraft-but/blob/master/assets/configuration.png?raw=true)
 I aim to make every modifier as customizable as possible. For example, in the "TNT rains from the sky" modifier, you can customize the rate at which the TNT spawns, toggle whether the TNT griefs (automatically set to the mobGriefing gamerule value), and if the TNT spawns from the sky and/or a few blocks above players.
 
 If you want to reset the configuration for a modifier back to the defaults, each configuration option has a reset button that looks like [⟲].
 
-### ![Difficulty](./assets/difficulty.png)
+### ![Difficulty](https://github.com/AmericanBagel/minecraft-but/blob/master/assets/difficulty.png?raw=true)
 Can't decide what to configure? Many modifiers respect global **Difficulty** and automatically change their configuration values to scale with the **Global Difficulty**, which automatically is set to the world difficulty with **Difficulty Sync**. However, you can input a custom global **Difficulty** which doesn't match the world difficulty. You can even configure the difficulty on a per-modifier basis, using each modifier's **Local Difficulty** -- which is set to the Global Difficulty by default.
 
-### ![Blacklisting](./assets/blacklisting.png)
+### ![Blacklisting](https://github.com/AmericanBagel/minecraft-but/blob/master/assets/blacklisting.png?raw=true)
 Want to disable a modifier or all modifiers for a certain player? In the config menu of each modifier, you will find an option to blacklist a certain player from that modifier. Alternatively, you can blacklist a player from all modifiers in the main config menu. **Players in the spectator gamemode are always blacklisted from almost all modifiers.**
 
-### ![Modes](./assets/modes.png)
+### ![Modes](https://github.com/AmericanBagel/minecraft-but/blob/master/assets/modes.png?raw=true)
 By default, **manual mode** is enabled. **Manual mode** allows you to manually enable or disable modifiers -- the way the pack was meant to be. However, there is support for another mode, **Random Mode**. Random mode randomly selects modifiers. However, it is highly recommended that you just stick with manual mode. Random mode is incredibly chaotic, unbalanced, and even not fun. However, I created it, so it would be a waste of effort to remove it 🤷. So if you have a world you need quickly destroyed, Random Mode is the way to do it.
 
-## ![🗿 Menu](./assets/menu.png)
-### ![Opening the menu](./assets/opening-the-menu.png)
+## ![🗿 Menu](https://github.com/AmericanBagel/minecraft-but/blob/master/assets/menu.png?raw=true)
+### ![Opening the menu](https://github.com/AmericanBagel/minecraft-but/blob/master/assets/opening-the-menu.png?raw=true)
 
-[A video guide on opening the menu](./assets/menu.mp4)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1zjDsJMT2Cc" title="A video guide on opening the menu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-To open the menu, run the command `/function minecraft_but.core:give_item`. or rename a nether star "Chaos Menu" and right click it:
-[Rename a nether star to "Chaos Menu"(./assets/rename-chaos-menu.png)
+To open the menu, run the command `/function minecraft_but.core:give_item`, or rename a nether star "Chaos Menu" and right click it:
+[Rename a nether star to "Chaos Menu"](./assets/rename-chaos-menu.png)
 
 Now you have the **Chaos Menu**. With this, just right click to bring up the menu. From here you will find different buttons. All that is important is the "Modifiers" button, the "Difficulty" slider, and the "Uninstall" button. You can guess what each button does.
 
@@ -132,7 +132,7 @@ Click on the "Modifier" button to see a list of categories. Feel free to look ar
 
 **TL;DR rename a nether star to "Chaos Menu" to open the menu to configure the data pack and toggle or configure modifiers. Enjoy!**
 
-# ![Credits](./assets/credits.png)
+# ![Credits](https://github.com/AmericanBagel/minecraft-but/blob/master/assets/credits.png?raw=true)
 So many people have helped with this project, it's hard to keep count. Still, here's my best attempt at some sort of "Thank you" list:
 - [The Minecraft Commands Discord server](https://discord.gg/QAFXFtZ). These people are awesome.
 - [CloudWolfYT](https://cloudwolfyt.github.io/index.html) for his scoreboard tree generator, `is_sky` predicate, and probably more I can't think of.

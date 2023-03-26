@@ -7,10 +7,10 @@ let readme = fs.readFileSync(path.normalize('../README.md'), 'utf-8');
 
 readme = readme.replace(/\.\//g, 'https://github.com/AmericanBagel/minecraft-but/edit/master/README.md')
 
-marked.setOptions({
+let bbcode = marked(readme, {
 	renderer: new md2bbc(),
 });
+fs.writeFileSync(path.normalize('../README.bbcode.txt'), bbcode)
 
-let out = marked(readme);
-
-fs.writeFileSync(path.normalize('../README.bbcode.txt'), out)
+let html = marked.parse(readme)
+fs.writeFileSync(path.normalize('../README.html'), html)
