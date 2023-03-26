@@ -54,10 +54,10 @@ function runScripts() {
 }
 
 function parseDescription(description) {
+    let out = '';
 	if (typeof description === 'string') {
-        let out = '';
 		try {
-			out = description.replace(/"/g, '\\"').replace(/\n/g, '\\n');
+			out = '{"text":"' + description.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '","color":"#ECEFF5"}';
 		} catch (e) {
             throw error;
 		}
@@ -163,7 +163,6 @@ categories.forEach((category) => {
 		const modifier = modsInCategory[i];
 		modifierDescription = parseDescription(modifier.description);
 
-		if (category.id === 'mob') console.log(modifier.id);
 		if (
 			(Object.values(modifier?.config).length > 0) |
 			(modifier.difficulty === true)

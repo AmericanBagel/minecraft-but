@@ -19,9 +19,11 @@ function minecraft_but.core:modifiers/ender_blood/load
 function minecraft_but.core:modifiers/explosive_arrows/load
 function minecraft_but.core:modifiers/explosive_arrows/load
 function minecraft_but.core:modifiers/explosive_eggs/load
+function minecraft_but.core:modifiers/explosive_phantoms/load
 function minecraft_but.core:modifiers/explosive_sight/load
 function minecraft_but.core:modifiers/fast_arrows/load
 function minecraft_but.core:modifiers/fire_walker/load
+function minecraft_but.core:modifiers/glowing/load
 function minecraft_but.core:modifiers/keep_moving/load
 function minecraft_but.core:modifiers/lightning_storm/load
 function minecraft_but.core:modifiers/limited_inventory/load
