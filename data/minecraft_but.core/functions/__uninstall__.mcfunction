@@ -101,6 +101,7 @@ scoreboard objectives remove minecraft_but.death_orb.sid
 scoreboard objectives remove minecraft_but.death_orb.distance
 scoreboard objectives remove minecraft_but.death_orb.factor
 scoreboard objectives remove minecraft_but.death_orb
+scoreboard objectives remove minecraft_but.death_orb.color
 scoreboard objectives remove minecraft_but.death_swap
 scoreboard objectives remove minecraft_but.degradation
 scoreboard objectives remove minecraft_but.ender_blood
